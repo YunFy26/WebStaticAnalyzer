@@ -1,0 +1,18 @@
+# macOS hidden file
+.DS_Store
+# gradle
+.gradle/
+build/
+.idea/
+bin/
+cache/
+out/
+# Tai-e output
+output/
+# Project analyzed
+WebGoat/
+# temp
+temp/
+
+src/test/
+
