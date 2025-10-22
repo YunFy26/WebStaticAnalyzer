@@ -10,22 +10,31 @@ import java.util.Objects;
 /**
  * Entity class including the JClass, routerMethods and baseUrls
  */
-public class ControllerClass {
 
+public class ControllerClass {
 
     private final JClass jClass;
 
-    private final List<String> baseUrls = new ArrayList<>();
+    private final List<String> baseUrls;
 
-    private final List<RouterMethod> routerMethods = new ArrayList<>();
-
+    private final List<RouterMethod> routerMethods;
 
     public ControllerClass(JClass jClass) {
         this.jClass = jClass;
+        this.baseUrls = new ArrayList<>();
+        this.routerMethods = new ArrayList<>();
     }
 
-    public void addBaseUrl(String baseUrl) {
-        this.baseUrls.add(baseUrl);
+    public JClass getJClass() {
+        return jClass;
+    }
+
+    public void setBaseUrls(List<String> baseUrls) {
+        this.baseUrls.addAll(baseUrls);
+    }
+
+    public List<String> getBaseUrls() {
+        return baseUrls;
     }
 
     public void addRouterMethod(RouterMethod routerMethod) {
@@ -36,27 +45,4 @@ public class ControllerClass {
         return routerMethods;
     }
 
-    public JClass getJClass() {
-        return jClass;
-    }
-
-
-    public List<String> getBaseUrls() {
-        return baseUrls;
-    }
-
-    public void setBaseUrls() {
-        // TODO: other Mapping ?
-        if (jClass.hasAnnotation("org.springframework.web.bind.annotation.RequestMapping")) {
-            // TODO：if value is a List, such as @RequestMapping({"/params", "/"}), how to process ?
-            Element value = Objects.requireNonNull(jClass.getAnnotation("org.springframework.web.bind.annotation.RequestMapping")).getElement("value");
-            Element path = Objects.requireNonNull(jClass.getAnnotation("org.springframework.web.bind.annotation.RequestMapping")).getElement("path");
-            if (value != null) {
-                baseUrls.add(value.toString());
-            }
-            if (path != null) {
-                baseUrls.add(path.toString());
-            }
-        }
-    }
 }

@@ -1,5 +1,6 @@
 package org.example.spring.router;
 
+import org.example.spring.rules.EntryMappingRules;
 import pascal.taie.language.annotation.Annotation;
 import pascal.taie.language.annotation.Element;
 import pascal.taie.language.classes.JMethod;
@@ -13,83 +14,25 @@ import java.util.List;
  */
 public class RouterMethod {
 
-    private JMethod jMethod;
+    private final JMethod jMethod;
 
-    private final List<String> urls = new ArrayList<>();
+    private final EntryMappingRules.HttpMethod httpMethod;
 
+    private final List<String> urls;
 
-    public RouterMethod(JMethod jMethod) {
+    public RouterMethod(JMethod jMethod, EntryMappingRules.HttpMethod httpMethod) {
         this.jMethod = jMethod;
-    }
-
-    public void addUrl() {
-
-        Collection<Annotation> annotations = jMethod.getAnnotations();
-        for (Annotation annotation : annotations) {
-            if (annotation.getType().equals("org.springframework.web.bind.annotation.RequestMapping")) {
-                Element value = annotation.getElement("value");
-                Element path = annotation.getElement("path");
-                if (value != null) {
-                    urls.add(value.toString());
-                }
-                if (path != null) {
-                    urls.add(path.toString());
-                }
-            } else if (annotation.getType().equals("org.springframework.web.bind.annotation.PostMapping")) {
-                Element value = annotation.getElement("value");
-                Element path = annotation.getElement("path");
-                if (value != null) {
-                    urls.add(value.toString());
-                }
-                if (path != null) {
-                    urls.add(path.toString());
-                }
-            } else if (annotation.getType().equals("org.springframework.web.bind.annotation.GetMapping")) {
-                Element value = annotation.getElement("value");
-                Element path = annotation.getElement("path");
-                if (value != null) {
-                    urls.add(value.toString());
-                }
-                if (path != null) {
-                    urls.add(path.toString());
-                }
-            } else if (annotation.getType().equals("org.springframework.web.bind.annotation.PutMapping")) {
-                Element value = annotation.getElement("value");
-                Element path = annotation.getElement("path");
-                if (value != null) {
-                    urls.add(value.toString());
-                }
-                if (path != null) {
-                    urls.add(path.toString());
-                }
-            } else if (annotation.getType().equals("org.springframework.web.bind.annotation.DeleteMapping")) {
-                Element value = annotation.getElement("value");
-                Element path = annotation.getElement("path");
-                if (value != null) {
-                    urls.add(value.toString());
-                }
-                if (path != null) {
-                    urls.add(path.toString());
-                }
-            } else if (annotation.getType().equals("org.springframework.web.bind.annotation.PatchMapping")) {
-                Element value = annotation.getElement("value");
-                Element path = annotation.getElement("path");
-                if (value != null) {
-                    urls.add(value.toString());
-                }
-                if (path != null) {
-                    urls.add(path.toString());
-                }
-            }
-        }
-
+        this.httpMethod = httpMethod;
+        this.urls = new ArrayList<>();
     }
 
     public JMethod getJMethod() {
         return jMethod;
     }
 
-
+    public void setUrls(List<String> urls) {
+        this.urls.addAll(urls);
+    }
     public List<String> getUrls() {
         return urls;
     }

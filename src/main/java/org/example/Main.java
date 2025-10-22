@@ -2,7 +2,7 @@ package org.example;
 
 
 import org.apache.commons.cli.*;
-import org.example.printer.OutputPrinter;
+import org.example.spring.router.RouterPrinter;
 
 public class Main {
 
@@ -44,9 +44,11 @@ public class Main {
                 "--options-file",
                 optionsFilePath
         );
+
+        RouterPrinter.printRouterInfo();
         // Output
-        OutputPrinter.outputUrls();
-        OutputPrinter.outputCallFlows();
+//        OutputPrinter.outputUrls();
+//        OutputPrinter.outputCallFlows();
 //        OutputPrinter.outputIcfg();
 //        if (enableLLM){
 //            CallGraph<Invoke, JMethod> callGraph = World.get().getResult(CallGraphBuilder.ID);
