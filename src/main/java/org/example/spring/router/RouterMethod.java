@@ -30,9 +30,14 @@ public class RouterMethod {
         return jMethod;
     }
 
+    public EntryMappingRules.HttpMethod getHttpMethod() {
+        return httpMethod;
+    }
+
     public void setUrls(List<String> urls) {
         this.urls.addAll(urls);
     }
+
     public List<String> getUrls() {
         return urls;
     }

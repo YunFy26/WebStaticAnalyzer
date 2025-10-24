@@ -2,7 +2,7 @@ package org.example;
 
 
 import org.apache.commons.cli.*;
-import org.example.spring.router.RouterPrinter;
+import org.example.printer.router.RouterPrinter;
 
 public class Main {
 

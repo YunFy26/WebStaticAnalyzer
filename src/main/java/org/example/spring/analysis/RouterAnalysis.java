@@ -14,6 +14,8 @@ import pascal.taie.config.AnalysisConfig;
 import pascal.taie.language.classes.JClass;
 import pascal.taie.language.classes.JMethod;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -56,10 +58,22 @@ public class RouterAnalysis extends ProgramAnalysis {
 
     @Override
     public Object analyze() {
-        logger.info("Start router analysis...");
+        LocalDateTime startTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+        logger.info("Router analysis started at: {}", startTime.format(formatter));
+
         extractUrls();
+
+        LocalDateTime endTime = LocalDateTime.now();
+        long duration = java.time.Duration.between(startTime, endTime).toMillis();
+
+        logger.info("Router analysis completed at: {} (Duration: {}ms)",
+            endTime.format(formatter), duration);
+
         return List.copyOf(controllerClasses);
     }
+
 
     private void extractUrls() {
         applicationClasses.forEach(jClass -> {

@@ -20,7 +20,7 @@ public class RouterUtils {
     private static final Logger logger = LogManager.getLogger(RouterUtils.class);
 
     /**
-     * 提取Mapping注解中的URL列表
+     * 提取Mapping注解中的URL
      * @param mappingAnnotation Mapping注解
      * @return URL列表（不可变集合）
      */
@@ -29,14 +29,16 @@ public class RouterUtils {
         if (element == null) {
             return List.of("");
         }
-        // @RequestMapping(value={"/api/v1","/api/v2"})
-        // {"/api/v1","/api/v2"}
-        // 去除{}并按照,分割
-        String stringUrls = element.toString().replaceAll("[{}]", "");
+        // @RequestMapping(value={"/api/{id}","/api/v2"})
+        // {"/api/{id}","/api/v2"}
+        // 只移除最外层的大括号,保留路径变量中的大括号
+        String stringUrls = element.toString().replaceAll("^\\{|\\}$", "");
         String[] urlList = stringUrls.split(",");
+
 
         return Arrays.stream(urlList)
             .map(String::trim)
+            .map(s -> s.replaceAll("^\"|\"$", ""))
             .toList();
     }
 
@@ -75,6 +77,4 @@ public class RouterUtils {
             return EntryMappingRules.HttpMethod.ANY;
         }
     }
-
-
 }
