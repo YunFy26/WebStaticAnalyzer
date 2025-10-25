@@ -1,4 +1,4 @@
-package org.example.spring.router;
+package org.example.spring.analysis.router;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

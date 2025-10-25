@@ -1,4 +1,4 @@
-package org.example.spring.router;
+package org.example.spring.analysis.router;
 
 import org.example.spring.rules.EntryMappingRules;
 import pascal.taie.language.annotation.Annotation;

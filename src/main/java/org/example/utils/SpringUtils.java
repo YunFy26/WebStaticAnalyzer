@@ -1,8 +1,8 @@
 package org.example.utils;
 
-import org.example.spring.di.bean.BeanAnnotationRules;
-import org.example.spring.di.bean.BeanInfo;
-import org.example.spring.di.injectpoints.InjectionAnnotationRules;
+import org.example.spring.analysis.di.bean.BeanAnnotationRules;
+import org.example.spring.analysis.di.bean.BeanInfo;
+import org.example.spring.analysis.di.injectpoints.InjectionAnnotationRules;
 import pascal.taie.language.annotation.Annotation;
 import pascal.taie.language.classes.ClassHierarchy;
 import pascal.taie.language.classes.JClass;

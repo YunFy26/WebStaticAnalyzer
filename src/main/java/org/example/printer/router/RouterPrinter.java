@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.example.printer.router.console.RouterAnalysisResultToConsole;
 import org.example.printer.router.file.RouterAnalysisResultToHtml;
 import org.example.spring.analysis.RouterAnalysis;
-import org.example.spring.router.ControllerClass;
+import org.example.spring.analysis.router.ControllerClass;
 import pascal.taie.World;
 
 import java.util.List;

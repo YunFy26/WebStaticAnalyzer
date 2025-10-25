@@ -1,4 +1,4 @@
-package org.example.spring.di.bean;
+package org.example.spring.analysis.di.bean;
 
 public enum BeanAnnotationRules {
 

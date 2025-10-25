@@ -2,9 +2,9 @@ package org.example.spring.analysis;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.spring.di.bean.BeanAnnotationRules;
-import org.example.spring.di.bean.BeanInfo;
-import org.example.spring.di.injectpoints.*;
+import org.example.spring.analysis.di.bean.BeanAnnotationRules;
+import org.example.spring.analysis.di.bean.BeanInfo;
+import org.example.spring.analysis.di.injectpoints.*;
 import pascal.taie.World;
 import pascal.taie.analysis.ProgramAnalysis;
 import pascal.taie.config.AnalysisConfig;

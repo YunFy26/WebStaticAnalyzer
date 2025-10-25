@@ -1,0 +1,154 @@
+package org.example.spring.analysis.di.bean;
+
+import pascal.taie.language.classes.JClass;
+
+import java.util.Collection;
+import java.util.Objects;
+
+/**
+ * Bean定义
+ */
+public class BeanClass {
+
+    /**
+     * 匹配Bean注解规则的类
+     */
+    private final JClass jClass;
+
+    /**
+     * 该类实现的接口
+     */
+    private Collection<JClass> interfaces;
+
+    /**
+     * 该jClass是否是接口，如果是接口，说明是@Mapper
+     */
+    private final boolean isInterface;
+
+    /**
+     * 如果jClass是接口，说明实现类是动态生成的，需要根据IR手动模拟实现类
+     */
+    private Collection<Object> implementations;
+
+    /**
+     * 全限定名
+     */
+    private final String fullyQualifiedClassName;
+
+    /**
+     * 简化类名
+     */
+    private final String simpleClassName;
+
+    /**
+     * 默认名称 ： userService
+     * TODO：优化java doc
+     */
+    private String defaultBeanName;
+
+    /**
+     * 通过注解（如 @Bean, @Component）显式声明的名称
+     */
+    private String declaredBeanName;
+
+    /**
+     * bean的作用域
+     */
+    private BeanScope scope;
+
+    private boolean isPrimary;
+
+    public boolean isPrimary() {
+        return isPrimary;
+    }
+
+    public void setPrimary(boolean primary) {
+        isPrimary = primary;
+    }
+
+    public boolean isLazy() {
+        return isLazy;
+    }
+
+    public void setLazy(boolean lazy) {
+        isLazy = lazy;
+    }
+
+    private boolean isLazy;
+
+    public BeanClass(JClass jClass) {
+        this.jClass = jClass;
+        this.isInterface = jClass.isInterface();
+        this.fullyQualifiedClassName = jClass.getName();
+        this.simpleClassName = jClass.getSimpleName();
+    }
+
+    public JClass getjClass() {
+        return jClass;
+    }
+
+    public boolean isInterface() {
+        return isInterface;
+    }
+
+    public Collection<JClass> getInterfaces() {
+        return interfaces;
+    }
+
+    public void setInterfaces(Collection<JClass> interfaces) {
+        this.interfaces = interfaces;
+    }
+
+    public Collection<Object> getImplementations() {
+        return implementations;
+    }
+
+    public void setImplementations(Collection<Object> implementations) {
+        this.implementations = implementations;
+    }
+
+    public String getFullyQualifiedClassName() {
+        return fullyQualifiedClassName;
+    }
+
+    public String getSimpleClassName() {
+        return simpleClassName;
+    }
+
+    public String getDefaultBeanName() {
+        return defaultBeanName;
+    }
+
+    public void setDefaultBeanName(String defaultBeanName) {
+        this.defaultBeanName = defaultBeanName;
+    }
+
+    public String getDeclaredBeanName() {
+        return declaredBeanName;
+    }
+
+    public void setDeclaredBeanName(String declaredBeanName) {
+        this.declaredBeanName = declaredBeanName;
+    }
+
+    public BeanScope getScope() {
+        return scope;
+    }
+
+    public void setScope(BeanScope scope) {
+        this.scope = scope;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        BeanClass beanClass = (BeanClass) o;
+        return Objects.equals(fullyQualifiedClassName, beanClass.fullyQualifiedClassName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(fullyQualifiedClassName);
+    }
+
+}

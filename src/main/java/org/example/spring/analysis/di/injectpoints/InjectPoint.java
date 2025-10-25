@@ -1,6 +1,7 @@
-package org.example.spring.di.injectpoints;
+package org.example.spring.analysis.di.injectpoints;
 
 
+import org.example.spring.analysis.di.bean.BeanClass;
 import pascal.taie.language.classes.JClass;
 
 public class InjectPoint{
@@ -10,6 +11,12 @@ public class InjectPoint{
 
     // 被注入的field名称
     protected String fieldName;
+
+    // field 声明类型
+    protected JClass fieldDeclaredType;
+
+    // 运行时类型
+    protected BeanClass fieldBeanClass;
 
     // 运行时类型 （也就是实际注入的Bean的类型）
     protected String runtimeType;

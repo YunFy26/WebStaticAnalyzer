@@ -1,4 +1,4 @@
-package org.example.spring.di.injectpoints;
+package org.example.spring.analysis.di.injectpoints;
 
 import pascal.taie.language.annotation.Annotation;
 import pascal.taie.language.classes.JClass;

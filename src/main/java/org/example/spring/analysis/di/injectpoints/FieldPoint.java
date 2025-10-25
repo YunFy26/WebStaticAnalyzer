@@ -1,4 +1,4 @@
-package org.example.spring.di.injectpoints;
+package org.example.spring.analysis.di.injectpoints;
 
 import pascal.taie.language.annotation.Annotation;
 import pascal.taie.language.classes.JClass;
@@ -9,6 +9,8 @@ import java.util.Collection;
  * Field注入点
  */
 public class FieldPoint extends InjectPoint {
+
+    // 注入点所在的类
 
     // 注解上指定的要注入的Bean名称
     private String specifyName;

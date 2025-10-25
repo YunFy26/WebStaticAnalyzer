@@ -3,9 +3,9 @@ package org.example.spring.plugin;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.spring.analysis.InjectPointsAnalysis;
-import org.example.spring.di.injectpoints.InjectPoint;
-import org.example.spring.router.ControllerClass;
-import org.example.spring.router.RouterMethod;
+import org.example.spring.analysis.di.injectpoints.InjectPoint;
+import org.example.spring.analysis.router.ControllerClass;
+import org.example.spring.analysis.router.RouterMethod;
 import pascal.taie.World;
 import pascal.taie.analysis.pta.core.cs.context.Context;
 import pascal.taie.analysis.pta.core.cs.element.CSManager;
@@ -69,6 +69,7 @@ public class ProcessDIPlugin implements Plugin {
     public void onStart() {
         World world = World.get();
         List<ControllerClass> routerAnalysis = world.getResult("routerAnalysis");
+
         // 增加入口点
         for (ControllerClass controllerClass: routerAnalysis){
             List<RouterMethod> routerMethods = controllerClass.getRouterMethods();

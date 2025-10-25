@@ -1,7 +1,7 @@
 package org.example.printer.router.file;
 
-import org.example.spring.router.ControllerClass;
-import org.example.spring.router.RouterMethod;
+import org.example.spring.analysis.router.ControllerClass;
+import org.example.spring.analysis.router.RouterMethod;
 import org.example.utils.StringUtils;
 import pascal.taie.language.annotation.Annotation;
 import pascal.taie.language.classes.JMethod;

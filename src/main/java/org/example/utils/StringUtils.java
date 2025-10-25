@@ -115,4 +115,13 @@ public class StringUtils {
             (codePoint >= 0x30000 && codePoint <= 0x3FFFF);   // CJK 扩展 F-G
     }
 
+    /**
+     * 类名首字母小写
+     * UserService -> userService
+     * TODO:优化 Java Doc
+     */
+    public static String decapitalizeClassName(String className) {
+        return className.substring(0, 1).toLowerCase() + className.substring(1);
+    }
+
 }

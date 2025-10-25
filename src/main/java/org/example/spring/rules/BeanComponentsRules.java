@@ -1,7 +1,8 @@
 package org.example.spring.rules;
 
-public class BeanStereotypeRules {
+public class BeanComponentsRules {
 
+    // 组件类型注解
     public static final String CONTROLLER = "org.springframework.stereotype.Controller";
 
     public static final String REST_CONTROLLER = "org.springframework.web.bind.annotation.RestController";
@@ -12,8 +13,6 @@ public class BeanStereotypeRules {
 
     public static final String REPOSITORY = "org.springframework.stereotype.Repository";
 
-    public static final String CONFIGURATION = "org.springframework.context.annotation.Configuration";
-
-    public static final String BEAN = "org.springframework.context.annotation.Bean";
+    public static final String JSR330_NAMED = "javax.inject.Named";
 
 }

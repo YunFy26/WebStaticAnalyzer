@@ -2,10 +2,10 @@ package org.example.spring.analysis;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.spring.router.ControllerClass;
-import org.example.spring.router.ControllerParser;
-import org.example.spring.router.RouterMethod;
-import org.example.spring.router.RouterMethodParser;
+import org.example.spring.analysis.router.ControllerClass;
+import org.example.spring.analysis.router.ControllerParser;
+import org.example.spring.analysis.router.RouterMethod;
+import org.example.spring.analysis.router.RouterMethodParser;
 import org.example.spring.rules.EntryControllerRules;
 import org.example.spring.rules.EntryMappingRules;
 import pascal.taie.World;
@@ -107,4 +107,5 @@ public class RouterAnalysis extends ProgramAnalysis {
         return MAPPING_ANNOTATIONS.stream()
             .anyMatch(jMethod::hasAnnotation);
     }
+
 }

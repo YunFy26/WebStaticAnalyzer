@@ -2,14 +2,8 @@ package org.example.spring.analysis;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.spring.di.bean.BeanInfo;
-import org.example.spring.di.injectpoints.InjectPoint;
-import pascal.taie.World;
 import pascal.taie.analysis.ProgramAnalysis;
 import pascal.taie.config.AnalysisConfig;
-
-import java.util.HashSet;
-import java.util.Set;
 
 public class AspectPointsAnalysis extends ProgramAnalysis {
 

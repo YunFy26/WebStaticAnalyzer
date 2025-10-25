@@ -1,4 +1,4 @@
-package org.example.spring.di.bean;
+package org.example.spring.analysis.di.bean;
 
 import pascal.taie.language.classes.JClass;
 
@@ -10,7 +10,9 @@ import java.util.Objects;
 public class BeanInfo {
 
     private final JClass beanClass;
+
     private final String defaultName;
+
     private final String fromAnnotationName;
 
 

@@ -45,7 +45,7 @@ public class Main {
                 optionsFilePath
         );
 
-        RouterPrinter.printRouterInfo();
+//        RouterPrinter.printRouterInfo();
         // Output
 //        OutputPrinter.outputUrls();
 //        OutputPrinter.outputCallFlows();

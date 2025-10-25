@@ -1,11 +1,9 @@
-package org.example.spring.router;
+package org.example.spring.analysis.router;
 
-import pascal.taie.language.annotation.Element;
 import pascal.taie.language.classes.JClass;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * Entity class including the JClass, routerMethods and baseUrls
