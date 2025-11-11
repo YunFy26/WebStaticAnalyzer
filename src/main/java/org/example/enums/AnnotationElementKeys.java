@@ -14,4 +14,8 @@ public class AnnotationElementKeys {
 
     public static final String METHOD = "method";
 
+    // @AfterReturning 和 @AfterThrowing 使用 pointcut指定切点
+    public static final String POINTCUT = "pointcut";
+
+
 }

@@ -1,8 +1,5 @@
 package org.example.spring.rules;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class EntryMappingRules {
 
     public static final String REQUEST_MAPPING = "org.springframework.web.bind.annotation.RequestMapping";

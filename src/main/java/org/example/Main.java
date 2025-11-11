@@ -2,6 +2,7 @@ package org.example;
 
 
 import org.apache.commons.cli.*;
+import org.example.printer.OutputPrinter;
 import org.example.printer.router.RouterPrinter;
 
 public class Main {
@@ -48,7 +49,7 @@ public class Main {
 //        RouterPrinter.printRouterInfo();
         // Output
 //        OutputPrinter.outputUrls();
-//        OutputPrinter.outputCallFlows();
+        OutputPrinter.outputCallFlows();
 //        OutputPrinter.outputIcfg();
 //        if (enableLLM){
 //            CallGraph<Invoke, JMethod> callGraph = World.get().getResult(CallGraphBuilder.ID);

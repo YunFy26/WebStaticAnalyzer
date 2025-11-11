@@ -88,6 +88,7 @@ public class BeanClassInitializer {
         processIsPrimary(beanClass);
         processIsLazy(beanClass);
         processInterfaces(beanClass);
+        processSuperClass(beanClass);
     }
 
     /**
@@ -173,6 +174,15 @@ public class BeanClassInitializer {
         Collection<JClass> immutableInterfaces = Set.copyOf(interfaces);
 
         beanClass.setInterfaces(immutableInterfaces);
+    }
+
+    /**
+     * 初始化该类的父类
+     */
+    private static void processSuperClass(BeanClass beanClass) {
+        JClass jClass = beanClass.getjClass();
+        JClass superClass = jClass.getSuperClass();
+        beanClass.setSuperClass(superClass);
     }
 
     /**

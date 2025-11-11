@@ -2,8 +2,12 @@ package org.example.spring.plugin;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.spring.analysis.BeanAnalysis;
 import org.example.spring.analysis.InjectPointsAnalysis;
+import org.example.spring.analysis.RouterAnalysis;
+import org.example.spring.analysis.di.bean.BeanClass;
 import org.example.spring.analysis.di.injectpoints.InjectPoint;
+import org.example.spring.analysis.di.injectpoints.LoadFieldPoint;
 import org.example.spring.analysis.router.ControllerClass;
 import org.example.spring.analysis.router.RouterMethod;
 import pascal.taie.World;
@@ -11,6 +15,7 @@ import pascal.taie.analysis.pta.core.cs.context.Context;
 import pascal.taie.analysis.pta.core.cs.element.CSManager;
 import pascal.taie.analysis.pta.core.cs.element.CSMethod;
 import pascal.taie.analysis.pta.core.cs.element.CSObj;
+import pascal.taie.analysis.pta.core.cs.element.CSVar;
 import pascal.taie.analysis.pta.core.cs.selector.ContextSelector;
 import pascal.taie.analysis.pta.core.heap.HeapModel;
 import pascal.taie.analysis.pta.core.heap.Obj;
@@ -19,6 +24,7 @@ import pascal.taie.analysis.pta.core.solver.EntryPoint;
 import pascal.taie.analysis.pta.core.solver.Solver;
 import pascal.taie.analysis.pta.plugin.Plugin;
 import pascal.taie.analysis.pta.pts.PointsToSet;
+import pascal.taie.ir.IR;
 import pascal.taie.ir.exp.InvokeExp;
 import pascal.taie.ir.exp.InvokeInstanceExp;
 import pascal.taie.ir.exp.Var;
@@ -31,123 +37,127 @@ import pascal.taie.language.classes.JField;
 import pascal.taie.language.classes.JMethod;
 import pascal.taie.language.type.TypeSystem;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class ProcessDIPlugin implements Plugin {
 
+    private final Logger logger = LogManager.getLogger(ProcessDIPlugin.class);
+
     private Solver solver;
 
-    private ClassHierarchy hierarchy;
-
-    private TypeSystem typeSystem;
-
     private HeapModel heapModel;
+
+    private ClassHierarchy hierarchy;
 
     private CSManager csManager;
 
     private ContextSelector contextSelector;
 
-    private final Set<InjectPoint> injectPoints = World.get().getResult(InjectPointsAnalysis.ID);
+    private final List<ControllerClass> routerAnalysis = World.get().getResult(RouterAnalysis.ID);
 
+    private final Collection<BeanClass> beans = World.get().getResult(BeanAnalysis.ID);
 
-    private final Logger logger = LogManager.getLogger(ProcessDIPlugin.class);
+    private final Map<BeanClass, Map<JMethod, List<LoadFieldPoint>>> injectPoints =
+        World.get().getResult(InjectPointsAnalysis.ID);
 
     @Override
     public void setSolver(Solver solver) {
         this.solver = solver;
-        this.hierarchy = solver.getHierarchy();
-        this.typeSystem = solver.getTypeSystem();
         this.heapModel = solver.getHeapModel();
+        this.hierarchy = solver.getHierarchy();
         this.csManager = solver.getCSManager();
         this.contextSelector = solver.getContextSelector();
     }
 
-    @Override
-    public void onStart() {
-        World world = World.get();
-        List<ControllerClass> routerAnalysis = world.getResult("routerAnalysis");
-
-        // 增加入口点
-        for (ControllerClass controllerClass: routerAnalysis){
-            List<RouterMethod> routerMethods = controllerClass.getRouterMethods();
-            for (RouterMethod routerMethod: routerMethods) {
-                // TODO: Mock parameter for taint analysis
-                solver.addEntryPoint(new EntryPoint(routerMethod.getJMethod(), EmptyParamProvider.get()));
-            }
-        }
-
-
-    }
+    /**
+     * 在pta开始前，添加入口点
+     */
+//    @Override
+//    public void onStart() {
+//        // 增加入口点
+//        for (ControllerClass controllerClass: routerAnalysis){
+//            List<RouterMethod> routerMethods = controllerClass.getRouterMethods();
+//            for (RouterMethod routerMethod: routerMethods) {
+//                // TODO: Mock parameter for taint analysis
+//                solver.addEntryPoint(new EntryPoint(routerMethod.getJMethod(), EmptyParamProvider.get()));
+//            }
+//        }
+//    }
 
     @Override
     public void onNewCSMethod(CSMethod csMethod) {
-        String className = csMethod.getMethod().getDeclaringClass().getName();
-//        logger.info(injectPoints);
-        for (InjectPoint injectPoint : injectPoints){
-            // 如果这个方法所属的类在包含注入点的类中
-            if (injectPoint.getInClassName().equals(className)){
-                String runtimeType = injectPoint.getRuntimeType();
-                JMethod jMethod = csMethod.getMethod();
-                Context context = csMethod.getContext();
-                if (isJdkCalls(jMethod)) {
-                    solver.addIgnoredMethod(csMethod.getMethod());
-                }
-                List<Stmt> stmts = jMethod.getIR().getStmts();
-                HashMap<Var, JField> varField = new HashMap<>();
-                List<Invoke> invokeInstanceExps = new ArrayList<>();
-                for (Stmt stmt: stmts) {
-                    // 遍历方法中所有的LoadField语句，将变量跟被加载的field做一个映射
-                    if(stmt instanceof LoadField loadField){
-                        Var lValue = loadField.getLValue();
-                        JField field = loadField.getFieldRef().resolve();
-                        varField.put(lValue, field);
-                    }
-                    // 获取方法中所有调用语句 --> 实例调用
-                    if (stmt instanceof Invoke invoke){
-                        if (invoke.isInterface() || invoke.isVirtual()){
-                            InvokeExp invokeExp = invoke.getRValue();
-                            if (invokeExp instanceof InvokeInstanceExp){
-                                invokeInstanceExps.add(invoke);
-                            }
-                        }
-                    }
-                }
+        JMethod jMethod = csMethod.getMethod();
+        JClass jClass = jMethod.getDeclaringClass();
+        Context context = csMethod.getContext();
+        if (isJdkCalls(jMethod)) {
+            solver.addIgnoredMethod(csMethod.getMethod());
+        }
+        // 查找当前方法所在的 BeanClass
+        Optional<BeanClass> beanClassOpt = injectPoints.keySet().stream()
+            .filter(beanClass -> beanClass.getjClass().equals(jClass))
+            .findFirst();
 
-                for (Invoke invoke : invokeInstanceExps){
-                    InvokeInstanceExp invokeInstanceExp = (InvokeInstanceExp) invoke.getRValue();
-                    Var base = invokeInstanceExp.getBase();
-                    PointsToSet pointsToSet = solver.getCSManager().getCSVar(context, base).getPointsToSet();
-                    varField.forEach((var, field) -> {
-                        if (injectPoint.getFieldName().equals(field.getName())){
-                            JClass aClass = hierarchy.getClass(runtimeType);
-                            Obj obj = null;
-                            if (aClass != null) {
-                                obj = heapModel.getMockObj(() -> "DIObj", invoke.getContainer() + ":" + invokeInstanceExp, aClass.getType());
-                            }
-                            Context heapContext = contextSelector.selectHeapContext(csMethod, obj);
-                            solver.addVarPointsTo(context, var, heapContext, obj);
-                        }
-                    });
-                    if ("%this".equals(base.getName())){
-                        String type = base.getType().getName();
-                        JClass jClass = hierarchy.getClass(type);
-                        if (jClass != null){
-                            Obj obj = heapModel.getMockObj(() -> "DIObj", invoke.getContainer() + ":" + invokeInstanceExp, jClass.getType());
-                            Context heapContext = contextSelector.selectHeapContext(csMethod, obj);
-                            solver.addVarPointsTo(context, base, heapContext, obj);
-                        }
-                    }
-
-                }
-            }
-
+        if (beanClassOpt.isEmpty()) {
+            return;
         }
 
+        BeanClass beanClass = beanClassOpt.get();
+        Map<JMethod, List<LoadFieldPoint>> methodFieldPoints = injectPoints.get(beanClass);
 
+        if (!methodFieldPoints.containsKey(jMethod)) {
+            return;
+        }
 
+        // 处理当前方法中局部变量LoadField的情况
+        List<LoadFieldPoint> fieldPoints = methodFieldPoints.get(jMethod);
+        fieldPoints.forEach(loadFieldPoint -> {
+            JField jField = loadFieldPoint.getjField();
+            String typeName = jField.getType().getName();
+            JClass fieldType = hierarchy.getClass(typeName);
+            if (fieldType == null) {
+                logger.error("Field type not found in class hierarchy: {}", typeName);
+                return;
+            }
+            if (fieldType.isInterface()) {
+                DIHelper.processInterface(solver, csMethod, context, loadFieldPoint, jField, beans, fieldType);
+            }else if (fieldType.isAbstract()) {
+                DIHelper.processAbstract(solver, csMethod, context, loadFieldPoint, jField, beans, fieldType);
+            }else {
+                DIHelper.processInstance(solver, csMethod, context, loadFieldPoint, jField, beans, fieldType);
+            }
+        });
+
+        // 处理 this 变量：只为实例方法中的 this 调用添加指向
+        // 注意：这里不创建新的 this 对象，而是使用已存在的对象
+        Var thisVar = findThisVar(jMethod);
+        if (thisVar != null) {
+            // 检查是否已经有 this 对象的指向
+            PointsToSet pointsToSet = csManager.getCSVar(context, thisVar).getPointsToSet();
+            if (pointsToSet == null || pointsToSet.isEmpty()) {
+                // 只有当 this 还没有指向任何对象时，才处理
+                DIHelper.processThis(solver, csMethod, context, thisVar);
+            }
+        }
+    }
+
+    /**
+     * 查找方法中的this变量
+     */
+    private Var findThisVar(JMethod method) {
+        for (Stmt stmt : method.getIR().getStmts()) {
+            if (stmt instanceof Invoke invoke &&
+                (invoke.isInterface() || invoke.isVirtual())) {
+                InvokeExp invokeExp = invoke.getRValue();
+                if (invokeExp instanceof InvokeInstanceExp invokeInstanceExp) {
+                    Var base = invokeInstanceExp.getBase();
+                    if ("%this".equals(base.getName())) {
+                        return base;
+                    }
+                }
+            }
+        }
+        return null;
     }
 
     @Override
@@ -155,7 +165,6 @@ public class ProcessDIPlugin implements Plugin {
 //        logger.info("Recv is : {}, Unresolved call: {}", recv, invoke);
 
     }
-
 
     private boolean isJdkCalls(JMethod jMethod) {
         String packageName = jMethod.getDeclaringClass().getName();
@@ -165,13 +174,5 @@ public class ProcessDIPlugin implements Plugin {
                 packageName.startsWith("com.sun.") ||
                 packageName.startsWith("jdk.") ||
                 packageName.startsWith("org.w3c.dom");
-//                packageName.startsWith("com.apple") ||
-//                packageName.startsWith("apple");
-    }
-
-    @Override
-    public void onPhaseFinish() {
-//        logger.info("HeapModel: ");
-//        heapModel.getObjects().forEach(System.out::println);
     }
 }

@@ -9,6 +9,10 @@ import pascal.taie.analysis.graph.callgraph.CallGraph;
 import pascal.taie.analysis.graph.callgraph.CallGraphBuilder;
 import pascal.taie.analysis.graph.icfg.ICFG;
 import pascal.taie.analysis.graph.icfg.ICFGBuilder;
+import pascal.taie.analysis.pta.PointerAnalysis;
+import pascal.taie.analysis.pta.PointerAnalysisResult;
+import pascal.taie.analysis.pta.core.cs.element.CSCallSite;
+import pascal.taie.analysis.pta.core.cs.element.CSMethod;
 import pascal.taie.ir.stmt.Invoke;
 import pascal.taie.ir.stmt.Stmt;
 import pascal.taie.language.classes.JMethod;
@@ -29,11 +33,13 @@ public class OutputPrinter {
 
     public static void outputCallFlows(){
         logger.info("Output the call flow of each entry method to output/callFlows.");
-        CallGraph<Invoke, JMethod> callGraph = World.get().getResult(CallGraphBuilder.ID);
-        CallGraphPrinter callGraphPrinter = new CallGraphPrinter(callGraph);
-        callGraph.entryMethods().forEach(jMethod -> {
+        PointerAnalysisResult pointerAnalysisResult = World.get().getResult(PointerAnalysis.ID);
+        CallGraph<CSCallSite, CSMethod> csCallGraph = pointerAnalysisResult.getCSCallGraph();
+//        CallGraph<Invoke, JMethod> callGraph = World.get().getResult(CallGraphBuilder.ID);
+        CallGraphPrinter callGraphPrinter = new CallGraphPrinter(csCallGraph);
+        csCallGraph.entryMethods().forEach(csMethod -> {
             try {
-                callGraphPrinter.generateDotFile(jMethod);
+                callGraphPrinter.generateDotFile(csMethod.getMethod());
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

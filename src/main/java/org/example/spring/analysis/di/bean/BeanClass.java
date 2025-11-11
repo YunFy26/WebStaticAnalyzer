@@ -21,6 +21,11 @@ public class BeanClass {
     private Collection<JClass> interfaces;
 
     /**
+     * 该类的父类
+     */
+    private JClass superClass;
+
+    /**
      * 该jClass是否是接口，如果是接口，说明是@Mapper
      */
     private final boolean isInterface;
@@ -58,22 +63,6 @@ public class BeanClass {
 
     private boolean isPrimary;
 
-    public boolean isPrimary() {
-        return isPrimary;
-    }
-
-    public void setPrimary(boolean primary) {
-        isPrimary = primary;
-    }
-
-    public boolean isLazy() {
-        return isLazy;
-    }
-
-    public void setLazy(boolean lazy) {
-        isLazy = lazy;
-    }
-
     private boolean isLazy;
 
     public BeanClass(JClass jClass) {
@@ -87,16 +76,24 @@ public class BeanClass {
         return jClass;
     }
 
-    public boolean isInterface() {
-        return isInterface;
-    }
-
     public Collection<JClass> getInterfaces() {
         return interfaces;
     }
 
     public void setInterfaces(Collection<JClass> interfaces) {
         this.interfaces = interfaces;
+    }
+
+    public JClass getSuperClass() {
+        return superClass;
+    }
+
+    public void setSuperClass(JClass superClass) {
+        this.superClass = superClass;
+    }
+
+    public boolean isInterface() {
+        return isInterface;
     }
 
     public Collection<Object> getImplementations() {
@@ -137,6 +134,22 @@ public class BeanClass {
 
     public void setScope(BeanScope scope) {
         this.scope = scope;
+    }
+
+    public boolean isPrimary() {
+        return isPrimary;
+    }
+
+    public void setPrimary(boolean primary) {
+        isPrimary = primary;
+    }
+
+    public boolean isLazy() {
+        return isLazy;
+    }
+
+    public void setLazy(boolean lazy) {
+        isLazy = lazy;
     }
 
     @Override

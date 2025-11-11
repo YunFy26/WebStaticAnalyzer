@@ -1,0 +1,214 @@
+package org.example.spring.plugin.aop;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.example.spring.analysis.AspectAnalysis;
+import org.example.spring.analysis.aop.AspectClass;
+import org.example.spring.analysis.aop.AspectMethod;
+import org.example.spring.analysis.aop.Pointcut;
+import pascal.taie.World;
+import pascal.taie.analysis.graph.callgraph.CallGraph;
+import pascal.taie.analysis.graph.callgraph.Edge;
+import pascal.taie.analysis.pta.core.cs.context.Context;
+import pascal.taie.analysis.pta.core.cs.element.CSCallSite;
+import pascal.taie.analysis.pta.core.cs.element.CSManager;
+import pascal.taie.analysis.pta.core.cs.element.CSMethod;
+import pascal.taie.analysis.pta.core.heap.Obj;
+import pascal.taie.analysis.pta.core.solver.Solver;
+import pascal.taie.analysis.pta.plugin.Plugin;
+import pascal.taie.ir.IR;
+import pascal.taie.ir.exp.Var;
+import pascal.taie.ir.stmt.Invoke;
+import pascal.taie.language.classes.JMethod;
+import pascal.taie.language.type.ClassType;
+import pascal.taie.language.type.Type;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+/**
+ * AOP 切面织入插件
+ * 在方法被添加到调用图时,检查是否匹配切点表达式,如果匹配则织入通知方法
+ */
+public class AspectPlugin implements Plugin {
+
+    private static final Logger logger = LogManager.getLogger(AspectPlugin.class);
+
+    private Solver solver;
+
+    // 从 AspectAnalysis 中获取所有已解析的切面类
+    private final List<AspectClass> aspects = World.get().getResult(AspectAnalysis.ID);
+
+    // 避免重复处理同一个方法
+    private final Map<JMethod, Boolean> processedMethods = new HashMap<>();
+
+    @Override
+    public void setSolver(Solver solver) {
+        this.solver = solver;
+    }
+
+    @Override
+    public void onNewCSMethod(CSMethod csMethod) {
+        JMethod targetMethod = csMethod.getMethod();
+
+        if (processedMethods.containsKey(targetMethod)) {
+            return;
+        }
+        processedMethods.put(targetMethod, true);
+
+        // 遍历所有切面类
+        for (AspectClass aspect : aspects) {
+            weaveAspectForMethod(csMethod, aspect);
+        }
+    }
+
+    /**
+     * 为指定方法织入切面
+     * 遍历切面的所有切点,检查方法是否匹配,如果匹配则织入通知方法
+     */
+    private void weaveAspectForMethod(CSMethod csMethod, AspectClass aspect) {
+        JMethod currMethod = csMethod.getMethod();
+        Context context = csMethod.getContext();
+        CSManager csManager = solver.getCSManager();
+
+        // 遍历切面中的所有切点
+        for (var entry : aspect.getPointcutMethodMap().entrySet()) {
+            Pointcut pointcut = entry.getKey();
+            List<AspectMethod> aspectMethods = entry.getValue();
+
+            // 使用 PointcutMatcher 检查当前方法是否匹配切点
+            if (!PointcutMatcher.matches(pointcut, currMethod, aspect)) {
+                continue;
+            }
+
+            logger.info("方法 {} 匹配切点: {}",
+                currMethod.getSignature(), pointcut.getExpression());
+
+            // 为匹配的切点织入所有通知方法
+            for (AspectMethod aspectMethod : aspectMethods) {
+                weaveAdvice(csMethod, aspectMethod, aspect, context, csManager);
+            }
+        }
+    }
+    /**
+     * 织入通知方法
+     * 创建虚拟调用边,将通知方法加入调用图
+     */
+    private void weaveAdvice(CSMethod csTargetMethod, AspectMethod aspectMethod,
+                             AspectClass aspect, Context context, CSManager csManager) {
+        JMethod adviceMethod = aspectMethod.getMethod();
+
+        logger.info("织入切面: {} -> 通知类型: {} -> 目标方法: {}",
+            aspect.getjClass().getName(),
+            aspectMethod.getAdviceType(),
+            csTargetMethod.getMethod().getSignature());
+
+        // 创建虚拟调用点
+        CSCallSite virtualCallSite = createVirtualCallSite(csTargetMethod, aspectMethod, context, csManager);
+
+        // 选择上下文并创建 CSMethod
+        Context adviceContext = solver.getContextSelector().selectContext(virtualCallSite, adviceMethod);
+        CSMethod csAdviceMethod = csManager.getCSMethod(adviceContext, adviceMethod);
+
+        // 添加 AOP 调用边
+        AOPEdge aopEdge = new AOPEdge(virtualCallSite, csAdviceMethod, aspectMethod.getAdviceType());
+        solver.addCallEdge(aopEdge);
+        Set<CSCallSite> callersOf = solver.getCallGraph().getCallersOf(csTargetMethod);
+
+        solver.addCSMethod(csAdviceMethod);
+    }
+
+
+    /**
+     * 创建虚拟调用点
+     * 用于表示从目标方法到通知方法的调用关系
+     */
+    private CSCallSite createVirtualCallSite(CSMethod csTargetMethod, AspectMethod aspectMethod,
+                                             Context context, CSManager csManager) {
+        Invoke virtualInvoke = AOPInvokeFactory.createVirtualInvoke(
+            csTargetMethod.getMethod(), aspectMethod);
+        return csManager.getCSCallSite(context, virtualInvoke);
+    }
+
+    @Override
+    public void onNewCallEdge(Edge<CSCallSite, CSMethod> edge) {
+        if (edge instanceof AOPEdge aopEdge) {
+            logger.info("✓ 处理 AOP 调用边: {} -> {}, 通知类型: {}",
+                edge.getCallSite().getCallSite().getContainer().getSignature(),
+                edge.getCallee().getMethod().getSignature(),
+                aopEdge.getAdviceType());
+
+            // AOP 通知方法作为新的分析入口
+            CSMethod csAdviceMethod = edge.getCallee();
+            // 为通知方法提供入口对象
+            provideEntryObjectsForAdvice(csAdviceMethod, aopEdge);
+        }
+    }
+
+    /**
+     * 为通知方法提供入口对象
+     * 根据通知类型和切点信息,为通知方法的参数提供适当的对象
+     */
+    private void provideEntryObjectsForAdvice(CSMethod csAdviceMethod, AOPEdge aopEdge) {
+        JMethod adviceMethod = csAdviceMethod.getMethod();
+        Context context = csAdviceMethod.getContext();
+        IR ir = adviceMethod.getIR();
+
+        // 处理 this 对象(如果通知方法不是静态的)
+        if (!adviceMethod.isStatic()) {
+            // 通知方法的 this 指向切面实例
+            // 可以从 heapModel 获取切面对象
+            Obj aspectObj = solver.getHeapModel().getMockObj(
+                () -> "AspectObj:" + adviceMethod.getDeclaringClass().getName(),
+                adviceMethod,
+                adviceMethod.getDeclaringClass().getType(),
+                adviceMethod
+            );
+            solver.addVarPointsTo(context, ir.getThis(), context, aspectObj);
+        }
+
+        // 处理 JoinPoint 参数(如果有)
+        // 通常通知方法的第一个参数是 JoinPoint 或 ProceedingJoinPoint
+        if (adviceMethod.getParamCount() > 0) {
+            for (int i = 0; i < adviceMethod.getParamCount(); i++) {
+                Var param = ir.getParam(i);
+                Type paramType = param.getType();
+
+                // 为 JoinPoint 类型的参数提供模拟对象
+                if (isJoinPointType(paramType)) {
+                    Obj joinPointObj = solver.getHeapModel().getMockObj(
+                        () -> "JoinPoint:" + aopEdge.getCallSite().getCallSite().getContainer().getSignature(),
+                        adviceMethod,
+                        paramType,
+                        adviceMethod
+                    );
+                    solver.addVarPointsTo(context, param, context, joinPointObj);
+
+                    logger.debug("为通知方法 {} 的参数 {} 提供 JoinPoint 对象",
+                        adviceMethod.getSignature(), i);
+                }
+            }
+        }
+    }
+
+    /**
+     * 检查类型是否为 JoinPoint 相关类型
+     */
+    private boolean isJoinPointType(Type type) {
+        if (!(type instanceof ClassType classType)) {
+            return false;
+        }
+        String typeName = classType.getName();
+        return typeName.equals("org.aspectj.lang.JoinPoint") ||
+            typeName.equals("org.aspectj.lang.ProceedingJoinPoint");
+    }
+
+
+    @Override
+    public void onFinish() {
+        CallGraph<CSCallSite, CSMethod> callGraph = solver.getCallGraph();
+        logger.info("1");
+    }
+}
