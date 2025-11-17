@@ -25,7 +25,9 @@ application {
     mainClass.set("org.example.Main")
 }
 
-val taieVersion = "0.5.2-SNAPSHOT" // or the latest version "0.5.2-SNAPSHOT"
+val taieVersion = "0.5.1" // or the latest version "0.5.2-SNAPSHOT"
+
+//val taieVersion = "0.5.2-SNAPSHOT" // or the latest version "0.5.2-SNAPSHOT"
 
 tasks {
     jar {

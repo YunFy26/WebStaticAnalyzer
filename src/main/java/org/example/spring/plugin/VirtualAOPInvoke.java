@@ -1,17 +1,14 @@
-package org.example.spring.plugin.aop;
+package org.example.spring.plugin;
 
 import org.example.spring.analysis.aop.AspectMethod.AdviceType;
-import pascal.taie.ir.exp.InvokeExp;
 import pascal.taie.ir.exp.InvokeStatic;
 import pascal.taie.ir.exp.RValue;
-import pascal.taie.ir.exp.Var;
 import pascal.taie.ir.exp.ExpVisitor;
 import pascal.taie.ir.proginfo.MethodRef;
 import pascal.taie.ir.stmt.Invoke;
 import pascal.taie.language.classes.JMethod;
 
 import java.util.Collections;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -22,8 +19,8 @@ public class VirtualAOPInvoke extends Invoke {
 
     private final AdviceType adviceType;
 
-    public VirtualAOPInvoke(JMethod targetMethod, JMethod adviceMethod, AdviceType adviceType) {
-        super(targetMethod, new VirtualInvokeExp(adviceMethod.getRef()), null);
+    public VirtualAOPInvoke(JMethod container, JMethod adviceMethod, AdviceType adviceType) {
+        super(container, new VirtualInvokeExp(adviceMethod.getRef()), null);
         this.adviceType = adviceType;
     }
 

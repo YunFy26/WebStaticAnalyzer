@@ -1,4 +1,4 @@
-package org.example.spring.plugin.aop;
+package org.example.spring.plugin;
 
 import org.example.spring.analysis.aop.AspectMethod;
 import pascal.taie.language.classes.JMethod;
@@ -16,3 +16,4 @@ public class AOPInvokeFactory {
         return new VirtualAOPInvoke(container, aspectMethod.getMethod(), aspectMethod.getAdviceType());
     }
 }
+

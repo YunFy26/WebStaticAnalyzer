@@ -26,8 +26,6 @@ public class BeanAnalysis extends ProgramAnalysis {
 
     private static final Logger logger = LogManager.getLogger(BeanAnalysis.class);
 
-    private final Set<BeanInfo> beanInfoSet = new HashSet<>();
-
     private final Collection<BeanClass> beans = new HashSet<>();
 
     private final List<JClass> applicationClasses;
@@ -113,13 +111,11 @@ public class BeanAnalysis extends ProgramAnalysis {
     private void processConfigurationClass(JClass appClass) {
         appClass.getDeclaredMethods().forEach(method -> {
             if (method.hasAnnotation(BeanConfigRules.BEAN)) {
-                if (method.hasAnnotation(BeanConfigRules.BEAN)) {
-                    Collection<JClass> jClasses = processBeanMethod(method);
-                    jClasses.forEach(jClass -> {
-                        BeanClass beanClass = BeanClassInitializer.createBeanFromMethod(method, jClass);
-                        beans.add(beanClass);
-                    });
-                }
+                Collection<JClass> jClasses = processBeanMethod(method);
+                jClasses.forEach(jClass -> {
+                    BeanClass beanClass = BeanClassInitializer.createBeanFromMethod(method, jClass);
+                    beans.add(beanClass);
+                });
             }
         });
     }

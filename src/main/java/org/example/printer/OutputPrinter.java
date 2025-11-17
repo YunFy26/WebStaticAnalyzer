@@ -36,7 +36,8 @@ public class OutputPrinter {
         PointerAnalysisResult pointerAnalysisResult = World.get().getResult(PointerAnalysis.ID);
         CallGraph<CSCallSite, CSMethod> csCallGraph = pointerAnalysisResult.getCSCallGraph();
 //        CallGraph<Invoke, JMethod> callGraph = World.get().getResult(CallGraphBuilder.ID);
-        CallGraphPrinter callGraphPrinter = new CallGraphPrinter(csCallGraph);
+//        CallGraphPrinter callGraphPrinter = new CallGraphPrinter(csCallGraph);
+        CallGraphPrinter callGraphPrinter = new CallGraphPrinter();
         csCallGraph.entryMethods().forEach(csMethod -> {
             try {
                 callGraphPrinter.generateDotFile(csMethod.getMethod());

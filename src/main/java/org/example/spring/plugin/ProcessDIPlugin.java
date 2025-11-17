@@ -70,21 +70,6 @@ public class ProcessDIPlugin implements Plugin {
         this.contextSelector = solver.getContextSelector();
     }
 
-    /**
-     * 在pta开始前，添加入口点
-     */
-//    @Override
-//    public void onStart() {
-//        // 增加入口点
-//        for (ControllerClass controllerClass: routerAnalysis){
-//            List<RouterMethod> routerMethods = controllerClass.getRouterMethods();
-//            for (RouterMethod routerMethod: routerMethods) {
-//                // TODO: Mock parameter for taint analysis
-//                solver.addEntryPoint(new EntryPoint(routerMethod.getJMethod(), EmptyParamProvider.get()));
-//            }
-//        }
-//    }
-
     @Override
     public void onNewCSMethod(CSMethod csMethod) {
         JMethod jMethod = csMethod.getMethod();

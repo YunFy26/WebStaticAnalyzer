@@ -31,14 +31,6 @@ public class AspectAnalysis extends ProgramAnalysis {
 
     private final List<AspectClass> aspectClasses = new ArrayList<>();
 
-    private final Map<JMethod, List<AspectWeaving>> weavingMap = new HashMap<>();
-
-    private static final Map<String, Pointcut.PointcutType> POINTCUT_TYPE_MAP = Map.of(
-        AspectRules.POINTCUT_TYPE_EXECUTE, Pointcut.PointcutType.EXECUTION,
-        AspectRules.POINTCUT_TYPE_WITHIN, Pointcut.PointcutType.WITHIN,
-        AspectRules.POINTCUT_TYPE_ANNOTATION, Pointcut.PointcutType.ANNOTATION
-    );
-
     public AspectAnalysis(AnalysisConfig config) {
         super(config);
         this.hierarchy = World.get().getClassHierarchy();

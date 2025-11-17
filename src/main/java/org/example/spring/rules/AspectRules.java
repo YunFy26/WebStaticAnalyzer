@@ -31,10 +31,4 @@ public class AspectRules {
     // 切面配置注解
     public static final String ENABLE_ASPECTJ_AUTO_PROXY = "org.springframework.context.annotation.EnableAspectJAutoProxy";
 
-    // 切点类型
-    public static final String POINTCUT_TYPE_EXECUTE = "@execute";
-
-    public static final String POINTCUT_TYPE_WITHIN = "@within";
-
-    public static final String POINTCUT_TYPE_ANNOTATION = "@annotation";
 }

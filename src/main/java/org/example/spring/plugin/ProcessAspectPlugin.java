@@ -1,7 +1,8 @@
-package org.example.spring.plugin.aop;
+package org.example.spring.plugin;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.printer.aop.AOPEdgesToFile;
 import org.example.spring.analysis.AspectAnalysis;
 import org.example.spring.analysis.aop.AspectClass;
 import org.example.spring.analysis.aop.AspectMethod;
@@ -27,14 +28,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * AOP 切面织入插件
  * 在方法被添加到调用图时,检查是否匹配切点表达式,如果匹配则织入通知方法
  */
-public class AspectPlugin implements Plugin {
+public class ProcessAspectPlugin implements Plugin {
 
-    private static final Logger logger = LogManager.getLogger(AspectPlugin.class);
+    private static final Logger logger = LogManager.getLogger(ProcessAspectPlugin.class);
 
     private Solver solver;
 
@@ -83,8 +85,8 @@ public class AspectPlugin implements Plugin {
                 continue;
             }
 
-            logger.info("方法 {} 匹配切点: {}",
-                currMethod.getSignature(), pointcut.getExpression());
+//            logger.info("方法 {} 匹配切点: {}",
+//                currMethod.getSignature(), pointcut.getExpression());
 
             // 为匹配的切点织入所有通知方法
             for (AspectMethod aspectMethod : aspectMethods) {
@@ -100,10 +102,10 @@ public class AspectPlugin implements Plugin {
                              AspectClass aspect, Context context, CSManager csManager) {
         JMethod adviceMethod = aspectMethod.getMethod();
 
-        logger.info("织入切面: {} -> 通知类型: {} -> 目标方法: {}",
-            aspect.getjClass().getName(),
-            aspectMethod.getAdviceType(),
-            csTargetMethod.getMethod().getSignature());
+//        logger.info("织入切面: {} -> 通知类型: {} -> 目标方法: {}",
+//            aspect.getjClass().getName(),
+//            aspectMethod.getAdviceType(),
+//            csTargetMethod.getMethod().getSignature());
 
         // 创建虚拟调用点
         CSCallSite virtualCallSite = createVirtualCallSite(csTargetMethod, aspectMethod, context, csManager);
@@ -115,9 +117,9 @@ public class AspectPlugin implements Plugin {
         // 添加 AOP 调用边
         AOPEdge aopEdge = new AOPEdge(virtualCallSite, csAdviceMethod, aspectMethod.getAdviceType());
         solver.addCallEdge(aopEdge);
-        Set<CSCallSite> callersOf = solver.getCallGraph().getCallersOf(csTargetMethod);
-
-        solver.addCSMethod(csAdviceMethod);
+//        Set<CSCallSite> callersOf = solver.getCallGraph().getCallersOf(csTargetMethod);
+//
+//        solver.addCSMethod(csAdviceMethod);
     }
 
 
@@ -132,20 +134,15 @@ public class AspectPlugin implements Plugin {
         return csManager.getCSCallSite(context, virtualInvoke);
     }
 
-    @Override
-    public void onNewCallEdge(Edge<CSCallSite, CSMethod> edge) {
-        if (edge instanceof AOPEdge aopEdge) {
-            logger.info("✓ 处理 AOP 调用边: {} -> {}, 通知类型: {}",
-                edge.getCallSite().getCallSite().getContainer().getSignature(),
-                edge.getCallee().getMethod().getSignature(),
-                aopEdge.getAdviceType());
-
-            // AOP 通知方法作为新的分析入口
-            CSMethod csAdviceMethod = edge.getCallee();
-            // 为通知方法提供入口对象
-            provideEntryObjectsForAdvice(csAdviceMethod, aopEdge);
-        }
-    }
+//    @Override
+//    public void onNewCallEdge(Edge<CSCallSite, CSMethod> edge) {
+//        if (edge instanceof AOPEdge aopEdge) {
+//            logger.info("✓ 处理 AOP 调用边: {} -> {}, 通知类型: {}",
+//                edge.getCallSite().getCallSite().getContainer().getSignature(),
+//                edge.getCallee().getMethod().getSignature(),
+//                aopEdge.getAdviceType());
+//        }
+//    }
 
     /**
      * 为通知方法提供入口对象
@@ -186,8 +183,8 @@ public class AspectPlugin implements Plugin {
                     );
                     solver.addVarPointsTo(context, param, context, joinPointObj);
 
-                    logger.debug("为通知方法 {} 的参数 {} 提供 JoinPoint 对象",
-                        adviceMethod.getSignature(), i);
+//                    logger.debug("为通知方法 {} 的参数 {} 提供 JoinPoint 对象",
+//                        adviceMethod.getSignature(), i);
                 }
             }
         }
@@ -205,10 +202,9 @@ public class AspectPlugin implements Plugin {
             typeName.equals("org.aspectj.lang.ProceedingJoinPoint");
     }
 
-
     @Override
     public void onFinish() {
         CallGraph<CSCallSite, CSMethod> callGraph = solver.getCallGraph();
-        logger.info("1");
+        AOPEdgesToFile.writeAOPEdgesToFile(callGraph);
     }
 }

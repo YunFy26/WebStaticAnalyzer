@@ -1,10 +1,9 @@
-package org.example.spring.plugin.aop;
+package org.example.spring.plugin;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.spring.analysis.aop.AspectClass;
 import org.example.spring.analysis.aop.Pointcut;
-import org.example.spring.plugin.AspectHelper;
 import pascal.taie.language.classes.JClass;
 import pascal.taie.language.classes.JMethod;
 

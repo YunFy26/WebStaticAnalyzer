@@ -2,13 +2,18 @@ optionsFile: null
 printHelp: false
 # WebGoat libs
 classPath :
-  - WebGoat/BOOT-INF/lib
+#  - WebGoat/BOOT-INF/lib
+  - /Users/yuntsy/My/Projects/Java/SpringTarget
+#  - /Users/yuntsy/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.44/tomcat-embed-core-10.1.44.jar
 #  - /Users/yuntsy/My/Projects/Java/SpringTest/build/libs/BOOT-INF/lib
 #  - /Users/yuntsy/My/Projects/Java/Analyzed/BOOT-INF/lib
 # appClass
-appClassPath: [WebGoat/BOOT-INF/classes]
-#appClassPath: [/Users/yuntsy/My/Projects/Java/SpringTest/build/classes/java/main]
-#appClassPath: [/Users/yuntsy/My/Projects/Java/Analyzed/BOOT-INF/classes]
+# WebGoat
+#appClassPath: [WebGoat/BOOT-INF/classes]
+# SpringTarget
+appClassPath: [/Users/yuntsy/My/Projects/Java/SpringTarget/target/classes]
+# 入口参数Mock测试
+#appClassPath: [/Users/yuntsy/My/Projects/Java/SpringTarget/target/classes, /Users/yuntsy/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.44/tomcat-embed-core-10.1.44.jar]
 mainClass:
 inputClasses: []
 javaVersion: 17
@@ -26,10 +31,15 @@ analyses:
   routerAnalysis: ""
   beanAnalysis: ""
   injectPointsAnalysis: ""
+  aspectAnalysis: ""
   cg: ""
 #  cfg: ""
 #  icfg: ""
-  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin]"
+#  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin,
+#     org.example.spring.plugin.ProcessEntryPlugin]"
+  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin,
+   org.example.spring.plugin.ProcessEntryPlugin,
+    org.example.spring.plugin.ProcessAspectPlugin]"
 onlyGenPlan: false
 keepResult:
   - $KEEP-ALL

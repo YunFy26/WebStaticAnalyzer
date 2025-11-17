@@ -181,6 +181,11 @@
   id: injectPointsAnalysis
   requires: [ routerAnalysis, beanAnalysis]
 
+- description: aspect analysis
+  analysisClass: org.example.spring.analysis.AspectAnalysis
+  id: aspectAnalysis
+  requires: []
+
 #- description: extract call flows (including control flows) from every entry points
 #  analysisClass: org.example.spring.SplitIcfgFlows
 #  id: splitIcfgFlows
