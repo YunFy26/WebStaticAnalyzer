@@ -34,40 +34,312 @@ public class CallGraphPrinter {
 
     public String dotContent(JMethod entryMethod) {
         Set<String> visited = new HashSet<>();
-        Set<String> addedEdges = new HashSet<>();
-        StringBuilder nodesContent = new StringBuilder();
-        StringBuilder edgesContent = new StringBuilder();
-        StringBuilder rankContent = new StringBuilder();
 
-        // 用于收集不同类型的方法，以便分层显示
-        Map<String, Set<String>> rankGroups = new HashMap<>();
-        rankGroups.put("entry", new HashSet<>());
-        rankGroups.put("target", new HashSet<>());
-        rankGroups.put("before", new HashSet<>());
-        rankGroups.put("around", new HashSet<>());
-        rankGroups.put("after", new HashSet<>());
-        rankGroups.put("afterReturning", new HashSet<>());
-        rankGroups.put("afterThrowing", new HashSet<>());
-        rankGroups.put("utility", new HashSet<>());
+        Map<JMethod, NodeInfo> nodeInfoMap = new HashMap<>();
+        Map<String, EdgeInfo> edgeInfoMap = new HashMap<>();
+
+        collectGraphInfo(entryMethod, visited, nodeInfoMap, edgeInfoMap);
+
+        Map<JMethod, Integer> depthMap = calculateDepth(entryMethod, edgeInfoMap);
+
+        Map<Integer, List<JMethod>> depthGroups = new TreeMap<>();
+        Map<Integer, List<JMethod>> aopDepthGroups = new TreeMap<>();
+
+        for (Map.Entry<JMethod, NodeInfo> entry : nodeInfoMap.entrySet()) {
+            JMethod method = entry.getKey();
+            NodeInfo info = entry.getValue();
+
+            if (info.isAOPMethod) {
+                int targetDepth = depthMap.getOrDefault(method, 0);
+                aopDepthGroups.computeIfAbsent(targetDepth, k -> new ArrayList<>()).add(method);
+            } else {
+                int depth = depthMap.getOrDefault(method, 0);
+                depthGroups.computeIfAbsent(depth, k -> new ArrayList<>()).add(method);
+            }
+        }
 
         StringBuilder dotContent = new StringBuilder("digraph G {\n");
-        dotContent.append("rankdir=TB;\n");  // 从上到下布局
-        dotContent.append("node [color=\".3 .2 1.0\",shape=box,style=filled];\n");
-        dotContent.append("edge [];\n");
+        dotContent.append("  rankdir=TB;\n");
+        dotContent.append("  ranksep=1.0;\n");
+        dotContent.append("  nodesep=0.5;\n");
+        dotContent.append("  node [shape=box, style=filled, fillcolor=\"lightblue\"];\n");
+        dotContent.append("  edge [color=\"black\"];\n\n");
 
-        explore(entryMethod, visited, addedEdges, nodesContent, edgesContent, rankGroups);
+        // 改进的图例 - 放在顶部
+        dotContent.append("  // Legend\n");
+        dotContent.append("  subgraph cluster_legend {\n");
+        dotContent.append("    label=\"Legend\";\n");
+        dotContent.append("    style=dashed;\n");
+        dotContent.append("    fontsize=10;\n");
+        dotContent.append("    rank=source;\n");  // 改为顶部
+        dotContent.append("    node [shape=plaintext];\n");
+        dotContent.append("    legend [label=<\n");
+        dotContent.append("      <TABLE BORDER=\"0\" CELLBORDER=\"1\" CELLSPACING=\"0\" CELLPADDING=\"4\">\n");
+        dotContent.append("        <TR><TD BGCOLOR=\"lightblue\"><B>Business Logic</B></TD><TD>Black Solid Line</TD></TR>\n");
+        dotContent.append("        <TR><TD BGCOLOR=\"lightyellow\"><B>AOP Advice</B></TD><TD><FONT COLOR=\"red\">Red Dashed Line (Weaving)</FONT></TD></TR>\n");
+        dotContent.append("        <TR><TD COLSPAN=\"2\"><FONT COLOR=\"#FF8C00\">Orange Solid Line (AOP Internal)</FONT></TD></TR>\n");
+        dotContent.append("      </TABLE>\n");
+        dotContent.append("    >];\n");
+        dotContent.append("  }\n\n");
 
-        // 添加节点
-        dotContent.append(nodesContent);
+        // AOP方法子图
+        if (!aopDepthGroups.isEmpty()) {
+            dotContent.append("  subgraph cluster_aop {\n");
+            dotContent.append("    style=invis;\n");
+            for (List<JMethod> methods : aopDepthGroups.values()) {
+                for (JMethod method : methods) {
+                    String label = getMethodLabel(method);
+                    dotContent.append("    ").append(label)
+                        .append(" [label=\"").append(escapeLabel(method.getSignature()))
+                        .append("\", fillcolor=\"lightyellow\"];\n");
+                }
+            }
+            dotContent.append("  }\n\n");
+        }
 
-        // 添加排序约束
-        dotContent.append(generateRankConstraints(rankGroups));
+        // 主调用链节点
+        for (Map.Entry<Integer, List<JMethod>> entry : depthGroups.entrySet()) {
+            int depth = entry.getKey();
+            List<JMethod> methods = entry.getValue();
 
-        // 添加边
-        dotContent.append(edgesContent);
+            dotContent.append("  // Depth ").append(depth).append("\n");
+            dotContent.append("  { rank=same; ");
+            for (JMethod method : methods) {
+                String label = getMethodLabel(method);
+                dotContent.append(label).append("; ");
+            }
+            dotContent.append("}\n");
+
+            for (JMethod method : methods) {
+                String label = getMethodLabel(method);
+                dotContent.append("  ").append(label)
+                    .append(" [label=\"").append(escapeLabel(method.getSignature())).append("\"];\n");
+            }
+            dotContent.append("\n");
+        }
+
+        // 强制层级顺序
+        dotContent.append("  // Force ranking order\n");
+        List<Integer> depths = new ArrayList<>(depthGroups.keySet());
+        for (int i = 0; i < depths.size() - 1; i++) {
+            List<JMethod> currentLevel = depthGroups.get(depths.get(i));
+            List<JMethod> nextLevel = depthGroups.get(depths.get(i + 1));
+            if (!currentLevel.isEmpty() && !nextLevel.isEmpty()) {
+                dotContent.append("  ").append(getMethodLabel(currentLevel.get(0)))
+                    .append(" -> ").append(getMethodLabel(nextLevel.get(0)))
+                    .append(" [style=invis, weight=100];\n");
+            }
+        }
+        dotContent.append("\n");
+
+        // 生成边
+        dotContent.append("  // Edges\n");
+        Set<String> addedEdges = new HashSet<>();
+
+        for (EdgeInfo edgeInfo : edgeInfoMap.values()) {
+            String callerLabel = getMethodLabel(edgeInfo.caller);
+            String calleeLabel = getMethodLabel(edgeInfo.callee);
+
+            String displayEdgeKey = callerLabel + " -> " + calleeLabel;
+            if (edgeInfo.isAOP) {
+                displayEdgeKey += "_AOP_" + edgeInfo.adviceType;
+            } else {
+                displayEdgeKey += "_" + getCallSiteLabel(edgeInfo.callSite);
+            }
+
+            if (addedEdges.contains(displayEdgeKey)) {
+                continue;
+            }
+            addedEdges.add(displayEdgeKey);
+
+            dotContent.append("  ").append(callerLabel)
+                .append(" -> ")
+                .append(calleeLabel);
+
+            if (edgeInfo.isAOP) {
+                dotContent.append(" [label=\"[AOP-")
+                    .append(edgeInfo.adviceType)
+                    .append("]\", color=red, style=dashed, fontcolor=red, penwidth=2, constraint=false];\n");
+            } else {
+                boolean callerIsAOP = isAOPMethodByName(edgeInfo.caller);
+
+                if (callerIsAOP) {
+                    dotContent.append(" [label=\"")
+                        .append(escapeLabel(getCallSiteLabel(edgeInfo.callSite)))
+                        .append("\", color=\"#FF8C00\", fontcolor=\"#FF8C00\", penwidth=1.5, weight=5];\n");
+                } else {
+                    dotContent.append(" [label=\"")
+                        .append(escapeLabel(getCallSiteLabel(edgeInfo.callSite)))
+                        .append("\", color=\"black\", weight=10];\n");
+                }
+            }
+        }
 
         dotContent.append("}\n");
         return dotContent.toString();
+    }
+
+    private void collectGraphInfo(JMethod currentMethod, Set<String> visited,
+                                  Map<JMethod, NodeInfo> nodeInfoMap,
+                                  Map<String, EdgeInfo> edgeInfoMap) {
+        String currentMethodSignature = currentMethod.getSignature();
+        if (visited.contains(currentMethodSignature)) {
+            return;
+        }
+        visited.add(currentMethodSignature);
+
+        boolean isAOPMethod = isAOPMethodByName(currentMethod);
+        nodeInfoMap.put(currentMethod, new NodeInfo(isAOPMethod));
+
+        Set<CSMethod> csMethods = ptaResult.getCSCallGraph().reachableMethods()
+            .filter(csMethod -> csMethod.getMethod().equals(currentMethod))
+            .collect(Collectors.toSet());
+
+        for (CSMethod csMethod : csMethods) {
+            Set<CSCallSite> callSites = callGraph.getCallSitesIn(csMethod);
+
+            for (CSCallSite callSite : callSites) {
+                callGraph.edgesOutOf(callSite).forEach(edge -> {
+                    JMethod callee = edge.getCallee().getMethod();
+
+                    if (shouldSkipMethod(callee)) {
+                        return;
+                    }
+
+                    boolean isAOPEdge = isAOPEdge(edge);
+                    String adviceType = isAOPEdge ? getAOPAdviceType(edge) : null;
+
+                    String edgeKey = createEdgeKey(currentMethod, callee, callSite, isAOPEdge, adviceType);
+
+                    if (!edgeInfoMap.containsKey(edgeKey)) {
+                        edgeInfoMap.put(edgeKey, new EdgeInfo(currentMethod, callee, isAOPEdge, adviceType, callSite));
+                    }
+
+                    collectGraphInfo(callee, visited, nodeInfoMap, edgeInfoMap);
+                });
+            }
+
+            callGraph.reachableMethods().forEach(targetCSMethod -> {
+                callGraph.edgesInTo(targetCSMethod).forEach(edge -> {
+                    CSMethod caller = callGraph.getContainerOf(edge.getCallSite());
+                    if (caller != null && caller.getMethod().equals(currentMethod)) {
+                        boolean isAOPEdge = isAOPEdge(edge);
+                        if (!isAOPEdge) {
+                            return;
+                        }
+
+                        JMethod callee = edge.getCallee().getMethod();
+
+                        if (shouldSkipMethod(callee)) {
+                            return;
+                        }
+
+                        String adviceType = getAOPAdviceType(edge);
+
+                        String edgeKey = createEdgeKey(currentMethod, callee, edge.getCallSite(), true, adviceType);
+
+                        if (!edgeInfoMap.containsKey(edgeKey)) {
+                            edgeInfoMap.put(edgeKey, new EdgeInfo(currentMethod, callee, true, adviceType, edge.getCallSite()));
+                        }
+
+                        collectGraphInfo(callee, visited, nodeInfoMap, edgeInfoMap);
+                    }
+                });
+            });
+        }
+    }
+
+    private boolean shouldSkipMethod(JMethod method) {
+        String className = method.getDeclaringClass().getName();
+        String methodName = method.getName();
+
+        if (className.startsWith("java.lang.StringBuilder") ||
+            className.startsWith("java.lang.StringBuffer")) {
+            return true;
+        }
+
+        if (className.equals("java.lang.String") &&
+            (methodName.equals("toString") || methodName.equals("valueOf"))) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private String createEdgeKey(JMethod caller, JMethod callee, CSCallSite callSite,
+                                 boolean isAOP, String adviceType) {
+        StringBuilder key = new StringBuilder();
+        key.append(caller.getSignature())
+            .append("->")
+            .append(callee.getSignature());
+
+        if (isAOP) {
+            key.append("_AOP_").append(adviceType);
+        } else {
+            key.append("_").append(callSite.getCallSite().toString());
+        }
+
+        return key.toString();
+    }
+
+    private Map<JMethod, Integer> calculateDepth(JMethod entryMethod, Map<String, EdgeInfo> edgeInfoMap) {
+        Map<JMethod, Integer> depthMap = new HashMap<>();
+        Queue<JMethod> queue = new LinkedList<>();
+
+        depthMap.put(entryMethod, 0);
+        queue.offer(entryMethod);
+
+        while (!queue.isEmpty()) {
+            JMethod current = queue.poll();
+            int currentDepth = depthMap.get(current);
+
+            for (EdgeInfo edgeInfo : edgeInfoMap.values()) {
+                if (edgeInfo.caller.equals(current)) {
+                    JMethod callee = edgeInfo.callee;
+
+                    int newDepth;
+                    if (edgeInfo.isAOP) {
+                        boolean calleeIsAOP = isAOPMethodByName(callee);
+                        if (calleeIsAOP) {
+                            newDepth = currentDepth;
+                        } else {
+                            boolean callerIsAOP = isAOPMethodByName(current);
+                            newDepth = callerIsAOP ? currentDepth + 2 : currentDepth + 1;
+                        }
+                    } else {
+                        newDepth = currentDepth + 1;
+                    }
+
+                    if (!depthMap.containsKey(callee) || depthMap.get(callee) > newDepth) {
+                        depthMap.put(callee, newDepth);
+                        queue.offer(callee);
+                    }
+                }
+            }
+        }
+
+        return depthMap;
+    }
+
+    private boolean isAOPMethodByName(JMethod method) {
+        String methodName = method.getName().toLowerCase();
+        String className = method.getDeclaringClass().getName().toLowerCase();
+
+        return methodName.contains("before") || methodName.contains("after") ||
+            methodName.contains("around") || className.contains("aspect");
+    }
+
+    private String getMethodLabel(JMethod method) {
+        int methodIndex = methodIndexer.getIndex(method);
+        return "\"" + methodIndex + "\"";
+    }
+
+    /**
+     * 转义DOT label中的特殊字符
+     * 注意：在普通字符串label中，< 和 > 不需要转义
+     */
+    private String escapeLabel(String label) {
+        return label.replace("\"", "\\\"");
     }
 
     public void generateDotFile(JMethod entryMethod) throws IOException {
@@ -84,219 +356,6 @@ public class CallGraphPrinter {
             ')' + ".dot";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(directoryPath + '/' + fileName))) {
             writer.write(dotContent);
-        }
-    }
-
-    private void explore(JMethod currentMethod, Set<String> visited, Set<String> addedEdges,
-                         StringBuilder nodesContent, StringBuilder edgesContent,
-                         Map<String, Set<String>> rankGroups) {
-        String currentMethodSignature = currentMethod.getSignature();
-        if (visited.contains(currentMethodSignature)) {
-            return;
-        }
-        visited.add(currentMethodSignature);
-
-        // 获取当前方法的所有 CSMethod
-        Set<CSMethod> csMethods = ptaResult.getCSCallGraph().reachableMethods()
-            .filter(csMethod -> csMethod.getMethod().equals(currentMethod))
-            .collect(Collectors.toSet());
-
-        // 使用 Map 来避免重复的边，key 为 "caller->callee"
-        Map<String, EdgeInfo> edgeInfoMap = new HashMap<>();
-
-        for (CSMethod csMethod : csMethods) {
-            // 方法1: 获取该方法内的所有调用点（普通调用边）
-            Set<CSCallSite> callSites = callGraph.getCallSitesIn(csMethod);
-
-            for (CSCallSite callSite : callSites) {
-                // 获取每个调用点的所有出边
-                callGraph.edgesOutOf(callSite).forEach(edge -> {
-                    JMethod callee = edge.getCallee().getMethod();
-
-                    // 判断是否为AOP边
-                    boolean isAOPEdge = isAOPEdge(edge);
-                    String adviceType = isAOPEdge ? getAOPAdviceType(edge) : null;
-
-                    String edgeKey = currentMethod.getSignature() + "->" + callee.getSignature() +
-                        (isAOPEdge ? "_AOP_" + adviceType : "");
-
-                    if (!edgeInfoMap.containsKey(edgeKey)) {
-                        edgeInfoMap.put(edgeKey, new EdgeInfo(currentMethod, callee, isAOPEdge, adviceType, callSite));
-                    }
-                });
-            }
-
-            // 方法2: 获取所有从当前方法出发的边（包括AOP边）
-            callGraph.reachableMethods().forEach(targetCSMethod -> {
-                JMethod targetMethod = targetCSMethod.getMethod();
-
-                // 获取所有指向目标方法的入边
-                callGraph.edgesInTo(targetCSMethod).forEach(edge -> {
-                    // 检查这条边是否从当前方法出发
-                    CSMethod caller = callGraph.getContainerOf(edge.getCallSite());
-                    if (caller != null && caller.getMethod().equals(currentMethod)) {
-                        JMethod callee = edge.getCallee().getMethod();
-
-                        // 判断是否为AOP边
-                        boolean isAOPEdge = isAOPEdge(edge);
-                        String adviceType = isAOPEdge ? getAOPAdviceType(edge) : null;
-
-                        String edgeKey = currentMethod.getSignature() + "->" + callee.getSignature() +
-                            (isAOPEdge ? "_AOP_" + adviceType : "");
-
-                        if (!edgeInfoMap.containsKey(edgeKey)) {
-                            edgeInfoMap.put(edgeKey, new EdgeInfo(currentMethod, callee, isAOPEdge, adviceType, edge.getCallSite()));
-                        }
-                    }
-                });
-            });
-        }
-
-        int methodIndex = methodIndexer.getIndex(currentMethod);
-        String currentMethodLabel = "\"" + methodIndex + "\"";
-
-        // 分类当前方法
-        classifyMethod(currentMethod, currentMethodLabel, rankGroups, edgeInfoMap);
-
-        nodesContent.append(currentMethodLabel)
-            .append(" [label=\"")
-            .append(currentMethod.getSignature())
-            .append("\"];\n");
-
-        // 按AOP执行顺序排序边
-        List<EdgeInfo> sortedEdges = new ArrayList<>(edgeInfoMap.values());
-        sortedEdges.sort((e1, e2) -> {
-            if (e1.isAOP && e2.isAOP) {
-                return getAOPOrder(e1.adviceType) - getAOPOrder(e2.adviceType);
-            } else if (e1.isAOP) {
-                return -1;
-            } else if (e2.isAOP) {
-                return 1;
-            }
-            return 0;
-        });
-
-        for (EdgeInfo edgeInfo : sortedEdges) {
-            JMethod callee = edgeInfo.callee;
-            int calleeIndex = methodIndexer.getIndex(callee);
-            String calleeMethodLabel = "\"" + calleeIndex + "\"";
-
-            String edgeKey = currentMethodLabel + " -> " + calleeMethodLabel +
-                (edgeInfo.isAOP ? "_AOP_" + edgeInfo.adviceType : "_" + edgeInfo.callSite.hashCode());
-
-            if (!addedEdges.contains(edgeKey)) {
-                edgesContent.append(currentMethodLabel)
-                    .append(" -> ")
-                    .append(calleeMethodLabel);
-
-                // 为AOP边设置不同的样式
-                if (edgeInfo.isAOP) {
-                    edgesContent.append(" [label=\"[AOP-")
-                        .append(edgeInfo.adviceType)
-                        .append("]\", color=red, style=dashed, fontcolor=red, penwidth=2");
-
-                    // 根据AOP类型设置不同的权重，影响边的布局
-                    edgesContent.append(", weight=").append(getAOPWeight(edgeInfo.adviceType));
-                    edgesContent.append("];\n");
-                } else {
-                    edgesContent.append(" [label=\"")
-                        .append(getCallSiteLabel(edgeInfo.callSite))
-                        .append("\", weight=5];\n");
-                }
-                addedEdges.add(edgeKey);
-            }
-            explore(callee, visited, addedEdges, nodesContent, edgesContent, rankGroups);
-        }
-    }
-
-    private void classifyMethod(JMethod method, String label, Map<String, Set<String>> rankGroups,
-                                Map<String, EdgeInfo> edgeInfoMap) {
-        String methodName = method.getName().toLowerCase();
-        String className = method.getDeclaringClass().getName().toLowerCase();
-
-        // 检查是否是工具类方法
-        if (className.contains("java.lang") || className.contains("java.util")) {
-            rankGroups.get("utility").add(label);
-            return;
-        }
-
-        // 检查是否是AOP advice方法
-        if (methodName.contains("before")) {
-            rankGroups.get("before").add(label);
-        } else if (methodName.contains("around")) {
-            rankGroups.get("around").add(label);
-        } else if (methodName.contains("afterreturning")) {
-            rankGroups.get("afterReturning").add(label);
-        } else if (methodName.contains("afterthrowing")) {
-            rankGroups.get("afterThrowing").add(label);
-        } else if (methodName.contains("after")) {
-            rankGroups.get("after").add(label);
-        } else {
-            // 检查是否有AOP边指向它
-            boolean hasAOPEdge = edgeInfoMap.values().stream()
-                .anyMatch(e -> e.callee.equals(method) && e.isAOP);
-
-            if (hasAOPEdge) {
-                rankGroups.get("target").add(label);
-            } else {
-                rankGroups.get("entry").add(label);
-            }
-        }
-    }
-
-    private String generateRankConstraints(Map<String, Set<String>> rankGroups) {
-        StringBuilder sb = new StringBuilder();
-
-        // 定义层级顺序
-        String[] order = {"entry", "before", "around", "target", "afterReturning", "afterThrowing", "after", "utility"};
-
-        for (String rank : order) {
-            Set<String> nodes = rankGroups.get(rank);
-            if (nodes != null && !nodes.isEmpty()) {
-                sb.append("{ rank=same; ");
-                for (String node : nodes) {
-                    sb.append(node).append("; ");
-                }
-                sb.append("}\n");
-            }
-        }
-
-        return sb.toString();
-    }
-
-    private int getAOPOrder(String adviceType) {
-        if (adviceType == null) return 999;
-        switch (adviceType) {
-            case "BEFORE":
-                return 1;
-            case "AROUND":
-                return 2;
-            case "AFTER_RETURNING":
-                return 3;
-            case "AFTER_THROWING":
-                return 4;
-            case "AFTER":
-                return 5;
-            default:
-                return 999;
-        }
-    }
-
-    private int getAOPWeight(String adviceType) {
-        if (adviceType == null) return 1;
-        switch (adviceType) {
-            case "BEFORE":
-                return 10;
-            case "AROUND":
-                return 9;
-            case "AFTER_RETURNING":
-                return 7;
-            case "AFTER_THROWING":
-                return 6;
-            case "AFTER":
-                return 5;
-            default:
-                return 1;
         }
     }
 
@@ -321,17 +380,11 @@ public class CallGraphPrinter {
         } catch (Exception e) {
             try {
                 String kindString = edge.getKind().toString();
-                if (kindString.contains("BEFORE")) {
-                    return "BEFORE";
-                } else if (kindString.contains("AFTER_RETURNING")) {
-                    return "AFTER_RETURNING";
-                } else if (kindString.contains("AFTER_THROWING")) {
-                    return "AFTER_THROWING";
-                } else if (kindString.contains("AFTER")) {
-                    return "AFTER";
-                } else if (kindString.contains("AROUND")) {
-                    return "AROUND";
-                }
+                if (kindString.contains("BEFORE")) return "BEFORE";
+                if (kindString.contains("AFTER_RETURNING")) return "AFTER_RETURNING";
+                if (kindString.contains("AFTER_THROWING")) return "AFTER_THROWING";
+                if (kindString.contains("AFTER")) return "AFTER";
+                if (kindString.contains("AROUND")) return "AROUND";
             } catch (Exception ex) {
                 // ignore
             }
@@ -348,6 +401,14 @@ public class CallGraphPrinter {
         return callSiteStr;
     }
 
+    private static class NodeInfo {
+        boolean isAOPMethod;
+
+        NodeInfo(boolean isAOPMethod) {
+            this.isAOPMethod = isAOPMethod;
+        }
+    }
+
     private static class EdgeInfo {
         JMethod caller;
         JMethod callee;
@@ -362,28 +423,6 @@ public class CallGraphPrinter {
             this.isAOP = isAOP;
             this.adviceType = adviceType;
             this.callSite = callSite;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            EdgeInfo edgeInfo = (EdgeInfo) o;
-            return isAOP == edgeInfo.isAOP &&
-                caller.equals(edgeInfo.caller) &&
-                callee.equals(edgeInfo.callee) &&
-                callSite.equals(edgeInfo.callSite) &&
-                (adviceType != null ? adviceType.equals(edgeInfo.adviceType) : edgeInfo.adviceType == null);
-        }
-
-        @Override
-        public int hashCode() {
-            int result = caller.hashCode();
-            result = 31 * result + callee.hashCode();
-            result = 31 * result + (isAOP ? 1 : 0);
-            result = 31 * result + (adviceType != null ? adviceType.hashCode() : 0);
-            result = 31 * result + callSite.hashCode();
-            return result;
         }
     }
 }
