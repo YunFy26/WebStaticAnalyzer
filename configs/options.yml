@@ -1,19 +1,17 @@
 optionsFile: null
 printHelp: false
 # WebGoat libs
-classPath :
-#  - WebGoat/BOOT-INF/lib
-  - /Users/yuntsy/My/Projects/Java/SpringTarget
-#  - /Users/yuntsy/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.44/tomcat-embed-core-10.1.44.jar
-#  - /Users/yuntsy/My/Projects/Java/SpringTest/build/libs/BOOT-INF/lib
-#  - /Users/yuntsy/My/Projects/Java/Analyzed/BOOT-INF/lib
-# appClass
-# WebGoat
-#appClassPath: [WebGoat/BOOT-INF/classes]
-# SpringTarget
-appClassPath: [/Users/yuntsy/My/Projects/Java/SpringTarget/target/classes]
-# 入口参数Mock测试
-#appClassPath: [/Users/yuntsy/My/Projects/Java/SpringTarget/target/classes, /Users/yuntsy/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.44/tomcat-embed-core-10.1.44.jar]
+classPath: []
+appClassPath:
+  - benchmarks/mogu/mogu_admin-0.0.1-SNAPSHOT/BOOT-INF/mogu_admin-0.0.1-SNAPSHOT.jar
+  - benchmarks/mogu/mogu_gateway-0.0.1-SNAPSHOT/BOOT-INF/mogu_gateway-0.0.1-SNAPSHOT.jar
+  - benchmarks/mogu/mogu_monitor-0.0.1-SNAPSHOT/BOOT-INF/mogu_monitor-0.0.1-SNAPSHOT.jar
+  - benchmarks/mogu/mogu_picture-0.0.1-SNAPSHOT/BOOT-INF/mogu_picture-0.0.1-SNAPSHOT.jar
+  - benchmarks/mogu/mogu_search-0.0.1-SNAPSHOT/BOOT-INF/mogu_search-0.0.1-SNAPSHOT.jar
+  - benchmarks/mogu/mogu_sms-0.0.1-SNAPSHOT/BOOT-INF/mogu_sms-0.0.1-SNAPSHOT.jar
+  - benchmarks/mogu/mogu_spider-0.0.1-SNAPSHOT/BOOT-INF/mogu_spider-0.0.1-SNAPSHOT.jar
+  - benchmarks/mogu/mogu_web-0.0.1-SNAPSHOT/BOOT-INF/mogu_web-0.0.1-SNAPSHOT.jar
+
 mainClass:
 inputClasses: []
 javaVersion: 17
@@ -27,19 +25,16 @@ scope: APP
 nativeModel: true
 planFile: null
 analyses:
-  ir-dumper: ;
+#  ir-dumper: ""
   routerAnalysis: ""
   beanAnalysis: ""
   injectPointsAnalysis: ""
   aspectAnalysis: ""
   cg: ""
-#  cfg: ""
-#  icfg: ""
-#  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin,
-#     org.example.spring.plugin.ProcessEntryPlugin]"
-  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin,
-   org.example.spring.plugin.ProcessEntryPlugin,
-    org.example.spring.plugin.ProcessAspectPlugin]"
+  #  cfg: ""
+  #  icfg: ""
+  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin,org.example.spring.plugin.ProcessEntryPlugin,org.example.spring.plugin.ProcessAspectPlugin]"
+#  pta: "plugins:[org.example.spring.plugin.ProcessEntryPlugin]"
 onlyGenPlan: false
 keepResult:
   - $KEEP-ALL

@@ -4,9 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.spring.analysis.di.bean.BeanClass;
 import org.example.spring.analysis.di.bean.BeanClassInitializer;
-import org.example.spring.analysis.di.bean.BeanInfo;
-import org.example.spring.rules.BeanComponentsRules;
-import org.example.spring.rules.BeanConfigRules;
+import org.example.spring.rules.*;
 import pascal.taie.World;
 import pascal.taie.analysis.ProgramAnalysis;
 import pascal.taie.config.AnalysisConfig;
@@ -35,6 +33,7 @@ public class BeanAnalysis extends ProgramAnalysis {
         BeanComponentsRules.REST_CONTROLLER,
         BeanComponentsRules.COMPONENT,
         BeanComponentsRules.SERVICE,
+        BeanComponentsRules.REPOSITORY,
         BeanComponentsRules.JSR330_NAMED
     );
 
@@ -66,13 +65,14 @@ public class BeanAnalysis extends ProgramAnalysis {
      *     <li>configuration class 中的 @Bean 方法</li>
      *     <li>JPA Entity</li> TODO
      *     <li>Mybatis</li> TODO
+     *     <li>Quartz（定时器）</li> TODO
+     *     <li>Shiro</li> TODO
      * </p>
      */
     private void extractBean() {
         applicationClasses.forEach(appClass -> {
             boolean isBeanComponent = BEAN_COMPONENTS_ANNOTATIONS.stream()
                 .anyMatch(appClass::hasAnnotation);
-
             if (isBeanComponent) {
                 BeanClass beanClass = BeanClassInitializer.createBeanClass(appClass);
                 beans.add(beanClass);
@@ -81,6 +81,29 @@ public class BeanAnalysis extends ProgramAnalysis {
             if (appClass.hasAnnotation(BeanConfigRules.CONFIGURATION)) {
                 processConfigurationClass(appClass);
             }
+
+            // MyBatis Mapper 接口
+            if (appClass.hasAnnotation(MyBatisRules.MAPPER) || appClass.getSimpleName().endsWith("Mapper")) {
+                BeanClass beanClass = BeanClassInitializer.createBeanClass(appClass);
+                beans.add(beanClass);
+            }
+
+//            // JPA Entity
+//            if (appClass.hasAnnotation(JPARules.JAKARTA_ENTITY) || appClass.hasAnnotation(JPARules.JAVAX_ENTITY)) {
+//                BeanClass beanClass = BeanClassInitializer.createBeanClass(appClass);
+//                beans.add(beanClass);
+//            }
+
+//            // Quartz  TODO
+//            JClass quartzJobType = World.get().getClassHierarchy().getClass(QuartzRules.JOB);
+//            if (quartzJobType != null && World.get().getClassHierarchy().isSubclass(appClass, quartzJobType)) {
+//                beans.add(BeanClassInitializer.createBeanClass(appClass));
+//            }
+//            // Shiro  TODO
+//            JClass shiroRealmType = World.get().getClassHierarchy().getClass(ShiroRules.REALM);
+//            if (shiroRealmType != null && World.get().getClassHierarchy().isSubclass(appClass, shiroRealmType)) {
+//                beans.add(BeanClassInitializer.createBeanClass(appClass));
+//            }
         });
     }
 

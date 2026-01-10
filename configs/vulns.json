@@ -1,0 +1,155 @@
+[
+  {
+    "vuln_name": "RCE-RemoteCodeExecution",
+    "sink_points": [
+      "java.lang.Runtime.getRuntime().exec()",
+      "java.lang.ProcessBuilder.start()",
+      "javax.script.ScriptEngine.eval()",
+      "groovy.lang.GroovyShell.evaluate()",
+      "org.python.util.PythonInterpreter.exec()"
+    ],
+    "vuln_samples": ["@Controller\n@RequestMapping(\"/exec\")\npublic class CommandExecClass {\n\n    @RequestMapping(\"/change\")\n    public String change(HttpServletRequest request) throws IOException {\n        String command = request.getParameter(\"cmd\");\n        Runtime.getRuntime().exec(cmd);\n        return cmd;\n    }\n\n}"],
+    "vuln_poc_samples": ["curl http://xxxx.xxxx/exec/change?cmd=ls"]
+  },
+  {
+    "vuln_name": "SSRF-ServerSideRequestForgery",
+    "sink_points": [
+      "java.net.URL.openConnection()",
+      "java.net.HttpURLConnection.connect()",
+      "java.net.Socket.connect()",
+      "org.apache.http.client.HttpClient.execute()"
+    ],
+    "vuln_samples": [],
+    "vuln_poc_samples": []
+  },
+  {
+    "vuln_name": "LFI-LocalFileInclusion",
+    "sink_points": [
+      "java.io.FileInputStream.read()",
+      "java.io.FileReader.read()",
+      "java.io.BufferedReader.readLine()",
+      "java.io.FileInputStream.readAllBytes()",
+      "java.io.FileInputStream.readNBytes()",
+      "java.nio.file.Files.readAllBytes()",
+      "javax.servlet.ServletContext.getResourceAsStream()",
+      "javax.servlet.ServletRequest.getRequestDispatcher().include()",
+      "javax.servlet.RequestDispatcher.include()"
+    ],
+    "vuln_samples": [],
+    "vuln_poc_samples": []
+  },
+  {
+    "vuln_name": "AFO-ArbitraryFileOverwrite",
+    "sink_points": [
+      "java.io.FileOutputStream.write()",
+      "java.io.FileWriter.write()",
+      "java.io.RandomAccessFile.write()",
+      "java.io.File.renameTo()",
+      "java.nio.file.Files.write()",
+      "java.util.zip.ZipOutputStream.putNextEntry()"
+    ],
+    "vuln_samples": [],
+    "vuln_poc_samples": []
+  },
+  {
+    "vuln_name": "SQLI-SQLInjection",
+    "sink_points": [
+      "java.sql.Statement.execute()",
+      "java.sql.Statement.executeQuery()",
+      "java.sql.Statement.executeUpdate()",
+      "javax.persistence.Query.executeUpdate()",
+      "javax.persistence.EntityManager.createNativeQuery()"
+    ],
+    "vuln_samples": [],
+    "vuln_poc_samples": []
+  },
+  {
+    "vuln_name": "XSS-CrossSiteScripting",
+    "sink_points": [
+      "javax.servlet.http.HttpServletResponse.getWriter().write()",
+      "javax.servlet.http.HttpServletResponse.getOutputStream().write()",
+      "javax.servlet.jsp.JspWriter.println()",
+      "javax.servlet.ServletOutputStream.println()",
+      "org.jsoup.Jsoup.parse()"
+    ],
+    "vuln_samples": [],
+    "vuln_poc_samples": []
+  },
+  {
+    "vuln_name": "IDOR-InsecureDirectObjectReferences",
+    "sink_points": [
+      "javax.servlet.ServletRequest.getParameter()",
+      "javax.servlet.http.HttpSession.getAttribute()",
+      "javax.servlet.ServletRequest.getAttribute()",
+      "javax.servlet.http.HttpServletRequest.getQueryString()"
+    ],
+    "vuln_samples": [],
+    "vuln_poc_samples": []
+  },
+  {
+    "vuln_name": "PathTraversal",
+    "sink_points": [
+      "java.io.File.getPath()",
+      "java.io.FileInputStream.read()",
+      "java.io.FileReader.read()",
+      "java.io.File.renameTo()",
+      "java.io.File.list()",
+      "java.io.FileInputStream(File file)",
+      "java.io.FileInputStream(String name)",
+      "java.nio.file.Paths.get()",
+      "java.nio.file.FileSystems.getPath()"
+    ],
+    "vuln_samples": [],
+    "vuln_poc_samples": []
+  },
+  {
+    "vuln_name": "OpenRedirect",
+    "sink_points": [
+      "javax.servlet.http.HttpServletResponse.sendRedirect()",
+      "javax.servlet.RequestDispatcher.forward()",
+      "javax.servlet.RequestDispatcher.include()",
+      "javax.servlet.ServletContext.getContext().getRequestDispatcher()"
+    ],
+    "vuln_samples": [],
+    "vuln_poc_samples": []
+  },
+  {
+    "vuln_name": "Deserialization",
+    "sink_points": [
+      "java.io.ObjectInputStream.readObject()",
+      "org.apache.commons.lang3.SerializationUtils.deserialize()",
+      "com.fasterxml.jackson.databind.ObjectMapper.readValue()",
+      "com.thoughtworks.xstream.XStream.fromXML()"
+    ],
+    "vuln_samples": [],
+    "vuln_poc_samples": []
+  },
+  {
+    "vuln_name": "FileUpload",
+    "sink_points": [
+      "org.apache.commons.fileupload.servlet.ServletFileUpload.parseRequest()",
+      "org.springframework.web.multipart.MultipartFile.transferTo()",
+      "java.io.FileOutputStream.write()",
+      "org.apache.commons.fileupload.disk.DiskFileItem.write()",
+      "java.nio.file.Files.copy()"
+    ],
+    "vuln_samples": [],
+    "vuln_poc_samples": []
+  },
+  {
+    "vuln_name": "CryptographicFailures",
+    "sink_points": [
+      "java.security.MessageDigest.getInstance(\"MD5\")",
+      "java.security.MessageDigest.getInstance(\"SHA-1\")",
+      "javax.crypto.Cipher.getInstance(\"DES\")",
+      "javax.crypto.Cipher.getInstance(\"DESede\")",
+      "javax.crypto.Cipher.getInstance(\"AES/ECB/PKCS5Padding\")",
+      "java.security.MessageDigest.digest(byte[])",
+      "javax.crypto.SecretKeyFactory.getInstance(\"PBKDF2WithHmacSHA1\")",
+      "java.util.Random.nextInt()",
+      "java.util.Random.nextBytes(byte[])"
+    ],
+    "vuln_samples": [],
+    "vuln_poc_samples": []
+  }
+]

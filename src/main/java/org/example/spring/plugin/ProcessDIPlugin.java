@@ -5,40 +5,32 @@ import org.apache.logging.log4j.Logger;
 import org.example.spring.analysis.BeanAnalysis;
 import org.example.spring.analysis.InjectPointsAnalysis;
 import org.example.spring.analysis.RouterAnalysis;
+import org.example.spring.analysis.di.MockObjDescriptor;
 import org.example.spring.analysis.di.bean.BeanClass;
-import org.example.spring.analysis.di.injectpoints.InjectPoint;
 import org.example.spring.analysis.di.injectpoints.LoadFieldPoint;
 import org.example.spring.analysis.router.ControllerClass;
-import org.example.spring.analysis.router.RouterMethod;
 import pascal.taie.World;
 import pascal.taie.analysis.pta.core.cs.context.Context;
 import pascal.taie.analysis.pta.core.cs.element.CSManager;
 import pascal.taie.analysis.pta.core.cs.element.CSMethod;
 import pascal.taie.analysis.pta.core.cs.element.CSObj;
-import pascal.taie.analysis.pta.core.cs.element.CSVar;
 import pascal.taie.analysis.pta.core.cs.selector.ContextSelector;
 import pascal.taie.analysis.pta.core.heap.HeapModel;
-import pascal.taie.analysis.pta.core.heap.Obj;
-import pascal.taie.analysis.pta.core.solver.EmptyParamProvider;
-import pascal.taie.analysis.pta.core.solver.EntryPoint;
 import pascal.taie.analysis.pta.core.solver.Solver;
 import pascal.taie.analysis.pta.plugin.Plugin;
 import pascal.taie.analysis.pta.pts.PointsToSet;
-import pascal.taie.ir.IR;
 import pascal.taie.ir.exp.InvokeExp;
 import pascal.taie.ir.exp.InvokeInstanceExp;
 import pascal.taie.ir.exp.Var;
 import pascal.taie.ir.stmt.Invoke;
-import pascal.taie.ir.stmt.LoadField;
 import pascal.taie.ir.stmt.Stmt;
 import pascal.taie.language.classes.ClassHierarchy;
 import pascal.taie.language.classes.JClass;
 import pascal.taie.language.classes.JField;
 import pascal.taie.language.classes.JMethod;
-import pascal.taie.language.type.TypeSystem;
 
 import java.util.*;
-import java.util.stream.Collectors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class ProcessDIPlugin implements Plugin {
 
@@ -71,12 +63,45 @@ public class ProcessDIPlugin implements Plugin {
     }
 
     @Override
+    public void onStart() {
+
+        initGlobalBeanObjects();
+
+    }
+
+    private void initGlobalBeanObjects() {
+        AtomicInteger count = new AtomicInteger();
+        logger.info("Initializing global bean mock objects for beans...");
+        for (BeanClass bean : beans) {
+            if (!bean.isInterface()) {
+                heapModel.getMockObj(
+                    MockObjDescriptor.DI_OBJ,
+                    bean.getjClass().getName(),
+                    bean.getjClass().getType()
+                );
+                count.getAndIncrement();
+            }else {
+                bean.getImplementations().forEach(jClass -> {
+                    heapModel.getMockObj(
+                        MockObjDescriptor.DI_OBJ,
+                        jClass.getName(),
+                        jClass.getType()
+                    );
+                    count.getAndIncrement();
+                });
+            }
+        }
+        logger.info("Initialized {} global bean objects.", count);
+    }
+
+    @Override
     public void onNewCSMethod(CSMethod csMethod) {
         JMethod jMethod = csMethod.getMethod();
         JClass jClass = jMethod.getDeclaringClass();
         Context context = csMethod.getContext();
         if (isJdkCalls(jMethod)) {
             solver.addIgnoredMethod(csMethod.getMethod());
+            return;
         }
         // 查找当前方法所在的 BeanClass
         Optional<BeanClass> beanClassOpt = injectPoints.keySet().stream()
@@ -100,8 +125,12 @@ public class ProcessDIPlugin implements Plugin {
             JField jField = loadFieldPoint.getjField();
             String typeName = jField.getType().getName();
             JClass fieldType = hierarchy.getClass(typeName);
+
             if (fieldType == null) {
-                logger.error("Field type not found in class hierarchy: {}", typeName);
+                logger.warn("Cannot find class for type: {}", typeName);
+                return;
+            }
+            if (isJdkClass(fieldType)) {
                 return;
             }
             if (fieldType.isInterface()) {
@@ -159,5 +188,15 @@ public class ProcessDIPlugin implements Plugin {
                 packageName.startsWith("com.sun.") ||
                 packageName.startsWith("jdk.") ||
                 packageName.startsWith("org.w3c.dom");
+    }
+
+    private boolean isJdkClass(JClass jClass) {
+        String packageName = jClass.getName();
+        return packageName.startsWith("java.") ||
+            packageName.startsWith("javax.") ||
+            packageName.startsWith("sun.") ||
+            packageName.startsWith("com.sun.") ||
+            packageName.startsWith("jdk.") ||
+            packageName.startsWith("org.w3c.dom");
     }
 }

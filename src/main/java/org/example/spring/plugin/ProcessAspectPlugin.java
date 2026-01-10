@@ -7,6 +7,8 @@ import org.example.spring.analysis.AspectAnalysis;
 import org.example.spring.analysis.aop.AspectClass;
 import org.example.spring.analysis.aop.AspectMethod;
 import org.example.spring.analysis.aop.Pointcut;
+import org.example.spring.analysis.di.MockObjDescriptor;
+import org.example.spring.analysis.di.bean.BeanClass;
 import pascal.taie.World;
 import pascal.taie.analysis.graph.callgraph.CallGraph;
 import pascal.taie.analysis.graph.callgraph.Edge;
@@ -14,12 +16,15 @@ import pascal.taie.analysis.pta.core.cs.context.Context;
 import pascal.taie.analysis.pta.core.cs.element.CSCallSite;
 import pascal.taie.analysis.pta.core.cs.element.CSManager;
 import pascal.taie.analysis.pta.core.cs.element.CSMethod;
+import pascal.taie.analysis.pta.core.heap.HeapModel;
 import pascal.taie.analysis.pta.core.heap.Obj;
 import pascal.taie.analysis.pta.core.solver.Solver;
 import pascal.taie.analysis.pta.plugin.Plugin;
 import pascal.taie.ir.IR;
 import pascal.taie.ir.exp.Var;
 import pascal.taie.ir.stmt.Invoke;
+import pascal.taie.language.classes.ClassHierarchy;
+import pascal.taie.language.classes.JClass;
 import pascal.taie.language.classes.JMethod;
 import pascal.taie.language.type.ClassType;
 import pascal.taie.language.type.Type;
@@ -28,6 +33,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 /**
@@ -40,6 +46,10 @@ public class ProcessAspectPlugin implements Plugin {
 
     private Solver solver;
 
+    private HeapModel heapModel;
+
+    private ClassHierarchy hierarchy;
+
     // 从 AspectAnalysis 中获取所有已解析的切面类
     private final List<AspectClass> aspects = World.get().getResult(AspectAnalysis.ID);
 
@@ -49,6 +59,29 @@ public class ProcessAspectPlugin implements Plugin {
     @Override
     public void setSolver(Solver solver) {
         this.solver = solver;
+        this.heapModel = solver.getHeapModel();
+        this.hierarchy = solver.getHierarchy();
+    }
+
+    @Override
+    public void onStart() {
+
+        initGlobalAspectObjects();
+
+    }
+
+    private void initGlobalAspectObjects() {
+        int count = 0;
+        logger.info("Initializing global aspect mock objects...");
+        for (AspectClass aspect : aspects) {
+            heapModel.getMockObj(
+                MockObjDescriptor.ASPECT_OBJ,
+                aspect.getjClass().getName(),
+                aspect.getjClass().getType()
+            );
+            count++;
+        }
+        logger.info("Initialized {} global aspect objects.", count);
     }
 
     @Override
@@ -116,6 +149,7 @@ public class ProcessAspectPlugin implements Plugin {
 
         // 添加 AOP 调用边
         AOPEdge aopEdge = new AOPEdge(virtualCallSite, csAdviceMethod, aspectMethod.getAdviceType());
+        provideEntryObjectsForAdvice(csAdviceMethod, aopEdge);
         solver.addCallEdge(aopEdge);
 //        Set<CSCallSite> callersOf = solver.getCallGraph().getCallersOf(csTargetMethod);
 //
@@ -146,45 +180,46 @@ public class ProcessAspectPlugin implements Plugin {
 
     /**
      * 为通知方法提供入口对象
-     * 根据通知类型和切点信息,为通知方法的参数提供适当的对象
      */
     private void provideEntryObjectsForAdvice(CSMethod csAdviceMethod, AOPEdge aopEdge) {
         JMethod adviceMethod = csAdviceMethod.getMethod();
         Context context = csAdviceMethod.getContext();
         IR ir = adviceMethod.getIR();
 
-        // 处理 this 对象(如果通知方法不是静态的)
+        // --- 修复 1: Aspect 对象应该是单例的 ---
         if (!adviceMethod.isStatic()) {
-            // 通知方法的 this 指向切面实例
-            // 可以从 heapModel 获取切面对象
             Obj aspectObj = solver.getHeapModel().getMockObj(
-                () -> "AspectObj:" + adviceMethod.getDeclaringClass().getName(),
-                adviceMethod,
-                adviceMethod.getDeclaringClass().getType(),
-                adviceMethod
+                MockObjDescriptor.ASPECT_OBJ,
+                adviceMethod.getDeclaringClass().getName(),
+                adviceMethod.getDeclaringClass().getType()
             );
             solver.addVarPointsTo(context, ir.getThis(), context, aspectObj);
         }
 
-        // 处理 JoinPoint 参数(如果有)
-        // 通常通知方法的第一个参数是 JoinPoint 或 ProceedingJoinPoint
+        // --- 修复 2: JoinPoint 对象应该随拦截点(CallSite)变化 ---
         if (adviceMethod.getParamCount() > 0) {
             for (int i = 0; i < adviceMethod.getParamCount(); i++) {
                 Var param = ir.getParam(i);
                 Type paramType = param.getType();
 
-                // 为 JoinPoint 类型的参数提供模拟对象
                 if (isJoinPointType(paramType)) {
+                    String concreteType = RuntimeImplementationMapper.getConcreteType(paramType.getName());
+                    JClass aClass = hierarchy.getClass(concreteType);
+                    Type typeToUse = (aClass != null) ? aClass.getType() : paramType;
+
+                    // 使用调用点（CallSite）的信息作为 Key
+                    // 这样不同的业务方法调用同一个切面时，JoinPoint 对象是不同的
+                    String callSiteStr = aopEdge.getCallSite().getCallSite().toString();
+                    String joinPointAllocKey = "JoinPoint:" + callSiteStr;
+
                     Obj joinPointObj = solver.getHeapModel().getMockObj(
-                        () -> "JoinPoint:" + aopEdge.getCallSite().getCallSite().getContainer().getSignature(),
-                        adviceMethod,
-                        paramType,
+                        () -> "JoinPointObj:" + callSiteStr,
+                        joinPointAllocKey, // [修改] key 包含 CallSite 信息，区分不同拦截
+                        typeToUse,
                         adviceMethod
                     );
-                    solver.addVarPointsTo(context, param, context, joinPointObj);
 
-//                    logger.debug("为通知方法 {} 的参数 {} 提供 JoinPoint 对象",
-//                        adviceMethod.getSignature(), i);
+                    solver.addVarPointsTo(context, param, context, joinPointObj);
                 }
             }
         }

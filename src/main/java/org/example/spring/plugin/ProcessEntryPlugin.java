@@ -3,6 +3,7 @@ package org.example.spring.plugin;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.spring.analysis.RouterAnalysis;
+import org.example.spring.analysis.di.MockObjDescriptor;
 import org.example.spring.analysis.router.ControllerClass;
 import org.example.spring.analysis.router.RouterMethod;
 import pascal.taie.World;
@@ -18,103 +19,99 @@ import pascal.taie.analysis.pta.plugin.Plugin;
 import pascal.taie.language.classes.ClassHierarchy;
 import pascal.taie.language.classes.JClass;
 import pascal.taie.language.classes.JMethod;
+import pascal.taie.language.type.ReferenceType;
 import pascal.taie.language.type.Type;
-import pascal.taie.language.type.TypeSystem;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Spring 应用入口点插件
- * 为 Controller 方法创建入口点
+ * <p>
+ * 重构说明：
+ * 根据参数类型严格区分处理策略：
+ * 1. 无参静态方法 -> EmptyParamProvider
+ * 2. 普通参数静态方法 -> DeclaredParamProvider
+ * 3. 实例方法(需要this) 或 含特殊映射参数的方法 -> SpecifiedParamProvider
+ * </p>
  */
 public class ProcessEntryPlugin implements Plugin {
 
     private static final Logger logger = LogManager.getLogger(ProcessEntryPlugin.class);
 
     private Solver solver;
-
     private ClassHierarchy hierarchy;
-
     private HeapModel heapModel;
 
     private final List<ControllerClass> controllers = World.get().getResult(RouterAnalysis.ID);
 
+    // 单例缓存：Key = Type, Value = Obj
+    private final Map<Type, Obj> singletonObjects = new HashMap<>();
+
     @Override
     public void setSolver(Solver solver) {
         this.solver = solver;
-        this.hierarchy = World.get().getClassHierarchy();
+        this.hierarchy = solver.getHierarchy();
         this.heapModel = solver.getHeapModel();
     }
 
     @Override
     public void onStart() {
-        addControllerEntryPoints();
+        if (controllers == null || controllers.isEmpty()) {
+            logger.warn("No controllers found from RouterAnalysis.");
+            return;
+        }
+
+        for (ControllerClass controller : controllers) {
+            processController(controller);
+        }
     }
 
-    /**
-     * 为 Controller 路由方法添加入口点
-     */
-    private void addControllerEntryPoints() {
-        for (ControllerClass controller : controllers) {
-            for (RouterMethod routerMethod : controller.getRouterMethods()) {
-                JMethod jMethod = routerMethod.getJMethod();
-                if (jMethod.getParamCount() == 0) {
-                    solver.addEntryPoint(new EntryPoint(jMethod, EmptyParamProvider.get()));
-                    logger.info("Add entry point (empty params): {}", jMethod);
-                } else {
-                    addRouterMethodWithParams(routerMethod);
+    private void processController(ControllerClass controller) {
+        JClass jClass = controller.getJClass();
+        for (RouterMethod routerMethod : controller.getRouterMethods()) {
+            JMethod jMethod = routerMethod.getJMethod();
+            if (jMethod.getParamCount() == 0) {
+                processEmptyParamMethod(jMethod);
+            } else {
+                int paramCount = jMethod.getParamCount();
+                for (int i = 0; i < paramCount; i++) {
+                    Type paramType = jMethod.getParamType(i);
+                    String paramTypeName = paramType.getName();
+                    if (RuntimeImplementationMapper.hasConcreteMapping(paramTypeName)) {
+                        SpecifiedParamProvider.Builder paramProviderBuilder =
+                            new SpecifiedParamProvider.Builder(jMethod);
+                        Obj thisObj = heapModel.getMockObj(
+                            MockObjDescriptor.DI_OBJ,
+                            "MethodPara{this}",
+                            jClass.getType(),
+                            jMethod
+                        );
+                        String concreteType = RuntimeImplementationMapper.getConcreteType(paramTypeName);
+                        JClass concreteClass = hierarchy.getClass(concreteType);
+                        if (concreteClass != null) {
+                            Obj p = heapModel.getMockObj(
+                                MockObjDescriptor.DI_OBJ,
+                                concreteClass.getName(),
+                                concreteClass.getType()
+                            );
+                            paramProviderBuilder.addThisObj(thisObj)
+                                .addParamObj(i, p)
+                                .setDelegate(new DeclaredParamProvider(jMethod, heapModel));
+                        }else {
+                            logger.info("Concrete class not found for type: {}", concreteType);
+                        }
+                    } else {
+                        solver.addEntryPoint(new EntryPoint(jMethod, new DeclaredParamProvider(jMethod, heapModel, 1)));
+                    }
                 }
             }
         }
     }
 
-    /**
-     * 为有参数的路由方法创建入口点
-     */
-    private void addRouterMethodWithParams(RouterMethod routerMethod) {
-        JMethod jMethod = routerMethod.getJMethod();
-        SpecifiedParamProvider.Builder builder = new SpecifiedParamProvider.Builder(jMethod);
-
-        // 创建 this 对象
-        JClass controllerClass = jMethod.getDeclaringClass();
-        Obj thisObj = heapModel.getMockObj(
-            Descriptor.ENTRY_DESC,
-            "EntryPoint{this}",
-            controllerClass.getType(),
-            jMethod
-        );
-        builder.addThisObj(thisObj);
-
-        // 为每个参数创建模拟对象
-        for (int i = 0; i < jMethod.getParamCount(); i++) {
-            Type paramType = jMethod.getParamType(i);
-
-            // 使用 TypeMapper 获取具体类型
-            String concreteType = EntryParaInterfaceMapper.getConcreteType(paramType.getName());
-            JClass aClass = hierarchy.getClass(concreteType);
-            Obj paramObj;
-            if (aClass != null) {
-                paramObj = heapModel.getMockObj(
-                    Descriptor.ENTRY_DESC,
-                    "EntryPoint{param" + i + "}",
-                    aClass.getType(),
-                    jMethod
-                );
-            }else {
-                paramObj = heapModel.getMockObj(
-                    Descriptor.ENTRY_DESC,
-                    "EntryPoint{param" + i + "}",
-                    paramType,
-                    jMethod
-                );
-            }
-            builder.addParamObj(i, paramObj);
-        }
-
-        // 使用 DeclaredParamProvider 自动处理那些没有被显式指定的参数
-        builder.setDelegate(new DeclaredParamProvider(jMethod, heapModel, 1));
-
-        solver.addEntryPoint(new EntryPoint(jMethod, builder.build()));
-        logger.info("Added entry point (with params): {}", jMethod);
+    private void processEmptyParamMethod(JMethod jMethod) {
+        solver.addEntryPoint(new EntryPoint(jMethod, EmptyParamProvider.get()));
+        logger.info("Added entry point (Empty): {}", jMethod);
     }
 }

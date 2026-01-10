@@ -22,7 +22,7 @@ public class LoadFieldPoint {
 
     private final JField jField;
 
-    private final List<Var> vars;
+    private List<Var> vars;
 
     public LoadFieldPoint(Stmt stmt, JField jField) {
         this.stmt = stmt;

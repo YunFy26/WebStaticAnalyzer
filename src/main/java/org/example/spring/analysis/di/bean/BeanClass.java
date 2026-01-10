@@ -2,6 +2,7 @@ package org.example.spring.analysis.di.bean;
 
 import pascal.taie.language.classes.JClass;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -26,14 +27,14 @@ public class BeanClass {
     private JClass superClass;
 
     /**
-     * 该jClass是否是接口，如果是接口，说明是@Mapper
+     * 该jClass是否是接口，如果是接口，说明是Mapper等接口类型
      */
     private final boolean isInterface;
 
     /**
-     * 如果jClass是接口，说明实现类是动态生成的，需要根据IR手动模拟实现类
+     * 如果jClass是接口，说明实现类是动态生成的
      */
-    private Collection<Object> implementations;
+    private Collection<JClass> implementations;
 
     /**
      * 全限定名
@@ -70,6 +71,7 @@ public class BeanClass {
         this.isInterface = jClass.isInterface();
         this.fullyQualifiedClassName = jClass.getName();
         this.simpleClassName = jClass.getSimpleName();
+        this.implementations = new ArrayList<>();
     }
 
     public JClass getjClass() {
@@ -96,11 +98,11 @@ public class BeanClass {
         return isInterface;
     }
 
-    public Collection<Object> getImplementations() {
+    public Collection<JClass> getImplementations() {
         return implementations;
     }
 
-    public void setImplementations(Collection<Object> implementations) {
+    public void setImplementations(Collection<JClass> implementations) {
         this.implementations = implementations;
     }
 

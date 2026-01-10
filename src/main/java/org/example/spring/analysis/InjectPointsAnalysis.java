@@ -2,26 +2,20 @@ package org.example.spring.analysis;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.spring.analysis.di.bean.BeanAnnotationRules;
 import org.example.spring.analysis.di.bean.BeanClass;
-import org.example.spring.analysis.di.bean.BeanInfo;
 import org.example.spring.analysis.di.injectpoints.*;
 import pascal.taie.World;
 import pascal.taie.analysis.ProgramAnalysis;
 import pascal.taie.config.AnalysisConfig;
 import pascal.taie.ir.exp.Var;
-import pascal.taie.ir.proginfo.FieldRef;
+import pascal.taie.ir.stmt.Invoke;
 import pascal.taie.ir.stmt.LoadField;
 import pascal.taie.ir.stmt.Stmt;
-import pascal.taie.ir.stmt.StoreField;
-import pascal.taie.language.annotation.Annotation;
 import pascal.taie.language.classes.JClass;
 import pascal.taie.language.classes.JField;
 import pascal.taie.language.classes.JMethod;
-import pascal.taie.language.type.Type;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 public class InjectPointsAnalysis extends ProgramAnalysis {
 
@@ -67,6 +61,11 @@ public class InjectPointsAnalysis extends ProgramAnalysis {
                         }
                         // 只分析实例字段（过滤静态字段如System.out）
                         if (jField.isStatic()) {
+                            return;
+                        }
+                        // 只分析有调用语句的变量
+                        Var var = loadField.getLValue();
+                        if (var.getInvokes().isEmpty()) {
                             return;
                         }
                         if (!fieldPoints.containsKey(jField)) {

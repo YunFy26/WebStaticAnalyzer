@@ -2,7 +2,9 @@ package org.example.spring.plugin;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.spring.analysis.di.MockObjDescriptor;
 import org.example.spring.analysis.di.bean.BeanClass;
+import org.example.spring.analysis.di.bean.BeanClassInitializer;
 import org.example.spring.analysis.di.bean.BeanScope;
 import org.example.spring.analysis.di.injectpoints.LoadFieldPoint;
 import pascal.taie.analysis.pta.core.cs.context.Context;
@@ -12,14 +14,19 @@ import pascal.taie.analysis.pta.core.heap.Descriptor;
 import pascal.taie.analysis.pta.core.heap.HeapModel;
 import pascal.taie.analysis.pta.core.heap.Obj;
 import pascal.taie.analysis.pta.core.solver.Solver;
+import pascal.taie.analysis.pta.pts.PointsToSet;
 import pascal.taie.ir.exp.Var;
+import pascal.taie.ir.stmt.Invoke;
 import pascal.taie.language.classes.JClass;
 import pascal.taie.language.classes.JField;
 import pascal.taie.language.classes.JMethod;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class DIHelper {
 
@@ -43,6 +50,30 @@ public class DIHelper {
         List<BeanClass> implBeans = getInterfaceImpl(beans, interfaceType);
         if (implBeans.isEmpty()) {
             logger.warn("No implementation found for interface: {}", interfaceType.getName());
+            // [修复核心]
+            // 原代码: jMethod + ":" + jField.getName() -> 导致每个注入点一个新对象
+            // 新代码: 使用统一的前缀 + 类名 -> 保证同一个 BeanClass 对应堆中的同一个 Obj
+//            String allocSite = "SpringBean:" + interfaceType.getName();
+//
+//            // 进阶：如果你未来想支持 Prototype (多例) 作用域，可以在这里加判断
+//            // if (beanClass.getScope() == BeanScope.PROTOTYPE) {
+//            //     allocSite = "SpringBean:Prototype:" + implClass.getName() + ":" + jField + "@" + csMethod;
+//            // }
+//
+//            Obj obj = solver.getHeapModel().getMockObj(
+//                () -> "DependencyInjectedBean",
+//                allocSite,           // 只要这个 Key 相同，getMockObj 就会返回同一个对象
+//                interfaceType.getType()
+//            );
+            BeanClass beanClass = BeanClassInitializer.createBeanClass(interfaceType);
+            // 如果担心重复，可以加上去重
+
+            implBeans = Stream.concat(
+                    implBeans.stream(),
+                    Stream.of(beanClass)
+                )
+                .distinct() // 如果担心重复，可以加上去重
+                .toList();
             return;
         }
         if (implBeans.size() == 1) {
@@ -93,10 +124,13 @@ public class DIHelper {
      */
     private static List<BeanClass> getInterfaceImpl(Collection<BeanClass> beans,
                                                       JClass interfaceType) {
-        // 查找接口实现类
-        return beans.stream()
+        // 查找接口实现类，如果是Mapper，这样是找不到的
+        List<BeanClass> list = beans.stream()
             .filter(bean -> bean.getInterfaces().contains(interfaceType))
             .toList();
+
+
+        return list;
     }
 
     /**
@@ -164,7 +198,7 @@ public class DIHelper {
 
     /**
      * 创建对象并添加指向关系
-     * TODO：考虑作用域？
+     * 修改说明：实现了 Singleton 语义，相同类型的 Bean 复用同一个 Heap 对象
      */
     private static void addBeanToVarPointSet(Solver solver,
                                              CSMethod csMethod,
@@ -176,19 +210,28 @@ public class DIHelper {
         ContextSelector contextSelector = solver.getContextSelector();
 
         JClass implClass = beanClass.getjClass();
-        JMethod jMethod = csMethod.getMethod();
 
         Obj obj = heapModel.getMockObj(
-            () -> "DependencyInjectedBean",
-            jMethod + ":" + jField.getName(),
+            MockObjDescriptor.DI_OBJ,
+            implClass.getName(),
             implClass.getType()
         );
+        Collection<Obj> objects = heapModel.getObjects();
 
         Context heapContext = contextSelector.selectHeapContext(csMethod, obj);
 
         // 为注入点的所有变量添加指向
         loadFieldPoint.getVars().forEach(var -> {
-            solver.addVarPointsTo(context, var, heapContext, obj);
+            List<Invoke> invokes = var.getInvokes();
+            if (invokes.isEmpty()) {
+                return;
+            }else {
+                PointsToSet pointsToSet = solver.getCSManager().getCSVar(context, var).getPointsToSet();
+                if (pointsToSet != null && !pointsToSet.isEmpty()) {
+                    return;
+                }
+                solver.addVarPointsTo(context, var, heapContext, obj);
+            }
         });
     }
 
@@ -200,14 +243,10 @@ public class DIHelper {
         ContextSelector contextSelector = solver.getContextSelector();
         JClass jClass = csMethod.getMethod().getDeclaringClass();
 
-        // 使用与 ProcessEntryPlugin 相同的 allocation site 策略
-        String allocSite = "EntryPoint{this}";
-
         Obj thisObj = heapModel.getMockObj(
-            Descriptor.ENTRY_DESC,
-            allocSite,
-            jClass.getType(),
-            csMethod.getMethod()
+            MockObjDescriptor.DI_OBJ,
+            jClass.getName(),
+            jClass.getType()
         );
 
         Context heapContext = contextSelector.selectHeapContext(csMethod, thisObj);
