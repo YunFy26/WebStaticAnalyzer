@@ -1,0 +1,103 @@
+Tai-e starts ...
+Output directory: /Users/yuntsy/My/Projects/Java/WebAnalyzer/output
+Writing options to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/options.yml
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/youlai/admin-boot/BOOT-INF/admin-boot.jar ... 106 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/youlai/oms-boot/BOOT-INF/oms-boot.jar ... 49 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/youlai/pms-boot/BOOT-INF/pms-boot.jar ... 66 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/youlai/sms-boot/BOOT-INF/sms-boot.jar ... 40 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/youlai/ums-boot/BOOT-INF/ums-boot.jar ... 21 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/youlai/youlai-auth/BOOT-INF/youlai-auth.jar ... 23 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/youlai/youlai-gateway/BOOT-INF/youlai-gateway.jar ... 22 classes
+Warning: main class was not given!
+10808 classes with 102422 methods in the world
+WorldBuilder finishes, elapsed time: 2.63s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-10 18:51:43
+Router analysis completed at: 2026-01-10 18:51:43 (Duration: 3ms)
+routerAnalysis finishes, elapsed time: 0.00s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.02s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.08s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Initializing global bean mock objects for beans...
+Initialized 111 global bean objects.
+Added entry point (Empty): <com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result lisetDeptOptions()>
+Added entry point (Empty): <com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result listResources()>
+Added entry point (Empty): <com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result listMenuOptions()>
+Added entry point (Empty): <com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result listRoutes()>
+Added entry point (Empty): <com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result listRoleOptions()>
+Added entry point (Empty): <com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result getLoginUserInfo()>
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Added entry point (Empty): <com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result getCart()>
+Added entry point (Empty): <com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result deleteCart()>
+Added entry point (Empty): <com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result getBrandList()>
+Added entry point (Empty): <com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result list()>
+Added entry point (Empty): <com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result listCategoryOptions()>
+Added entry point (Empty): <com.youlai.mall.pms.controller.app.SpuController: com.youlai.common.result.Result listSeckillingSpu()>
+Added entry point (Empty): <com.youlai.mall.sms.controller.app.AdvertController: com.youlai.common.result.Result list()>
+Added entry point (Empty): <com.youlai.mall.ums.controller.app.AddressController: com.youlai.common.result.Result listCurrentMemberAddresses()>
+Added entry point (Empty): <com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result getCurrMemberInfo()>
+Added entry point (Empty): <com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result getProductViewHistory()>
+No bean found for concrete class: org.springframework.security.oauth2.provider.endpoint.TokenEndpoint
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+Added entry point (Empty): <com.youlai.auth.controller.AuthController: com.youlai.common.result.Result logout()>
+Added entry point (Empty): <com.youlai.auth.controller.AuthController: java.util.Map getPublicKey()>
+Initializing global aspect mock objects...
+Initialized 0 global aspect objects.
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+No bean found for concrete class: org.redisson.api.RedissonClient
+No bean found for concrete class: com.youlai.mall.pms.api.SkuFeignClient
+No bean found for concrete class: com.youlai.mall.pms.api.SkuFeignClient
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.youlai.mall.ums.api.MemberFeignClient
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: com.youlai.mall.pms.api.SkuFeignClient
+No bean found for concrete class: com.youlai.mall.pms.api.SkuFeignClient
+No bean found for concrete class: com.youlai.mall.ums.api.MemberFeignClient
+No bean found for concrete class: com.youlai.mall.oms.config.WxPayProperties
+No bean found for concrete class: com.youlai.mall.ums.api.MemberFeignClient
+[Pointer analysis] elapsed time: 0.07s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                3528 (insens) / 3720 (sens)
+#objects:                     1462 (insens) / 1463 (sens)
+#var points-to:               2618 (insens) / 2631 (sens)
+#static field points-to:      19 (sens)
+#instance field points-to:    647 (sens)
+#array points-to:             78 (sens)
+#reachable methods:           696 (insens) / 1045 (sens)
+#call graph edges:            992 (insens) / 1069 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.17s
+cg starts ...
+Call graph has 696 reachable methods and 992 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.05s
+Tai-e finishes, elapsed time: 3.03s

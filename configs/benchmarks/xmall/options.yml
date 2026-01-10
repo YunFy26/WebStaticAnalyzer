@@ -1,0 +1,38 @@
+optionsFile: null
+printHelp: false
+# WebGoat libs
+classPath: []
+appClassPath:
+  - benchmarks/xmall/xmall-content-service-1.0-SNAPSHOT/WEB-INF/xmall-content-service-1.0-SNAPSHOT.jar
+  - benchmarks/xmall/xmall-front-web-1.0-SNAPSHOT/WEB-INF/xmall-front-web-1.0-SNAPSHOT.jar
+  - benchmarks/xmall/xmall-manager-service-1.0-SNAPSHOT/WEB-INF/xmall-manager-service-1.0-SNAPSHOT.jar
+  - benchmarks/xmall/xmall-manager-web-1.0-SNAPSHOT/WEB-INF/xmall-manager-web-1.0-SNAPSHOT.jar
+  - benchmarks/xmall/xmall-search-service-1.0-SNAPSHOT/WEB-INF/xmall-search-service-1.0-SNAPSHOT.jar
+  - benchmarks/xmall/xmall-sso-service-1.0-SNAPSHOT/WEB-INF/xmall-sso-service-1.0-SNAPSHOT.jar
+
+mainClass:
+inputClasses: []
+javaVersion: 17
+prependJVM: true
+allowPhantom: true
+worldBuilderClass: pascal.taie.frontend.soot.SootWorldBuilder
+outputDir: output
+preBuildIR: false
+worldCacheMode: false
+scope: APP
+nativeModel: true
+planFile: null
+analyses:
+  #  ir-dumper: ""
+  routerAnalysis: ""
+  beanAnalysis: ""
+  injectPointsAnalysis: ""
+  aspectAnalysis: ""
+  cg: ""
+  #  cfg: ""
+  #  icfg: ""
+  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin,org.example.spring.plugin.ProcessEntryPlugin,org.example.spring.plugin.ProcessAspectPlugin]"
+#  pta: "plugins:[org.example.spring.plugin.ProcessEntryPlugin]"
+onlyGenPlan: false
+keepResult:
+  - $KEEP-ALL

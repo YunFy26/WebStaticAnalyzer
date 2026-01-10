@@ -1,0 +1,39 @@
+optionsFile: null
+printHelp: false
+# WebGoat libs
+classPath: []
+appClassPath:
+  - benchmarks/youlai/admin-boot/BOOT-INF/admin-boot.jar
+  - benchmarks/youlai/oms-boot/BOOT-INF/oms-boot.jar
+  - benchmarks/youlai/pms-boot/BOOT-INF/pms-boot.jar
+  - benchmarks/youlai/sms-boot/BOOT-INF/sms-boot.jar
+  - benchmarks/youlai/ums-boot/BOOT-INF/ums-boot.jar
+  - benchmarks/youlai/youlai-auth/BOOT-INF/youlai-auth.jar
+  - benchmarks/youlai/youlai-gateway/BOOT-INF/youlai-gateway.jar
+
+mainClass:
+inputClasses: []
+javaVersion: 17
+prependJVM: true
+allowPhantom: true
+worldBuilderClass: pascal.taie.frontend.soot.SootWorldBuilder
+outputDir: output
+preBuildIR: false
+worldCacheMode: false
+scope: APP
+nativeModel: true
+planFile: null
+analyses:
+  #  ir-dumper: ""
+  routerAnalysis: ""
+  beanAnalysis: ""
+  injectPointsAnalysis: ""
+  aspectAnalysis: ""
+  cg: ""
+  #  cfg: ""
+  #  icfg: ""
+  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin,org.example.spring.plugin.ProcessEntryPlugin,org.example.spring.plugin.ProcessAspectPlugin]"
+#  pta: "plugins:[org.example.spring.plugin.ProcessEntryPlugin]"
+onlyGenPlan: false
+keepResult:
+  - $KEEP-ALL

@@ -1,0 +1,42 @@
+optionsFile: null
+printHelp: false
+# WebGoat libs
+classPath: []
+appClassPath:
+  - benchmarks/novel/author-service-1.3.0/BOOT-INF/author-service-1.3.0.jar
+  - benchmarks/novel/book-service-1.3.0/BOOT-INF/book-service-1.3.0.jar
+  - benchmarks/novel/news-service-1.3.0/BOOT-INF/news-service-1.3.0.jar
+  - benchmarks/novel/novel-file-1.3.0/BOOT-INF/novel-file-1.3.0.jar
+  - benchmarks/novel/novel-gateway-1.3.0/BOOT-INF/novel-gateway-1.3.0.jar
+  - benchmarks/novel/novel-home-1.3.0/BOOT-INF/novel-home-1.3.0.jar
+  - benchmarks/novel/novel-monitor-1.3.0/BOOT-INF/novel-monitor-1.3.0.jar
+  - benchmarks/novel/novel-search-1.3.0/BOOT-INF/novel-search-1.3.0.jar
+  - benchmarks/novel/pay-service-1.3.0/BOOT-INF/pay-service-1.3.0.jar
+  - benchmarks/novel/user-service-1.3.0/BOOT-INF/user-service-1.3.0.jar
+
+mainClass:
+inputClasses: []
+javaVersion: 17
+prependJVM: true
+allowPhantom: true
+worldBuilderClass: pascal.taie.frontend.soot.SootWorldBuilder
+outputDir: output
+preBuildIR: false
+worldCacheMode: false
+scope: APP
+nativeModel: true
+planFile: null
+analyses:
+  #  ir-dumper: ""
+  routerAnalysis: ""
+  beanAnalysis: ""
+  injectPointsAnalysis: ""
+  aspectAnalysis: ""
+  cg: ""
+  #  cfg: ""
+  #  icfg: ""
+  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin,org.example.spring.plugin.ProcessEntryPlugin,org.example.spring.plugin.ProcessAspectPlugin]"
+#  pta: "plugins:[org.example.spring.plugin.ProcessEntryPlugin]"
+onlyGenPlan: false
+keepResult:
+  - $KEEP-ALL

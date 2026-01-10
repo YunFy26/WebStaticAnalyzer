@@ -1,0 +1,41 @@
+optionsFile: null
+printHelp: false
+# WebGoat libs
+classPath: []
+appClassPath:
+  - benchmarks/sduoj/sduoj-auth/BOOT-INF/sduoj-auth.jar
+  - benchmarks/sduoj/sduoj-contest/BOOT-INF/sduoj-contest.jar
+  - benchmarks/sduoj/sduoj-filesys/BOOT-INF/sduoj-filesys.jar
+  - benchmarks/sduoj/sduoj-gateway/BOOT-INF/sduoj-gateway.jar
+  - benchmarks/sduoj/sduoj-judger/BOOT-INF/sduoj-judger.jar
+  - benchmarks/sduoj/sduoj-problem/BOOT-INF/sduoj-problem.jar
+  - benchmarks/sduoj/sduoj-submit/BOOT-INF/sduoj-submit.jar
+  - benchmarks/sduoj/sduoj-user/BOOT-INF/sduoj-user.jar
+  - benchmarks/sduoj/sduoj-websocket/BOOT-INF/sduoj-websocket.jar
+
+mainClass:
+inputClasses: []
+javaVersion: 17
+prependJVM: true
+allowPhantom: true
+worldBuilderClass: pascal.taie.frontend.soot.SootWorldBuilder
+outputDir: output
+preBuildIR: false
+worldCacheMode: false
+scope: APP
+nativeModel: true
+planFile: null
+analyses:
+  #  ir-dumper: ""
+  routerAnalysis: ""
+  beanAnalysis: ""
+  injectPointsAnalysis: ""
+  aspectAnalysis: ""
+  cg: ""
+  #  cfg: ""
+  #  icfg: ""
+  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin,org.example.spring.plugin.ProcessEntryPlugin,org.example.spring.plugin.ProcessAspectPlugin]"
+#  pta: "plugins:[org.example.spring.plugin.ProcessEntryPlugin]"
+onlyGenPlan: false
+keepResult:
+  - $KEEP-ALL

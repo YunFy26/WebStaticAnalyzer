@@ -1,0 +1,112 @@
+Tai-e starts ...
+Output directory: /Users/yuntsy/My/Projects/Java/WebAnalyzer/output
+Writing options to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/options.yml
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/roncoo/app-gateway/BOOT-INF/app-gateway.jar ... 7 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/roncoo/app-job/BOOT-INF/app-job.jar ... 4 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/roncoo/app-sba/BOOT-INF/app-sba.jar ... 2 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/roncoo/course-service/BOOT-INF/course-service.jar ... 431 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/roncoo/system-service/BOOT-INF/system-service.jar ... 334 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/roncoo/user-service/BOOT-INF/user-service.jar ... 223 classes
+Warning: main class was not given!
+11537 classes with 125945 methods in the world
+WorldBuilder finishes, elapsed time: 4.38s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-10 18:51:33
+Router analysis completed at: 2026-01-10 18:51:33 (Duration: 9ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.01s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.09s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Initializing global bean mock objects for beans...
+Initialized 293 global bean objects.
+Added entry point (Empty): <com.roncoo.education.app.gateway.IndexController: reactor.core.publisher.Mono index()>
+Added entry point (Empty): <com.roncoo.education.app.gateway.swagger.SwaggerHandler: reactor.core.publisher.Mono securityConfiguration()>
+Added entry point (Empty): <com.roncoo.education.app.gateway.swagger.SwaggerHandler: reactor.core.publisher.Mono uiConfiguration()>
+Added entry point (Empty): <com.roncoo.education.app.gateway.swagger.SwaggerHandler: reactor.core.publisher.Mono swaggerResources()>
+Added entry point (Empty): <com.roncoo.education.course.service.api.ApiCourseCategoryController: com.roncoo.education.common.core.base.Result list()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <com.roncoo.education.course.service.pc.PcApiCourseController: com.roncoo.education.common.core.base.Result addEs()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <com.roncoo.education.system.service.api.ApiNavBarController: com.roncoo.education.common.core.base.Result list()>
+Added entry point (Empty): <com.roncoo.education.system.service.api.ApiWebsiteController: com.roncoo.education.common.core.base.Result get()>
+Added entry point (Empty): <com.roncoo.education.system.service.api.ApiWebsiteLinkController: com.roncoo.education.common.core.base.Result list()>
+Added entry point (Empty): <com.roncoo.education.system.service.api.ApiWebsiteNavController: com.roncoo.education.common.core.base.Result list()>
+Added entry point (Empty): <com.roncoo.education.system.service.pc.PcApiSysController: com.roncoo.education.common.core.base.Result view()>
+Added entry point (Empty): <com.roncoo.education.system.service.pc.PcApiWebsiteController: com.roncoo.education.common.core.base.Result view()>
+Initializing global aspect mock objects...
+Initialized 0 global aspect objects.
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.cloud.gateway.route.RouteLocator
+No bean found for concrete class: org.springframework.cloud.gateway.config.GatewayProperties
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
+No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
+[Pointer analysis] elapsed time: 0.15s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                1,1287 (insens) / 1,9571 (sens)
+#objects:                     2071 (insens) / 2382 (sens)
+#var points-to:               9437 (insens) / 1,4416 (sens)
+#static field points-to:      0 (sens)
+#instance field points-to:    1406 (sens)
+#array points-to:             22 (sens)
+#reachable methods:           2239 (insens) / 4891 (sens)
+#call graph edges:            4162 (insens) / 8109 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.32s
+cg starts ...
+Call graph has 2239 reachable methods and 4162 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.13s
+Tai-e finishes, elapsed time: 5.03s

@@ -1,0 +1,106 @@
+Tai-e starts ...
+Output directory: /Users/yuntsy/My/Projects/Java/WebAnalyzer/output
+Writing options to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/options.yml
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/novel/author-service-1.3.0/BOOT-INF/author-service-1.3.0.jar ... 7 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/novel/book-service-1.3.0/BOOT-INF/book-service-1.3.0.jar ... 25 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/novel/news-service-1.3.0/BOOT-INF/news-service-1.3.0.jar ... 11 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/novel/novel-file-1.3.0/BOOT-INF/novel-file-1.3.0.jar ... 6 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/novel/novel-gateway-1.3.0/BOOT-INF/novel-gateway-1.3.0.jar ... 8 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/novel/novel-home-1.3.0/BOOT-INF/novel-home-1.3.0.jar ... 16 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/novel/novel-monitor-1.3.0/BOOT-INF/novel-monitor-1.3.0.jar ... 2 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/novel/novel-search-1.3.0/BOOT-INF/novel-search-1.3.0.jar ... 10 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/novel/pay-service-1.3.0/BOOT-INF/pay-service-1.3.0.jar ... 4 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/novel/user-service-1.3.0/BOOT-INF/user-service-1.3.0.jar ... 24 classes
+Warning: main class was not given!
+10419 classes with 100254 methods in the world
+WorldBuilder finishes, elapsed time: 2.05s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-10 18:51:24
+Router analysis completed at: 2026-01-10 18:51:24 (Duration: 3ms)
+routerAnalysis finishes, elapsed time: 0.00s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.02s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.01s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Initializing global bean mock objects for beans...
+Initialized 27 global bean objects.
+Added entry point (Empty): <com.java2nb.novel.book.controller.BookController: com.java2nb.novel.common.bean.ResultBean listBookCategory()>
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+Added entry point (Empty): <com.java2nb.novel.gateway.swagger.SwaggerHandler: reactor.core.publisher.Mono securityConfiguration()>
+Added entry point (Empty): <com.java2nb.novel.gateway.swagger.SwaggerHandler: reactor.core.publisher.Mono uiConfiguration()>
+Added entry point (Empty): <com.java2nb.novel.gateway.swagger.SwaggerHandler: reactor.core.publisher.Mono swaggerResources()>
+Added entry point (Empty): <com.java2nb.novel.home.controller.HomeController: com.java2nb.novel.common.bean.ResultBean listHomeBook()>
+Added entry point (Empty): <com.java2nb.novel.home.controller.HomeController: com.java2nb.novel.common.bean.ResultBean listIndexLink()>
+Added entry point (Empty): <com.java2nb.novel.home.controller.HomeController: com.java2nb.novel.common.bean.ResultBean listIndexNews()>
+Added entry point (Empty): <com.java2nb.novel.home.controller.HomeController: com.java2nb.novel.common.bean.ResultBean listClickRank()>
+Added entry point (Empty): <com.java2nb.novel.home.controller.HomeController: com.java2nb.novel.common.bean.ResultBean listNewRank()>
+Added entry point (Empty): <com.java2nb.novel.home.controller.HomeController: com.java2nb.novel.common.bean.ResultBean listUpdateRank()>
+No bean found for concrete class: com.java2nb.novel.common.cache.CacheService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No implementation found for interface: com.java2nb.novel.user.feign.BookFeignClient
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.java2nb.novel.user.feign.BookFeignClient
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Initializing global aspect mock objects...
+Initialized 0 global aspect objects.
+No implementation found for interface: com.java2nb.novel.book.feign.UserFeignClient
+No bean found for concrete class: com.java2nb.novel.common.cache.CacheService
+No bean found for concrete class: com.java2nb.novel.common.cache.CacheService
+No bean found for concrete class: com.java2nb.novel.common.cache.CacheService
+No implementation found for interface: com.java2nb.novel.home.feign.NewsFeignClient
+No bean found for concrete class: com.java2nb.novel.common.cache.CacheService
+No bean found for concrete class: com.java2nb.novel.common.cache.CacheService
+No bean found for concrete class: com.java2nb.novel.common.cache.CacheService
+No bean found for concrete class: io.searchbox.client.JestClient
+No bean found for concrete class: com.java2nb.novel.user.feign.BookFeignClient
+No bean found for concrete class: com.java2nb.novel.user.feign.BookFeignClient
+No bean found for concrete class: org.springframework.cloud.gateway.route.RouteLocator
+No bean found for concrete class: org.springframework.cloud.gateway.config.GatewayProperties
+[Pointer analysis] elapsed time: 0.04s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                1934 (insens) / 1934 (sens)
+#objects:                     440 (insens) / 440 (sens)
+#var points-to:               886 (insens) / 886 (sens)
+#static field points-to:      12 (sens)
+#instance field points-to:    130 (sens)
+#array points-to:             4 (sens)
+#reachable methods:           188 (insens) / 238 (sens)
+#call graph edges:            223 (insens) / 224 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.13s
+cg starts ...
+Call graph has 188 reachable methods and 223 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.02s
+Tai-e finishes, elapsed time: 2.33s

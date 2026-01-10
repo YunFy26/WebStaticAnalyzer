@@ -16,5 +16,8 @@ temp/
 
 src/test/
 
-benchmarks/
+/benchmarks
+
+/configs/http_ca.crt
+/configs/vulns.json
 
