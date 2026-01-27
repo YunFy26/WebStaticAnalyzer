@@ -1,0 +1,54 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+27353 classes with 240367 methods in the world
+WorldBuilder finishes, elapsed time: 21.48s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 12:51:22
+Router analysis completed at: 2026-01-25 12:51:22 (Duration: 7ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.03s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.02s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Initializing global bean mock objects for beans...
+Initialized 52 global bean objects.
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <com.site.blog.my.core.controller.admin.AdminController: java.lang.String login()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Initializing global aspect mock objects...
+[Pointer analysis] elapsed time: 0.04s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                1372 (insens) / 1601 (sens)
+#objects:                     456 (insens) / 456 (sens)
+#var points-to:               1308 (insens) / 1407 (sens)
+#static field points-to:      19 (sens)
+#instance field points-to:    217 (sens)
+#array points-to:             13 (sens)
+#reachable methods:           264 (insens) / 556 (sens)
+#call graph edges:            685 (insens) / 885 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.15s
+cg starts ...
+Call graph has 264 reachable methods and 685 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.03s
+Tai-e finishes, elapsed time: 21.81s

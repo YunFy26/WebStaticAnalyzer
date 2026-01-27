@@ -1,0 +1,57 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+27379 classes with 240699 methods in the world
+WorldBuilder finishes, elapsed time: 21.09s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 13:05:12
+Router analysis completed at: 2026-01-25 13:05:12 (Duration: 15ms)
+routerAnalysis finishes, elapsed time: 0.02s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.05s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.05s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Initializing global bean mock objects for beans...
+Initialized 59 global bean objects.
+Added entry point (Empty): <ltd.newbee.mall.controller.admin.AdminController: java.lang.String login()>
+Added entry point (Empty): <ltd.newbee.mall.controller.admin.AdminController: java.lang.String test()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <ltd.newbee.mall.controller.mall.PersonalController: java.lang.String loginPage()>
+Added entry point (Empty): <ltd.newbee.mall.controller.mall.PersonalController: java.lang.String registerPage()>
+Added entry point (Empty): <ltd.newbee.mall.controller.mall.PersonalController: java.lang.String addressesPage()>
+Initializing global aspect mock objects...
+[Pointer analysis] elapsed time: 0.10s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                2051 (insens) / 2504 (sens)
+#objects:                     526 (insens) / 528 (sens)
+#var points-to:               2098 (insens) / 2300 (sens)
+#static field points-to:      80 (sens)
+#instance field points-to:    260 (sens)
+#array points-to:             70 (sens)
+#reachable methods:           345 (insens) / 707 (sens)
+#call graph edges:            995 (insens) / 1220 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.26s
+cg starts ...
+Call graph has 345 reachable methods and 995 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.06s
+Tai-e finishes, elapsed time: 21.62s

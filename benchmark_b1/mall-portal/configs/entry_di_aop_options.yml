@@ -1,0 +1,53 @@
+optionsFile: null
+printHelp: false
+# WebGoat libs
+classPath: []
+appClassPath:
+  - /Users/yuntsy/My/Graduate/Data/final/mall/mall-portal/target/classes
+  - /Users/yuntsy/My/Graduate/Data/final/mall/mall-common/target/classes
+  - /Users/yuntsy/My/Graduate/Data/final/mall/mall-demo/target/classes
+  - /Users/yuntsy/My/Graduate/Data/final/mall/mall-mbg/target/classes
+  - /Users/yuntsy/My/Graduate/Data/final/mall/mall-security/target/classes
+#  -
+  - /Users/yuntsy/.m2/repository/jakarta/servlet/jakarta.servlet-api/4.0.4/jakarta.servlet-api-4.0.4.jar
+  - /Users/yuntsy/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar
+  - /Users/yuntsy/.m2/repository/org/springframework/spring-web/6.2.1/spring-web-6.2.1.jar
+  - /Users/yuntsy/.m2/repository/org/springframework/spring-aop/6.2.0/spring-aop-6.2.0.jar
+  - /Users/yuntsy/.m2/repository/org/springframework/spring-core/6.2.0/spring-core-6.2.0.jar
+  - /Users/yuntsy/.m2/repository/org/springframework/spring-jdbc/6.2.0/spring-jdbc-6.2.0.jar
+  - /Users/yuntsy/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.0.0/jakarta.servlet-api-6.0.0.jar
+  - /Users/yuntsy/.m2/repository/org/springframework/spring-context/6.2.0/spring-context-6.2.0.jar
+  - /Users/yuntsy/.m2/repository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar
+  - /Users/yuntsy/.m2/repository/org/apache/tomcat/tomcat-catalina/10.1.18/tomcat-catalina-10.1.18.jar
+  - /Users/yuntsy/.m2/repository/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar
+  - /Users/yuntsy/.m2/repository/org/mybatis/mybatis/3.5.15/mybatis-3.5.15.jar
+  - /Users/yuntsy/.m2/repository/org/apache/shiro/shiro-web/1.13.0/shiro-web-1.13.0.jar
+  - /Users/yuntsy/.m2/repository/org/apache/shiro/shiro-core/1.13.0/shiro-core-1.13.0.jar
+  - /Users/yuntsy/.m2/repository/org/quartz-scheduler/quartz/2.3.2/quartz-2.3.2.jar
+
+
+mainClass:
+inputClasses: []
+javaVersion: 17
+prependJVM: true
+allowPhantom: true
+worldBuilderClass: pascal.taie.frontend.soot.SootWorldBuilder
+outputDir: output
+preBuildIR: false
+worldCacheMode: false
+scope: APP
+nativeModel: true
+planFile: null
+analyses:
+  #  ir-dumper: ""
+  routerAnalysis: ""
+  beanAnalysis: ""
+  injectPointsAnalysis: ""
+  aspectAnalysis: ""
+  cg: ""
+  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin,org.example.spring.plugin.ProcessEntryPlugin,org.example.spring.plugin.ProcessAspectPlugin]"
+#  pta: "plugins:[org.example.spring.plugin.ProcessEntryPlugin, org.example.spring.plugin.ProcessDIPlugin]"
+#  pta: "plugins:[org.example.spring.plugin.ProcessEntryPlugin]"
+onlyGenPlan: false
+keepResult:
+  - $KEEP-ALL

@@ -1,0 +1,63 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+27552 classes with 241603 methods in the world
+WorldBuilder finishes, elapsed time: 21.39s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 12:50:14
+Router analysis completed at: 2026-01-25 12:50:14 (Duration: 11ms)
+routerAnalysis finishes, elapsed time: 0.02s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.05s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.07s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.01s
+pta starts ...
+Added entry point (Empty): <net.mingsoft.cms.action.ContentAction: java.lang.String index()>
+Added entry point (Empty): <net.mingsoft.cms.action.ContentAction: java.lang.String main()>
+No bean found for concrete class: net.mingsoft.mdiy.biz.IModelBiz
+No bean found for concrete class: org.slf4j.Logger
+No bean found for concrete class: org.slf4j.Logger
+No bean found for concrete class: net.mingsoft.mdiy.biz.IModelBiz
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+No bean found for concrete class: net.mingsoft.config.MSProperties
+Added entry point (Empty): <net.mingsoft.cms.action.CategoryAction: java.lang.String index()>
+Added entry point (Empty): <net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData changeType()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+No bean found for concrete class: net.mingsoft.config.MSProperties
+Initializing global bean mock objects for beans...
+Initialized 65 global bean objects.
+No bean found for concrete class: net.mingsoft.mdiy.biz.ITagBiz
+[Pointer analysis] elapsed time: 0.12s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                2303 (insens) / 4006 (sens)
+#objects:                     929 (insens) / 1078 (sens)
+#var points-to:               2336 (insens) / 3319 (sens)
+#static field points-to:      68 (sens)
+#instance field points-to:    678 (sens)
+#array points-to:             143 (sens)
+#reachable methods:           439 (insens) / 1213 (sens)
+#call graph edges:            1074 (insens) / 1948 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.30s
+cg starts ...
+Call graph has 439 reachable methods and 1074 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.05s
+Tai-e finishes, elapsed time: 22.01s

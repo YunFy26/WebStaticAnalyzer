@@ -1,0 +1,145 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+28038 classes with 262485 methods in the world
+WorldBuilder finishes, elapsed time: 22.68s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 13:02:11
+Router analysis completed at: 2026-01-25 13:02:11 (Duration: 11ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.04s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.03s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Initializing global bean mock objects for beans...
+Initialized 88 global bean objects.
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberCouponController: com.macro.mall.common.api.CommonResult add(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberCouponController: com.macro.mall.common.api.CommonResult listHistory(java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberCouponController: com.macro.mall.common.api.CommonResult list(java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberCouponController: com.macro.mall.common.api.CommonResult listCart(java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberCouponController: com.macro.mall.common.api.CommonResult listByProduct(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.HomeController: com.macro.mall.common.api.CommonResult content()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Added entry point (Empty): <com.macro.mall.portal.controller.HomeController: com.macro.mall.common.api.CommonResult content()>
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.HomeController: com.macro.mall.common.api.CommonResult recommendProductList(java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.HomeController: com.macro.mall.common.api.CommonResult getProductCateList(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.HomeController: com.macro.mall.common.api.CommonResult getSubjectList(java.lang.Long,java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.HomeController: com.macro.mall.common.api.CommonResult hotProductList(java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.HomeController: com.macro.mall.common.api.CommonResult newProductList(java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult add(com.macro.mall.model.OmsCartItem)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult list()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Added entry point (Empty): <com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult list()>
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult listPromotion(java.util.List)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult updateQuantity(java.lang.Long,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult getCartProduct(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult updateAttr(com.macro.mall.model.OmsCartItem)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult delete(java.util.List)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult clear()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Added entry point (Empty): <com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult clear()>
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.PmsPortalProductController: com.macro.mall.common.api.CommonResult search(java.lang.String,java.lang.Long,java.lang.Long,java.lang.Integer,java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.PmsPortalProductController: com.macro.mall.common.api.CommonResult categoryTreeList()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Added entry point (Empty): <com.macro.mall.portal.controller.PmsPortalProductController: com.macro.mall.common.api.CommonResult categoryTreeList()>
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.PmsPortalProductController: com.macro.mall.common.api.CommonResult detail(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberReceiveAddressController: com.macro.mall.common.api.CommonResult add(com.macro.mall.model.UmsMemberReceiveAddress)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberReceiveAddressController: com.macro.mall.common.api.CommonResult delete(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberReceiveAddressController: com.macro.mall.common.api.CommonResult update(java.lang.Long,com.macro.mall.model.UmsMemberReceiveAddress)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberReceiveAddressController: com.macro.mall.common.api.CommonResult list()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Added entry point (Empty): <com.macro.mall.portal.controller.UmsMemberReceiveAddressController: com.macro.mall.common.api.CommonResult list()>
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberReceiveAddressController: com.macro.mall.common.api.CommonResult getItem(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsPortalOrderReturnApplyController: com.macro.mall.common.api.CommonResult create(com.macro.mall.portal.domain.OmsOrderReturnApplyParam)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.PmsPortalBrandController: com.macro.mall.common.api.CommonResult recommendList(java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.PmsPortalBrandController: com.macro.mall.common.api.CommonResult detail(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.PmsPortalBrandController: com.macro.mall.common.api.CommonResult productList(java.lang.Long,java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult generateConfirmOrder(java.util.List)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult generateOrder(com.macro.mall.portal.domain.OrderParam)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult paySuccess(java.lang.Long,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult cancelTimeOutOrder()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Added entry point (Empty): <com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult cancelTimeOutOrder()>
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult cancelOrder(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult list(java.lang.Integer,java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult detail(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult cancelUserOrder(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult confirmReceiveOrder(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult deleteOrder(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberController: com.macro.mall.common.api.CommonResult register(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberController: com.macro.mall.common.api.CommonResult login(java.lang.String,java.lang.String)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberController: com.macro.mall.common.api.CommonResult info(java.security.Principal)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberController: com.macro.mall.common.api.CommonResult getAuthCode(java.lang.String)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.UmsMemberController: com.macro.mall.common.api.CommonResult updatePassword(java.lang.String,java.lang.String,java.lang.String)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberProductCollectionController: com.macro.mall.common.api.CommonResult add(com.macro.mall.portal.domain.MemberProductCollection)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberProductCollectionController: com.macro.mall.common.api.CommonResult delete(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberProductCollectionController: com.macro.mall.common.api.CommonResult list(java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberProductCollectionController: com.macro.mall.common.api.CommonResult detail(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberProductCollectionController: com.macro.mall.common.api.CommonResult clear()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Added entry point (Empty): <com.macro.mall.portal.controller.MemberProductCollectionController: com.macro.mall.common.api.CommonResult clear()>
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberReadHistoryController: com.macro.mall.common.api.CommonResult create(com.macro.mall.portal.domain.MemberReadHistory)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberReadHistoryController: com.macro.mall.common.api.CommonResult delete(java.util.List)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberReadHistoryController: com.macro.mall.common.api.CommonResult clear()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Added entry point (Empty): <com.macro.mall.portal.controller.MemberReadHistoryController: com.macro.mall.common.api.CommonResult clear()>
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberReadHistoryController: com.macro.mall.common.api.CommonResult list(java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberAttentionController: com.macro.mall.common.api.CommonResult add(com.macro.mall.portal.domain.MemberBrandAttention)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberAttentionController: com.macro.mall.common.api.CommonResult delete(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberAttentionController: com.macro.mall.common.api.CommonResult list(java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberAttentionController: com.macro.mall.common.api.CommonResult detail(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.MemberAttentionController: com.macro.mall.common.api.CommonResult clear()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Added entry point (Empty): <com.macro.mall.portal.controller.MemberAttentionController: com.macro.mall.common.api.CommonResult clear()>
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.AlipayController: void pay(com.macro.mall.portal.domain.AliPayParam,javax.servlet.http.HttpServletResponse)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.AlipayController: void webPay(com.macro.mall.portal.domain.AliPayParam,javax.servlet.http.HttpServletResponse)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.portal.controller.AlipayController: com.macro.mall.common.api.CommonResult query(java.lang.String,java.lang.String)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object getForEntity(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object getForEntity2(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object getForEntity3(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object getForObject(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object postForEntity(com.macro.mall.model.PmsBrand)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object postForObject(com.macro.mall.model.PmsBrand)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object postForEntity3(java.lang.String)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult getBrandList()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Added entry point (Empty): <com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult getBrandList()>
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: void <clinit>()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult createBrand(com.macro.mall.demo.dto.PmsBrandDto)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult updateBrand(java.lang.Long,com.macro.mall.demo.dto.PmsBrandDto)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult deleteBrand(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult listBrand(java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult brand(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Initializing global aspect mock objects...
+No implementation found for interface: com.macro.mall.common.service.RedisService
+No bean found for concrete class: org.springframework.amqp.core.AmqpTemplate
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+[Pointer analysis] elapsed time: 0.23s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                8289 (insens) / 2,1004 (sens)
+#objects:                     1845 (insens) / 2342 (sens)
+#var points-to:               9174 (insens) / 1,8899 (sens)
+#static field points-to:      391 (sens)
+#instance field points-to:    1622 (sens)
+#array points-to:             278 (sens)
+#reachable methods:           1857 (insens) / 6577 (sens)
+#call graph edges:            4295 (insens) / 1,2097 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.45s
+cg starts ...
+Call graph has 1857 reachable methods and 4295 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.13s
+Tai-e finishes, elapsed time: 23.43s

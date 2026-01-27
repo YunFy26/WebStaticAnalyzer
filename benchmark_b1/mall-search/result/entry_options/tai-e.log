@@ -1,0 +1,50 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+27972 classes with 261969 methods in the world
+WorldBuilder finishes, elapsed time: 21.52s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 13:04:28
+Router analysis completed at: 2026-01-25 13:04:28 (Duration: 8ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.03s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.03s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Added entry point (Empty): <com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult importAllList()>
+Added entry point (Empty): <com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult getBrandList()>
+[Pointer analysis] elapsed time: 0.12s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                4612 (insens) / 1,4632 (sens)
+#objects:                     915 (insens) / 1270 (sens)
+#var points-to:               5681 (insens) / 1,4051 (sens)
+#static field points-to:      386 (sens)
+#instance field points-to:    1035 (sens)
+#array points-to:             273 (sens)
+#reachable methods:           1037 (insens) / 4480 (sens)
+#call graph edges:            2468 (insens) / 9077 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.29s
+cg starts ...
+Call graph has 1037 reachable methods and 2468 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.09s
+Tai-e finishes, elapsed time: 22.06s

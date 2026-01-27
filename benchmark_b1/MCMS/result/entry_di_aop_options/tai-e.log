@@ -1,0 +1,72 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+27552 classes with 241603 methods in the world
+WorldBuilder finishes, elapsed time: 23.35s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 12:49:52
+Router analysis completed at: 2026-01-25 12:49:52 (Duration: 8ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.04s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.05s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Initializing global bean mock objects for beans...
+Initialized 65 global bean objects.
+Added entry point (Empty): <net.mingsoft.cms.action.ContentAction: java.lang.String index()>
+Added entry point (Empty): <net.mingsoft.cms.action.ContentAction: java.lang.String main()>
+No bean found for concrete class: net.mingsoft.mdiy.biz.IModelBiz
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData delete(java.util.List)>], Aspect: [net.mingsoft.cms.aop.ContentAop]
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData update(net.mingsoft.cms.entity.ContentEntity)>], Aspect: [net.mingsoft.cms.aop.ContentAop]
+No bean found for concrete class: org.slf4j.Logger
+No bean found for concrete class: org.slf4j.Logger
+No bean found for concrete class: net.mingsoft.mdiy.biz.IModelBiz
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.web.ContentAction: net.mingsoft.base.entity.ResultData get(net.mingsoft.cms.entity.ContentEntity)>], Aspect: [net.mingsoft.cms.aop.ContentAop]
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+No bean found for concrete class: net.mingsoft.config.MSProperties
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.web.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>], Aspect: [net.mingsoft.cms.aop.EditorFileVerifyAop]
+Added entry point (Empty): <net.mingsoft.cms.action.CategoryAction: java.lang.String index()>
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData save(net.mingsoft.cms.entity.CategoryEntity)>], Aspect: [net.mingsoft.cms.aop.CategoryAop]
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData delete(java.util.List)>], Aspect: [net.mingsoft.cms.aop.CategoryAop]
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData update(net.mingsoft.cms.entity.CategoryEntity)>], Aspect: [net.mingsoft.cms.aop.CategoryAop]
+Added entry point (Empty): <net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData changeType()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+No bean found for concrete class: net.mingsoft.config.MSProperties
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>], Aspect: [net.mingsoft.cms.aop.EditorFileVerifyAop]
+Initializing global aspect mock objects...
+No bean found for concrete class: net.mingsoft.mdiy.biz.ITagBiz
+[Pointer analysis] elapsed time: 0.11s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                2670 (insens) / 5523 (sens)
+#objects:                     996 (insens) / 1205 (sens)
+#var points-to:               2750 (insens) / 4319 (sens)
+#static field points-to:      74 (sens)
+#instance field points-to:    774 (sens)
+#array points-to:             160 (sens)
+#reachable methods:           477 (insens) / 1589 (sens)
+#call graph edges:            1186 (insens) / 2584 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.27s
+cg starts ...
+Call graph has 477 reachable methods and 1186 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.05s
+Tai-e finishes, elapsed time: 23.86s

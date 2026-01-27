@@ -2,75 +2,120 @@ import os
 import subprocess
 import glob
 import sys
+import shutil
 
-def run_benchmarks():
-    # --- 1. 配置基础信息 ---
-    # 指定你生成好的 fat-jar 路径
+def clean_directory(directory):
+    """清理指定目录下的所有文件，防止旧数据干扰"""
+    if os.path.exists(directory):
+        for filename in os.listdir(directory):
+            file_path = os.path.join(directory, filename)
+            try:
+                if os.path.isfile(file_path) or os.path.islink(file_path):
+                    os.unlink(file_path)
+                elif os.path.isdir(file_path):
+                    shutil.rmtree(file_path)
+            except Exception as e:
+                print(f"⚠️ 清理 {file_path} 失败: {e}")
+
+def run_benchmark_b1():
+    # --- 1. 基础配置 ---
     jar_path = "build/libs/WebAnalyzer-all.jar"
+    base_benchmark_dir = "benchmark_b1"
+    source_output_dir = "output"  # 工具默认输出目录
 
-    # 检查 jar 包是否存在，避免无效运行
+    # 需要保存的文件列表
+    files_to_save = [
+        "call-edges.txt",
+        "tai-e.log",
+        "reachable-methods.txt",
+        "aop-call-edges.txt",
+        "tai-e-plan.yml"
+    ]
+
+    # --- 检查环境 ---
     if not os.path.exists(jar_path):
         print(f"❌ 错误: 找不到 Jar 包: {jar_path}")
-        print("💡 请先运行: ./gradlew shadowJar")
         return
 
-    # 定义配置文件的搜索路径
-    base_search_path = os.path.join("configs", "benchmarks", "*", "options.yml")
-
-    # 获取所有匹配的文件路径列表
-    config_files = glob.glob(base_search_path)
-
-    if not config_files:
-        print(f"❌ 未在 '{base_search_path}' 下找到任何 options.yml 文件。")
+    if not os.path.exists(base_benchmark_dir):
+        print(f"❌ 错误: 找不到测试目录: {base_benchmark_dir}")
         return
 
-    # 排序
-    config_files.sort()
+    # 获取 benchmark_b1 下的所有项目目录 (排除文件)
+    projects = [d for d in os.listdir(base_benchmark_dir)
+                if os.path.isdir(os.path.join(base_benchmark_dir, d))]
 
-    print(f"=== 🔍 发现 {len(config_files)} 个任务，准备开始执行 ===")
-    print(f"📦 使用 Jar 包: {jar_path}")
-    print("-" * 50)
+    projects.sort() # 排序，保证执行顺序一致
 
-    # --- 2. 遍历并执行 ---
-    for index, config_path in enumerate(config_files, 1):
-        # 自动计算 result 文件的路径：放在与 options.yml 同级的目录下
-        # 例如: configs/benchmarks/basemall/options.yml -> configs/benchmarks/basemall/result
-        work_dir = os.path.dirname(config_path)
-        result_path = os.path.join(work_dir, "result")
+    print(f"=== 🔍 发现 {len(projects)} 个项目，开始批量分析 ===")
+    print(f"📦 Jar Path: {jar_path}")
+    print("-" * 60)
 
-        print(f"[{index}/{len(config_files)}] 🚀 正在处理: {work_dir.split('/')[-1]} ...", end=" ", flush=True)
+    # --- 2. 遍历项目 ---
+    for proj_idx, project_name in enumerate(projects, 1):
+        project_dir = os.path.join(base_benchmark_dir, project_name)
+        configs_dir = os.path.join(project_dir, "configs")
+        base_result_dir = os.path.join(project_dir, "result")
 
-        # 构建命令：严格按照你测试成功的命令结构
-        # java -jar build/libs/WebAnalyzer-all.jar -o="configs/benchmarks/xxx/options.yml"
-        command = [
-            "java",
-            "-jar", jar_path,
-            f"-o={config_path}"
-        ]
+        # 获取该项目下的所有 yml 配置文件
+        config_files = glob.glob(os.path.join(configs_dir, "*.yml"))
+        config_files.sort()
 
-        try:
-            # 打开 result 文件用于写入（相当于 Shell 中的 > result）
-            with open(result_path, "w") as f_out:
-                # subprocess.run 执行命令
-                # stdout=f_out: 将标准输出写入文件
-                # stderr=subprocess.STDOUT: 将错误日志也合并写入同一个文件（推荐，方便排查报错）
-                subprocess.run(command, stdout=f_out, stderr=subprocess.STDOUT, check=True)
+        if not config_files:
+            print(f"⚠️ [{proj_idx}/{len(projects)}] 项目 {project_name} 没有找到配置文件，跳过。")
+            continue
 
-            print("✅ 成功 (结果已保存)")
+        print(f"🚀 [{proj_idx}/{len(projects)}] 处理项目: {project_name} ({len(config_files)} 个配置)")
 
-        except subprocess.CalledProcessError as e:
-            # 如果 Java 程序返回错误码（非0）
-            print(f"❌ 失败 (代码 {e.returncode})")
-            print(f"   👉 请查看日志: {result_path}")
+        # --- 3. 遍历配置文件 (每个项目分析3次) ---
+        for conf_idx, config_path in enumerate(config_files, 1):
+            # 获取配置文件的文件名（不带后缀），作为结果子目录名称
+            # 例如: entry_di_options.yml -> entry_di_options
+            config_filename = os.path.basename(config_path)
+            config_name = os.path.splitext(config_filename)[0]
 
-        except FileNotFoundError:
-            print("\n❌ 错误: 未找到 'java' 命令。")
-            sys.exit(1)
-        except Exception as e:
-            print(f"\n❌ 发生未知错误: {e}")
+            # 创建结果存放的具体目录: benchmark_b1/MCMS/result/entry_di_options/
+            target_result_dir = os.path.join(base_result_dir, config_name)
+            if not os.path.exists(target_result_dir):
+                os.makedirs(target_result_dir)
 
-    print("\n" + "="*50)
+            print(f"   ├─ ({conf_idx}/{len(config_files)}) 正在分析: {config_name} ...", end=" ", flush=True)
+
+            # A. 运行前清理 output 目录，确保结果纯净
+            clean_directory(source_output_dir)
+
+            # B. 构建并执行命令
+            command = [
+                "java", "-jar", jar_path,
+                f"-o={config_path}"
+            ]
+
+            # 控制台日志保存路径
+            console_log_path = os.path.join(target_result_dir, "console_run.log")
+
+            try:
+                with open(console_log_path, "w") as f_log:
+                    subprocess.run(command, stdout=f_log, stderr=subprocess.STDOUT, check=True)
+
+                # C. 复制结果文件
+                copied_count = 0
+                for filename in files_to_save:
+                    src_file = os.path.join(source_output_dir, filename)
+                    dst_file = os.path.join(target_result_dir, filename)
+
+                    if os.path.exists(src_file):
+                        shutil.copy(src_file, dst_file)
+                        copied_count += 1
+
+                print(f"✅ 完成 (保存 {copied_count} 个文件)")
+
+            except subprocess.CalledProcessError:
+                print(f"❌ 分析失败 (查看日志: {console_log_path})")
+            except Exception as e:
+                print(f"❌ 异常: {e}")
+
+    print("-" * 60)
     print("=== 🎉 所有批量任务执行完毕 ===")
 
 if __name__ == "__main__":
-    run_benchmarks()
+    run_benchmark_b1()

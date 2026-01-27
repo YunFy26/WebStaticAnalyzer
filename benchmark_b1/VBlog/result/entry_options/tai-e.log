@@ -1,0 +1,59 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+27336 classes with 240088 methods in the world
+WorldBuilder finishes, elapsed time: 21.90s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 12:55:07
+Router analysis completed at: 2026-01-25 12:55:07 (Duration: 7ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.03s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.02s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Added entry point (Empty): <org.sang.controller.LoginRegController: org.sang.bean.RespBean loginError()>
+Added entry point (Empty): <org.sang.controller.LoginRegController: org.sang.bean.RespBean loginSuccess()>
+Added entry point (Empty): <org.sang.controller.LoginRegController: org.sang.bean.RespBean loginPage()>
+Added entry point (Empty): <org.sang.controller.CategoryController: java.util.List getAllCategories()>
+Added entry point (Empty): <org.sang.controller.admin.UserManaController: java.util.List getAllRole()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <org.sang.controller.ArticleController: java.util.Map dataStatistics()>
+Added entry point (Empty): <org.sang.controller.UserController: java.lang.String currentUserName()>
+Added entry point (Empty): <org.sang.controller.UserController: java.lang.Long currentUserId()>
+Added entry point (Empty): <org.sang.controller.UserController: java.lang.String currentUserEmail()>
+Added entry point (Empty): <org.sang.controller.UserController: java.lang.Boolean isAdmin()>
+[Pointer analysis] elapsed time: 0.02s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                332 (insens) / 441 (sens)
+#objects:                     201 (insens) / 201 (sens)
+#var points-to:               310 (insens) / 364 (sens)
+#static field points-to:      0 (sens)
+#instance field points-to:    170 (sens)
+#array points-to:             4 (sens)
+#reachable methods:           91 (insens) / 174 (sens)
+#call graph edges:            128 (insens) / 162 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.12s
+cg starts ...
+Call graph has 91 reachable methods and 128 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.01s
+Tai-e finishes, elapsed time: 22.17s

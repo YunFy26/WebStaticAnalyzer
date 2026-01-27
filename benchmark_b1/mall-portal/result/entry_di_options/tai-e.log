@@ -1,0 +1,67 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+28038 classes with 262485 methods in the world
+WorldBuilder finishes, elapsed time: 22.18s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 13:02:35
+Router analysis completed at: 2026-01-25 13:02:35 (Duration: 9ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.04s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.03s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Added entry point (Empty): <com.macro.mall.portal.controller.HomeController: com.macro.mall.common.api.CommonResult content()>
+Added entry point (Empty): <com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult list()>
+Added entry point (Empty): <com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult clear()>
+Added entry point (Empty): <com.macro.mall.portal.controller.PmsPortalProductController: com.macro.mall.common.api.CommonResult categoryTreeList()>
+Added entry point (Empty): <com.macro.mall.portal.controller.UmsMemberReceiveAddressController: com.macro.mall.common.api.CommonResult list()>
+Added entry point (Empty): <com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult cancelTimeOutOrder()>
+Added entry point (Empty): <com.macro.mall.portal.controller.MemberProductCollectionController: com.macro.mall.common.api.CommonResult clear()>
+Added entry point (Empty): <com.macro.mall.portal.controller.MemberReadHistoryController: com.macro.mall.common.api.CommonResult clear()>
+Added entry point (Empty): <com.macro.mall.portal.controller.MemberAttentionController: com.macro.mall.common.api.CommonResult clear()>
+Added entry point (Empty): <com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult getBrandList()>
+Initializing global bean mock objects for beans...
+Initialized 88 global bean objects.
+No implementation found for interface: com.macro.mall.common.service.RedisService
+No bean found for concrete class: org.springframework.amqp.core.AmqpTemplate
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+[Pointer analysis] elapsed time: 0.17s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                8151 (insens) / 1,9645 (sens)
+#objects:                     1670 (insens) / 2091 (sens)
+#var points-to:               8638 (insens) / 1,8206 (sens)
+#static field points-to:      389 (sens)
+#instance field points-to:    1542 (sens)
+#array points-to:             278 (sens)
+#reachable methods:           1819 (insens) / 6134 (sens)
+#call graph edges:            4235 (insens) / 1,1635 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.37s
+cg starts ...
+Call graph has 1819 reachable methods and 4235 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.13s
+Tai-e finishes, elapsed time: 22.84s

@@ -1,0 +1,112 @@
+Tai-e starts ...
+Output directory: /Users/yuntsy/My/Projects/Java/WebAnalyzer/output
+Writing options to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/options.yml
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Scanning /Users/yuntsy/My/Graduate/Data/final/mall/mall-admin/target/classes ... 157 classes
+Scanning /Users/yuntsy/My/Graduate/Data/final/mall/mall-common/target/classes ... 17 classes
+Scanning /Users/yuntsy/My/Graduate/Data/final/mall/mall-demo/target/classes ... 14 classes
+Scanning /Users/yuntsy/My/Graduate/Data/final/mall/mall-mbg/target/classes ... 458 classes
+Scanning /Users/yuntsy/My/Graduate/Data/final/mall/mall-portal/target/classes ... 88 classes
+Scanning /Users/yuntsy/My/Graduate/Data/final/mall/mall-search/target/classes ... 12 classes
+Scanning /Users/yuntsy/My/Graduate/Data/final/mall/mall-security/target/classes ... 15 classes
+Scanning /Users/yuntsy/.m2/repository/jakarta/servlet/jakarta.servlet-api/4.0.4/jakarta.servlet-api-4.0.4.jar ... 85 classes
+Scanning /Users/yuntsy/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar ... 85 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-web/6.2.1/spring-web-6.2.1.jar ... 1239 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-aop/6.2.0/spring-aop-6.2.0.jar ... 289 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-core/6.2.0/spring-core-6.2.0.jar ... 1181 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-jdbc/6.2.0/spring-jdbc-6.2.0.jar ... 303 classes
+Scanning /Users/yuntsy/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.0.0/jakarta.servlet-api-6.0.0.jar ... 85 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-context/6.2.0/spring-context-6.2.0.jar ... 861 classes
+Scanning /Users/yuntsy/.m2/repository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar ... 949 classes
+Scanning /Users/yuntsy/.m2/repository/org/apache/tomcat/tomcat-catalina/10.1.18/tomcat-catalina-10.1.18.jar ... 681 classes
+Scanning /Users/yuntsy/.m2/repository/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar ... 6733 classes
+Scanning /Users/yuntsy/.m2/repository/org/mybatis/mybatis/3.5.15/mybatis-3.5.15.jar ... 1083 classes
+Scanning /Users/yuntsy/.m2/repository/org/apache/shiro/shiro-web/1.13.0/shiro-web-1.13.0.jar ... 109 classes
+Scanning /Users/yuntsy/.m2/repository/org/apache/shiro/shiro-core/1.13.0/shiro-core-1.13.0.jar ... 367 classes
+Scanning /Users/yuntsy/.m2/repository/org/quartz-scheduler/quartz/2.3.2/quartz-2.3.2.jar ... 353 classes
+Warning: main class was not given!
+28281 classes with 263600 methods in the world
+WorldBuilder finishes, elapsed time: 22.60s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 12:59:24
+Router analysis completed at: 2026-01-25 12:59:24 (Duration: 12ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.04s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.04s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Added entry point (Empty): <com.macro.mall.controller.OssController: com.macro.mall.common.api.CommonResult policy()>
+Added entry point (Empty): <com.macro.mall.controller.UmsResourceCategoryController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.UmsRoleController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.CmsSubjectController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.CmsPrefrenceAreaController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.PmsProductCategoryController: com.macro.mall.common.api.CommonResult listWithChildren()>
+Added entry point (Empty): <com.macro.mall.controller.UmsResourceController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.SmsFlashPromotionSessionController: com.macro.mall.common.api.CommonResult list()>
+Added entry point (Empty): <com.macro.mall.controller.PmsBrandController: com.macro.mall.common.api.CommonResult getList()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <com.macro.mall.controller.PmsProductAttributeCategoryController: com.macro.mall.common.api.CommonResult getListWithAttr()>
+Added entry point (Empty): <com.macro.mall.controller.OmsCompanyAddressController: com.macro.mall.common.api.CommonResult list()>
+Added entry point (Empty): <com.macro.mall.controller.UmsMenuController: com.macro.mall.common.api.CommonResult treeList()>
+Added entry point (Empty): <com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult getBrandList()>
+Added entry point (Empty): <com.macro.mall.portal.controller.HomeController: com.macro.mall.common.api.CommonResult content()>
+Added entry point (Empty): <com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult list()>
+Added entry point (Empty): <com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult clear()>
+Added entry point (Empty): <com.macro.mall.portal.controller.PmsPortalProductController: com.macro.mall.common.api.CommonResult categoryTreeList()>
+Added entry point (Empty): <com.macro.mall.portal.controller.UmsMemberReceiveAddressController: com.macro.mall.common.api.CommonResult list()>
+Added entry point (Empty): <com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult cancelTimeOutOrder()>
+Added entry point (Empty): <com.macro.mall.portal.controller.MemberProductCollectionController: com.macro.mall.common.api.CommonResult clear()>
+Added entry point (Empty): <com.macro.mall.portal.controller.MemberReadHistoryController: com.macro.mall.common.api.CommonResult clear()>
+Added entry point (Empty): <com.macro.mall.portal.controller.MemberAttentionController: com.macro.mall.common.api.CommonResult clear()>
+Added entry point (Empty): <com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult importAllList()>
+Initializing global bean mock objects for beans...
+Initialized 154 global bean objects.
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No implementation found for interface: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: org.springframework.amqp.core.AmqpTemplate
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+[Pointer analysis] elapsed time: 0.21s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                1,2697 (insens) / 2,5780 (sens)
+#objects:                     3319 (insens) / 3852 (sens)
+#var points-to:               1,2759 (insens) / 2,3466 (sens)
+#static field points-to:      391 (sens)
+#instance field points-to:    2732 (sens)
+#array points-to:             286 (sens)
+#reachable methods:           2819 (insens) / 8279 (sens)
+#call graph edges:            6389 (insens) / 1,4685 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.49s
+cg starts ...
+Call graph has 2819 reachable methods and 6389 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.20s
+Tai-e finishes, elapsed time: 23.47s

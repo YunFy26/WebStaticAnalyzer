@@ -1,0 +1,308 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+10405 classes with 99951 methods in the world
+WorldBuilder finishes, elapsed time: 1.85s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 17:24:14
+Router analysis completed at: 2026-01-25 17:24:14 (Duration: 6ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.02s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.03s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Added entry point (Empty): <cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getNavList()>
+Added entry point (Empty): <cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getProductHome()>
+Added entry point (Empty): <cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getRecommendGoods()>
+Added entry point (Empty): <cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getThankGoods()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Added entry point (Empty): <cn.exrick.manager.controller.DictController: cn.exrick.common.pojo.DataTablesResult getDictList()>
+Added entry point (Empty): <cn.exrick.manager.controller.DictController: cn.exrick.common.pojo.DataTablesResult getStopList()>
+Added entry point (Empty): <cn.exrick.manager.controller.ExpressController: cn.exrick.common.pojo.DataTablesResult addressList()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getAllItemCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result importIndex()>
+Added entry point (Empty): <cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result getESInfo()>
+Added entry point (Empty): <cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getRemoveMemberCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result getOrderCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.PageController: java.lang.String showIndex()>
+Added entry point (Empty): <cn.exrick.manager.controller.PanelController: java.util.List getIndexPanel()>
+Added entry point (Empty): <cn.exrick.manager.controller.PanelController: java.util.List getAllIndexPanel()>
+Added entry point (Empty): <cn.exrick.manager.controller.PanelController: java.util.List getIndexBannerPanel()>
+Added entry point (Empty): <cn.exrick.manager.controller.PanelController: java.util.List getRecommendPanel()>
+Added entry point (Empty): <cn.exrick.manager.controller.RedisController: cn.exrick.common.pojo.Result getIndexRedis()>
+Added entry point (Empty): <cn.exrick.manager.controller.RedisController: cn.exrick.common.pojo.Result updateIndexRedis()>
+Added entry point (Empty): <cn.exrick.manager.controller.RedisController: cn.exrick.common.pojo.Result getRecommendRedis()>
+Added entry point (Empty): <cn.exrick.manager.controller.RedisController: cn.exrick.common.pojo.Result updateRecommendRedis()>
+Added entry point (Empty): <cn.exrick.manager.controller.RedisController: cn.exrick.common.pojo.Result getThankRedis()>
+Added entry point (Empty): <cn.exrick.manager.controller.RedisController: cn.exrick.common.pojo.Result updateThankRedis()>
+Added entry point (Empty): <cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result getUserCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result getBase()>
+Added entry point (Empty): <cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result getWeekHot()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result countLog()>
+Added entry point (Empty): <cn.exrick.manager.controller.ThanksController: cn.exrick.common.pojo.DataTablesResult getThanksList()>
+Added entry point (Empty): <cn.exrick.manager.controller.ThanksController: cn.exrick.common.pojo.Result getThanksCount()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+>>> AOP Match Found! Method: [<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>], Aspect: [cn.exrick.manager.aop.SystemLogAspect]
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result logout()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result getUserInfo()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.DataTablesResult getRoleList()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result getAllRoles()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result getRoleCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.DataTablesResult getPermissionList()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result getPermissionCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.DataTablesResult getUserList()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result getUserCount()>
+Initializing global bean mock objects for beans...
+Initialized 49 global bean objects.
+Initializing global aspect mock objects...
+No bean found for concrete class: org.slf4j.Logger
+No bean found for concrete class: cn.exrick.manager.mapper.TbAddressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbAddressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbAddressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbAddressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbAddressMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemDescMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderShippingMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderShippingMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderShippingMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderShippingMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbDictMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbDictMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbDictMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbDictMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbDictMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbExpressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbExpressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbExpressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbExpressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemCatMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemCatMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemCatMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemCatMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemDescMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemDescMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemDescMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemDescMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderShippingMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderShippingMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbShiroFilterMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbShiroFilterMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbShiroFilterMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbShiroFilterMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbShiroFilterMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbBaseMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbBaseMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbLogMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbLogMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbLogMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRolePermMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRolePermMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRolePermMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPermissionMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPermissionMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPermissionMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPermissionMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRolePermMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPermissionMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbAddressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemCatMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemCatMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: org.springframework.jms.core.JmsTemplate
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+[Pointer analysis] elapsed time: 0.08s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                2737 (insens) / 2764 (sens)
+#objects:                     1268 (insens) / 1268 (sens)
+#var points-to:               2061 (insens) / 2073 (sens)
+#static field points-to:      0 (sens)
+#instance field points-to:    410 (sens)
+#array points-to:             39 (sens)
+#reachable methods:           397 (insens) / 843 (sens)
+#call graph edges:            1016 (insens) / 1035 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.18s
+cg starts ...
+Call graph has 397 reachable methods and 1016 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.04s
+Tai-e finishes, elapsed time: 2.21s

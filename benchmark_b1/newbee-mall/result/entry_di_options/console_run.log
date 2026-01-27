@@ -1,0 +1,75 @@
+Tai-e starts ...
+Output directory: /Users/yuntsy/My/Projects/Java/WebAnalyzer/output
+Writing options to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/options.yml
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Scanning /Users/yuntsy/My/Graduate/Data/final/newbee-mall/target/classes ... 89 classes
+Scanning /Users/yuntsy/.m2/repository/jakarta/servlet/jakarta.servlet-api/4.0.4/jakarta.servlet-api-4.0.4.jar ... 85 classes
+Scanning /Users/yuntsy/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar ... 85 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-web/6.2.1/spring-web-6.2.1.jar ... 1239 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-aop/6.2.0/spring-aop-6.2.0.jar ... 289 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-core/6.2.0/spring-core-6.2.0.jar ... 1181 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-jdbc/6.2.0/spring-jdbc-6.2.0.jar ... 303 classes
+Scanning /Users/yuntsy/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.0.0/jakarta.servlet-api-6.0.0.jar ... 85 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-context/6.2.0/spring-context-6.2.0.jar ... 861 classes
+Scanning /Users/yuntsy/.m2/repository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar ... 949 classes
+Scanning /Users/yuntsy/.m2/repository/org/apache/tomcat/tomcat-catalina/10.1.18/tomcat-catalina-10.1.18.jar ... 681 classes
+Scanning /Users/yuntsy/.m2/repository/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar ... 6733 classes
+Scanning /Users/yuntsy/.m2/repository/org/mybatis/mybatis/3.5.15/mybatis-3.5.15.jar ... 1083 classes
+Scanning /Users/yuntsy/.m2/repository/org/apache/shiro/shiro-web/1.13.0/shiro-web-1.13.0.jar ... 109 classes
+Scanning /Users/yuntsy/.m2/repository/org/apache/shiro/shiro-core/1.13.0/shiro-core-1.13.0.jar ... 367 classes
+Scanning /Users/yuntsy/.m2/repository/org/quartz-scheduler/quartz/2.3.2/quartz-2.3.2.jar ... 353 classes
+Warning: main class was not given!
+27379 classes with 240699 methods in the world
+WorldBuilder finishes, elapsed time: 22.24s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 13:05:35
+Router analysis completed at: 2026-01-25 13:05:35 (Duration: 8ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.03s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.03s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Added entry point (Empty): <ltd.newbee.mall.controller.admin.AdminController: java.lang.String login()>
+Added entry point (Empty): <ltd.newbee.mall.controller.admin.AdminController: java.lang.String test()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <ltd.newbee.mall.controller.mall.PersonalController: java.lang.String loginPage()>
+Added entry point (Empty): <ltd.newbee.mall.controller.mall.PersonalController: java.lang.String registerPage()>
+Added entry point (Empty): <ltd.newbee.mall.controller.mall.PersonalController: java.lang.String addressesPage()>
+Initializing global bean mock objects for beans...
+Initialized 59 global bean objects.
+[Pointer analysis] elapsed time: 0.06s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                2051 (insens) / 2504 (sens)
+#objects:                     526 (insens) / 528 (sens)
+#var points-to:               2098 (insens) / 2300 (sens)
+#static field points-to:      80 (sens)
+#instance field points-to:    260 (sens)
+#array points-to:             70 (sens)
+#reachable methods:           345 (insens) / 707 (sens)
+#call graph edges:            995 (insens) / 1220 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.20s
+cg starts ...
+Call graph has 345 reachable methods and 995 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.05s
+Tai-e finishes, elapsed time: 22.66s

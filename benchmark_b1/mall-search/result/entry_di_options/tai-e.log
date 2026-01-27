@@ -1,0 +1,55 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+27972 classes with 261969 methods in the world
+WorldBuilder finishes, elapsed time: 21.67s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 13:04:06
+Router analysis completed at: 2026-01-25 13:04:06 (Duration: 7ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.04s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.03s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Added entry point (Empty): <com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult importAllList()>
+Added entry point (Empty): <com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult getBrandList()>
+Initializing global bean mock objects for beans...
+Initialized 53 global bean objects.
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+[Pointer analysis] elapsed time: 0.14s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                4965 (insens) / 1,5610 (sens)
+#objects:                     982 (insens) / 1358 (sens)
+#var points-to:               5927 (insens) / 1,4913 (sens)
+#static field points-to:      386 (sens)
+#instance field points-to:    1058 (sens)
+#array points-to:             276 (sens)
+#reachable methods:           1074 (insens) / 4660 (sens)
+#call graph edges:            2556 (insens) / 9538 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.33s
+cg starts ...
+Call graph has 1074 reachable methods and 2556 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.09s
+Tai-e finishes, elapsed time: 22.25s

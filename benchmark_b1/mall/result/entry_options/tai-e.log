@@ -1,0 +1,72 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+28281 classes with 263600 methods in the world
+WorldBuilder finishes, elapsed time: 22.39s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 12:59:47
+Router analysis completed at: 2026-01-25 12:59:47 (Duration: 15ms)
+routerAnalysis finishes, elapsed time: 0.02s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.04s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.05s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.01s
+pta starts ...
+Added entry point (Empty): <com.macro.mall.controller.OssController: com.macro.mall.common.api.CommonResult policy()>
+Added entry point (Empty): <com.macro.mall.controller.UmsResourceCategoryController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.UmsRoleController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.CmsSubjectController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.CmsPrefrenceAreaController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.PmsProductCategoryController: com.macro.mall.common.api.CommonResult listWithChildren()>
+Added entry point (Empty): <com.macro.mall.controller.UmsResourceController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.SmsFlashPromotionSessionController: com.macro.mall.common.api.CommonResult list()>
+Added entry point (Empty): <com.macro.mall.controller.PmsBrandController: com.macro.mall.common.api.CommonResult getList()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <com.macro.mall.controller.PmsProductAttributeCategoryController: com.macro.mall.common.api.CommonResult getListWithAttr()>
+Added entry point (Empty): <com.macro.mall.controller.OmsCompanyAddressController: com.macro.mall.common.api.CommonResult list()>
+Added entry point (Empty): <com.macro.mall.controller.UmsMenuController: com.macro.mall.common.api.CommonResult treeList()>
+Added entry point (Empty): <com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult getBrandList()>
+Added entry point (Empty): <com.macro.mall.portal.controller.HomeController: com.macro.mall.common.api.CommonResult content()>
+Added entry point (Empty): <com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult list()>
+Added entry point (Empty): <com.macro.mall.portal.controller.OmsCartItemController: com.macro.mall.common.api.CommonResult clear()>
+Added entry point (Empty): <com.macro.mall.portal.controller.PmsPortalProductController: com.macro.mall.common.api.CommonResult categoryTreeList()>
+Added entry point (Empty): <com.macro.mall.portal.controller.UmsMemberReceiveAddressController: com.macro.mall.common.api.CommonResult list()>
+Added entry point (Empty): <com.macro.mall.portal.controller.OmsPortalOrderController: com.macro.mall.common.api.CommonResult cancelTimeOutOrder()>
+Added entry point (Empty): <com.macro.mall.portal.controller.MemberProductCollectionController: com.macro.mall.common.api.CommonResult clear()>
+Added entry point (Empty): <com.macro.mall.portal.controller.MemberReadHistoryController: com.macro.mall.common.api.CommonResult clear()>
+Added entry point (Empty): <com.macro.mall.portal.controller.MemberAttentionController: com.macro.mall.common.api.CommonResult clear()>
+Added entry point (Empty): <com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult importAllList()>
+[Pointer analysis] elapsed time: 0.15s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                5943 (insens) / 1,5982 (sens)
+#objects:                     2528 (insens) / 2883 (sens)
+#var points-to:               6609 (insens) / 1,4983 (sens)
+#static field points-to:      386 (sens)
+#instance field points-to:    2151 (sens)
+#array points-to:             273 (sens)
+#reachable methods:           1269 (insens) / 4735 (sens)
+#call graph edges:            2972 (insens) / 9584 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.34s
+cg starts ...
+Call graph has 1269 reachable methods and 2972 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.09s
+Tai-e finishes, elapsed time: 23.02s

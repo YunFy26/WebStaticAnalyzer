@@ -1,0 +1,186 @@
+Tai-e starts ...
+Output directory: /Users/yuntsy/My/Projects/Java/WebAnalyzer/output
+Writing options to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/options.yml
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mall4cloud/mall4cloud-auth/BOOT-INF/mall4cloud-auth.jar ... 20 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mall4cloud/mall4cloud-biz/BOOT-INF/mall4cloud-biz.jar ... 21 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mall4cloud/mall4cloud-gateway/BOOT-INF/mall4cloud-gateway.jar ... 3 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mall4cloud/mall4cloud-leaf/BOOT-INF/mall4cloud-leaf.jar ... 21 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mall4cloud/mall4cloud-multishop/BOOT-INF/mall4cloud-multishop.jar ... 46 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mall4cloud/mall4cloud-order/BOOT-INF/mall4cloud-order.jar ... 39 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mall4cloud/mall4cloud-payment/BOOT-INF/mall4cloud-payment.jar ... 14 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mall4cloud/mall4cloud-platform/BOOT-INF/mall4cloud-platform.jar ... 22 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mall4cloud/mall4cloud-product/BOOT-INF/mall4cloud-product.jar ... 111 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mall4cloud/mall4cloud-rbac/BOOT-INF/mall4cloud-rbac.jar ... 38 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mall4cloud/mall4cloud-search/BOOT-INF/mall4cloud-search.jar ... 34 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mall4cloud/mall4cloud-user/BOOT-INF/mall4cloud-user.jar ... 26 classes
+Warning: main class was not given!
+10871 classes with 104572 methods in the world
+WorldBuilder finishes, elapsed time: 2.41s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 17:23:50
+Router analysis completed at: 2026-01-25 17:23:50 (Duration: 5ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.02s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.03s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Added entry point (Empty): <com.mall4j.cloud.auth.controller.LoginController: com.mall4j.cloud.common.response.ServerResponseEntity loginOut()>
+No bean found for concrete class: org.springframework.security.crypto.password.PasswordEncoder
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: com.mall4j.cloud.biz.config.OssConfig
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Added entry point (Empty): <com.mall4j.cloud.biz.controller.multishop.AttachFileGroupController: com.mall4j.cloud.common.response.ServerResponseEntity list()>
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Added entry point (Empty): <com.mall4j.cloud.gateway.handler.SwaggerHandler: reactor.core.publisher.Mono securityConfiguration()>
+Added entry point (Empty): <com.mall4j.cloud.gateway.handler.SwaggerHandler: reactor.core.publisher.Mono uiConfiguration()>
+Added entry point (Empty): <com.mall4j.cloud.gateway.handler.SwaggerHandler: reactor.core.publisher.Mono swaggerResources()>
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Added entry point (Empty): <com.mall4j.cloud.multishop.controller.app.MyShopDetailController: com.mall4j.cloud.common.response.ServerResponseEntity get()>
+Added entry point (Empty): <com.mall4j.cloud.multishop.controller.multishop.ShopDetailController: com.mall4j.cloud.common.response.ServerResponseEntity info()>
+Added entry point (Empty): <com.mall4j.cloud.multishop.controller.multishop.ShopUserController: com.mall4j.cloud.common.response.ServerResponseEntity info()>
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Added entry point (Empty): <com.mall4j.cloud.order.controller.app.MyOrderController: com.mall4j.cloud.common.response.ServerResponseEntity orderCount()>
+No bean found for concrete class: com.mall4j.cloud.api.product.manager.ShopCartAdapter
+No bean found for concrete class: com.mall4j.cloud.common.cache.util.CacheManagerUtil
+No bean found for concrete class: com.mall4j.cloud.common.cache.util.CacheManagerUtil
+Added entry point (Empty): <com.mall4j.cloud.order.controller.app.OrderController: com.mall4j.cloud.common.response.ServerResponseEntity submitOrders()>
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <com.mall4j.cloud.platform.controller.SysUserController: com.mall4j.cloud.common.response.ServerResponseEntity info()>
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Added entry point (Empty): <com.mall4j.cloud.product.controller.admin.AttrController: com.mall4j.cloud.common.response.ServerResponseEntity getShopAttrs()>
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Added entry point (Empty): <com.mall4j.cloud.product.controller.admin.CategoryController: com.mall4j.cloud.common.response.ServerResponseEntity platformCategories()>
+Added entry point (Empty): <com.mall4j.cloud.product.controller.admin.CategoryController: com.mall4j.cloud.common.response.ServerResponseEntity shopCategories()>
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Added entry point (Empty): <com.mall4j.cloud.product.controller.app.BrandController: com.mall4j.cloud.common.response.ServerResponseEntity topBrandList()>
+No bean found for concrete class: com.mall4j.cloud.api.product.manager.ShopCartAdapter
+Added entry point (Empty): <com.mall4j.cloud.product.controller.app.ShopCartController: com.mall4j.cloud.common.response.ServerResponseEntity info()>
+No bean found for concrete class: com.mall4j.cloud.api.product.manager.ShopCartAdapter
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Added entry point (Empty): <com.mall4j.cloud.product.controller.app.ShopCartController: com.mall4j.cloud.common.response.ServerResponseEntity amountInfo()>
+Added entry point (Empty): <com.mall4j.cloud.product.controller.app.ShopCartController: com.mall4j.cloud.common.response.ServerResponseEntity deleteAll()>
+Added entry point (Empty): <com.mall4j.cloud.product.controller.app.ShopCartController: com.mall4j.cloud.common.response.ServerResponseEntity prodCount()>
+Added entry point (Empty): <com.mall4j.cloud.product.controller.app.ShopCartController: com.mall4j.cloud.common.response.ServerResponseEntity expiryProdList()>
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Added entry point (Empty): <com.mall4j.cloud.rbac.controller.MenuController: com.mall4j.cloud.common.response.ServerResponseEntity listWithPermissions()>
+Added entry point (Empty): <com.mall4j.cloud.rbac.controller.MenuController: com.mall4j.cloud.common.response.ServerResponseEntity listMenuIds()>
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Added entry point (Empty): <com.mall4j.cloud.rbac.controller.MenuPermissionController: com.mall4j.cloud.common.response.ServerResponseEntity permissions()>
+Added entry point (Empty): <com.mall4j.cloud.rbac.controller.RoleController: com.mall4j.cloud.common.response.ServerResponseEntity list()>
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Added entry point (Empty): <com.mall4j.cloud.user.controller.app.AreaController: com.mall4j.cloud.common.response.ServerResponseEntity list()>
+Added entry point (Empty): <com.mall4j.cloud.user.controller.app.UserAddrController: com.mall4j.cloud.common.response.ServerResponseEntity list()>
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Added entry point (Empty): <com.mall4j.cloud.user.controller.app.UserController: com.mall4j.cloud.common.response.ServerResponseEntity getByAddrId()>
+Added entry point (Empty): <com.mall4j.cloud.user.controller.app.UserController: com.mall4j.cloud.common.response.ServerResponseEntity getUserDetailInfo()>
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+Initializing global bean mock objects for beans...
+Initialized 137 global bean objects.
+Initializing global aspect mock objects...
+No bean found for concrete class: org.springframework.security.crypto.password.PasswordEncoder
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.security.crypto.password.PasswordEncoder
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: org.springframework.security.crypto.password.PasswordEncoder
+No bean found for concrete class: org.springframework.security.crypto.password.PasswordEncoder
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: io.minio.MinioClient
+No bean found for concrete class: com.mall4j.cloud.biz.config.OssConfig
+No bean found for concrete class: io.minio.MinioClient
+No bean found for concrete class: com.mall4j.cloud.biz.config.OssConfig
+No bean found for concrete class: org.springframework.cloud.gateway.route.RouteLocator
+No bean found for concrete class: org.springframework.cloud.gateway.config.GatewayProperties
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: io.minio.MinioClient
+No bean found for concrete class: com.mall4j.cloud.biz.config.OssConfig
+No bean found for concrete class: ma.glasnost.orika.MapperFacade
+No bean found for concrete class: org.springframework.security.crypto.password.PasswordEncoder
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
+No implementation found for interface: com.mall4j.cloud.leaf.IDGen
+[Pointer analysis] elapsed time: 0.09s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                5113 (insens) / 6767 (sens)
+#objects:                     1507 (insens) / 1598 (sens)
+#var points-to:               3441 (insens) / 3965 (sens)
+#static field points-to:      80 (sens)
+#instance field points-to:    735 (sens)
+#array points-to:             54 (sens)
+#reachable methods:           1035 (insens) / 1679 (sens)
+#call graph edges:            1687 (insens) / 2213 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.19s
+cg starts ...
+Call graph has 1035 reachable methods and 1687 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.09s
+Tai-e finishes, elapsed time: 2.83s

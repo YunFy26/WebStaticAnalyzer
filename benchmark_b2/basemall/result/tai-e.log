@@ -1,0 +1,175 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+11397 classes with 105352 methods in the world
+WorldBuilder finishes, elapsed time: 3.38s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 17:23:46
+Router analysis completed at: 2026-01-25 17:23:46 (Duration: 6ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.03s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.05s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+No bean found for concrete class: com.medusa.gruul.shops.api.feign.RemoteShopsService
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: com.medusa.gruul.platform.api.feign.RemoteMiniInfoService
+Added entry point (Empty): <com.medusa.gruul.account.web.controller.AggregateController: com.medusa.gruul.common.core.util.Result getCommanderInfo()>
+Added entry point (Empty): <com.medusa.gruul.account.web.controller.MiniAccountController: com.medusa.gruul.common.core.util.Result qrCode()>
+Added entry point (Empty): <com.medusa.gruul.account.web.controller.MiniAccountTagController: com.medusa.gruul.common.core.util.Result listAll()>
+Added entry point (Empty): <com.medusa.gruul.account.web.controller.api.ApiMiniAccountCollectController: com.medusa.gruul.common.core.util.Result getUserCollectInfo()>
+Added entry point (Empty): <com.medusa.gruul.account.web.controller.api.ApiMiniAccountCollectController: com.medusa.gruul.common.core.util.Result getAccountCollectCount()>
+Added entry point (Empty): <com.medusa.gruul.account.web.controller.api.ApiMiniAccountFootMarkController: com.medusa.gruul.common.core.util.Result getAccountFootMarkCount()>
+Added entry point (Empty): <com.medusa.gruul.afs.controller.mini.MiniAfsOrderController: com.medusa.gruul.common.core.util.Result reasons()>
+Added entry point (Empty): <com.medusa.gruul.goods.web.controller.api.ApiShoppingCartController: com.medusa.gruul.common.core.util.Result getShoppingCartListByUserId()>
+Added entry point (Empty): <com.medusa.gruul.goods.web.controller.api.ApiShowCategoryController: com.medusa.gruul.common.core.util.Result getAllApiShowCategoryList()>
+Added entry point (Empty): <com.medusa.gruul.goods.web.controller.manager.AttributeTemplateController: com.medusa.gruul.common.core.util.Result getAllAttributeTemplateList()>
+Added entry point (Empty): <com.medusa.gruul.goods.web.controller.manager.FreightTemplateController: com.medusa.gruul.common.core.util.Result findFreightTemplateListByLogistics()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <com.medusa.gruul.goods.web.controller.manager.SaleModeController: com.medusa.gruul.common.core.util.Result getAllSaleModeList()>
+Added entry point (Empty): <com.medusa.gruul.goods.web.controller.manager.SupplierController: com.medusa.gruul.common.core.util.Result getAllSupplierList()>
+Added entry point (Empty): <com.medusa.gruul.goods.web.remote.GoodsController: java.lang.Integer findProductCount()>
+Added entry point (Empty): <com.medusa.gruul.logistics.controller.FeignController: com.medusa.gruul.common.core.util.Result getLogisticList()>
+Added entry point (Empty): <com.medusa.gruul.logistics.controller.LogisticsAddressController: com.medusa.gruul.common.core.util.Result getAllAddressList()>
+Added entry point (Empty): <com.medusa.gruul.logistics.controller.LogisticsAddressController: com.medusa.gruul.common.core.util.Result listLogisticsCompany()>
+Added entry point (Empty): <com.medusa.gruul.order.controller.manage.ManageOrderController: com.medusa.gruul.common.core.util.Result getOverview()>
+Added entry point (Empty): <com.medusa.gruul.order.controller.manage.ManageOrderController: com.medusa.gruul.common.core.util.Result getSetting()>
+Added entry point (Empty): <com.medusa.gruul.order.controller.manage.ManageOrderController: com.medusa.gruul.common.core.util.Result getOrderSetting()>
+Added entry point (Empty): <com.medusa.gruul.order.controller.manage.ManageOrderController: com.medusa.gruul.common.core.util.Result getShareSetting()>
+No bean found for concrete class: com.medusa.gruul.logistics.api.feign.RemoteLogisticsFeginService
+Added entry point (Empty): <com.medusa.gruul.order.controller.manage.ManageOrderController: com.medusa.gruul.common.core.util.Result hasWaitSend()>
+Added entry point (Empty): <com.medusa.gruul.order.controller.mini.MiniOrderController: com.medusa.gruul.common.core.util.Result orderOverview()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <com.medusa.gruul.order.controller.mini.MiniOrderController: com.medusa.gruul.common.core.util.Result evaluateSetting()>
+No bean found for concrete class: com.medusa.gruul.platform.api.feign.RemoteMiniInfoService
+Added entry point (Empty): <com.medusa.gruul.order.controller.mini.MiniOrderController: com.medusa.gruul.common.core.util.Result setting()>
+Added entry point (Empty): <com.medusa.gruul.order.controller.remote.RemoteOrderController: com.medusa.gruul.order.api.entity.OrderSetting getOrderSetting()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+No bean found for concrete class: com.medusa.gruul.oss.api.feign.RemoteSysOssService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.medusa.gruul.payment.router.PayMessageRouter
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Added entry point (Empty): <com.medusa.gruul.platform.web.controller.AccountInfoController: com.medusa.gruul.common.core.util.Result info()>
+Added entry point (Empty): <com.medusa.gruul.platform.web.controller.PlatformShopInfoConsoleController: com.medusa.gruul.common.core.util.Result closeOrOpen()>
+Added entry point (Empty): <com.medusa.gruul.platform.web.controller.PlatformShopInfoConsoleController: com.medusa.gruul.common.core.util.Result shopInfo()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <com.medusa.gruul.platform.web.controller.PlatformShopInfoConsoleController: com.medusa.gruul.common.core.util.Result getShopFunction()>
+Added entry point (Empty): <com.medusa.gruul.platform.web.controller.PlatformShopMessageController: com.medusa.gruul.common.core.util.Result msgAll()>
+Added entry point (Empty): <com.medusa.gruul.platform.web.controller.PlatformShopTemplateDetailController: com.medusa.gruul.common.core.util.Result getSkipUrl()>
+Added entry point (Empty): <com.medusa.gruul.platform.web.controller.SystemConfController: com.medusa.gruul.common.core.util.Result getTypeInfo()>
+Added entry point (Empty): <com.medusa.gruul.platform.web.controller.SystemConfController: com.medusa.gruul.common.core.util.Result getPayConfig()>
+Added entry point (Empty): <com.medusa.gruul.platform.web.controller.SystemConfController: com.medusa.gruul.common.core.util.Result getKfmsg()>
+Added entry point (Empty): <com.medusa.gruul.platform.web.controller.SystemConfController: com.medusa.gruul.common.core.util.Result getCodeEmailConf()>
+Added entry point (Empty): <com.medusa.gruul.platform.web.remote.RemoteMiniInfoController: com.medusa.gruul.common.core.util.Result getShopInfo()>
+Added entry point (Empty): <com.medusa.gruul.platform.web.remote.RemoteMiniInfoController: com.medusa.gruul.common.core.util.Result currentOssConfig()>
+Added entry point (Empty): <com.medusa.gruul.platform.web.remote.RemoteMiniInfoController: com.medusa.gruul.platform.api.model.dto.ShopConfigDto getShopConfig()>
+Added entry point (Empty): <com.medusa.gruul.platform.web.remote.RemoteMiniInfoController: com.medusa.gruul.common.core.util.Result getShopFunction()>
+Added entry point (Empty): <com.medusa.gruul.shops.controller.AccountCenterController: com.medusa.gruul.common.core.util.Result accountCenterSetting()>
+Added entry point (Empty): <com.medusa.gruul.shops.controller.ShopsController: java.util.List listShops()>
+Added entry point (Empty): <com.medusa.gruul.shops.controller.ShopsController: com.medusa.gruul.common.core.util.Result getTerms()>
+Added entry point (Empty): <com.medusa.gruul.shops.controller.ShopsGuidePageController: com.medusa.gruul.common.core.util.Result getShopGuidePage()>
+Added entry point (Empty): <com.medusa.gruul.shops.controller.ShopsGuidePageController: com.medusa.gruul.common.core.util.Result getShopGuidePageDefault()>
+Added entry point (Empty): <com.medusa.gruul.shops.controller.ShopsGuidePageSwitchController: com.medusa.gruul.common.core.util.Result getShopGuidePageSwitch()>
+Added entry point (Empty): <com.medusa.gruul.shops.controller.ShopsMenuConfigController: com.medusa.gruul.common.core.util.Result getMenuConfig()>
+Added entry point (Empty): <com.medusa.gruul.shops.controller.ShopsPartnerController: com.medusa.gruul.common.core.util.Result listShopsPartner()>
+Added entry point (Empty): <com.medusa.gruul.shops.controller.ShopsPartnerController: com.medusa.gruul.shops.api.entity.ShopsPartner oneByShopId()>
+Added entry point (Empty): <com.medusa.gruul.shops.controller.ShopsRenovationController: com.medusa.gruul.common.core.util.Result templateDefOne()>
+Added entry point (Empty): <com.medusa.gruul.shops.controller.remote.RemoteController: com.medusa.gruul.shops.api.model.AccountCenterVo accountCenterSetting()>
+Initializing global bean mock objects for beans...
+Initialized 191 global bean objects.
+Initializing global aspect mock objects...
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: com.medusa.gruul.logistics.api.feign.RemoteLogisticsFeginService
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: com.medusa.gruul.logistics.api.feign.RemoteLogisticsFeginService
+No bean found for concrete class: com.medusa.gruul.logistics.api.feign.RemoteLogisticsFeginService
+No bean found for concrete class: com.medusa.gruul.platform.api.feign.RemoteMiniInfoService
+No bean found for concrete class: com.medusa.gruul.shops.api.feign.RemoteShopsService
+No bean found for concrete class: com.medusa.gruul.shops.api.feign.RemoteShopsService
+No bean found for concrete class: com.medusa.gruul.account.api.feign.RemoteMiniAccountService
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: com.medusa.gruul.goods.api.feign.RemoteGoodsService
+No bean found for concrete class: com.medusa.gruul.account.api.feign.RemoteMiniAccountService
+No bean found for concrete class: com.medusa.gruul.goods.api.feign.RemoteGoodsService
+No bean found for concrete class: com.medusa.gruul.account.api.feign.RemoteMiniAccountService
+No bean found for concrete class: com.medusa.gruul.goods.api.feign.RemoteGoodsService
+No bean found for concrete class: com.medusa.gruul.logistics.api.feign.RemoteLogisticsFeginService
+No bean found for concrete class: com.medusa.gruul.account.api.feign.RemoteMiniAccountService
+No bean found for concrete class: com.medusa.gruul.goods.api.feign.RemoteGoodsService
+No bean found for concrete class: com.medusa.gruul.goods.api.feign.RemoteGoodsService
+No bean found for concrete class: com.medusa.gruul.account.api.feign.RemoteMiniAccountService
+No bean found for concrete class: com.medusa.gruul.account.api.feign.RemoteMiniAccountService
+No bean found for concrete class: com.medusa.gruul.platform.conf.WechatOpenProperties
+No bean found for concrete class: com.medusa.gruul.account.api.conf.MiniInfoProperty
+No bean found for concrete class: cn.hutool.cache.impl.TimedCache
+No bean found for concrete class: com.medusa.gruul.platform.api.feign.RemoteMiniInfoService
+No bean found for concrete class: com.medusa.gruul.sms.api.feign.RemoteSmsSendService
+No bean found for concrete class: com.medusa.gruul.account.api.conf.MiniInfoProperty
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: com.medusa.gruul.account.api.feign.RemoteMiniAccountService
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: com.medusa.gruul.account.api.feign.RemoteMiniAccountService
+No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+No bean found for concrete class: com.medusa.gruul.goods.api.feign.RemoteGoodsService
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+No bean found for concrete class: com.medusa.gruul.goods.api.feign.RemoteGoodsService
+No bean found for concrete class: com.medusa.gruul.platform.api.feign.RemoteMiniInfoService
+No bean found for concrete class: com.medusa.gruul.payment.api.feign.RemotePaymentService
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+No bean found for concrete class: com.medusa.gruul.platform.api.feign.RemoteMiniInfoService
+No bean found for concrete class: com.medusa.gruul.account.api.conf.MiniInfoProperty
+No bean found for concrete class: com.medusa.gruul.platform.api.feign.RemoteMiniInfoService
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+No bean found for concrete class: com.medusa.gruul.logistics.api.feign.RemoteLogisticsFeginService
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+No bean found for concrete class: com.medusa.gruul.payment.api.feign.RemotePaymentService
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+[Pointer analysis] elapsed time: 0.13s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                9746 (insens) / 1,0455 (sens)
+#objects:                     2834 (insens) / 2877 (sens)
+#var points-to:               5763 (insens) / 6083 (sens)
+#static field points-to:      49 (sens)
+#instance field points-to:    816 (sens)
+#array points-to:             80 (sens)
+#reachable methods:           1423 (insens) / 2370 (sens)
+#call graph edges:            2849 (insens) / 3103 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.26s
+cg starts ...
+Call graph has 1423 reachable methods and 2849 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.11s
+Tai-e finishes, elapsed time: 3.93s

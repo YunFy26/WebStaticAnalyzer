@@ -1,0 +1,153 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+10614 classes with 101672 methods in the world
+WorldBuilder finishes, elapsed time: 2.94s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 17:23:56
+Router analysis completed at: 2026-01-25 17:23:56 (Duration: 3ms)
+routerAnalysis finishes, elapsed time: 0.00s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.02s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.04s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Added entry point (Empty): <com.micro.controller.AdminController: com.micro.model.Result findProject()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+>>> AOP Match Found! Method: [<com.micro.manage.controller.FileController: void download(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>], Aspect: [com.micro.manage.aop.AllowDownloadAop]
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <com.micro.manage.controller.TypeComponentController: com.micro.common.Result findList()>
+>>> AOP Match Found! Method: [<com.micro.manage.controller.TypeComponentController: com.micro.common.Result save(com.micro.disk.bean.TypeComponentBean,javax.servlet.http.HttpServletRequest)>], Aspect: [com.micro.manage.aop.AllowOperateAop]
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+>>> AOP Match Found! Method: [<com.micro.manage.controller.TypeComponentController: com.micro.common.Result update(com.micro.disk.bean.TypeComponentBean)>], Aspect: [com.micro.manage.aop.AllowOperateAop]
+>>> AOP Match Found! Method: [<com.micro.manage.controller.TypeComponentController: com.micro.common.Result delete(java.lang.String)>], Aspect: [com.micro.manage.aop.AllowOperateAop]
+Added entry point (Empty): <com.micro.manage.controller.TypeController: com.micro.common.Result init()>
+Added entry point (Empty): <com.micro.manage.controller.TypeController: com.micro.common.Result findTypeTree()>
+Added entry point (Empty): <com.micro.manage.controller.TypeController: com.micro.common.Result findTypeList()>
+>>> AOP Match Found! Method: [<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>], Aspect: [com.micro.manage.aop.AllowOperateAop]
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+>>> AOP Match Found! Method: [<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>], Aspect: [com.micro.manage.aop.AllowOperateAop]
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+>>> AOP Match Found! Method: [<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result delete(java.lang.String)>], Aspect: [com.micro.manage.aop.AllowOperateAop]
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+>>> AOP Match Found! Method: [<com.micro.perpc.controller.FileDownloadController: void download(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>], Aspect: [com.micro.perpc.aop.AllowDownloadAop]
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+>>> AOP Match Found! Method: [<com.micro.perpc.controller.FileDownloadController: com.micro.common.Result mergeFiles(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>], Aspect: [com.micro.perpc.aop.AllowDownloadAop]
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <com.micro.perpc.controller.FileEditController: com.micro.common.Result editOffice()>
+Added entry point (Empty): <com.micro.perpc.controller.FileEditController: com.micro.common.Result addOffice()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+>>> AOP Match Found! Method: [<com.micro.perpc.controller.FileOpenController: void writeByte(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>], Aspect: [com.micro.perpc.aop.AllowPreviewAop]
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+>>> AOP Match Found! Method: [<com.micro.perpc.controller.FileUploadController: com.micro.common.Result checkFile(java.lang.String,long)>], Aspect: [com.micro.perpc.aop.FileCheckAop]
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+>>> AOP Match Found! Method: [<com.micro.perpc.controller.FileUploadController: com.micro.common.Result mergeChunk(com.micro.disk.bean.MergeFileBean,javax.servlet.http.HttpServletRequest)>], Aspect: [com.micro.perpc.aop.FileMergeAop]
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Initializing global bean mock objects for beans...
+Initialized 203 global bean objects.
+Initializing global aspect mock objects...
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.micro.common.json.JsonUtils
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.micro.store.context.StoreContext
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.micro.search.context.SearchContext
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.micro.common.json.JsonUtils
+No bean found for concrete class: com.micro.office.preview.PreviewContext
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.micro.common.json.JsonUtils
+No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
+No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
+No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
+>>> AOP Match Found! Method: [<com.micro.lock.LockZookeeper: void getLock(java.lang.String)>], Aspect: [com.micro.lock.LockAop]
+[Pointer analysis] elapsed time: 0.15s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                4595 (insens) / 5489 (sens)
+#objects:                     1710 (insens) / 1722 (sens)
+#var points-to:               3959 (insens) / 4330 (sens)
+#static field points-to:      7 (sens)
+#instance field points-to:    882 (sens)
+#array points-to:             17 (sens)
+#reachable methods:           629 (insens) / 1346 (sens)
+#call graph edges:            1806 (insens) / 2264 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.28s
+cg starts ...
+Call graph has 629 reachable methods and 1806 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.06s
+Tai-e finishes, elapsed time: 3.43s

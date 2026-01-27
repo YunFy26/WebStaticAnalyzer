@@ -1,0 +1,41 @@
+- id: routerAnalysis
+  options: {}
+- id: beanAnalysis
+  options: {}
+- id: injectPointsAnalysis
+  options: {}
+- id: aspectAnalysis
+  options: {}
+- id: pta
+  options:
+    cs: 2-obj
+    only-app: true
+    implicit-entries: true
+    distinguish-string-constants: reflection
+    merge-string-objects: true
+    merge-string-builders: true
+    merge-exception-objects: true
+    handle-invokedynamic: true
+    propagate-types:
+    - reference
+    advanced: null
+    dump: false
+    dump-ci: false
+    dump-yaml: false
+    expected-file: null
+    reflection-inference: string-constant
+    reflection-log: null
+    taint-config: null
+    taint-config-providers: []
+    taint-interactive-mode: false
+    plugins:
+    - org.example.spring.plugin.ProcessEntryPlugin
+    - org.example.spring.plugin.ProcessDIPlugin
+    - org.example.spring.plugin.ProcessAspectPlugin
+    time-limit: -1
+- id: cg
+  options:
+    algorithm: pta
+    dump: true
+    dump-methods: true
+    dump-call-edges: true

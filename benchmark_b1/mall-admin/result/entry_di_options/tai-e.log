@@ -1,0 +1,67 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+28095 classes with 262856 methods in the world
+WorldBuilder finishes, elapsed time: 23.67s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 13:01:00
+Router analysis completed at: 2026-01-25 13:01:00 (Duration: 10ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.04s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.03s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Added entry point (Empty): <com.macro.mall.controller.OssController: com.macro.mall.common.api.CommonResult policy()>
+Added entry point (Empty): <com.macro.mall.controller.UmsResourceCategoryController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.UmsRoleController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.CmsSubjectController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.CmsPrefrenceAreaController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.PmsProductCategoryController: com.macro.mall.common.api.CommonResult listWithChildren()>
+Added entry point (Empty): <com.macro.mall.controller.UmsResourceController: com.macro.mall.common.api.CommonResult listAll()>
+Added entry point (Empty): <com.macro.mall.controller.SmsFlashPromotionSessionController: com.macro.mall.common.api.CommonResult list()>
+Added entry point (Empty): <com.macro.mall.controller.PmsBrandController: com.macro.mall.common.api.CommonResult getList()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <com.macro.mall.controller.PmsProductAttributeCategoryController: com.macro.mall.common.api.CommonResult getListWithAttr()>
+Added entry point (Empty): <com.macro.mall.controller.OmsCompanyAddressController: com.macro.mall.common.api.CommonResult list()>
+Added entry point (Empty): <com.macro.mall.controller.UmsMenuController: com.macro.mall.common.api.CommonResult treeList()>
+Added entry point (Empty): <com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult getBrandList()>
+Initializing global bean mock objects for beans...
+Initialized 116 global bean objects.
+No implementation found for interface: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+No bean found for concrete class: com.macro.mall.common.service.RedisService
+[Pointer analysis] elapsed time: 0.23s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                9496 (insens) / 2,1208 (sens)
+#objects:                     2496 (insens) / 2950 (sens)
+#var points-to:               1,0163 (insens) / 1,9902 (sens)
+#static field points-to:      388 (sens)
+#instance field points-to:    2164 (sens)
+#array points-to:             278 (sens)
+#reachable methods:           2225 (insens) / 6789 (sens)
+#call graph edges:            4859 (insens) / 1,2465 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.45s
+cg starts ...
+Call graph has 2225 reachable methods and 4859 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.15s
+Tai-e finishes, elapsed time: 24.45s

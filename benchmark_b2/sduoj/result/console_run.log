@@ -1,0 +1,169 @@
+Tai-e starts ...
+Output directory: /Users/yuntsy/My/Projects/Java/WebAnalyzer/output
+Writing options to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/options.yml
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/sduoj/sduoj-auth/BOOT-INF/sduoj-auth.jar ... 11 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/sduoj/sduoj-contest/BOOT-INF/sduoj-contest.jar ... 36 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/sduoj/sduoj-filesys/BOOT-INF/sduoj-filesys.jar ... 13 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/sduoj/sduoj-gateway/BOOT-INF/sduoj-gateway.jar ... 11 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/sduoj/sduoj-judger/BOOT-INF/sduoj-judger.jar ... 35 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/sduoj/sduoj-problem/BOOT-INF/sduoj-problem.jar ... 98 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/sduoj/sduoj-submit/BOOT-INF/sduoj-submit.jar ... 34 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/sduoj/sduoj-user/BOOT-INF/sduoj-user.jar ... 36 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/sduoj/sduoj-websocket/BOOT-INF/sduoj-websocket.jar ... 12 classes
+Warning: main class was not given!
+10681 classes with 101752 methods in the world
+WorldBuilder finishes, elapsed time: 2.54s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 17:24:12
+Router analysis completed at: 2026-01-25 17:24:12 (Duration: 2ms)
+routerAnalysis finishes, elapsed time: 0.00s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.02s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.15s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Added entry point (Empty): <cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestListDTO queryUpcomingContest()>
+No implementation found for interface: cn.edu.sdu.qd.oj.contest.client.ProblemClient
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+No bean found for concrete class: cn.edu.sdu.qd.oj.site.config.SiteProperties
+Added entry point (Empty): <cn.edu.sdu.qd.oj.site.controller.SitePropertyController: java.lang.String getCopyright()>
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+Added entry point (Empty): <cn.edu.sdu.qd.oj.user.controller.UserController: java.util.Map getCaptcha()>
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Initializing global bean mock objects for beans...
+Initialized 116 global bean objects.
+Initializing global aspect mock objects...
+No implementation found for interface: cn.edu.sdu.qd.oj.contest.client.UserClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No implementation found for interface: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.UserClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No bean found for concrete class: cn.edu.sdu.qd.oj.filesys.config.FileSystemProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.filesys.config.FileSystemProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.filesys.config.FileSystemProperties
+No implementation found for interface: cn.edu.sdu.qd.oj.checkpoint.client.FilesysClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No bean found for concrete class: cn.edu.sdu.qd.oj.checkpoint.client.FilesysClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.checkpoint.client.FilesysClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No implementation found for interface: cn.edu.sdu.qd.oj.problem.client.UserClient
+No implementation found for interface: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No implementation found for interface: cn.edu.sdu.qd.oj.submit.client.UserClient
+No implementation found for interface: cn.edu.sdu.qd.oj.submit.client.JudgeTemplateClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.UserClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.UserClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.UserClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No bean found for concrete class: cn.edu.sdu.qd.oj.filesys.config.FileSystemProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.checkpoint.client.FilesysClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No bean found for concrete class: cn.edu.sdu.qd.oj.checkpoint.client.FilesysClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.checkpoint.client.FilesysClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No bean found for concrete class: cn.edu.sdu.qd.oj.problem.client.UserClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.UserClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.JudgeTemplateClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.UserClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.checkpoint.client.FilesysClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.MailProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.MailProperties
+[Pointer analysis] elapsed time: 0.08s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                3587 (insens) / 5614 (sens)
+#objects:                     1031 (insens) / 1509 (sens)
+#var points-to:               2024 (insens) / 2963 (sens)
+#static field points-to:      1 (sens)
+#instance field points-to:    209 (sens)
+#array points-to:             285 (sens)
+#reachable methods:           587 (insens) / 1190 (sens)
+#call graph edges:            994 (insens) / 1571 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.19s
+cg starts ...
+Call graph has 587 reachable methods and 994 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.05s
+Tai-e finishes, elapsed time: 3.04s

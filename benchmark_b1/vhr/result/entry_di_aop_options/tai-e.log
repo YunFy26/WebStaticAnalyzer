@@ -1,0 +1,71 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+27477 classes with 240640 methods in the world
+WorldBuilder finishes, elapsed time: 21.51s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 13:06:43
+Router analysis completed at: 2026-01-25 13:06:43 (Duration: 8ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.03s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.02s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Initializing global bean mock objects for beans...
+Initialized 69 global bean objects.
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <org.javaboy.vhr.controller.config.SystemConfigController: java.util.List getMenusByHrId()>
+Added entry point (Empty): <org.javaboy.vhr.controller.salary.SalaryController: java.util.List getAllSalaries()>
+Added entry point (Empty): <org.javaboy.vhr.controller.salary.SobConfigController: java.util.List getAllSalaries()>
+Added entry point (Empty): <org.javaboy.vhr.controller.LoginController: org.javaboy.vhr.model.RespBean login()>
+Added entry point (Empty): <org.javaboy.vhr.controller.ChatController: java.util.List getAllHrs()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: java.util.List getAllNations()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: java.util.List getAllPoliticsstatus()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: java.util.List getAllJobLevels()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: java.util.List getAllPositions()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespBean maxWorkID()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: java.util.List getAllDepartments()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: org.springframework.http.ResponseEntity exportData()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <org.javaboy.vhr.controller.system.HrController: java.util.List getAllRoles()>
+Added entry point (Empty): <org.javaboy.vhr.controller.system.basic.JobLevelController: java.util.List getAllJobLevels()>
+Added entry point (Empty): <org.javaboy.vhr.controller.system.basic.PermissController: java.util.List getAllRoles()>
+Added entry point (Empty): <org.javaboy.vhr.controller.system.basic.PermissController: java.util.List getAllMenus()>
+Added entry point (Empty): <org.javaboy.vhr.controller.system.basic.DepartmentController: java.util.List getAllDepartments()>
+Added entry point (Empty): <org.javaboy.vhr.controller.system.basic.PositionController: java.util.List getAllPositions()>
+Initializing global aspect mock objects...
+[Pointer analysis] elapsed time: 0.06s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                1638 (insens) / 3278 (sens)
+#objects:                     688 (insens) / 764 (sens)
+#var points-to:               1717 (insens) / 2679 (sens)
+#static field points-to:      221 (sens)
+#instance field points-to:    603 (sens)
+#array points-to:             79 (sens)
+#reachable methods:           323 (insens) / 1138 (sens)
+#call graph edges:            595 (insens) / 1755 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.19s
+cg starts ...
+Call graph has 323 reachable methods and 595 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.04s
+Tai-e finishes, elapsed time: 21.90s

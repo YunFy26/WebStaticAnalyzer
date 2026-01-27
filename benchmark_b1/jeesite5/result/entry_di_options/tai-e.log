@@ -1,0 +1,281 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+27987 classes with 243159 methods in the world
+WorldBuilder finishes, elapsed time: 22.16s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 12:56:15
+Router analysis completed at: 2026-01-25 12:56:15 (Duration: 9ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.03s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.04s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Added entry point (Empty): <com.jeesite.modules.ai.cms.web.CmsAiChatController: java.util.Collection list()>
+Added entry point (Empty): <com.jeesite.modules.cms.web.FileTemplateController: java.lang.String index()>
+Added entry point (Empty): <com.jeesite.modules.cms.web.FileTemplateController: java.lang.String help()>
+Added entry point (Empty): <com.jeesite.modules.cms.web.FileTemplateController: java.util.List treeData()>
+Added entry point (Empty): <com.jeesite.modules.cms.web.CmsIndexController: java.lang.String index()>
+Added entry point (Empty): <com.jeesite.modules.cms.web.CmsIndexController: java.lang.String none()>
+No implementation found for interface: com.jeesite.modules.biz.service.BizCategoryService
+No bean found for concrete class: com.jeesite.modules.biz.service.BizCategoryService
+No bean found for concrete class: com.jeesite.modules.biz.service.BizCategoryService
+No bean found for concrete class: com.jeesite.modules.biz.service.BizCategoryService
+No bean found for concrete class: com.jeesite.modules.biz.service.BizCategoryService
+No bean found for concrete class: com.jeesite.modules.biz.service.BizCategoryService
+No bean found for concrete class: com.jeesite.modules.biz.service.BizCategoryService
+No bean found for concrete class: com.jeesite.modules.biz.service.BizCategoryService
+No implementation found for interface: com.jeesite.modules.msg.service.MsgInnerService
+No bean found for concrete class: com.jeesite.modules.msg.service.MsgInnerService
+No bean found for concrete class: com.jeesite.modules.msg.service.MsgInnerService
+No bean found for concrete class: com.jeesite.modules.msg.service.MsgInnerService
+Added entry point (Empty): <com.jeesite.modules.file.web.FileUploadController: java.util.Map params()>
+No bean found for concrete class: com.jeesite.modules.file.service.FileUploadService
+No bean found for concrete class: com.jeesite.modules.file.service.FileUploadService
+No bean found for concrete class: com.jeesite.modules.file.service.FileUploadService
+No implementation found for interface: com.jeesite.modules.sys.service.PostService
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictTypeService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictTypeService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictTypeService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictTypeService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictTypeService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictTypeService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictTypeService
+No bean found for concrete class: com.jeesite.modules.sys.service.ConfigService
+No bean found for concrete class: com.jeesite.modules.sys.service.ConfigService
+No bean found for concrete class: com.jeesite.modules.sys.service.ConfigService
+No bean found for concrete class: com.jeesite.modules.sys.service.ConfigService
+No bean found for concrete class: com.jeesite.modules.sys.service.AuditService
+No bean found for concrete class: com.jeesite.modules.sys.service.AuditService
+No bean found for concrete class: com.jeesite.modules.sys.service.AuditService
+No bean found for concrete class: com.jeesite.modules.sys.service.AuditService
+Added entry point (Empty): <com.jeesite.modules.sys.web.LoginController: org.apache.shiro.authz.AuthorizationInfo authInfo()>
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No implementation found for interface: com.jeesite.modules.sys.service.EmpUserService
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No implementation found for interface: com.jeesite.modules.sys.service.EmployeeService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmpUserService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmployeeService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmpUserService
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+No bean found for concrete class: com.jeesite.modules.sys.service.EmpUserService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmpUserService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmpUserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmpUserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmpUserService
+Added entry point (Empty): <com.jeesite.modules.sys.web.user.EmpUserController: java.util.List officeListData()>
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictDataService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictDataService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictDataService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictTypeService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictTypeService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictDataService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictDataService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictDataService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictDataService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictDataService
+No implementation found for interface: com.jeesite.modules.sys.service.AreaService
+No bean found for concrete class: com.jeesite.modules.sys.service.AreaService
+No bean found for concrete class: com.jeesite.modules.sys.service.AreaService
+No bean found for concrete class: com.jeesite.modules.sys.service.AreaService
+No bean found for concrete class: com.jeesite.modules.sys.service.AreaService
+No bean found for concrete class: com.jeesite.modules.sys.service.AreaService
+No bean found for concrete class: com.jeesite.modules.sys.service.AreaService
+No bean found for concrete class: com.jeesite.modules.sys.service.AreaService
+No bean found for concrete class: com.jeesite.modules.sys.service.AreaService
+No implementation found for interface: com.jeesite.modules.sys.service.OfficeService
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmpUserService
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+No implementation found for interface: com.jeesite.modules.sys.service.LogService
+No implementation found for interface: com.jeesite.modules.sys.service.CompanyService
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+No bean found for concrete class: com.jeesite.modules.sys.service.CompanyService
+No bean found for concrete class: com.jeesite.modules.sys.service.CompanyService
+No bean found for concrete class: com.jeesite.modules.sys.service.CompanyService
+No bean found for concrete class: com.jeesite.modules.sys.service.CompanyService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmpUserService
+No bean found for concrete class: com.jeesite.modules.sys.service.CompanyService
+No bean found for concrete class: com.jeesite.modules.sys.service.CompanyService
+No bean found for concrete class: com.jeesite.modules.sys.service.CompanyService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.modules.sys.service.ModuleService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.common.shiro.session.SessionDAO
+No bean found for concrete class: com.jeesite.common.shiro.session.SessionDAO
+No bean found for concrete class: com.jeesite.modules.sys.service.ModuleService
+No bean found for concrete class: com.jeesite.modules.sys.service.ModuleService
+No bean found for concrete class: com.jeesite.modules.sys.service.ModuleService
+No bean found for concrete class: com.jeesite.modules.sys.service.ModuleService
+No bean found for concrete class: com.jeesite.modules.sys.service.ModuleService
+No bean found for concrete class: com.jeesite.modules.sys.service.ModuleService
+No bean found for concrete class: com.jeesite.modules.sys.service.ModuleService
+Added entry point (Empty): <com.jeesite.modules.sys.web.CacheController: java.lang.String clearAll()>
+Added entry point (Empty): <com.jeesite.modules.FastApplication$JeeSiteController: java.lang.String login()>
+Initializing global bean mock objects for beans...
+Initialized 116 global bean objects.
+No bean found for concrete class: com.jeesite.modules.ai.cms.properties.AiCmsProperties
+No bean found for concrete class: com.jeesite.modules.ai.cms.properties.AiCmsProperties
+No implementation found for interface: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No implementation found for interface: com.jeesite.modules.cms.service.extend.ArticleAuthService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No implementation found for interface: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No bean found for concrete class: com.jeesite.modules.biz.service.BizCategoryService
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No bean found for concrete class: com.jeesite.modules.sys.service.PostService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.UserService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmployeeService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmployeeService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.RoleService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictDataService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictTypeService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictDataService
+No bean found for concrete class: com.jeesite.modules.sys.service.DictTypeService
+No bean found for concrete class: com.jeesite.modules.sys.service.AreaService
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+No bean found for concrete class: com.jeesite.modules.sys.service.OfficeService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmpUserService
+No bean found for concrete class: com.jeesite.modules.sys.service.CompanyService
+No bean found for concrete class: com.jeesite.modules.sys.service.CompanyService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.modules.sys.service.MenuService
+No bean found for concrete class: com.jeesite.modules.ai.cms.properties.AiCmsProperties
+No bean found for concrete class: com.jeesite.modules.ai.cms.properties.AiCmsProperties
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No bean found for concrete class: org.slf4j.Logger
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleAuthService
+No bean found for concrete class: org.springframework.ai.vectorstore.VectorStore
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No bean found for concrete class: com.jeesite.modules.sys.service.EmpUserService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.ArticleIndexService
+No bean found for concrete class: com.jeesite.modules.cms.service.extend.PageCacheService
+No bean found for concrete class: org.springframework.ai.vectorstore.VectorStore
+[Pointer analysis] elapsed time: 0.39s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                1,2808 (insens) / 3,2289 (sens)
+#objects:                     4663 (insens) / 5523 (sens)
+#var points-to:               1,7630 (insens) / 5,8234 (sens)
+#static field points-to:      183 (sens)
+#instance field points-to:    5691 (sens)
+#array points-to:             539 (sens)
+#reachable methods:           1956 (insens) / 7579 (sens)
+#call graph edges:            5813 (insens) / 2,3590 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.62s
+cg starts ...
+Call graph has 1956 reachable methods and 5813 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.16s
+Tai-e finishes, elapsed time: 23.12s

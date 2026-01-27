@@ -1,0 +1,356 @@
+Tai-e starts ...
+Output directory: /Users/yuntsy/My/Projects/Java/WebAnalyzer/output
+Writing options to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/options.yml
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/onemall/management-web-app/BOOT-INF/management-web-app.jar ... 165 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/onemall/pay-service-app/BOOT-INF/pay-service-app.jar ... 48 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/onemall/product-service-app/BOOT-INF/product-service-app.jar ... 66 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/onemall/promotion-service-app/BOOT-INF/promotion-service-app.jar ... 45 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/onemall/search-service-app/BOOT-INF/search-service-app.jar ... 16 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/onemall/shop-web-app/BOOT-INF/shop-web-app.jar ... 98 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/onemall/system-service-app/BOOT-INF/system-service-app.jar ... 107 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/onemall/trade-service-app/BOOT-INF/trade-service-app.jar ... 32 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/onemall/user-service-app/BOOT-INF/user-service-app.jar ... 29 classes
+Warning: main class was not given!
+11054 classes with 105869 methods in the world
+WorldBuilder finishes, elapsed time: 3.15s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 17:24:03
+Router analysis completed at: 2026-01-25 17:24:03 (Duration: 4ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.02s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.05s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult treeDepartment()>
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult listDataDicts()>
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult listSimpleDataDicts()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.passport.PassportController: cn.iocoder.common.framework.vo.CommonResult getInfo()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.passport.PassportController: cn.iocoder.common.framework.vo.CommonResult treeAdminMenu()>
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.passport.PassportController: cn.iocoder.common.framework.vo.CommonResult listAdminPermission()>
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.permission.ResourceController: cn.iocoder.common.framework.vo.CommonResult treeResource()>
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult listAllRoles()>
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.product.ProductCategoryController: cn.iocoder.common.framework.vo.CommonResult treeProductCategory()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.promotion.BannerController: cn.iocoder.common.framework.vo.CommonResult listBanners()>
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.promotion.ProductRecommendController: cn.iocoder.common.framework.vo.CommonResult list()>
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult sumCartItemQuantity()>
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult getCartDetail()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult getDefaultUserAddress()>
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult listUserAddresses()>
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult getUserInfo()>
+Initializing global bean mock objects for beans...
+Initialized 141 global bean objects.
+Initializing global aspect mock objects...
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.oauth.OAuth2Rpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.oauth.OAuth2Rpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No implementation found for interface: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No implementation found for interface: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No implementation found for interface: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No implementation found for interface: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No implementation found for interface: cn.iocoder.mall.promotion.api.rpc.activity.PromotionActivityRpc
+No implementation found for interface: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No implementation found for interface: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No implementation found for interface: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.systemlog.SystemAccessLogRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.systemlog.SystemExceptionLogRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.systemlog.SystemExceptionLogRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.systemlog.SystemExceptionLogRpc
+No implementation found for interface: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No implementation found for interface: cn.iocoder.mall.promotion.api.rpc.price.PriceRpc
+No implementation found for interface: cn.iocoder.mall.searchservice.rpc.product.SearchProductRpc
+No bean found for concrete class: cn.iocoder.mall.searchservice.rpc.product.SearchProductRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No implementation found for interface: cn.iocoder.mall.promotion.api.rpc.coupon.CouponCardRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponCardRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No implementation found for interface: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.price.PriceRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No implementation found for interface: cn.iocoder.mall.userservice.rpc.sms.UserSmsCodeRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.oauth.OAuth2Rpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.sms.UserSmsCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.oauth.OAuth2Rpc
+No implementation found for interface: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.oauth.OAuth2Rpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.oauth.OAuth2Rpc
+No implementation found for interface: cn.iocoder.mall.payservice.rpc.transaction.PayTransactionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.activity.PromotionActivityRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.systemlog.SystemAccessLogRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.systemlog.SystemExceptionLogRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.systemlog.SystemExceptionLogRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.systemlog.SystemExceptionLogRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.payservice.rpc.transaction.PayTransactionRpc
+No bean found for concrete class: cn.iocoder.mall.payservice.rpc.transaction.PayTransactionRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.activity.PromotionActivityRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.price.PriceRpc
+No bean found for concrete class: cn.iocoder.mall.searchservice.rpc.product.SearchProductRpc
+No bean found for concrete class: cn.iocoder.mall.searchservice.rpc.product.SearchProductRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponCardRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponCardRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.activity.PromotionActivityRpc
+No implementation found for interface: cn.iocoder.mall.productservice.rpc.sku.ProductSkuRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.price.PriceRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponCardRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No implementation found for interface: cn.iocoder.mall.tradeservice.rpc.order.TradeOrderRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.order.TradeOrderRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.order.TradeOrderRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.sms.UserSmsCodeRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.oauth.OAuth2Rpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.sms.UserSmsCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.oauth.OAuth2Rpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.activity.PromotionActivityRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.sku.ProductSkuRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.activity.PromotionActivityRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.price.PriceRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponCardRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.price.PriceRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponCardRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.sku.ProductSkuRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.activity.PromotionActivityRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.sku.ProductSkuRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.activity.PromotionActivityRpc
+[Pointer analysis] elapsed time: 0.07s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                1806 (insens) / 2854 (sens)
+#objects:                     970 (insens) / 1047 (sens)
+#var points-to:               1051 (insens) / 1297 (sens)
+#static field points-to:      2 (sens)
+#instance field points-to:    575 (sens)
+#array points-to:             0 (sens)
+#reachable methods:           369 (insens) / 669 (sens)
+#call graph edges:            326 (insens) / 563 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.19s
+cg starts ...
+Call graph has 369 reachable methods and 326 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.03s
+Tai-e finishes, elapsed time: 3.53s

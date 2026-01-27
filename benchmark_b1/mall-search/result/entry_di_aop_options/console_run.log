@@ -1,0 +1,101 @@
+Tai-e starts ...
+Output directory: /Users/yuntsy/My/Projects/Java/WebAnalyzer/output
+Writing options to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/options.yml
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Scanning /Users/yuntsy/My/Graduate/Data/final/mall/mall-search/target/classes ... 12 classes
+Scanning /Users/yuntsy/My/Graduate/Data/final/mall/mall-common/target/classes ... 17 classes
+Scanning /Users/yuntsy/My/Graduate/Data/final/mall/mall-demo/target/classes ... 14 classes
+Scanning /Users/yuntsy/My/Graduate/Data/final/mall/mall-mbg/target/classes ... 458 classes
+Scanning /Users/yuntsy/My/Graduate/Data/final/mall/mall-security/target/classes ... 15 classes
+Scanning /Users/yuntsy/.m2/repository/jakarta/servlet/jakarta.servlet-api/4.0.4/jakarta.servlet-api-4.0.4.jar ... 85 classes
+Scanning /Users/yuntsy/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar ... 85 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-web/6.2.1/spring-web-6.2.1.jar ... 1239 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-aop/6.2.0/spring-aop-6.2.0.jar ... 289 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-core/6.2.0/spring-core-6.2.0.jar ... 1181 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-jdbc/6.2.0/spring-jdbc-6.2.0.jar ... 303 classes
+Scanning /Users/yuntsy/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.0.0/jakarta.servlet-api-6.0.0.jar ... 85 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-context/6.2.0/spring-context-6.2.0.jar ... 861 classes
+Scanning /Users/yuntsy/.m2/repository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar ... 949 classes
+Scanning /Users/yuntsy/.m2/repository/org/apache/tomcat/tomcat-catalina/10.1.18/tomcat-catalina-10.1.18.jar ... 681 classes
+Scanning /Users/yuntsy/.m2/repository/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar ... 6733 classes
+Scanning /Users/yuntsy/.m2/repository/org/mybatis/mybatis/3.5.15/mybatis-3.5.15.jar ... 1083 classes
+Scanning /Users/yuntsy/.m2/repository/org/apache/shiro/shiro-web/1.13.0/shiro-web-1.13.0.jar ... 109 classes
+Scanning /Users/yuntsy/.m2/repository/org/apache/shiro/shiro-core/1.13.0/shiro-core-1.13.0.jar ... 367 classes
+Scanning /Users/yuntsy/.m2/repository/org/quartz-scheduler/quartz/2.3.2/quartz-2.3.2.jar ... 353 classes
+Warning: main class was not given!
+27972 classes with 261969 methods in the world
+WorldBuilder finishes, elapsed time: 22.03s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-25 13:03:43
+Router analysis completed at: 2026-01-25 13:03:43 (Duration: 9ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.03s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.02s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Initializing global bean mock objects for beans...
+Initialized 53 global bean objects.
+>>> AOP Match Found! Method: [<com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult importAllList()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Added entry point (Empty): <com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult importAllList()>
+>>> AOP Match Found! Method: [<com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult delete(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult delete(java.util.List)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult create(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult search(java.lang.String,java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult search(java.lang.String,java.lang.Long,java.lang.Long,java.lang.Integer,java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult recommend(java.lang.Long,java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.search.controller.EsProductController: com.macro.mall.common.api.CommonResult searchRelatedInfo(java.lang.String)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object getForEntity(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object getForEntity2(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object getForEntity3(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object getForObject(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object postForEntity(com.macro.mall.model.PmsBrand)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object postForObject(com.macro.mall.model.PmsBrand)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.RestTemplateDemoController: java.lang.Object postForEntity3(java.lang.String)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult getBrandList()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Added entry point (Empty): <com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult getBrandList()>
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: void <clinit>()>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult createBrand(com.macro.mall.demo.dto.PmsBrandDto)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult updateBrand(java.lang.Long,com.macro.mall.demo.dto.PmsBrandDto)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult deleteBrand(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult listBrand(java.lang.Integer,java.lang.Integer)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+>>> AOP Match Found! Method: [<com.macro.mall.demo.controller.DemoController: com.macro.mall.common.api.CommonResult brand(java.lang.Long)>], Aspect: [com.macro.mall.common.log.WebLogAspect]
+Initializing global aspect mock objects...
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
+[Pointer analysis] elapsed time: 0.17s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                5103 (insens) / 1,6089 (sens)
+#objects:                     1047 (insens) / 1444 (sens)
+#var points-to:               6133 (insens) / 1,5166 (sens)
+#static field points-to:      388 (sens)
+#instance field points-to:    1083 (sens)
+#array points-to:             276 (sens)
+#reachable methods:           1113 (insens) / 4828 (sens)
+#call graph edges:            2616 (insens) / 9725 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.35s
+cg starts ...
+Call graph has 1113 reachable methods and 2616 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.08s
+Tai-e finishes, elapsed time: 22.63s

@@ -1,0 +1,44 @@
+optionsFile: null
+printHelp: false
+# WebGoat libs
+classPath: []
+appClassPath:
+  - benchmarks/mall4cloud/mall4cloud-auth/BOOT-INF/mall4cloud-auth.jar
+  - benchmarks/mall4cloud/mall4cloud-biz/BOOT-INF/mall4cloud-biz.jar
+  - benchmarks/mall4cloud/mall4cloud-gateway/BOOT-INF/mall4cloud-gateway.jar
+  - benchmarks/mall4cloud/mall4cloud-leaf/BOOT-INF/mall4cloud-leaf.jar
+  - benchmarks/mall4cloud/mall4cloud-multishop/BOOT-INF/mall4cloud-multishop.jar
+  - benchmarks/mall4cloud/mall4cloud-order/BOOT-INF/mall4cloud-order.jar
+  - benchmarks/mall4cloud/mall4cloud-payment/BOOT-INF/mall4cloud-payment.jar
+  - benchmarks/mall4cloud/mall4cloud-platform/BOOT-INF/mall4cloud-platform.jar
+  - benchmarks/mall4cloud/mall4cloud-product/BOOT-INF/mall4cloud-product.jar
+  - benchmarks/mall4cloud/mall4cloud-rbac/BOOT-INF/mall4cloud-rbac.jar
+  - benchmarks/mall4cloud/mall4cloud-search/BOOT-INF/mall4cloud-search.jar
+  - benchmarks/mall4cloud/mall4cloud-user/BOOT-INF/mall4cloud-user.jar
+
+mainClass:
+inputClasses: []
+javaVersion: 17
+prependJVM: true
+allowPhantom: true
+worldBuilderClass: pascal.taie.frontend.soot.SootWorldBuilder
+outputDir: output
+preBuildIR: false
+worldCacheMode: false
+scope: APP
+nativeModel: true
+planFile: null
+analyses:
+  #  ir-dumper: ""
+  routerAnalysis: ""
+  beanAnalysis: ""
+  injectPointsAnalysis: ""
+  aspectAnalysis: ""
+  cg: ""
+  #  cfg: ""
+  #  icfg: ""
+  pta: "plugins:[org.example.spring.plugin.ProcessEntryPlugin,org.example.spring.plugin.ProcessDIPlugin,org.example.spring.plugin.ProcessAspectPlugin]"
+#  pta: "plugins:[org.example.spring.plugin.ProcessEntryPlugin]"
+onlyGenPlan: false
+keepResult:
+  - $KEEP-ALL
