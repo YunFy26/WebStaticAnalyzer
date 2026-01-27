@@ -4,7 +4,7 @@
   options:
     cs: 2-obj # | k-[obj|type|call][-k'h]
     only-app: true # only analyze application code
-    implicit-entries: false # analyze implicit entries
+    implicit-entries: true # analyze implicit entries
     distinguish-string-constants: reflection # (distinguish reflection-relevant
     # string constants, i.e., class, method, and field names)
     # | null (do not distinguish any string constants)
@@ -27,7 +27,7 @@
     reflection-inference: string-constant # | solar | null
     reflection-log: null # path to reflection log, required when reflection option is log
 #    taint-config: /Users/yuntsy/My/Projects/Java/WebAnalyzer/configs/taint-config.yml # path (of dir/file) to config file of taint analysis,
-    taint-config: null # path (of dir/file) to config file of taint analysis,
+    taint-config: configs/taint-config.yml # path (of dir/file) to config file of taint analysis,
     taint-config-providers: [ ] # class names of taint config provider classes
     # when this file is given, taint analysis will be enabled
     taint-interactive-mode: false # whether enable interactive mode for taint analysis

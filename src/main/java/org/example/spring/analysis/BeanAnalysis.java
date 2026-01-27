@@ -83,7 +83,9 @@ public class BeanAnalysis extends ProgramAnalysis {
             }
 
             // MyBatis Mapper 接口
-            if (appClass.hasAnnotation(MyBatisRules.MAPPER) || appClass.getSimpleName().endsWith("Mapper")) {
+            if (appClass.hasAnnotation(MyBatisRules.MAPPER) || appClass.getSimpleName().endsWith("Mapper")
+            || appClass.getSimpleName().endsWith("Dao") || appClass.getSimpleName().endsWith("Repository")
+            || appClass.getName().endsWith("MapperEx") || appClass.getName().endsWith("Entity")) {
                 BeanClass beanClass = BeanClassInitializer.createBeanClass(appClass);
                 beans.add(beanClass);
             }

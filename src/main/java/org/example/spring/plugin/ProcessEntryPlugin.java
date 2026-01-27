@@ -103,7 +103,11 @@ public class ProcessEntryPlugin implements Plugin {
                             logger.info("Concrete class not found for type: {}", concreteType);
                         }
                     } else {
-                        solver.addEntryPoint(new EntryPoint(jMethod, new DeclaredParamProvider(jMethod, heapModel, 1)));
+                        try{
+                            solver.addEntryPoint(new EntryPoint(jMethod, new DeclaredParamProvider(jMethod, heapModel, 1)));
+                        } catch (NullPointerException e) {
+                            logger.error(jMethod.getName());
+                        }
                     }
                 }
             }
