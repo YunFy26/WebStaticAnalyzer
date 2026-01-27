@@ -1,16 +1,21 @@
+# taint-config.yml
+
 sources:
   - kind: param
+    # 污点源仍然是 Controller 的入口参数
     method: "<org.example.springtarget.controller.UserController: java.lang.String getUserById(java.lang.String)>"
     index: 0
     type: java.lang.String
 
 sinks:
   - vulnerability: sql-injection
-    method: "<java.sql.Statement: java.sql.ResultSet executeQuery(java.lang.String)>"
+    # 【修改点】Sink 变更为 Mapper 接口的方法
+    # 含义：如果污点数据被传给了 UserMapper.queryById 的第 0 个参数，就报告漏洞
+    method: "<org.example.springtarget.mapper.UserMapper: java.lang.String queryById(java.lang.String)>"
     index: 0
 
-# 建议添加基础的字符串传递规则，以支持 "SELECT..." + id 这种字符串拼接
 transfers:
+  # 保持基础的字符串拼接规则，以防 Controller/Service 层有简单的字符串处理
   - method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
     from: 0
     to: base

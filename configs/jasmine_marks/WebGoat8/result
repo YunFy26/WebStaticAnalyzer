@@ -1,0 +1,158 @@
+Tai-e starts ...
+Output directory: /Users/yuntsy/My/Projects/Java/WebAnalyzer/output
+Writing options to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/options.yml
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Scanning /Users/yuntsy/.m2/repository/jakarta/servlet/jakarta.servlet-api/4.0.4/jakarta.servlet-api-4.0.4.jar ... 85 classes
+Scanning /Users/yuntsy/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar ... 85 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-web/6.2.1/spring-web-6.2.1.jar ... 1239 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-aop/6.2.0/spring-aop-6.2.0.jar ... 289 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-core/6.2.0/spring-core-6.2.0.jar ... 1181 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-jdbc/6.2.0/spring-jdbc-6.2.0.jar ... 303 classes
+Scanning /Users/yuntsy/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.0.0/jakarta.servlet-api-6.0.0.jar ... 85 classes
+Scanning /Users/yuntsy/.m2/repository/org/springframework/spring-context/6.2.0/spring-context-6.2.0.jar ... 861 classes
+Scanning /Users/yuntsy/.m2/repository/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar ... 949 classes
+Scanning /Users/yuntsy/.m2/repository/org/apache/tomcat/tomcat-catalina/10.1.18/tomcat-catalina-10.1.18.jar ... 681 classes
+Scanning /Users/yuntsy/.m2/repository/org/hibernate/orm/hibernate-core/6.4.4.Final/hibernate-core-6.4.4.Final.jar ... 6733 classes
+Scanning /Users/yuntsy/.m2/repository/org/mybatis/mybatis/3.5.15/mybatis-3.5.15.jar ... 1083 classes
+Scanning /Users/yuntsy/.m2/repository/org/apache/shiro/shiro-web/1.13.0/shiro-web-1.13.0.jar ... 109 classes
+Scanning /Users/yuntsy/.m2/repository/org/apache/shiro/shiro-core/1.13.0/shiro-core-1.13.0.jar ... 367 classes
+Scanning /Users/yuntsy/.m2/repository/org/quartz-scheduler/quartz/2.3.2/quartz-2.3.2.jar ... 353 classes
+Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/WebGoat/BOOT-INF/classes ... 284 classes
+Warning: main class was not given!
+27724 classes with 241369 methods in the world
+WorldBuilder finishes, elapsed time: 21.74s
+routerAnalysis starts ...
+Router analysis started at: 2026-01-12 13:36:14
+Router analysis completed at: 2026-01-12 13:36:14 (Duration: 8ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.03s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.04s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Added entry point (Empty): <org.owasp.webgoat.webwolf.jwt.JWTController: org.springframework.web.servlet.ModelAndView jwt()>
+Added entry point (Empty): <org.owasp.webgoat.webwolf.FileServer: java.lang.String getFileLocation()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+No implementation found for interface: org.owasp.webgoat.webwolf.mailbox.MailboxRepository
+No bean found for concrete class: org.owasp.webgoat.webwolf.mailbox.MailboxRepository
+No bean found for concrete class: org.owasp.webgoat.webwolf.mailbox.MailboxRepository
+Added entry point (Empty): <org.owasp.webgoat.webwolf.mailbox.MailboxController: void deleteAllMail()>
+Added entry point (Empty): <org.owasp.webgoat.container.controller.StartLesson: org.springframework.web.servlet.ModelAndView start()>
+No implementation found for interface: org.springframework.context.ApplicationContext
+Added entry point (Empty): <org.owasp.webgoat.container.WebWolfRedirect: org.springframework.web.servlet.ModelAndView openWebWolf()>
+No implementation found for interface: org.owasp.webgoat.container.users.UserRepository
+Added entry point (Empty): <org.owasp.webgoat.container.users.Scoreboard: java.util.List getRankings()>
+Added entry point (Empty): <org.owasp.webgoat.container.HammerHead: org.springframework.web.servlet.ModelAndView attack()>
+Added entry point (Empty): <org.owasp.webgoat.container.service.LessonTitleService: java.lang.String showPlan()>
+Added entry point (Empty): <org.owasp.webgoat.container.service.LessonInfoService: org.owasp.webgoat.container.lessons.LessonInfoModel getLessonInfo()>
+Added entry point (Empty): <org.owasp.webgoat.container.service.LabelDebugService: org.springframework.http.ResponseEntity checkDebuggingStatus()>
+Added entry point (Empty): <org.owasp.webgoat.container.service.HintService: java.util.List getHints()>
+No bean found for concrete class: org.springframework.context.ApplicationContext
+Added entry point (Empty): <org.owasp.webgoat.container.service.EnvironmentService: java.lang.String homeDirectory()>
+No implementation found for interface: org.owasp.webgoat.container.users.UserTrackerRepository
+Added entry point (Empty): <org.owasp.webgoat.container.service.LessonProgressService: java.util.List lessonOverview()>
+No bean found for concrete class: org.owasp.webgoat.container.users.UserTrackerRepository
+Added entry point (Empty): <org.owasp.webgoat.container.service.LessonMenuService: java.util.List showLeftNav()>
+No bean found for concrete class: org.owasp.webgoat.container.users.UserTrackerRepository
+Added entry point (Empty): <org.owasp.webgoat.container.service.ReportCardService: org.owasp.webgoat.container.service.ReportCardService$ReportCard reportCard()>
+No bean found for concrete class: org.owasp.webgoat.container.users.UserTrackerRepository
+Added entry point (Empty): <org.owasp.webgoat.container.service.RestartLessonService: void restartLesson()>
+Added entry point (Empty): <org.owasp.webgoat.container.service.LabelService: org.springframework.http.ResponseEntity fetchLabels()>
+Added entry point (Empty): <org.owasp.webgoat.container.service.SessionService: java.lang.String applySecurity()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.jwt.JWTSecretKeyEndpoint: java.lang.String getSecretToken()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.jwt.JWTQuiz: boolean[] getResults()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.xxe.CommentsEndpoint: java.util.Collection retrieveComments()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.xxe.SimpleXXE: java.lang.String getSampleDTDFile()>
+No bean found for concrete class: org.owasp.webgoat.lessons.clientsidefiltering.ShopEndpoint$CheckoutCodes
+No bean found for concrete class: org.owasp.webgoat.lessons.clientsidefiltering.ShopEndpoint$CheckoutCodes
+Added entry point (Empty): <org.owasp.webgoat.lessons.clientsidefiltering.ShopEndpoint: org.owasp.webgoat.lessons.clientsidefiltering.ShopEndpoint$CheckoutCodes all()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.clientsidefiltering.Salaries: java.util.List invoke()>
+No bean found for concrete class: org.owasp.webgoat.lessons.challenges.Flags
+Added entry point (Empty): <org.owasp.webgoat.lessons.challenges.challenge7.Assignment7: org.springframework.core.io.ClassPathResource git()>
+No bean found for concrete class: org.owasp.webgoat.lessons.challenges.Flags
+No bean found for concrete class: org.owasp.webgoat.lessons.challenges.Flags
+Added entry point (Empty): <org.owasp.webgoat.lessons.challenges.challenge8.Assignment8: org.springframework.http.ResponseEntity getVotes()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.challenges.challenge8.Assignment8: org.springframework.http.ResponseEntity average()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.challenges.challenge8.Assignment8: org.owasp.webgoat.container.assignments.AttackResult notUsed()>
+No bean found for concrete class: org.owasp.webgoat.lessons.challenges.Flags
+Added entry point (Empty): <org.owasp.webgoat.lessons.challenges.challenge1.ImageServlet: byte[] logo()>
+No bean found for concrete class: org.owasp.webgoat.lessons.challenges.Flags
+Added entry point (Empty): <org.owasp.webgoat.lessons.xss.CrossSiteScriptingQuiz: boolean[] getResults()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.xss.stored.StoredXssComments: java.util.Collection retrieveComments()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.idor.IDORViewOwnProfile: java.util.Map invoke()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.missingac.MissingFunctionACUsers: org.springframework.web.servlet.ModelAndView listUsers()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.missingac.MissingFunctionACUsers: org.springframework.http.ResponseEntity usersService()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.missingac.MissingFunctionACUsers: org.springframework.http.ResponseEntity usersFixed()>
+No bean found for concrete class: com.fasterxml.jackson.databind.ObjectMapper
+Added entry point (Empty): <org.owasp.webgoat.lessons.csrf.ForgedReviews: java.util.Collection retrieveReviews()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionQuiz: boolean[] getResults()>
+Added entry point (Empty): <org.owasp.webgoat.lessons.insecurelogin.InsecureLoginTask: void login()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <org.owasp.webgoat.lessons.pathtraversal.ProfileUpload: org.springframework.http.ResponseEntity getProfilePicture()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <org.owasp.webgoat.lessons.pathtraversal.ProfileZipSlip: org.springframework.http.ResponseEntity getProfilePicture()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <org.owasp.webgoat.lessons.pathtraversal.ProfileUploadFix: org.springframework.http.ResponseEntity getProfilePicture()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <org.owasp.webgoat.lessons.cia.CIAQuiz: boolean[] getResults()>
+Initializing global bean mock objects for beans...
+Initialized 216 global bean objects.
+Initializing global aspect mock objects...
+Initialized 0 global aspect objects.
+No bean found for concrete class: org.owasp.webgoat.container.users.UserRepository
+No bean found for concrete class: org.owasp.webgoat.container.users.UserRepository
+No bean found for concrete class: org.owasp.webgoat.container.users.UserTrackerRepository
+No bean found for concrete class: org.owasp.webgoat.container.users.WebGoatUser
+No bean found for concrete class: org.owasp.webgoat.container.users.UserTrackerRepository
+No bean found for concrete class: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
+No bean found for concrete class: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
+No bean found for concrete class: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
+No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
+No bean found for concrete class: org.owasp.webgoat.container.users.UserRepository
+No bean found for concrete class: org.owasp.webgoat.container.users.UserRepository
+No bean found for concrete class: org.owasp.webgoat.container.users.UserTrackerRepository
+No bean found for concrete class: org.owasp.webgoat.container.users.UserRepository
+No bean found for concrete class: org.owasp.webgoat.container.users.UserTrackerRepository
+No bean found for concrete class: org.owasp.webgoat.container.users.WebGoatUser
+No bean found for concrete class: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
+No bean found for concrete class: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
+No bean found for concrete class: org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
+No bean found for concrete class: org.owasp.webgoat.container.users.WebGoatUser
+No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
+No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
+No implementation found for interface: org.springframework.core.io.support.ResourcePatternResolver
+[Pointer analysis] elapsed time: 0.28s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                1,0629 (insens) / 3,6147 (sens)
+#objects:                     2347 (insens) / 3466 (sens)
+#var points-to:               1,3001 (insens) / 3,2299 (sens)
+#static field points-to:      476 (sens)
+#instance field points-to:    2802 (sens)
+#array points-to:             415 (sens)
+#reachable methods:           1988 (insens) / 1,0782 (sens)
+#call graph edges:            5670 (insens) / 2,0495 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.54s
+cg starts ...
+Call graph has 1988 reachable methods and 5670 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.15s
+Tai-e finishes, elapsed time: 22.61s

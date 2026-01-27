@@ -49,7 +49,7 @@ public class Main {
 //        RouterPrinter.printRouterInfo();
         // Output
 //        OutputPrinter.outputUrls();
-//        OutputPrinter.outputCallFlows();
+        OutputPrinter.outputCallFlows();
 //        OutputPrinter.outputIcfg();
 //        if (enableLLM){
 //            CallGraph<Invoke, JMethod> callGraph = World.get().getResult(CallGraphBuilder.ID);

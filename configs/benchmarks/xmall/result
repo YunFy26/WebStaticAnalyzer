@@ -23,21 +23,19 @@ Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/xmall/xmall-searc
 Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/xmall/xmall-sso-service-1.0-SNAPSHOT/WEB-INF/xmall-sso-service-1.0-SNAPSHOT.jar ... 7 classes
 Warning: main class was not given!
 10405 classes with 99951 methods in the world
-WorldBuilder finishes, elapsed time: 2.00s
+WorldBuilder finishes, elapsed time: 2.12s
 routerAnalysis starts ...
-Router analysis started at: 2026-01-10 18:51:40
-Router analysis completed at: 2026-01-10 18:51:40 (Duration: 6ms)
+Router analysis started at: 2026-01-11 14:36:48
+Router analysis completed at: 2026-01-11 14:36:48 (Duration: 5ms)
 routerAnalysis finishes, elapsed time: 0.01s
 beanAnalysis starts ...
-beanAnalysis finishes, elapsed time: 0.05s
+beanAnalysis finishes, elapsed time: 0.02s
 injectPointsAnalysis starts ...
 injectPointsAnalysis finishes, elapsed time: 0.03s
 aspectAnalysis starts ...
 Starting AOP aspect analysis...
 aspectAnalysis finishes, elapsed time: 0.00s
 pta starts ...
-Initializing global bean mock objects for beans...
-Initialized 49 global bean objects.
 Added entry point (Empty): <cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getNavList()>
 Added entry point (Empty): <cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getProductHome()>
 Added entry point (Empty): <cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getRecommendGoods()>
@@ -90,6 +88,8 @@ Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exri
 Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result getPermissionCount()>
 Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.DataTablesResult getUserList()>
 Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result getUserCount()>
+Initializing global bean mock objects for beans...
+Initialized 49 global bean objects.
 Initializing global aspect mock objects...
 Initialized 1 global aspect objects.
 No bean found for concrete class: org.slf4j.Logger
@@ -314,4 +314,4 @@ Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-gra
 Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
 Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
 cg finishes, elapsed time: 0.04s
-Tai-e finishes, elapsed time: 2.38s
+Tai-e finishes, elapsed time: 2.46s

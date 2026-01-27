@@ -25,57 +25,426 @@ Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mogu/mogu_spider-
 Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/mogu/mogu_web-0.0.1-SNAPSHOT/BOOT-INF/mogu_web-0.0.1-SNAPSHOT.jar ... 31 classes
 Warning: main class was not given!
 11070 classes with 104408 methods in the world
-WorldBuilder finishes, elapsed time: 2.28s
+WorldBuilder finishes, elapsed time: 2.60s
 routerAnalysis starts ...
-Router analysis started at: 2026-01-10 18:51:19
-Router analysis completed at: 2026-01-10 18:51:19 (Duration: 6ms)
+Router analysis started at: 2026-01-11 14:36:27
+Router analysis completed at: 2026-01-11 14:36:27 (Duration: 8ms)
 routerAnalysis finishes, elapsed time: 0.01s
 beanAnalysis starts ...
 beanAnalysis finishes, elapsed time: 0.02s
 injectPointsAnalysis starts ...
-injectPointsAnalysis finishes, elapsed time: 0.06s
+injectPointsAnalysis finishes, elapsed time: 0.04s
 aspectAnalysis starts ...
 Starting AOP aspect analysis...
 aspectAnalysis finishes, elapsed time: 0.00s
 pta starts ...
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String blogSortByClickCount()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String blogSortByCite()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.moxi.mogublog.xo.service.FeedbackService
+No bean found for concrete class: com.moxi.mogublog.xo.service.FeedbackService
+No bean found for concrete class: com.moxi.mogublog.xo.service.FeedbackService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebVisitService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.IndexRestApi: java.lang.String init()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebVisitService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.IndexRestApi: java.lang.String getVisitByWeek()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.IndexRestApi: java.lang.String getBlogCountByTag()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.IndexRestApi: java.lang.String getBlogCountByBlogSort()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.IndexRestApi: java.lang.String getBlogContributeCount()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
+No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
+No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
+No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
+No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+No bean found for concrete class: com.moxi.mogublog.xo.service.RoleService
+No bean found for concrete class: com.moxi.mogublog.commons.config.jwt.Audience
+No bean found for concrete class: com.moxi.mogublog.commons.config.jwt.JwtTokenUtil
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.RoleService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.LoginRestApi: java.lang.String getWebSiteName()>
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.LoginRestApi: java.lang.String logout()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysLogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.ExceptionLogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.PictureService
+No bean found for concrete class: com.moxi.mogublog.xo.service.PictureService
+No bean found for concrete class: com.moxi.mogublog.xo.service.PictureService
+No bean found for concrete class: com.moxi.mogublog.xo.service.PictureService
+No bean found for concrete class: com.moxi.mogublog.xo.service.PictureService
+No bean found for concrete class: com.moxi.mogublog.xo.service.PictureSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.PictureSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.PictureSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.PictureSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.PictureSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.PictureSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.ResourceSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.ResourceSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.ResourceSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.ResourceSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.ResourceSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.RoleService
+No bean found for concrete class: com.moxi.mogublog.xo.service.RoleService
+No bean found for concrete class: com.moxi.mogublog.xo.service.RoleService
+No bean found for concrete class: com.moxi.mogublog.xo.service.RoleService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.SearchFeignClient
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.SearchIndexRestApi: java.lang.String initElasticIndex()>
+No bean found for concrete class: com.moxi.mogublog.commons.feign.SearchFeignClient
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.SearchIndexRestApi: java.lang.String initSolrIndex()>
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.ServerMonitorRestApi: java.lang.String getInfo()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.StudyVideoService
+No bean found for concrete class: com.moxi.mogublog.xo.service.StudyVideoService
+No bean found for concrete class: com.moxi.mogublog.xo.service.StudyVideoService
+No bean found for concrete class: com.moxi.mogublog.xo.service.StudyVideoService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectItemService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectItemService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectItemService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectItemService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectItemService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictTypeService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictTypeService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictTypeService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictTypeService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.SystemConfigRestApi: java.lang.String getSystemConfig()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.SystemRestApi: java.lang.String getMe()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
+No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
+No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
+No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
+No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
+No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String tagSortByClickCount()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String tagSortByCite()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.TodoService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.TodoService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.TodoService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.TodoService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.TodoService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.WebConfigRestApi: java.lang.String getWebConfig()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebNavbarService
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebNavbarService
+Added entry point (Empty): <com.moxi.mogublog.admin.restapi.WebNavbarRestApi: java.lang.String getAllList()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebNavbarService
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebNavbarService
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebNavbarService
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebVisitService
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.Object ckeditorUploadCopyFile()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String getFileTree()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String getStorage()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No implementation found for interface: com.moxi.mogublog.search.repository.BlogRepository
+No bean found for concrete class: com.moxi.mogublog.search.repository.BlogRepository
+No bean found for concrete class: com.moxi.mogublog.commons.feign.WebFeignClient
+No bean found for concrete class: com.moxi.mogublog.search.repository.BlogRepository
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchTemplate
+No bean found for concrete class: com.moxi.mogublog.commons.feign.WebFeignClient
+No bean found for concrete class: com.moxi.mogublog.search.repository.BlogRepository
+Added entry point (Empty): <com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String initElasticSearchIndex()>
+No bean found for concrete class: us.codecraft.webmagic.Spider
+Added entry point (Empty): <com.moxi.mogublog.spider.restapi.BlogSpiderRestApi: java.lang.String startSpiderCsdn()>
+No bean found for concrete class: us.codecraft.webmagic.Spider
+Added entry point (Empty): <com.moxi.mogublog.spider.restapi.BlogSpiderRestApi: java.lang.String stopSpiderCsdn()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
+Added entry point (Empty): <com.moxi.mogublog.web.controller.FreemarkerController: java.lang.String getAllHtml()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
+Added entry point (Empty): <com.moxi.mogublog.web.restapi.AboutMeRestApi: java.lang.String getMe()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
+Added entry point (Empty): <com.moxi.mogublog.web.restapi.AboutMeRestApi: java.lang.String getContact()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.xo.utils.RabbitMqUtil
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No bean found for concrete class: com.moxi.mogublog.xo.utils.RabbitMqUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No bean found for concrete class: com.moxi.mogublog.xo.utils.RabbitMqUtil
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
+Added entry point (Empty): <com.moxi.mogublog.web.restapi.ClassifyRestApi: java.lang.String getBlogSortList()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No bean found for concrete class: com.moxi.mogublog.xo.utils.RabbitMqUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentReportService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+Added entry point (Empty): <com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getHotBlog()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
+Added entry point (Empty): <com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getHotTag()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
+Added entry point (Empty): <com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getLink()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
+Added entry point (Empty): <com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getWebConfig()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebNavbarService
+Added entry point (Empty): <com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getWebNavbar()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.xo.utils.RabbitMqUtil
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.StudyVideoService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.ResourceSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+Added entry point (Empty): <com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String getSearchModel()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+Added entry point (Empty): <com.moxi.mogublog.web.restapi.SortRestApi: java.lang.String getSortList()>
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectItemService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
+No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
+Added entry point (Empty): <com.moxi.mogublog.web.restapi.TagRestApi: java.lang.String getTagList()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+Added entry point (Empty): <com.moxi.mogublog.web.restapi.WechatRestApi: java.lang.String getWechatOrCodeTicket()>
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
 Initializing global bean mock objects for beans...
 Initialized 106 global bean objects.
-No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
-Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 0, end -1, length 15
-	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4608)
-	at java.base/java.lang.String.substring(String.java:2711)
-	at org.example.spring.plugin.PointcutMatcher.parseExecutionPattern(PointcutMatcher.java:102)
-	at org.example.spring.plugin.PointcutMatcher.matchesExecutionPattern(PointcutMatcher.java:67)
-	at org.example.spring.plugin.PointcutMatcher.matchesExecution(PointcutMatcher.java:55)
-	at org.example.spring.plugin.PointcutMatcher.matches(PointcutMatcher.java:31)
-	at org.example.spring.plugin.ProcessAspectPlugin.weaveAspectForMethod(ProcessAspectPlugin.java:117)
-	at org.example.spring.plugin.ProcessAspectPlugin.onNewCSMethod(ProcessAspectPlugin.java:98)
-	at pascal.taie.analysis.pta.plugin.CompositePlugin.lambda$onNewCSMethod$5(CompositePlugin.java:142)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at pascal.taie.analysis.pta.plugin.CompositePlugin.onNewCSMethod(CompositePlugin.java:142)
-	at pascal.taie.analysis.pta.core.solver.DefaultSolver.addCSMethod(DefaultSolver.java:843)
-	at pascal.taie.analysis.pta.core.solver.DefaultSolver.addEntryPoint(DefaultSolver.java:796)
-	at org.example.spring.plugin.ProcessEntryPlugin.processController(ProcessEntryPlugin.java:106)
-	at org.example.spring.plugin.ProcessEntryPlugin.onStart(ProcessEntryPlugin.java:67)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at pascal.taie.analysis.pta.plugin.CompositePlugin.onStart(CompositePlugin.java:107)
-	at pascal.taie.analysis.pta.core.solver.DefaultSolver.initialize(DefaultSolver.java:267)
-	at pascal.taie.analysis.pta.core.solver.DefaultSolver.solve(DefaultSolver.java:247)
-	at pascal.taie.analysis.pta.PointerAnalysis.runAnalysis(PointerAnalysis.java:119)
-	at pascal.taie.analysis.pta.PointerAnalysis.analyze(PointerAnalysis.java:107)
-	at pascal.taie.analysis.pta.PointerAnalysis.analyze(PointerAnalysis.java:64)
-	at pascal.taie.analysis.AnalysisManager.runProgramAnalysis(AnalysisManager.java:148)
-	at pascal.taie.analysis.AnalysisManager.runAnalysis(AnalysisManager.java:135)
-	at pascal.taie.analysis.AnalysisManager.lambda$execute$0(AnalysisManager.java:104)
-	at pascal.taie.util.Timer.runAndCount(Timer.java:93)
-	at pascal.taie.analysis.AnalysisManager.lambda$execute$1(AnalysisManager.java:103)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at pascal.taie.analysis.AnalysisManager.execute(AnalysisManager.java:102)
-	at pascal.taie.Main.executePlan(Main.java:154)
-	at pascal.taie.Main.lambda$main$0(Main.java:62)
-	at pascal.taie.util.Timer.lambda$runAndCount$0(Timer.java:112)
-	at pascal.taie.util.Timer.runAndCount(Timer.java:93)
-	at pascal.taie.util.Timer.runAndCount(Timer.java:111)
-	at pascal.taie.util.Timer.runAndCount(Timer.java:107)
-	at pascal.taie.Main.main(Main.java:52)
-	at org.example.Main.main(Main.java:44)
+Initializing global aspect mock objects...
+Initialized 5 global aspect objects.
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.moxi.mogublog.commons.feign.AdminFeignClient
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchTemplate
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
+No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.moxi.mogublog.commons.feign.WebFeignClient
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.moxi.mogublog.commons.feign.AdminFeignClient
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.moxi.mogublog.commons.feign.AdminFeignClient
+No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchTemplate
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.moxi.mogublog.commons.feign.WebFeignClient
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: com.moxi.mogublog.commons.feign.AdminFeignClient
+[Pointer analysis] elapsed time: 0.10s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                3354 (insens) / 4067 (sens)
+#objects:                     2120 (insens) / 2212 (sens)
+#var points-to:               2727 (insens) / 3099 (sens)
+#static field points-to:      2 (sens)
+#instance field points-to:    1111 (sens)
+#array points-to:             10 (sens)
+#reachable methods:           446 (insens) / 855 (sens)
+#call graph edges:            991 (insens) / 1296 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.25s
+cg starts ...
+Call graph has 446 reachable methods and 991 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.05s
+Tai-e finishes, elapsed time: 3.07s

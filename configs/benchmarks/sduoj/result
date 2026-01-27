@@ -26,21 +26,19 @@ Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/sduoj/sduoj-user/
 Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/sduoj/sduoj-websocket/BOOT-INF/sduoj-websocket.jar ... 12 classes
 Warning: main class was not given!
 10681 classes with 101752 methods in the world
-WorldBuilder finishes, elapsed time: 3.05s
+WorldBuilder finishes, elapsed time: 2.49s
 routerAnalysis starts ...
-Router analysis started at: 2026-01-10 18:51:37
-Router analysis completed at: 2026-01-10 18:51:37 (Duration: 4ms)
-routerAnalysis finishes, elapsed time: 0.01s
+Router analysis started at: 2026-01-11 14:36:45
+Router analysis completed at: 2026-01-11 14:36:45 (Duration: 3ms)
+routerAnalysis finishes, elapsed time: 0.00s
 beanAnalysis starts ...
 beanAnalysis finishes, elapsed time: 0.02s
 injectPointsAnalysis starts ...
-injectPointsAnalysis finishes, elapsed time: 0.16s
+injectPointsAnalysis finishes, elapsed time: 0.15s
 aspectAnalysis starts ...
 Starting AOP aspect analysis...
 aspectAnalysis finishes, elapsed time: 0.00s
 pta starts ...
-Initializing global bean mock objects for beans...
-Initialized 116 global bean objects.
 Added entry point (Empty): <cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestListDTO queryUpcomingContest()>
 No implementation found for interface: cn.edu.sdu.qd.oj.contest.client.ProblemClient
 Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
@@ -53,6 +51,8 @@ No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
 Added entry point (Empty): <cn.edu.sdu.qd.oj.user.controller.UserController: java.util.Map getCaptcha()>
 Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
 Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Initializing global bean mock objects for beans...
+Initialized 116 global bean objects.
 Initializing global aspect mock objects...
 Initialized 0 global aspect objects.
 No implementation found for interface: cn.edu.sdu.qd.oj.contest.client.UserClient
@@ -160,11 +160,11 @@ No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.MailProperties
 #reachable methods:           574 (insens) / 1176 (sens)
 #call graph edges:            991 (insens) / 1568 (sens)
 ----------------------------------------
-pta finishes, elapsed time: 0.18s
+pta finishes, elapsed time: 0.17s
 cg starts ...
 Call graph has 574 reachable methods and 991 edges
 Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
 Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
 Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
-cg finishes, elapsed time: 0.06s
-Tai-e finishes, elapsed time: 3.57s
+cg finishes, elapsed time: 0.05s
+Tai-e finishes, elapsed time: 2.97s

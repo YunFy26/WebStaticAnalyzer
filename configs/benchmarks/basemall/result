@@ -28,10 +28,10 @@ Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/basemall/gruul-sh
 Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/basemall/gruul-sms-open-service/BOOT-INF/gruul-sms-open-service.jar ... 25 classes
 Warning: main class was not given!
 11397 classes with 105352 methods in the world
-WorldBuilder finishes, elapsed time: 3.27s
+WorldBuilder finishes, elapsed time: 3.36s
 routerAnalysis starts ...
-Router analysis started at: 2026-01-10 18:51:13
-Router analysis completed at: 2026-01-10 18:51:13 (Duration: 8ms)
+Router analysis started at: 2026-01-11 14:36:20
+Router analysis completed at: 2026-01-11 14:36:20 (Duration: 6ms)
 routerAnalysis finishes, elapsed time: 0.01s
 beanAnalysis starts ...
 beanAnalysis finishes, elapsed time: 0.03s
@@ -41,8 +41,6 @@ aspectAnalysis starts ...
 Starting AOP aspect analysis...
 aspectAnalysis finishes, elapsed time: 0.00s
 pta starts ...
-Initializing global bean mock objects for beans...
-Initialized 187 global bean objects.
 No bean found for concrete class: com.medusa.gruul.shops.api.feign.RemoteShopsService
 No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
 No bean found for concrete class: com.medusa.gruul.platform.api.feign.RemoteMiniInfoService
@@ -111,6 +109,8 @@ Added entry point (Empty): <com.medusa.gruul.shops.controller.ShopsPartnerContro
 Added entry point (Empty): <com.medusa.gruul.shops.controller.ShopsPartnerController: com.medusa.gruul.shops.api.entity.ShopsPartner oneByShopId()>
 Added entry point (Empty): <com.medusa.gruul.shops.controller.ShopsRenovationController: com.medusa.gruul.common.core.util.Result templateDefOne()>
 Added entry point (Empty): <com.medusa.gruul.shops.controller.remote.RemoteController: com.medusa.gruul.shops.api.model.AccountCenterVo accountCenterSetting()>
+Initializing global bean mock objects for beans...
+Initialized 187 global bean objects.
 Initializing global aspect mock objects...
 Initialized 0 global aspect objects.
 No bean found for concrete class: com.medusa.gruul.order.api.feign.RemoteOrderService
@@ -169,7 +169,7 @@ No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTem
 No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
 No bean found for concrete class: com.medusa.gruul.payment.api.feign.RemotePaymentService
 No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
-[Pointer analysis] elapsed time: 0.12s
+[Pointer analysis] elapsed time: 0.13s
 -------------- Pointer analysis statistics: --------------
 #var pointers:                9738 (insens) / 1,0447 (sens)
 #objects:                     2830 (insens) / 2873 (sens)
@@ -186,5 +186,5 @@ Call graph has 1410 reachable methods and 2846 edges
 Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
 Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
 Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
-cg finishes, elapsed time: 0.11s
-Tai-e finishes, elapsed time: 3.84s
+cg finishes, elapsed time: 0.10s
+Tai-e finishes, elapsed time: 3.91s

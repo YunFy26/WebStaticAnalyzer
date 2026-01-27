@@ -24,21 +24,19 @@ Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/youlai/youlai-aut
 Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/youlai/youlai-gateway/BOOT-INF/youlai-gateway.jar ... 22 classes
 Warning: main class was not given!
 10808 classes with 102422 methods in the world
-WorldBuilder finishes, elapsed time: 2.63s
+WorldBuilder finishes, elapsed time: 2.59s
 routerAnalysis starts ...
-Router analysis started at: 2026-01-10 18:51:43
-Router analysis completed at: 2026-01-10 18:51:43 (Duration: 3ms)
+Router analysis started at: 2026-01-11 14:36:51
+Router analysis completed at: 2026-01-11 14:36:51 (Duration: 3ms)
 routerAnalysis finishes, elapsed time: 0.00s
 beanAnalysis starts ...
-beanAnalysis finishes, elapsed time: 0.02s
+beanAnalysis finishes, elapsed time: 0.03s
 injectPointsAnalysis starts ...
 injectPointsAnalysis finishes, elapsed time: 0.08s
 aspectAnalysis starts ...
 Starting AOP aspect analysis...
 aspectAnalysis finishes, elapsed time: 0.00s
 pta starts ...
-Initializing global bean mock objects for beans...
-Initialized 111 global bean objects.
 Added entry point (Empty): <com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result lisetDeptOptions()>
 Added entry point (Empty): <com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result listResources()>
 Added entry point (Empty): <com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result listMenuOptions()>
@@ -61,6 +59,8 @@ No bean found for concrete class: org.springframework.security.oauth2.provider.e
 No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
 Added entry point (Empty): <com.youlai.auth.controller.AuthController: com.youlai.common.result.Result logout()>
 Added entry point (Empty): <com.youlai.auth.controller.AuthController: java.util.Map getPublicKey()>
+Initializing global bean mock objects for beans...
+Initialized 111 global bean objects.
 Initializing global aspect mock objects...
 Initialized 0 global aspect objects.
 No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
@@ -82,7 +82,7 @@ No bean found for concrete class: com.youlai.mall.pms.api.SkuFeignClient
 No bean found for concrete class: com.youlai.mall.ums.api.MemberFeignClient
 No bean found for concrete class: com.youlai.mall.oms.config.WxPayProperties
 No bean found for concrete class: com.youlai.mall.ums.api.MemberFeignClient
-[Pointer analysis] elapsed time: 0.07s
+[Pointer analysis] elapsed time: 0.06s
 -------------- Pointer analysis statistics: --------------
 #var pointers:                3528 (insens) / 3720 (sens)
 #objects:                     1462 (insens) / 1463 (sens)
@@ -93,11 +93,11 @@ No bean found for concrete class: com.youlai.mall.ums.api.MemberFeignClient
 #reachable methods:           696 (insens) / 1045 (sens)
 #call graph edges:            992 (insens) / 1069 (sens)
 ----------------------------------------
-pta finishes, elapsed time: 0.17s
+pta finishes, elapsed time: 0.15s
 cg starts ...
 Call graph has 696 reachable methods and 992 edges
 Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
 Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
 Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
 cg finishes, elapsed time: 0.05s
-Tai-e finishes, elapsed time: 3.03s
+Tai-e finishes, elapsed time: 3.00s

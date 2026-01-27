@@ -26,11 +26,11 @@ Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/onemall/trade-ser
 Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/onemall/user-service-app/BOOT-INF/user-service-app.jar ... 29 classes
 Warning: main class was not given!
 11054 classes with 105869 methods in the world
-WorldBuilder finishes, elapsed time: 3.21s
+WorldBuilder finishes, elapsed time: 3.08s
 routerAnalysis starts ...
-Router analysis started at: 2026-01-10 18:51:28
-Router analysis completed at: 2026-01-10 18:51:28 (Duration: 3ms)
-routerAnalysis finishes, elapsed time: 0.00s
+Router analysis started at: 2026-01-11 14:36:37
+Router analysis completed at: 2026-01-11 14:36:37 (Duration: 4ms)
+routerAnalysis finishes, elapsed time: 0.01s
 beanAnalysis starts ...
 beanAnalysis finishes, elapsed time: 0.02s
 injectPointsAnalysis starts ...
@@ -39,8 +39,6 @@ aspectAnalysis starts ...
 Starting AOP aspect analysis...
 aspectAnalysis finishes, elapsed time: 0.00s
 pta starts ...
-Initializing global bean mock objects for beans...
-Initialized 141 global bean objects.
 Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult treeDepartment()>
 Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult listDataDicts()>
@@ -66,6 +64,8 @@ Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult getDefaultUserAddress()>
 Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult listUserAddresses()>
 Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult getUserInfo()>
+Initializing global bean mock objects for beans...
+Initialized 141 global bean objects.
 Initializing global aspect mock objects...
 Initialized 0 global aspect objects.
 No implementation found for interface: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
@@ -354,4 +354,4 @@ Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-gra
 Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
 Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
 cg finishes, elapsed time: 0.03s
-Tai-e finishes, elapsed time: 3.55s
+Tai-e finishes, elapsed time: 3.45s

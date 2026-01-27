@@ -31,8 +31,8 @@ analyses:
   cg: ""
   #  cfg: ""
   #  icfg: ""
-  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin,org.example.spring.plugin.ProcessEntryPlugin,org.example.spring.plugin.ProcessAspectPlugin]"
-#  pta: "plugins:[org.example.spring.plugin.ProcessEntryPlugin]"
+#  pta: "plugins:[org.example.spring.plugin.ProcessEntryPlugin,org.example.spring.plugin.ProcessDIPlugin,org.example.spring.plugin.ProcessAspectPlugin]"
+  pta: "plugins:[org.example.spring.plugin.ProcessEntryPlugin]"
 onlyGenPlan: false
 keepResult:
   - $KEEP-ALL

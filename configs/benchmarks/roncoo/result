@@ -23,21 +23,19 @@ Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/roncoo/system-ser
 Scanning /Users/yuntsy/My/Projects/Java/WebAnalyzer/benchmarks/roncoo/user-service/BOOT-INF/user-service.jar ... 223 classes
 Warning: main class was not given!
 11537 classes with 125945 methods in the world
-WorldBuilder finishes, elapsed time: 4.38s
+WorldBuilder finishes, elapsed time: 4.26s
 routerAnalysis starts ...
-Router analysis started at: 2026-01-10 18:51:33
-Router analysis completed at: 2026-01-10 18:51:33 (Duration: 9ms)
+Router analysis started at: 2026-01-11 14:36:42
+Router analysis completed at: 2026-01-11 14:36:42 (Duration: 8ms)
 routerAnalysis finishes, elapsed time: 0.01s
 beanAnalysis starts ...
 beanAnalysis finishes, elapsed time: 0.01s
 injectPointsAnalysis starts ...
-injectPointsAnalysis finishes, elapsed time: 0.09s
+injectPointsAnalysis finishes, elapsed time: 0.06s
 aspectAnalysis starts ...
 Starting AOP aspect analysis...
 aspectAnalysis finishes, elapsed time: 0.00s
 pta starts ...
-Initializing global bean mock objects for beans...
-Initialized 293 global bean objects.
 Added entry point (Empty): <com.roncoo.education.app.gateway.IndexController: reactor.core.publisher.Mono index()>
 Added entry point (Empty): <com.roncoo.education.app.gateway.swagger.SwaggerHandler: reactor.core.publisher.Mono securityConfiguration()>
 Added entry point (Empty): <com.roncoo.education.app.gateway.swagger.SwaggerHandler: reactor.core.publisher.Mono uiConfiguration()>
@@ -56,57 +54,22 @@ Added entry point (Empty): <com.roncoo.education.system.service.api.ApiWebsiteLi
 Added entry point (Empty): <com.roncoo.education.system.service.api.ApiWebsiteNavController: com.roncoo.education.common.core.base.Result list()>
 Added entry point (Empty): <com.roncoo.education.system.service.pc.PcApiSysController: com.roncoo.education.common.core.base.Result view()>
 Added entry point (Empty): <com.roncoo.education.system.service.pc.PcApiWebsiteController: com.roncoo.education.common.core.base.Result view()>
-Initializing global aspect mock objects...
-Initialized 0 global aspect objects.
-No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
-No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.cloud.gateway.route.RouteLocator
-No bean found for concrete class: org.springframework.cloud.gateway.config.GatewayProperties
-No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
-No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
-No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
-No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
-No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
-No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
-No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
-No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
-No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
-No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
-No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate
-No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
-No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
-[Pointer analysis] elapsed time: 0.15s
+[Pointer analysis] elapsed time: 0.08s
 -------------- Pointer analysis statistics: --------------
-#var pointers:                1,1287 (insens) / 1,9571 (sens)
-#objects:                     2071 (insens) / 2382 (sens)
-#var points-to:               9437 (insens) / 1,4416 (sens)
+#var pointers:                8042 (insens) / 8592 (sens)
+#objects:                     1689 (insens) / 1711 (sens)
+#var points-to:               5619 (insens) / 5869 (sens)
 #static field points-to:      0 (sens)
-#instance field points-to:    1406 (sens)
-#array points-to:             22 (sens)
-#reachable methods:           2239 (insens) / 4891 (sens)
-#call graph edges:            4162 (insens) / 8109 (sens)
+#instance field points-to:    1047 (sens)
+#array points-to:             10 (sens)
+#reachable methods:           1504 (insens) / 2249 (sens)
+#call graph edges:            2605 (insens) / 2795 (sens)
 ----------------------------------------
-pta finishes, elapsed time: 0.32s
+pta finishes, elapsed time: 0.26s
 cg starts ...
-Call graph has 2239 reachable methods and 4162 edges
+Call graph has 1504 reachable methods and 2605 edges
 Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
 Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
 Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
-cg finishes, elapsed time: 0.13s
-Tai-e finishes, elapsed time: 5.03s
+cg finishes, elapsed time: 0.09s
+Tai-e finishes, elapsed time: 4.79s
