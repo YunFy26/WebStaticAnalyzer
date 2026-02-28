@@ -1,0 +1,13 @@
+﻿Project,Router Methods,Log Path
+MCMS,35,./MCMS/result/entrys/console_run.log
+My-Blog,54,./My-Blog/result/entrys/console_run.log
+RuoYi,298,./RuoYi/result/entrys/console_run.log
+VBlog,28,./VBlog/result/entrys/console_run.log
+jeesite5,327,./jeesite5/result/entrys/console_run.log
+jshERP,319,./jshERP/result/entrys/console_run.log
+mall,246,./mall/result/entrys/console_run.log
+mall-admin,173,./mall-admin/result/entrys/console_run.log
+mall-portal,78,./mall-portal/result/entrys/console_run.log
+mall-search,21,./mall-search/result/entrys/console_run.log
+newbee-mall,73,./newbee-mall/result/entrys/console_run.log
+vhr,51,./vhr/result/entrys/console_run.log

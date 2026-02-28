@@ -1,8 +1,9 @@
 - description: whole-program pointer analysis
   analysisClass: pascal.taie.analysis.pta.PointerAnalysis
   id: pta
+  requires: [srfaAnalysis, beanAnalysis]
   options:
-    cs: 2-obj # | k-[obj|type|call][-k'h]
+    cs: ci # | k-[obj|type|call][-k'h]
     only-app: true # only analyze application code
     implicit-entries: true # analyze implicit entries
     distinguish-string-constants: reflection # (distinguish reflection-relevant
@@ -27,7 +28,7 @@
     reflection-inference: string-constant # | solar | null
     reflection-log: null # path to reflection log, required when reflection option is log
 #    taint-config: /Users/yuntsy/My/Projects/Java/WebAnalyzer/configs/taint-config.yml # path (of dir/file) to config file of taint analysis,
-    taint-config: configs/taint-config.yml # path (of dir/file) to config file of taint analysis,
+    taint-config: output/taint-config-generated.yml # path (of dir/file) to config file of taint analysis,
     taint-config-providers: [ ] # class names of taint config provider classes
     # when this file is given, taint analysis will be enabled
     taint-interactive-mode: false # whether enable interactive mode for taint analysis
@@ -186,6 +187,22 @@
   id: aspectAnalysis
   requires: []
 
+- description: result analysis
+  analysisClass: org.example.spring.analysis.ResultAnalysis
+  id: resultAnalysis
+  requires: [routerAnalysis, beanAnalysis, aspectAnalysis]
+
+
+# File: analyses.yml (add this entry to your existing analyses configuration)
+# Add to your existing analyses.yml or tai-e-analyses.yml
+
+- description: "SRFA: Static Rule-based Fine-grained Taint Analysis (Chapter 4)"
+  analysisClass: org.example.taint.SRFAAnalysis
+  id: srfaAnalysis
+  requires: [routerAnalysis, beanAnalysis, injectPointsAnalysis, aspectAnalysis]
+  options:
+    mapper-paths: ""
+    output-path: "output/taint-config-generated.yml"
 #- description: extract call flows (including control flows) from every entry points
 #  analysisClass: org.example.spring.SplitIcfgFlows
 #  id: splitIcfgFlows

@@ -1,24 +1,205 @@
-# taint-config.yml
+# Auto-generated taint analysis configuration by SRFA
+# Chapter 4: Fine-grained Taint Source and Sink Detection
 
 sources:
-  - kind: param
-    # 污点源仍然是 Controller 的入口参数
-    method: "<org.example.springtarget.controller.UserController: java.lang.String getUserById(java.lang.String)>"
-    index: 0
-    type: java.lang.String
+  - { kind: param, method: "<com.ruoyi.web.controller.demo.controller.DemoOperateController: java.lang.String edit(java.lang.Integer,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Integer" }
+  - { kind: param, method: "<com.ruoyi.web.controller.demo.controller.DemoOperateController: java.lang.String detail(java.lang.Integer,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Integer" }
+  - { kind: param, method: "<com.ruoyi.web.controller.monitor.SysOperlogController: java.lang.String detail(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysConfigController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysDictDataController: java.lang.String add(java.lang.String,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysDictDataController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysRoleController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysRoleController: java.lang.String authDataScope(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysRoleController: java.lang.String authUser(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysRoleController: java.lang.String selectUser(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysProfileController: com.ruoyi.common.core.domain.AjaxResult updateAvatar(org.springframework.web.multipart.MultipartFile)>", index: 0, type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysIndexController: void menuStyle(java.lang.String,javax.servlet.http.HttpServletResponse)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysDeptController: java.lang.String add(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysDeptController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysDeptController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.Long)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysDeptController: java.lang.String selectDeptTree(java.lang.Long,java.lang.String,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysDeptController: java.lang.String selectDeptTree(java.lang.Long,java.lang.String,org.springframework.ui.ModelMap)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysDeptController: java.util.List treeDataExcludeChild(java.lang.Long)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String detail(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String selectDeptTree(java.lang.Long,java.lang.String,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String selectDeptTree(java.lang.Long,java.lang.String,org.springframework.ui.ModelMap)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysPostController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysUserController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysUserController: java.lang.String resetPwd(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysUserController: java.lang.String authRole(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysNoticeController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysMenuController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.Long)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysMenuController: java.lang.String add(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysMenuController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.system.SysMenuController: java.lang.String selectMenuTree(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.web.controller.tool.TestController: com.ruoyi.common.core.domain.AjaxResult getUser(java.lang.Integer)>", index: 0, type: "java.lang.Integer" }
+  - { kind: param, method: "<com.ruoyi.web.controller.tool.TestController: com.ruoyi.common.core.domain.AjaxResult delete(java.lang.Integer)>", index: 0, type: "java.lang.Integer" }
+  - { kind: param, method: "<com.ruoyi.generator.controller.GenController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult preview(java.lang.Long)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.generator.controller.GenController: void download(javax.servlet.http.HttpServletResponse,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult genCode(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult synchDb(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<com.ruoyi.quartz.controller.SysJobController: java.lang.String detail(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.quartz.controller.SysJobController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.quartz.controller.SysJobLogController: java.lang.String jobLog(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  - { kind: param, method: "<com.ruoyi.quartz.controller.SysJobLogController: java.lang.String detail(java.lang.Long,org.springframework.ui.ModelMap)>", index: 0, type: "java.lang.Long" }
+  # ── Framework-injected taint sources (universal, Tai-e 0.5.1 format) ─────
+
+  # --- Apache Shiro ---
+  - { method: "<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>", type: "org.apache.shiro.subject.Subject" }
+  - { method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", type: "java.lang.Object" }
+
+  # --- Spring Security ---
+  - { method: "<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>", type: "org.springframework.security.core.context.SecurityContext" }
+  - { method: "<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>", type: "org.springframework.security.core.Authentication" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>", type: "java.lang.Object" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.Object getDetails()>", type: "java.lang.Object" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.String getName()>", type: "java.lang.String" }
+  - { method: "<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>", type: "java.util.Collection" }
+  - { method: "<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>", type: "java.lang.String" }
+
+  # --- Servlet HttpSession (framework-agnostic) ---
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>", type: "javax.servlet.http.HttpSession" }
+  - { method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>", type: "javax.servlet.http.HttpSession" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>", type: "java.security.Principal" }
+  - { method: "<java.security.Principal: java.lang.String getName()>", type: "java.lang.String" }
+
+  # --- Request Attribute (JWT / custom filter pattern) ---
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>", type: "java.lang.Object" }
+  - { method: "<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>", type: "java.lang.Object" }
+
+  # --- ThreadLocal user context (common custom pattern) ---
+  - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", type: "java.lang.Object" }
+  - { method: "<java.lang.InheritableThreadLocal: java.lang.Object get()>", type: "java.lang.Object" }
 
 sinks:
-  - vulnerability: sql-injection
-    # 【修改点】Sink 变更为 Mapper 接口的方法
-    # 含义：如果污点数据被传给了 UserMapper.queryById 的第 0 个参数，就报告漏洞
-    method: "<org.example.springtarget.mapper.UserMapper: java.lang.String queryById(java.lang.String)>"
-    index: 0
+  - { method: "<com.ruoyi.system.mapper.SysUserMapper: java.util.List selectUserList(com.ruoyi.common.core.domain.entity.SysUser)>", index: 0 }
+  - { method: "<com.ruoyi.system.mapper.SysUserMapper: java.util.List selectAllocatedList(com.ruoyi.common.core.domain.entity.SysUser)>", index: 0 }
+  - { method: "<com.ruoyi.system.mapper.SysUserMapper: java.util.List selectUnallocatedList(com.ruoyi.common.core.domain.entity.SysUser)>", index: 0 }
+  - { method: "<com.ruoyi.system.mapper.SysRoleMapper: java.util.List selectRoleList(com.ruoyi.common.core.domain.entity.SysRole)>", index: 0 }
+  - { method: "<com.ruoyi.system.mapper.SysDeptMapper: void updateDeptStatus(com.ruoyi.common.core.domain.entity.SysDept)>", index: 0 }
+  - { method: "<com.ruoyi.system.mapper.SysDeptMapper: java.util.List selectDeptList(com.ruoyi.common.core.domain.entity.SysDept)>", index: 0 }
 
 transfers:
-  # 保持基础的字符串拼接规则，以防 Controller/Service 层有简单的字符串处理
-  - method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>"
-    from: 0
-    to: base
-  - method: "<java.lang.StringBuilder: java.lang.String toString()>"
-    from: base
-    to: result
+  # ── java.lang.String ─────────────────────────────────────────────────────
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int,int)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(char,char)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String trim()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String strip()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripLeading()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripTrailing()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String intern()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(java.lang.Object)>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(char[])>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.util.Locale,java.lang.String,java.lang.Object[])>", from: 1, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.CharSequence[])>", from: 1, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.Iterable)>", from: 1, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: char[] toCharArray()>", from: base, to: result, type: "char[]" }
+
+  # ── java.lang.StringBuilder ───────────────────────────────────────────────
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char[])>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(long)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.String)>", from: 1, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.Object)>", from: 1, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence)>", from: 1, to: base }
+
+  # ── java.lang.StringBuffer ────────────────────────────────────────────────
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: base, to: result, type: "java.lang.String" }
+
+  # ── java.util.Map ─────────────────────────────────────────────────────────
+  - { method: "<java.util.Map: java.lang.Object get(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.HashMap: java.lang.Object get(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.LinkedHashMap: java.lang.Object get(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.TreeMap: java.lang.Object get(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.concurrent.ConcurrentHashMap: java.lang.Object get(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: 1, to: base }
+  - { method: "<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: 1, to: base }
+  - { method: "<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: 1, to: base }
+  - { method: "<java.util.Map: void putAll(java.util.Map)>", from: 0, to: base }
+  - { method: "<java.util.Map: java.util.Collection values()>", from: base, to: result, type: "java.util.Collection" }
+  - { method: "<java.util.Map: java.util.Set entrySet()>", from: base, to: result, type: "java.util.Set" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getValue()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getKey()>", from: base, to: result, type: "java.lang.Object" }
+
+  # ── java.util.List / Collection ───────────────────────────────────────────
+  - { method: "<java.util.List: java.lang.Object get(int)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.ArrayList: java.lang.Object get(int)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.LinkedList: java.lang.Object get(int)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.List: boolean add(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.util.ArrayList: boolean add(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.util.LinkedList: boolean add(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.util.Collection: boolean add(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.util.Iterator: java.lang.Object next()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.ListIterator: java.lang.Object next()>", from: base, to: result, type: "java.lang.Object" }
+
+  # ── java.util.Optional ────────────────────────────────────────────────────
+  - { method: "<java.util.Optional: java.lang.Object get()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElse(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElseGet(java.util.function.Supplier)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.util.Optional of(java.lang.Object)>", from: 0, to: result, type: "java.util.Optional" }
+  - { method: "<java.util.Optional: java.util.Optional ofNullable(java.lang.Object)>", from: 0, to: result, type: "java.util.Optional" }
+
+  # ── java.lang.Object ──────────────────────────────────────────────────────
+  - { method: "<java.lang.Object: java.lang.String toString()>", from: base, to: result, type: "java.lang.String" }
+
+  # ── Servlet request parameter / header / URI ──────────────────────────────
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>", from: base, to: result, type: "java.lang.String[]" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>", from: base, to: result, type: "java.lang.StringBuffer" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>", from: base, to: result, type: "java.lang.Object" }
+
+  # ── Shiro propagation chain ───────────────────────────────────────────────
+  - { method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", from: base, to: result, type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.util.Collection fromRealm(java.lang.String)>", from: base, to: result, type: "java.util.Collection" }
+
+  # ── Spring Security propagation chain ─────────────────────────────────────
+  - { method: "<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>", from: base, to: result, type: "org.springframework.security.core.Authentication" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.Object getDetails()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.String getName()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>", from: base, to: result, type: "java.util.Collection" }
+  - { method: "<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>", from: base, to: result, type: "java.lang.String" }
+
+  # ── HttpSession / ThreadLocal propagation ─────────────────────────────────
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>", from: 1, to: base }
+  - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.lang.InheritableThreadLocal: java.lang.Object get()>", from: base, to: result, type: "java.lang.Object" }

@@ -1,138 +1,122 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import os
 import glob
-import statistics
-import re
 
-def natural_sort_key(s):
-    """自然排序键生成器"""
-    return [int(text) if text.isdigit() else text.lower()
-            for text in re.split('([0-9]+)', s)]
+def read_lines_to_set(file_path):
+    """读取文件内容并返回去重后的集合，去除首尾空白"""
+    if not os.path.exists(file_path):
+        print(f"Warning: File not found: {file_path}")
+        return set()
 
-def read_file_to_set(file_path):
-    """读取文件内容，存入集合"""
-    lines = set()
-    if os.path.exists(file_path):
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                for line in f:
-                    stripped = line.strip()
-                    if stripped:
-                        lines.add(stripped)
-        except Exception as e:
-            print(f"⚠️ 读取出错 {file_path}: {e}")
-    return lines
+    with open(file_path, 'r', encoding='utf-8') as f:
+        # strip() 用于去除行首尾的换行符和空格，确保对比准确
+        return {line.strip() for line in f if line.strip()}
 
-def process_comparison(base_file, target_pattern, label):
-    """
-    处理对比逻辑：
-    1. 打印详细对比过程
-    2. 返回 (Sum, Ave) 元组供后续汇总使用
-    """
-    # 默认返回 0, 0
-    if not os.path.exists(base_file):
-        print(f"  ❌ [{label}] 基准文件缺失: {os.path.basename(base_file)}")
-        return 0, 0.0
+def append_intersection_to_file(base_set, target_file_path, output_path):
+    """计算 target_file 与 base_set 的交集，并将结果追加到 output_path"""
+    if not os.path.exists(target_file_path):
+        return 0
 
-    base_set = read_file_to_set(base_file)
-    # print(f"  📂 [{label}] 基准数据量: {len(base_set)}")
+    target_lines = read_lines_to_set(target_file_path)
+    # 计算交集
+    intersection = base_set.intersection(target_lines)
 
-    target_files = glob.glob(target_pattern)
-    target_files.sort(key=lambda f: natural_sort_key(os.path.basename(f)))
+    if intersection:
+        with open(output_path, 'a', encoding='utf-8') as f:
+            for line in intersection:
+                f.write(line + '\n')
 
-    if not target_files:
-        print(f"  ⚠️ [{label}] 未找到匹配文件")
-        return 0, 0.0
+    return len(intersection)
 
-    print(f"  📊 [{label}] 详细对比 (基准 vs Dyer):")
+def deduplicate_file(input_path, output_path):
+    """读取 input_path，去重后写入 output_path，并返回行数"""
+    if not os.path.exists(input_path):
+        # 如果文件不存在（可能是没有交集），创建一个空文件
+        with open(output_path, 'w', encoding='utf-8') as f:
+            pass
+        return 0, 0
 
-    intersection_counts = []
+    unique_lines = set()
+    total_lines_read = 0
 
-    for target_path in target_files:
-        target_name = os.path.basename(target_path)
-        target_set = read_file_to_set(target_path)
+    with open(input_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                total_lines_read += 1
+                unique_lines.add(line)
 
-        common_count = len(base_set.intersection(target_set))
-        intersection_counts.append(common_count)
+    with open(output_path, 'w', encoding='utf-8') as f:
+        for line in unique_lines:
+            f.write(line + '\n')
 
-        # 打印单行详情
-        print(f"     - vs {target_name:<20} : {common_count} 条相同")
-
-    # 计算统计值
-    total_sum = sum(intersection_counts)
-    average = statistics.mean(intersection_counts) if intersection_counts else 0.0
-
-    print(f"     {'-'*40}")
-    print(f"     >> 总和 (Sum) : {total_sum}")
-    print(f"     >> 平均 (Ave) : {average:.1f}")
-    print("")
-
-    return total_sum, average
+    return total_lines_read, len(unique_lines)
 
 def main():
-    base_dir = os.getcwd()
-    benchmark_b2_dir = os.path.join(base_dir, "benchmark_b2")
-    dyer_dir = os.path.join(base_dir, "dyer")
+    # 项目列表
+    projects = [
+        "basemall", "mall4cloud", "mogu", "netdisk", "novel",
+        "onemall", "roncoo", "sduoj", "xmall", "youlai"
+    ]
 
-    if not os.path.exists(benchmark_b2_dir) or not os.path.exists(dyer_dir):
-        print("❌ 错误: 未找到目录，请确保在 WebAnalyzer 根目录下运行脚本。")
-        return
+    base_b2_dir = "benchmark_b2"
+    base_dyer_dir = "dyer"
+    output_base_dir = "comparison_results"
 
-    projects = [d for d in os.listdir(benchmark_b2_dir)
-                if os.path.isdir(os.path.join(benchmark_b2_dir, d)) and not d.startswith('.')]
-    projects.sort()
-
-    # 用于存储汇总数据: [ (name, edge_sum, edge_ave, method_sum, method_ave), ... ]
-    summary_data = []
-
-    print(f"=== 开始详细对比分析 ({len(projects)} 个项目) ===")
+    print(f"{'Project':<15} | {'Edges (Raw)':<12} | {'Edges (Set)':<12} | {'Methods (Raw)':<12} | {'Methods (Set)':<12}")
+    print("-" * 75)
 
     for project in projects:
-        print("=" * 80)
-        print(f"🚀 项目: {project}")
-        print("=" * 80)
+        # 1. 设置路径
+        # Benchmark B2 路径
+        b2_edges_path = os.path.join(base_b2_dir, project, "result", "call-edges.txt")
+        b2_methods_path = os.path.join(base_b2_dir, project, "result", "reachable-methods.txt")
 
-        b2_result_dir = os.path.join(benchmark_b2_dir, project, "result")
-        dyer_proj_dir = os.path.join(dyer_dir, project)
+        # 输出路径
+        project_out_dir = os.path.join(output_base_dir, project)
+        os.makedirs(project_out_dir, exist_ok=True)
 
-        # --- 1. 对比 Call Edges ---
-        base_edges = os.path.join(b2_result_dir, "call-edges.txt")
-        target_edges_pattern = os.path.join(dyer_proj_dir, "calledges-*.txt")
+        final_edges_path = os.path.join(project_out_dir, "final-edges.txt")
+        final_edges_set_path = os.path.join(project_out_dir, "final-edges-set.txt")
+        final_methods_path = os.path.join(project_out_dir, "final-methods.txt")
+        final_methods_set_path = os.path.join(project_out_dir, "final-methods-set.txt")
 
-        e_sum, e_ave = process_comparison(base_edges, target_edges_pattern, "Call Edges")
+        # 清理旧的输出文件（如果存在），防止追加模式导致数据重复
+        for p in [final_edges_path, final_methods_path]:
+            if os.path.exists(p):
+                os.remove(p)
 
-        # --- 2. 对比 Reachable Methods ---
-        base_methods = os.path.join(b2_result_dir, "reachable-methods.txt")
-        target_methods_pattern = os.path.join(dyer_proj_dir, "methods-*.txt")
+        # 2. 读取 Benchmark B2 的基准数据
+        b2_edges_set = read_lines_to_set(b2_edges_path)
+        b2_methods_set = read_lines_to_set(b2_methods_path)
 
-        m_sum, m_ave = process_comparison(base_methods, target_methods_pattern, "Methods")
+        # 3. 处理 Edges (call-edges)
+        # 找到 dyer 下该项目所有的 calledges-*.txt
+        dyer_edge_files = glob.glob(os.path.join(base_dyer_dir, project, "calledges-*.txt"))
+        # 排序以保证处理顺序一致
+        dyer_edge_files.sort()
 
-        # 收集数据
-        summary_data.append({
-            "name": project,
-            "e_sum": e_sum,
-            "e_ave": e_ave,
-            "m_sum": m_sum,
-            "m_ave": m_ave
-        })
+        for d_file in dyer_edge_files:
+            append_intersection_to_file(b2_edges_set, d_file, final_edges_path)
 
-    # --- 最终汇总表格输出 ---
-    print("\n" + "="*100)
-    print("📋 最终结果汇总表格")
-    print("="*100)
+        # 4. 处理 Methods (reachable-methods)
+        # 找到 dyer 下该项目所有的 methods-*.txt
+        dyer_method_files = glob.glob(os.path.join(base_dyer_dir, project, "methods-*.txt"))
+        dyer_method_files.sort()
 
-    # 表头
-    header = f"{'Project':<15} | {'Edge Sum':<12} | {'Edge Ave':<12} | {'Method Sum':<12} | {'Method Ave':<12}"
-    print(header)
-    print("-" * len(header))
+        for d_file in dyer_method_files:
+            append_intersection_to_file(b2_methods_set, d_file, final_methods_path)
 
-    for item in summary_data:
-        print(f"{item['name']:<15} | {item['e_sum']:<12} | {item['e_ave']:<12.1f} | {item['m_sum']:<12} | {item['m_ave']:<12.1f}")
+        # 5. 去重并统计 (Generate -set files)
+        # Edges
+        edges_raw_count, edges_set_count = deduplicate_file(final_edges_path, final_edges_set_path)
+        # Methods
+        methods_raw_count, methods_set_count = deduplicate_file(final_methods_path, final_methods_set_path)
 
-    print("="*100)
-    print(f"✅ 统计完成，共处理 {len(summary_data)} 个项目。")
+        # 6. 打印统计结果
+        print(f"{project:<15} | {edges_raw_count:<12} | {edges_set_count:<12} | {methods_raw_count:<12} | {methods_set_count:<12}")
+
+    print("-" * 75)
+    print(f"Comparison complete. Detailed results are in the '{output_base_dir}' directory.")
 
 if __name__ == "__main__":
     main()

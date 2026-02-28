@@ -1,0 +1,71 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.2
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+10927 classes with 122918 methods in the world
+WorldBuilder finishes, elapsed time: 3.35s
+routerAnalysis starts ...
+Router analysis started at: 2026-02-04 21:17:36
+Router analysis completed at: 2026-02-04 21:17:36 (Duration: 4ms)
+routerAnalysis finishes, elapsed time: 0.00s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.02s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.01s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+resultAnalysis starts ...
+============================================================
+                 Spring Analysis Result Summary             
+============================================================
+Router Methods (Endpoints)     : 21
+Spring Beans                   : 99
+Aspect Methods (Advice)        : 4
+============================================================
+resultAnalysis finishes, elapsed time: 0.00s
+pta starts ...
+Loading taint config from /Users/yuntsy/My/Projects/Java/WebAnalyzer/configs/taint-config.yml
+Cannot find source method '<org.example.springtarget.controller.UserController: java.lang.String getUserById(java.lang.String)>'
+Cannot find sink method '<org.example.springtarget.mapper.UserMapper: java.lang.String queryById(java.lang.String)>'
+TaintConfig:
+transfers:
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+
+[Pointer analysis] elapsed time: 0.01s
+Detected 0 taint flow(s):
+TFGDumper starts ...
+Source nodes:
+Sink nodes:
+Dumping /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-flow-graph.dot
+TFGDumper finishes, elapsed time: 0.01s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                8 (insens) / 8 (sens)
+#objects:                     4 (insens) / 4 (sens)
+#var points-to:               7 (insens) / 7 (sens)
+#static field points-to:      0 (sens)
+#instance field points-to:    0 (sens)
+#array points-to:             0 (sens)
+#reachable methods:           14 (insens) / 14 (sens)
+#call graph edges:            3 (insens) / 3 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.09s
+cg starts ...
+Call graph has 14 reachable methods and 3 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.00s
+Tai-e finishes, elapsed time: 3.58s
