@@ -9,11 +9,14 @@ import java.nio.file.*;
 import java.util.List;
 
 /**
- * Writes the generated TaintAnalysisConfig to a Tai-e 0.5.1 compatible YAML file.
+ * Writes the generated TaintAnalysisConfig to a Tai-e compatible YAML file.
  *
- * Tai-e 0.5.1 source format:
+ * Tai-e source format:
+ *   call source:  { kind: call, method: "...", index: result, type: "..." }
  *   param source: { kind: param, method: "...", index: N, type: "..." }
- *   call  source: { method: "...", type: "..." }   ← no kind/index fields in 0.5.1
+ *
+ * Tai-e sink format:
+ *   { method: "...", index: N }
  *
  * Output sections:
  *   sources   - SRFA param sources + universal framework call sources
@@ -39,7 +42,7 @@ public class TaintConfigYamlWriter {
                 .append(", type: \"").append(source.getType()).append("\"")
                 .append(" }\n");
         }
-        // Universal framework-injected call sources (Tai-e 0.5.1 format: method + type only)
+        // Universal framework-injected call sources (Tai-e format: kind: call, method, index: result, type)
         sb.append(FRAMEWORK_INJECTED_SOURCES);
 
         sb.append("\n");
@@ -80,56 +83,54 @@ public class TaintConfigYamlWriter {
     }
 
     // =========================================================================
-    // Framework-injected taint sources (Tai-e 0.5.1 call source format)
+    // Framework-injected taint sources (Tai-e call source format)
     //
-    // In Tai-e 0.5.1, a "call source" is declared with only:
-    //   { method: "SIGNATURE", type: "TYPE" }
+    // Tai-e call source format:
+    //   { kind: call, method: "SIGNATURE", index: result, type: "TYPE" }
     // The return value of the method becomes the taint source.
-    // Do NOT add kind or index fields — they are not supported in 0.5.1
-    // and will cause a NullPointerException in YamlTaintConfigProvider.
     //
     // Covers: Apache Shiro / Spring Security / Servlet Session / ThreadLocal
     // =========================================================================
     private static final String FRAMEWORK_INJECTED_SOURCES = """
-  # ── Framework-injected taint sources (universal, Tai-e 0.5.1 format) ─────
+  # ── Framework-injected taint sources (universal, Tai-e call source format) ─
 
   # --- Apache Shiro ---
-  - { method: "<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>", type: "org.apache.shiro.subject.Subject" }
-  - { method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", type: "java.lang.Object" }
-  - { method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", type: "org.apache.shiro.subject.PrincipalCollection" }
-  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", type: "java.lang.Object" }
+  - { kind: call, method: "<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>", index: result, type: "org.apache.shiro.subject.Subject" }
+  - { kind: call, method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", index: result, type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { kind: call, method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", index: result, type: "java.lang.Object" }
 
   # --- Spring Security ---
-  - { method: "<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>", type: "org.springframework.security.core.context.SecurityContext" }
-  - { method: "<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>", type: "org.springframework.security.core.Authentication" }
-  - { method: "<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>", type: "java.lang.Object" }
-  - { method: "<org.springframework.security.core.Authentication: java.lang.Object getDetails()>", type: "java.lang.Object" }
-  - { method: "<org.springframework.security.core.Authentication: java.lang.String getName()>", type: "java.lang.String" }
-  - { method: "<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>", type: "java.util.Collection" }
-  - { method: "<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>", type: "java.lang.String" }
+  - { kind: call, method: "<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>", index: result, type: "org.springframework.security.core.context.SecurityContext" }
+  - { kind: call, method: "<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>", index: result, type: "org.springframework.security.core.Authentication" }
+  - { kind: call, method: "<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<org.springframework.security.core.Authentication: java.lang.Object getDetails()>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<org.springframework.security.core.Authentication: java.lang.String getName()>", index: result, type: "java.lang.String" }
+  - { kind: call, method: "<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>", index: result, type: "java.util.Collection" }
+  - { kind: call, method: "<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>", index: result, type: "java.lang.String" }
 
   # --- Servlet HttpSession (framework-agnostic) ---
-  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", type: "java.lang.Object" }
-  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", type: "java.lang.Object" }
-  - { method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>", type: "javax.servlet.http.HttpSession" }
-  - { method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>", type: "javax.servlet.http.HttpSession" }
-  - { method: "<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>", type: "java.security.Principal" }
-  - { method: "<java.security.Principal: java.lang.String getName()>", type: "java.lang.String" }
-  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>", type: "java.lang.String" }
+  - { kind: call, method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>", index: result, type: "javax.servlet.http.HttpSession" }
+  - { kind: call, method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>", index: result, type: "javax.servlet.http.HttpSession" }
+  - { kind: call, method: "<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>", index: result, type: "java.security.Principal" }
+  - { kind: call, method: "<java.security.Principal: java.lang.String getName()>", index: result, type: "java.lang.String" }
+  - { kind: call, method: "<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>", index: result, type: "java.lang.String" }
 
   # --- Request Attribute (JWT / custom filter pattern) ---
-  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>", type: "java.lang.Object" }
-  - { method: "<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>", type: "java.lang.Object" }
+  - { kind: call, method: "<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>", index: result, type: "java.lang.Object" }
 
   # --- ThreadLocal user context (common custom pattern) ---
-  - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", type: "java.lang.Object" }
-  - { method: "<java.lang.InheritableThreadLocal: java.lang.Object get()>", type: "java.lang.Object" }
+  - { kind: call, method: "<java.lang.ThreadLocal: java.lang.Object get()>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<java.lang.InheritableThreadLocal: java.lang.Object get()>", index: result, type: "java.lang.Object" }
 """;
 
     // =========================================================================
     // Common predefined taint sinks (universal, framework-agnostic)
     //
-    // Tai-e 0.5.1 sink format:
+    // Tai-e sink format:
     //   { method: "SIGNATURE", index: N }
     // where index is the parameter position that receives tainted data.
     //
@@ -143,7 +144,9 @@ public class TaintConfigYamlWriter {
   - { method: "<java.sql.Statement: java.sql.ResultSet executeQuery(java.lang.String)>", index: 0 }
   - { method: "<java.sql.Statement: int executeUpdate(java.lang.String)>", index: 0 }
   - { method: "<java.sql.Statement: boolean execute(java.lang.String)>", index: 0 }
-  - { method: "<java.sql.Statement: int[] executeBatch()>", index: 0 }
+  # executeBatch() has no parameters, taint enters via prior addBatch(String) calls
+  # - { method: "<java.sql.Statement: int[] executeBatch()>", index: 0 }
+  - { method: "<java.sql.Statement: void addBatch(java.lang.String)>", index: 0 }
   - { method: "<java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>", index: 0 }
   - { method: "<java.sql.Connection: java.sql.CallableStatement prepareCall(java.lang.String)>", index: 0 }
   # --- Spring JdbcTemplate ---
@@ -185,7 +188,7 @@ public class TaintConfigYamlWriter {
 
   # ── XSS (Cross-Site Scripting) ────────────────────────────────────────────
   # --- Servlet Response ---
-  - { method: "<javax.servlet.http.HttpServletResponse: java.io.PrintWriter getWriter()>", index: 0 }
+  # Note: getWriter() itself is not a sink; the actual sinks are print/println/write on the returned PrintWriter
   - { method: "<java.io.PrintWriter: void print(java.lang.String)>", index: 0 }
   - { method: "<java.io.PrintWriter: void println(java.lang.String)>", index: 0 }
   - { method: "<java.io.PrintWriter: void write(java.lang.String)>", index: 0 }
@@ -200,7 +203,7 @@ public class TaintConfigYamlWriter {
   - { method: "<java.net.URL: void <init>(java.lang.String)>", index: 0 }
   - { method: "<java.net.URI: void <init>(java.lang.String)>", index: 0 }
   - { method: "<java.net.URI: java.net.URI create(java.lang.String)>", index: 0 }
-  - { method: "<java.net.HttpURLConnection: void connect()>", index: base }
+  # Note: connect() has no parameters; SSRF taint enters via URL/URI construction (listed above)
   - { method: "<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>", index: 0 }
   - { method: "<org.springframework.web.client.RestTemplate: java.lang.Object getForObject(java.lang.String,java.lang.Class)>", index: 0 }
   - { method: "<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity getForEntity(java.lang.String,java.lang.Class)>", index: 0 }
@@ -247,7 +250,7 @@ public class TaintConfigYamlWriter {
   - { method: "<org.apache.velocity.app.VelocityEngine: boolean evaluate(org.apache.velocity.context.Context,java.io.Writer,java.lang.String,java.lang.String)>", index: 3 }
 
   # ── Deserialization ───────────────────────────────────────────────────────
-  - { method: "<java.io.ObjectInputStream: java.lang.Object readObject()>", index: base }
+  # Note: readObject() has no parameters; deserialization taint enters via ObjectInputStream(InputStream) constructor (listed below)
   - { method: "<java.io.ObjectInputStream: void <init>(java.io.InputStream)>", index: 0 }
   - { method: "<com.alibaba.fastjson.JSON: java.lang.Object parse(java.lang.String)>", index: 0 }
   - { method: "<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String)>", index: 0 }

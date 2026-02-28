@@ -3,14 +3,17 @@ printHelp: false
 # WebGoat libs
 classPath: []
 appClassPath:
-  - benchmarks/mogu/mogu_admin-0.0.1-SNAPSHOT/BOOT-INF/mogu_admin-0.0.1-SNAPSHOT.jar
-  - benchmarks/mogu/mogu_gateway-0.0.1-SNAPSHOT/BOOT-INF/mogu_gateway-0.0.1-SNAPSHOT.jar
-  - benchmarks/mogu/mogu_monitor-0.0.1-SNAPSHOT/BOOT-INF/mogu_monitor-0.0.1-SNAPSHOT.jar
-  - benchmarks/mogu/mogu_picture-0.0.1-SNAPSHOT/BOOT-INF/mogu_picture-0.0.1-SNAPSHOT.jar
-  - benchmarks/mogu/mogu_search-0.0.1-SNAPSHOT/BOOT-INF/mogu_search-0.0.1-SNAPSHOT.jar
-  - benchmarks/mogu/mogu_sms-0.0.1-SNAPSHOT/BOOT-INF/mogu_sms-0.0.1-SNAPSHOT.jar
-  - benchmarks/mogu/mogu_spider-0.0.1-SNAPSHOT/BOOT-INF/mogu_spider-0.0.1-SNAPSHOT.jar
-  - benchmarks/mogu/mogu_web-0.0.1-SNAPSHOT/BOOT-INF/mogu_web-0.0.1-SNAPSHOT.jar
+  - benchmarks/basemall/gruul-account-open-service/BOOT-INF/gruul-account-open-service.jar
+  - benchmarks/basemall/gruul-afs-open-service/BOOT-INF/gruul-afs-open-service.jar
+  - benchmarks/basemall/gruul-gateway-open/BOOT-INF/gruul-gateway-open.jar
+  - benchmarks/basemall/gruul-goods-open-service/BOOT-INF/gruul-goods-open-service.jar
+  - benchmarks/basemall/gruul-logistics-open/BOOT-INF/gruul-logistics-open.jar
+  - benchmarks/basemall/gruul-order-open-service/BOOT-INF/gruul-order-open-service.jar
+  - benchmarks/basemall/gruul-oss-open-service/BOOT-INF/gruul-oss-open-service.jar
+  - benchmarks/basemall/gruul-payment-open-service/BOOT-INF/gruul-payment-open-service.jar
+  - benchmarks/basemall/gruul-platform-open-service/BOOT-INF/gruul-platform-open-service.jar
+  - benchmarks/basemall/gruul-shops-open-service/BOOT-INF/gruul-shops-open-service.jar
+  - benchmarks/basemall/gruul-sms-open-service/BOOT-INF/gruul-sms-open-service.jar
 
 
 
