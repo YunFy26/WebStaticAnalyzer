@@ -1,0 +1,670 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.3
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Tai-e Commit: a086cc6200102f74b303a2cb800dad4e1b8b3af5
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+11054 classes with 105869 methods in the world
+WorldBuilder finishes, elapsed time: 3.30s
+ir-dumper starts ...
+Dumping IR in /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tir
+606 classes in scope (APP) of class analyses
+ir-dumper finishes, elapsed time: 0.65s
+routerAnalysis starts ...
+Router analysis started at: 2026-02-27 20:06:36
+Router analysis completed at: 2026-02-27 20:06:36 (Duration: 5ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.01s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.01s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+resultAnalysis starts ...
+============================================================
+                 Spring Analysis Result Summary             
+============================================================
+Router Methods (Endpoints)     : 127
+Spring Beans                   : 177
+Aspect Methods (Advice)        : 0
+============================================================
+resultAnalysis finishes, elapsed time: 0.00s
+srfaAnalysis starts ...
+SRFA Analysis started at: 2026-02-27 20:06:36
+Loaded 33 controller classes from RouterAnalysis
+Discovering mapper paths from 9 appClassPath entries
+Extracting XML from fat jar: management-web-app.jar
+Extracted 0 XML files from management-web-app.jar
+Extracting XML from fat jar: pay-service-app.jar
+Extracted 0 XML files from pay-service-app.jar
+Extracted 1 XML files (plain jar) from pay-service-app.jar
+Extracting XML from fat jar: product-service-app.jar
+Extracted 0 XML files from product-service-app.jar
+Extracted 1 XML files (plain jar) from product-service-app.jar
+Extracting XML from fat jar: promotion-service-app.jar
+Extracted 0 XML files from promotion-service-app.jar
+Extracted 1 XML files (plain jar) from promotion-service-app.jar
+Extracting XML from fat jar: search-service-app.jar
+Extracted 0 XML files from search-service-app.jar
+Extracting XML from fat jar: shop-web-app.jar
+Extracted 0 XML files from shop-web-app.jar
+Extracting XML from fat jar: system-service-app.jar
+Extracted 0 XML files from system-service-app.jar
+Extracted 2 XML files (plain jar) from system-service-app.jar
+Extracting XML from fat jar: trade-service-app.jar
+Extracted 0 XML files from trade-service-app.jar
+Extracting XML from fat jar: user-service-app.jar
+Extracted 0 XML files from user-service-app.jar
+Auto-discovered 4 mapper path(s)
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/pay-service-app_1731057261000/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/product-service-app_1731057261000/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/promotion-service-app_1731057261000/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/system-service-app_1731057261000/mapper
+Using 4 mapper search path(s):
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/pay-service-app_1731057261000/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/product-service-app_1731057261000/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/promotion-service-app_1731057261000/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/system-service-app_1731057261000/mapper
+Parsed 5 MyBatis mapper files
+Parsed 5 MyBatis mapper files
+  Mapper namespace: cn.iocoder.mall.payservice.dal.mysql.mapper.transaction.PayTransactionMapper
+    Operation: id=updatePriceTotalIncr, type=update, hasDollar=true
+      Risky var: ${{refundTotalIncr}}
+      Risky var: ${{refundTotalIncr}}
+  Mapper namespace: cn.iocoder.mall.productservice.dal.mysql.mapper.sku.ProductSkuMapper
+    Operation: id=insertList, type=insert, hasDollar=false
+  Mapper namespace: cn.iocoder.mall.promotionservice.dal.mysql.mapper.coupon.CouponTemplateMapper
+    Operation: id=updateStatFetchNumIncr, type=update, hasDollar=false
+  Mapper namespace: cn.iocoder.mall.systemservice.dal.mysql.mapper.permission.RoleResourceMapper
+    Operation: id=insertList, type=insert, hasDollar=false
+  Mapper namespace: cn.iocoder.mall.systemservice.dal.mysql.mapper.permission.AdminRoleMapper
+    Operation: id=insertList, type=insert, hasDollar=false
+Collected 14 write field names from INSERT/UPDATE operations
+Extracted 117 source metadata entries (before filtering)
+Resolving 5 mapper namespaces...
+  Namespace resolve: cn.iocoder.mall.payservice.dal.mysql.mapper.transaction.PayTransactionMapper -> cn.iocoder.mall.payservice.dal.mysql.mapper.transaction.PayTransactionMapper
+  Namespace resolve: cn.iocoder.mall.productservice.dal.mysql.mapper.sku.ProductSkuMapper -> cn.iocoder.mall.productservice.dal.mysql.mapper.sku.ProductSkuMapper
+  Namespace resolve: cn.iocoder.mall.promotionservice.dal.mysql.mapper.coupon.CouponTemplateMapper -> cn.iocoder.mall.promotionservice.dal.mysql.mapper.coupon.CouponTemplateMapper
+  Namespace resolve: cn.iocoder.mall.systemservice.dal.mysql.mapper.permission.RoleResourceMapper -> cn.iocoder.mall.systemservice.dal.mysql.mapper.permission.RoleResourceMapper
+  Namespace resolve: cn.iocoder.mall.systemservice.dal.mysql.mapper.permission.AdminRoleMapper -> cn.iocoder.mall.systemservice.dal.mysql.mapper.permission.AdminRoleMapper
+Extracted 4 sink metadata entries (deduplicated, before risk filtering)
+Sources: 117 generated, 0 filtered, 0 deduplicated
+Sinks: 4 generated (risky), 0 filtered (safe), 0 deduplicated
+  Note: 'risky' means uses string concatenation ($), 'safe' means uses prepared statement (#)
+Written taint config to: output/taint-config-generated.yml
+  Sources: 117 (SRFA param) + framework call sources
+  Sinks: 4
+  Transfers: standard set included
+SRFA Analysis completed at: 2026-02-27 20:06:36 (Duration: 79ms)
+srfaAnalysis finishes, elapsed time: 0.08s
+pta starts ...
+Loading taint config from /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-config-generated.yml
+Ignore {"method":"<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>","type":"org.apache.shiro.subject.Subject"} due to missing source "kind"
+Ignore {"method":"<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>","type":"org.apache.shiro.subject.PrincipalCollection"} due to missing source "kind"
+Ignore {"method":"<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>","type":"org.springframework.security.core.context.SecurityContext"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>","type":"org.springframework.security.core.Authentication"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.Object getDetails()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.String getName()>","type":"java.lang.String"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>","type":"java.util.Collection"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>","type":"java.lang.String"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>","type":"javax.servlet.http.HttpSession"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>","type":"javax.servlet.http.HttpSession"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>","type":"java.security.Principal"} due to missing source "kind"
+Ignore {"method":"<java.security.Principal: java.lang.String getName()>","type":"java.lang.String"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<java.lang.ThreadLocal: java.lang.Object get()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<java.lang.InheritableThreadLocal: java.lang.Object get()>","type":"java.lang.Object"} due to missing source "kind"
+Cannot find taint-transfer method '<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find taint-transfer method '<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>'
+Cannot find taint-transfer method '<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>'
+Cannot find taint-transfer method '<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>'
+Cannot find taint-transfer method '<org.apache.shiro.subject.PrincipalCollection: java.util.Collection fromRealm(java.lang.String)>'
+Cannot find taint-transfer method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
+Cannot find taint-transfer method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
+Cannot find taint-transfer method '<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>'
+Cannot find taint-transfer method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+TaintConfig:
+sources:
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.admin.AdminController: cn.iocoder.common.framework.vo.CommonResult page(cn.iocoder.mall.managementweb.controller.admin.dto.AdminPageDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.admin.dto.AdminPageDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.admin.AdminController: cn.iocoder.common.framework.vo.CommonResult createAdmin(cn.iocoder.mall.managementweb.controller.admin.dto.AdminCreateDTO,javax.servlet.http.HttpServletRequest)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.admin.dto.AdminCreateDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.admin.AdminController: cn.iocoder.common.framework.vo.CommonResult updateAdmin(cn.iocoder.mall.managementweb.controller.admin.dto.AdminUpdateInfoDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.admin.dto.AdminUpdateInfoDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.admin.AdminController: cn.iocoder.common.framework.vo.CommonResult updateAdminStatus(cn.iocoder.mall.managementweb.controller.admin.dto.AdminUpdateStatusDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.admin.dto.AdminUpdateStatusDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult createDepartment(cn.iocoder.mall.managementweb.controller.admin.dto.DepartmentCreateDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.admin.dto.DepartmentCreateDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult updateDepartment(cn.iocoder.mall.managementweb.controller.admin.dto.DepartmentUpdateDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.admin.dto.DepartmentUpdateDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult deleteDepartment(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult getDepartment(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult listDepartments(java.util.List)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult createDataDict(cn.iocoder.mall.managementweb.controller.datadict.dto.DataDictCreateDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.datadict.dto.DataDictCreateDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult updateDataDict(cn.iocoder.mall.managementweb.controller.datadict.dto.DataDictUpdateDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.datadict.dto.DataDictUpdateDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult deleteDataDict(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult getDataDict(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult listDataDicts(java.util.List)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.errorcode.ErrorCodeController: cn.iocoder.common.framework.vo.CommonResult createErrorCode(cn.iocoder.mall.managementweb.controller.errorcode.dto.ErrorCodeCreateDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.errorcode.dto.ErrorCodeCreateDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.errorcode.ErrorCodeController: cn.iocoder.common.framework.vo.CommonResult updateErrorCode(cn.iocoder.mall.managementweb.controller.errorcode.dto.ErrorCodeUpdateDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.errorcode.dto.ErrorCodeUpdateDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.errorcode.ErrorCodeController: cn.iocoder.common.framework.vo.CommonResult deleteErrorCode(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.errorcode.ErrorCodeController: cn.iocoder.common.framework.vo.CommonResult getErrorCode(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.errorcode.ErrorCodeController: cn.iocoder.common.framework.vo.CommonResult pageErrorCode(cn.iocoder.mall.managementweb.controller.errorcode.dto.ErrorCodePageDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.errorcode.dto.ErrorCodePageDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.passport.PassportController: cn.iocoder.common.framework.vo.CommonResult login(cn.iocoder.mall.managementweb.controller.passport.dto.PassportLoginDTO,javax.servlet.http.HttpServletRequest)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.passport.dto.PassportLoginDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.passport.PassportController: cn.iocoder.common.framework.vo.CommonResult refreshToken(java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.pay.PayTransactionController: cn.iocoder.common.framework.vo.CommonResult pagePayTransaction(cn.iocoder.mall.managementweb.controller.pay.vo.transaction.PayTransactionPageReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.pay.vo.transaction.PayTransactionPageReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.PermissionController: cn.iocoder.common.framework.vo.CommonResult listRoleResources(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.PermissionController: cn.iocoder.common.framework.vo.CommonResult assignRoleResource(cn.iocoder.mall.managementweb.controller.permission.dto.PermissionAssignRoleResourceDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.permission.dto.PermissionAssignRoleResourceDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.PermissionController: cn.iocoder.common.framework.vo.CommonResult listAdminRoles(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.PermissionController: cn.iocoder.common.framework.vo.CommonResult assignAdminRole(cn.iocoder.mall.managementweb.controller.permission.dto.PermissionAssignAdminRoleDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.permission.dto.PermissionAssignAdminRoleDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.ResourceController: cn.iocoder.common.framework.vo.CommonResult createResource(cn.iocoder.mall.managementweb.controller.permission.dto.ResourceCreateDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.permission.dto.ResourceCreateDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.ResourceController: cn.iocoder.common.framework.vo.CommonResult updateResource(cn.iocoder.mall.managementweb.controller.permission.dto.ResourceUpdateDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.permission.dto.ResourceUpdateDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.ResourceController: cn.iocoder.common.framework.vo.CommonResult deleteResource(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.ResourceController: cn.iocoder.common.framework.vo.CommonResult getResource(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.ResourceController: cn.iocoder.common.framework.vo.CommonResult listResources(java.util.List)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult createRole(cn.iocoder.mall.managementweb.controller.permission.dto.RoleCreateDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.permission.dto.RoleCreateDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult updateRole(cn.iocoder.mall.managementweb.controller.permission.dto.RoleUpdateDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.permission.dto.RoleUpdateDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult deleteRole(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult role(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult listRoles(java.util.List)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult pageRole(cn.iocoder.mall.managementweb.controller.permission.dto.RolePageDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.permission.dto.RolePageDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult createProductAttrKey(cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrKeyCreateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrKeyCreateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult updateProductAttrKey(cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrKeyUpdateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrKeyUpdateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult getProductAttrKey(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult listProductAttrKeys(java.util.List)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult pageProductAttrKey(cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrKeyPageReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrKeyPageReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult createProductAttrValue(cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrValueCreateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrValueCreateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult updateProductAttrValue(cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrValueUpdateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrValueUpdateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult getProductAttrValue(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult listProductAttrValues(cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrValueListQueryReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrValueListQueryReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductBrandController: cn.iocoder.common.framework.vo.CommonResult createProductBrand(cn.iocoder.mall.managementweb.controller.product.vo.brand.ProductBrandCreateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.brand.ProductBrandCreateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductBrandController: cn.iocoder.common.framework.vo.CommonResult updateProductBrand(cn.iocoder.mall.managementweb.controller.product.vo.brand.ProductBrandUpdateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.brand.ProductBrandUpdateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductBrandController: cn.iocoder.common.framework.vo.CommonResult deleteProductBrand(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductBrandController: cn.iocoder.common.framework.vo.CommonResult getProductBrand(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductBrandController: cn.iocoder.common.framework.vo.CommonResult listProductBrands(java.util.List)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductBrandController: cn.iocoder.common.framework.vo.CommonResult pageProductBrand(cn.iocoder.mall.managementweb.controller.product.vo.brand.ProductBrandPageReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.brand.ProductBrandPageReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductCategoryController: cn.iocoder.common.framework.vo.CommonResult createProductCategory(cn.iocoder.mall.managementweb.controller.product.vo.category.ProductCategoryCreateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.category.ProductCategoryCreateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductCategoryController: cn.iocoder.common.framework.vo.CommonResult updateProductCategory(cn.iocoder.mall.managementweb.controller.product.vo.category.ProductCategoryUpdateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.category.ProductCategoryUpdateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductCategoryController: cn.iocoder.common.framework.vo.CommonResult deleteProductCategory(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult createProductSpu(cn.iocoder.mall.managementweb.controller.product.vo.spu.ProductSpuCreateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.spu.ProductSpuCreateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult updateProductSpu(cn.iocoder.mall.managementweb.controller.product.vo.spu.ProductSpuUpdateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.spu.ProductSpuUpdateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult getProductSpu(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult listProductSpus(java.util.List)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult pageProductSpu(cn.iocoder.mall.managementweb.controller.product.vo.spu.ProductSpuPageReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.product.vo.spu.ProductSpuPageReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.activity.PromotionActivityController: cn.iocoder.common.framework.vo.CommonResult pagePromotionActivity(cn.iocoder.mall.managementweb.controller.promotion.activity.vo.PromotionActivityPageReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.promotion.activity.vo.PromotionActivityPageReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.brand.BannerController: cn.iocoder.common.framework.vo.CommonResult createBanner(cn.iocoder.mall.managementweb.controller.promotion.brand.vo.BannerCreateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.promotion.brand.vo.BannerCreateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.brand.BannerController: cn.iocoder.common.framework.vo.CommonResult updateBanner(cn.iocoder.mall.managementweb.controller.promotion.brand.vo.BannerUpdateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.promotion.brand.vo.BannerUpdateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.brand.BannerController: cn.iocoder.common.framework.vo.CommonResult deleteBanner(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.brand.BannerController: cn.iocoder.common.framework.vo.CommonResult pageBanner(cn.iocoder.mall.managementweb.controller.promotion.brand.vo.BannerPageReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.promotion.brand.vo.BannerPageReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.coupon.CouponTemplateController: cn.iocoder.common.framework.vo.CommonResult pageCouponTemplate(cn.iocoder.mall.managementweb.controller.promotion.coupon.vo.template.CouponTemplatePageReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.promotion.coupon.vo.template.CouponTemplatePageReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.coupon.CouponTemplateController: cn.iocoder.common.framework.vo.CommonResult updateCouponTemplateStatus(java.lang.Integer,java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.coupon.CouponTemplateController: cn.iocoder.common.framework.vo.CommonResult updateCouponTemplateStatus(java.lang.Integer,java.lang.Integer)>", index: "1", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.coupon.CouponTemplateController: cn.iocoder.common.framework.vo.CommonResult createCouponCardTemplate(cn.iocoder.mall.managementweb.controller.promotion.coupon.vo.template.CouponTemplateCardCreateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.promotion.coupon.vo.template.CouponTemplateCardCreateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.coupon.CouponTemplateController: cn.iocoder.common.framework.vo.CommonResult updateCouponCardTemplate(cn.iocoder.mall.managementweb.controller.promotion.coupon.vo.template.CouponTemplateCardUpdateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.promotion.coupon.vo.template.CouponTemplateCardUpdateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.recommend.ProductRecommendController: cn.iocoder.common.framework.vo.CommonResult createProductRecommend(cn.iocoder.mall.managementweb.controller.promotion.recommend.vo.ProductRecommendCreateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.promotion.recommend.vo.ProductRecommendCreateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.recommend.ProductRecommendController: cn.iocoder.common.framework.vo.CommonResult updateProductRecommend(cn.iocoder.mall.managementweb.controller.promotion.recommend.vo.ProductRecommendUpdateReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.promotion.recommend.vo.ProductRecommendUpdateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.recommend.ProductRecommendController: cn.iocoder.common.framework.vo.CommonResult deleteProductRecommend(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.promotion.recommend.ProductRecommendController: cn.iocoder.common.framework.vo.CommonResult pageProductRecommend(cn.iocoder.mall.managementweb.controller.promotion.recommend.vo.ProductRecommendPageReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.promotion.recommend.vo.ProductRecommendPageReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.systemlog.SystemAccessLogController: cn.iocoder.common.framework.vo.CommonResult pageSystemAccessLog(cn.iocoder.mall.managementweb.controller.systemlog.dto.SystemAccessLogPageDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.systemlog.dto.SystemAccessLogPageDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.systemlog.SystemExceptionLogController: cn.iocoder.common.framework.vo.CommonResult getSystemExceptionLogDetail(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.systemlog.SystemExceptionLogController: cn.iocoder.common.framework.vo.CommonResult pageSystemExceptionLog(cn.iocoder.mall.managementweb.controller.systemlog.dto.SystemExceptionLogPageDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.systemlog.dto.SystemExceptionLogPageDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.systemlog.SystemExceptionLogController: cn.iocoder.common.framework.vo.CommonResult processSystemExceptionLog(cn.iocoder.mall.managementweb.controller.systemlog.dto.SystemExceptionLogProcessDTO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.systemlog.dto.SystemExceptionLogProcessDTO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult updateUserInfo(cn.iocoder.mall.managementweb.controller.user.vo.UserUpdateInfoReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.user.vo.UserUpdateInfoReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult updateUserStatus(cn.iocoder.mall.managementweb.controller.user.vo.UserUpdateStatusReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.user.vo.UserUpdateStatusReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult getUser(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult listUsers(java.util.List)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<cn.iocoder.mall.managementweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult pageUser(cn.iocoder.mall.managementweb.controller.user.vo.UserPageReqVO)>", index: "0", type: "cn.iocoder.mall.managementweb.controller.user.vo.UserPageReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.pay.PayTransactionController: cn.iocoder.common.framework.vo.CommonResult getPayTransaction(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.pay.PayTransactionController: cn.iocoder.common.framework.vo.CommonResult getPayTransaction(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.pay.PayTransactionController: cn.iocoder.common.framework.vo.CommonResult submitPayTransaction(javax.servlet.http.HttpServletRequest,cn.iocoder.mall.shopweb.controller.pay.vo.transaction.PayTransactionSubmitReqVO)>", index: "1", type: "cn.iocoder.mall.shopweb.controller.pay.vo.transaction.PayTransactionSubmitReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.product.ProductCategoryController: cn.iocoder.common.framework.vo.CommonResult listProductCategories(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.product.ProductSkuController: cn.iocoder.common.framework.vo.CommonResult calcProductSkuPrice(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult pageProductSpu(cn.iocoder.mall.shopweb.controller.product.vo.product.ProductSpuPageReqVO)>", index: "0", type: "cn.iocoder.mall.shopweb.controller.product.vo.product.ProductSpuPageReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult getProductSpuSearchCondition(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult getProductSpuDetail(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.promotion.CouponCardController: cn.iocoder.common.framework.vo.CommonResult pageCouponCard(cn.iocoder.mall.shopweb.controller.promotion.vo.coupon.card.CouponCardPageReqVO)>", index: "0", type: "cn.iocoder.mall.shopweb.controller.promotion.vo.coupon.card.CouponCardPageReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.promotion.CouponCardController: cn.iocoder.common.framework.vo.CommonResult createCouponCard(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.promotion.CouponTemplateController: cn.iocoder.common.framework.vo.CommonResult getCouponTemplate(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult addCartItem(java.lang.Integer,java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult addCartItem(java.lang.Integer,java.lang.Integer)>", index: "1", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult updateCartItemQuantity(java.lang.Integer,java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult updateCartItemQuantity(java.lang.Integer,java.lang.Integer)>", index: "1", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult updateCartItemSelected(java.util.Set,java.lang.Boolean)>", index: "0", type: "java.util.Set" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult updateCartItemSelected(java.util.Set,java.lang.Boolean)>", index: "1", type: "java.lang.Boolean" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult getTradeOrderConfirmCreateInfo(java.lang.Integer,java.lang.Integer,java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult getTradeOrderConfirmCreateInfo(java.lang.Integer,java.lang.Integer,java.lang.Integer)>", index: "1", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult getTradeOrderConfirmCreateInfo(java.lang.Integer,java.lang.Integer,java.lang.Integer)>", index: "2", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult getTradeOrderConfirmCreateInfoFromCart(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult createTradeOrder(cn.iocoder.mall.shopweb.controller.trade.vo.order.TradeOrderCreateReqVO,javax.servlet.http.HttpServletRequest)>", index: "0", type: "cn.iocoder.mall.shopweb.controller.trade.vo.order.TradeOrderCreateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult createTradeOrder(cn.iocoder.mall.shopweb.controller.trade.vo.order.TradeOrderCreateFromCartReqVO)>", index: "0", type: "cn.iocoder.mall.shopweb.controller.trade.vo.order.TradeOrderCreateFromCartReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult getTradeOrder(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult pageTradeOrder(cn.iocoder.mall.shopweb.controller.trade.vo.order.TradeOrderPageReqVO)>", index: "0", type: "cn.iocoder.mall.shopweb.controller.trade.vo.order.TradeOrderPageReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.user.PassportController: cn.iocoder.common.framework.vo.CommonResult loginBySms(cn.iocoder.mall.shopweb.controller.user.vo.passport.PassportLoginBySmsReqVO,javax.servlet.http.HttpServletRequest)>", index: "0", type: "cn.iocoder.mall.shopweb.controller.user.vo.passport.PassportLoginBySmsReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.user.PassportController: cn.iocoder.common.framework.vo.CommonResult sendSmsCode(cn.iocoder.mall.shopweb.controller.user.vo.passport.PassportSendSmsRespVO,javax.servlet.http.HttpServletRequest)>", index: "0", type: "cn.iocoder.mall.shopweb.controller.user.vo.passport.PassportSendSmsRespVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.user.PassportController: cn.iocoder.common.framework.vo.CommonResult refreshToken(java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult createUserAddress(cn.iocoder.mall.shopweb.controller.user.vo.address.UserAddressCreateReqVO)>", index: "0", type: "cn.iocoder.mall.shopweb.controller.user.vo.address.UserAddressCreateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult updateUserAddress(cn.iocoder.mall.shopweb.controller.user.vo.address.UserAddressUpdateReqVO)>", index: "0", type: "cn.iocoder.mall.shopweb.controller.user.vo.address.UserAddressUpdateReqVO" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult deleteUserAddress(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult getUserAddress(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult updateUserAvatar(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.iocoder.mall.shopweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult updateUserNickname(java.lang.String)>", index: "0", type: "java.lang.String" }
+
+sinks:
+  - { method: "<cn.iocoder.mall.productservice.dal.mysql.mapper.sku.ProductSkuMapper: void insertList(java.util.List)>", index: "0" }
+  - { method: "<cn.iocoder.mall.promotionservice.dal.mysql.mapper.coupon.CouponTemplateMapper: int updateStatFetchNumIncr(java.lang.Integer)>", index: "0" }
+  - { method: "<cn.iocoder.mall.systemservice.dal.mysql.mapper.permission.RoleResourceMapper: int insertList(java.util.List)>", index: "0" }
+  - { method: "<cn.iocoder.mall.systemservice.dal.mysql.mapper.permission.AdminRoleMapper: int insertList(java.util.List)>", index: "0" }
+
+transfers:
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int,int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(char,char)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String trim()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String strip()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripLeading()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripTrailing()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String intern()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(java.lang.Object)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(char[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.util.Locale,java.lang.String,java.lang.Object[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.CharSequence[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.Iterable)>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: char[] toCharArray()>", from: "base", to: "result", type: "char[]" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char[])>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(long)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.String)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.Object)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.util.Map: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.HashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.TreeMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.concurrent.ConcurrentHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.HashMap" }
+  - { method: "<java.util.Map: void putAll(java.util.Map)>", from: "0", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.Map: java.util.Collection values()>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<java.util.Map: java.util.Set entrySet()>", from: "base", to: "result", type: "java.util.Set" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getValue()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getKey()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ArrayList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.List" }
+  - { method: "<java.util.ArrayList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.ArrayList" }
+  - { method: "<java.util.LinkedList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.LinkedList" }
+  - { method: "<java.util.Collection: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.Collection" }
+  - { method: "<java.util.Iterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ListIterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElse(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElseGet(java.util.function.Supplier)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.util.Optional of(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.util.Optional: java.util.Optional ofNullable(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.lang.Object: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+
+Initializing global bean mock objects for beans...
+Initialized 141 global bean objects.
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult treeDepartment()>
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult listDataDicts()>
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult listSimpleDataDicts()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.passport.PassportController: cn.iocoder.common.framework.vo.CommonResult getInfo()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.passport.PassportController: cn.iocoder.common.framework.vo.CommonResult treeAdminMenu()>
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.passport.PassportController: cn.iocoder.common.framework.vo.CommonResult listAdminPermission()>
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.permission.ResourceController: cn.iocoder.common.framework.vo.CommonResult treeResource()>
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult listAllRoles()>
+Added entry point (Empty): <cn.iocoder.mall.managementweb.controller.product.ProductCategoryController: cn.iocoder.common.framework.vo.CommonResult treeProductCategory()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.promotion.BannerController: cn.iocoder.common.framework.vo.CommonResult listBanners()>
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.promotion.ProductRecommendController: cn.iocoder.common.framework.vo.CommonResult list()>
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult sumCartItemQuantity()>
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult getCartDetail()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult getDefaultUserAddress()>
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult listUserAddresses()>
+Added entry point (Empty): <cn.iocoder.mall.shopweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult getUserInfo()>
+Initializing global aspect mock objects...
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.DepartmentRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.datadict.DataDictRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.errorcode.ErrorCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.oauth.OAuth2Rpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.oauth.OAuth2Rpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.ResourceRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No implementation found for interface: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.attr.ProductAttrRpc
+No implementation found for interface: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.brand.ProductBrandRpc
+No implementation found for interface: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No implementation found for interface: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No implementation found for interface: cn.iocoder.mall.promotion.api.rpc.activity.PromotionActivityRpc
+No implementation found for interface: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No implementation found for interface: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No implementation found for interface: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.systemlog.SystemAccessLogRpc
+No implementation found for interface: cn.iocoder.mall.systemservice.rpc.systemlog.SystemExceptionLogRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.admin.AdminRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.systemlog.SystemExceptionLogRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.systemlog.SystemExceptionLogRpc
+No implementation found for interface: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No implementation found for interface: cn.iocoder.mall.promotion.api.rpc.price.PriceRpc
+No implementation found for interface: cn.iocoder.mall.searchservice.rpc.product.SearchProductRpc
+No bean found for concrete class: cn.iocoder.mall.searchservice.rpc.product.SearchProductRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.category.ProductCategoryRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.banner.BannerRpc
+No implementation found for interface: cn.iocoder.mall.promotion.api.rpc.coupon.CouponCardRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponCardRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponTemplateRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.recommend.ProductRecommendRpc
+No implementation found for interface: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.price.PriceRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.cart.CartRpc
+No implementation found for interface: cn.iocoder.mall.userservice.rpc.sms.UserSmsCodeRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.oauth.OAuth2Rpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.sms.UserSmsCodeRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.oauth.OAuth2Rpc
+No implementation found for interface: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.user.UserRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.PermissionRpc
+No bean found for concrete class: cn.iocoder.mall.systemservice.rpc.permission.RoleRpc
+No implementation found for interface: cn.iocoder.mall.payservice.rpc.transaction.PayTransactionRpc
+No bean found for concrete class: cn.iocoder.mall.payservice.rpc.transaction.PayTransactionRpc
+No bean found for concrete class: cn.iocoder.mall.payservice.rpc.transaction.PayTransactionRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.activity.PromotionActivityRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.spu.ProductSpuRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.activity.PromotionActivityRpc
+No implementation found for interface: cn.iocoder.mall.productservice.rpc.sku.ProductSkuRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.price.PriceRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.coupon.CouponCardRpc
+No implementation found for interface: cn.iocoder.mall.tradeservice.rpc.order.TradeOrderRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.order.TradeOrderRpc
+No bean found for concrete class: cn.iocoder.mall.tradeservice.rpc.order.TradeOrderRpc
+No bean found for concrete class: cn.iocoder.mall.userservice.rpc.address.UserAddressRpc
+No bean found for concrete class: cn.iocoder.mall.productservice.rpc.sku.ProductSkuRpc
+No bean found for concrete class: cn.iocoder.mall.promotion.api.rpc.activity.PromotionActivityRpc
+[Pointer analysis] elapsed time: 0.09s
+Detected 0 taint flow(s):
+TFGDumper starts ...
+Source nodes:
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.ResourceController: cn.iocoder.common.framework.vo.CommonResult getResource(java.lang.Integer)>/resourceId}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.brand.BannerController: cn.iocoder.common.framework.vo.CommonResult deleteBanner(java.lang.Integer)>/bannerId}
+VarNode{<cn.iocoder.mall.managementweb.controller.passport.PassportController: cn.iocoder.common.framework.vo.CommonResult login(cn.iocoder.mall.managementweb.controller.passport.dto.PassportLoginDTO,javax.servlet.http.HttpServletRequest)>/loginDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.errorcode.ErrorCodeController: cn.iocoder.common.framework.vo.CommonResult createErrorCode(cn.iocoder.mall.managementweb.controller.errorcode.dto.ErrorCodeCreateDTO)>/createDTO}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult createTradeOrder(cn.iocoder.mall.shopweb.controller.trade.vo.order.TradeOrderCreateReqVO,javax.servlet.http.HttpServletRequest)>/createReqVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult createDataDict(cn.iocoder.mall.managementweb.controller.datadict.dto.DataDictCreateDTO)>/createDTO}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult addCartItem(java.lang.Integer,java.lang.Integer)>/skuId}
+VarNode{<cn.iocoder.mall.shopweb.controller.product.ProductSkuController: cn.iocoder.common.framework.vo.CommonResult calcProductSkuPrice(java.lang.Integer)>/id}
+VarNode{<cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult updateUserAddress(cn.iocoder.mall.shopweb.controller.user.vo.address.UserAddressUpdateReqVO)>/updateVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult listDataDicts(java.util.List)>/dataDictIds}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult getTradeOrderConfirmCreateInfo(java.lang.Integer,java.lang.Integer,java.lang.Integer)>/quantity}
+VarNode{<cn.iocoder.mall.managementweb.controller.admin.AdminController: cn.iocoder.common.framework.vo.CommonResult createAdmin(cn.iocoder.mall.managementweb.controller.admin.dto.AdminCreateDTO,javax.servlet.http.HttpServletRequest)>/createDTO}
+VarNode{<cn.iocoder.mall.shopweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult getProductSpuSearchCondition(java.lang.String)>/keyword}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.PermissionController: cn.iocoder.common.framework.vo.CommonResult listAdminRoles(java.lang.Integer)>/adminId}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.ResourceController: cn.iocoder.common.framework.vo.CommonResult createResource(cn.iocoder.mall.managementweb.controller.permission.dto.ResourceCreateDTO)>/createDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult pageProductSpu(cn.iocoder.mall.managementweb.controller.product.vo.spu.ProductSpuPageReqVO)>/pageVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.recommend.ProductRecommendController: cn.iocoder.common.framework.vo.CommonResult createProductRecommend(cn.iocoder.mall.managementweb.controller.promotion.recommend.vo.ProductRecommendCreateReqVO)>/createVO}
+VarNode{<cn.iocoder.mall.shopweb.controller.user.PassportController: cn.iocoder.common.framework.vo.CommonResult loginBySms(cn.iocoder.mall.shopweb.controller.user.vo.passport.PassportLoginBySmsReqVO,javax.servlet.http.HttpServletRequest)>/loginBySmsDTO}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult getTradeOrder(java.lang.Integer)>/tradeOrderId}
+VarNode{<cn.iocoder.mall.managementweb.controller.passport.PassportController: cn.iocoder.common.framework.vo.CommonResult refreshToken(java.lang.String,javax.servlet.http.HttpServletRequest)>/refreshToken}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult pageTradeOrder(cn.iocoder.mall.shopweb.controller.trade.vo.order.TradeOrderPageReqVO)>/pageVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.ResourceController: cn.iocoder.common.framework.vo.CommonResult listResources(java.util.List)>/resourceIds}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult createProductAttrKey(cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrKeyCreateReqVO)>/createVO}
+VarNode{<cn.iocoder.mall.shopweb.controller.product.ProductCategoryController: cn.iocoder.common.framework.vo.CommonResult listProductCategories(java.lang.Integer)>/pid}
+VarNode{<cn.iocoder.mall.shopweb.controller.promotion.CouponCardController: cn.iocoder.common.framework.vo.CommonResult pageCouponCard(cn.iocoder.mall.shopweb.controller.promotion.vo.coupon.card.CouponCardPageReqVO)>/pageVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.coupon.CouponTemplateController: cn.iocoder.common.framework.vo.CommonResult createCouponCardTemplate(cn.iocoder.mall.managementweb.controller.promotion.coupon.vo.template.CouponTemplateCardCreateReqVO)>/createVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult role(java.lang.Integer)>/roleId}
+VarNode{<cn.iocoder.mall.managementweb.controller.errorcode.ErrorCodeController: cn.iocoder.common.framework.vo.CommonResult pageErrorCode(cn.iocoder.mall.managementweb.controller.errorcode.dto.ErrorCodePageDTO)>/pageDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.errorcode.ErrorCodeController: cn.iocoder.common.framework.vo.CommonResult deleteErrorCode(java.lang.Integer)>/errorCodeId}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult getProductSpu(java.lang.Integer)>/productSpuId}
+VarNode{<cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult deleteUserAddress(java.lang.Integer)>/userAddressId}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult updateCartItemQuantity(java.lang.Integer,java.lang.Integer)>/quantity}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.ResourceController: cn.iocoder.common.framework.vo.CommonResult deleteResource(java.lang.Integer)>/resourceId}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.ResourceController: cn.iocoder.common.framework.vo.CommonResult updateResource(cn.iocoder.mall.managementweb.controller.permission.dto.ResourceUpdateDTO)>/updateDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult pageRole(cn.iocoder.mall.managementweb.controller.permission.dto.RolePageDTO)>/pageDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.brand.BannerController: cn.iocoder.common.framework.vo.CommonResult createBanner(cn.iocoder.mall.managementweb.controller.promotion.brand.vo.BannerCreateReqVO)>/createVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.errorcode.ErrorCodeController: cn.iocoder.common.framework.vo.CommonResult updateErrorCode(cn.iocoder.mall.managementweb.controller.errorcode.dto.ErrorCodeUpdateDTO)>/updateDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult listDepartments(java.util.List)>/departmentIds}
+VarNode{<cn.iocoder.mall.managementweb.controller.admin.AdminController: cn.iocoder.common.framework.vo.CommonResult page(cn.iocoder.mall.managementweb.controller.admin.dto.AdminPageDTO)>/adminPageDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.coupon.CouponTemplateController: cn.iocoder.common.framework.vo.CommonResult updateCouponTemplateStatus(java.lang.Integer,java.lang.Integer)>/status}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult updateProductSpu(cn.iocoder.mall.managementweb.controller.product.vo.spu.ProductSpuUpdateReqVO)>/updateVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult createProductAttrValue(cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrValueCreateReqVO)>/createVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult pageProductAttrKey(cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrKeyPageReqVO)>/pageVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult pageUser(cn.iocoder.mall.managementweb.controller.user.vo.UserPageReqVO)>/pageVO}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult getTradeOrderConfirmCreateInfo(java.lang.Integer,java.lang.Integer,java.lang.Integer)>/skuId}
+VarNode{<cn.iocoder.mall.shopweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult pageProductSpu(cn.iocoder.mall.shopweb.controller.product.vo.product.ProductSpuPageReqVO)>/pageReqVO}
+VarNode{<cn.iocoder.mall.shopweb.controller.user.PassportController: cn.iocoder.common.framework.vo.CommonResult sendSmsCode(cn.iocoder.mall.shopweb.controller.user.vo.passport.PassportSendSmsRespVO,javax.servlet.http.HttpServletRequest)>/sendSmsCodeDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult listUsers(java.util.List)>/userIds}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductBrandController: cn.iocoder.common.framework.vo.CommonResult updateProductBrand(cn.iocoder.mall.managementweb.controller.product.vo.brand.ProductBrandUpdateReqVO)>/updateVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductBrandController: cn.iocoder.common.framework.vo.CommonResult deleteProductBrand(java.lang.Integer)>/productBrandId}
+VarNode{<cn.iocoder.mall.managementweb.controller.systemlog.SystemExceptionLogController: cn.iocoder.common.framework.vo.CommonResult processSystemExceptionLog(cn.iocoder.mall.managementweb.controller.systemlog.dto.SystemExceptionLogProcessDTO)>/processDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult createRole(cn.iocoder.mall.managementweb.controller.permission.dto.RoleCreateDTO)>/createDTO}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult updateCartItemSelected(java.util.Set,java.lang.Boolean)>/selected}
+VarNode{<cn.iocoder.mall.managementweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult updateUserStatus(cn.iocoder.mall.managementweb.controller.user.vo.UserUpdateStatusReqVO)>/updateStatusReqVO}
+VarNode{<cn.iocoder.mall.shopweb.controller.promotion.CouponCardController: cn.iocoder.common.framework.vo.CommonResult createCouponCard(java.lang.Integer)>/couponTemplateId}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult listProductAttrValues(cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrValueListQueryReqVO)>/queryReqVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult updateDataDict(cn.iocoder.mall.managementweb.controller.datadict.dto.DataDictUpdateDTO)>/updateDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.coupon.CouponTemplateController: cn.iocoder.common.framework.vo.CommonResult updateCouponTemplateStatus(java.lang.Integer,java.lang.Integer)>/id}
+VarNode{<cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult getDataDict(java.lang.Integer)>/dataDictId}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult createTradeOrder(cn.iocoder.mall.shopweb.controller.trade.vo.order.TradeOrderCreateFromCartReqVO)>/createReqVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductBrandController: cn.iocoder.common.framework.vo.CommonResult getProductBrand(java.lang.Integer)>/productBrandId}
+VarNode{<cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult getUserAddress(java.lang.Integer)>/userAddressId}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult listProductSpus(java.util.List)>/productSpuIds}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult updateCartItemQuantity(java.lang.Integer,java.lang.Integer)>/skuId}
+VarNode{<cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult createDepartment(cn.iocoder.mall.managementweb.controller.admin.dto.DepartmentCreateDTO)>/createDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult getProductAttrKey(java.lang.Integer)>/productAttrKeyId}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.PermissionController: cn.iocoder.common.framework.vo.CommonResult assignAdminRole(cn.iocoder.mall.managementweb.controller.permission.dto.PermissionAssignAdminRoleDTO)>/assignAdminRoleDTO}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult updateCartItemSelected(java.util.Set,java.lang.Boolean)>/skuIds}
+VarNode{<cn.iocoder.mall.shopweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult getProductSpuDetail(java.lang.Integer)>/id}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult updateProductAttrValue(cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrValueUpdateReqVO)>/updateVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.systemlog.SystemAccessLogController: cn.iocoder.common.framework.vo.CommonResult pageSystemAccessLog(cn.iocoder.mall.managementweb.controller.systemlog.dto.SystemAccessLogPageDTO)>/pageDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductCategoryController: cn.iocoder.common.framework.vo.CommonResult updateProductCategory(cn.iocoder.mall.managementweb.controller.product.vo.category.ProductCategoryUpdateReqVO)>/updateVO}
+VarNode{<cn.iocoder.mall.shopweb.controller.pay.PayTransactionController: cn.iocoder.common.framework.vo.CommonResult getPayTransaction(java.lang.String,java.lang.String)>/appId}
+VarNode{<cn.iocoder.mall.shopweb.controller.pay.PayTransactionController: cn.iocoder.common.framework.vo.CommonResult submitPayTransaction(javax.servlet.http.HttpServletRequest,cn.iocoder.mall.shopweb.controller.pay.vo.transaction.PayTransactionSubmitReqVO)>/submitReqVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.admin.AdminController: cn.iocoder.common.framework.vo.CommonResult updateAdmin(cn.iocoder.mall.managementweb.controller.admin.dto.AdminUpdateInfoDTO)>/updateInfoDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.systemlog.SystemExceptionLogController: cn.iocoder.common.framework.vo.CommonResult getSystemExceptionLogDetail(java.lang.Integer)>/logId}
+VarNode{<cn.iocoder.mall.managementweb.controller.datadict.DataDictController: cn.iocoder.common.framework.vo.CommonResult deleteDataDict(java.lang.Integer)>/dataDictId}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductSpuController: cn.iocoder.common.framework.vo.CommonResult createProductSpu(cn.iocoder.mall.managementweb.controller.product.vo.spu.ProductSpuCreateReqVO)>/createVO}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.CartController: cn.iocoder.common.framework.vo.CommonResult addCartItem(java.lang.Integer,java.lang.Integer)>/quantity}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult getTradeOrderConfirmCreateInfo(java.lang.Integer,java.lang.Integer,java.lang.Integer)>/couponCardId}
+VarNode{<cn.iocoder.mall.managementweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult updateUserInfo(cn.iocoder.mall.managementweb.controller.user.vo.UserUpdateInfoReqVO)>/updateInfoReqVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.coupon.CouponTemplateController: cn.iocoder.common.framework.vo.CommonResult updateCouponCardTemplate(cn.iocoder.mall.managementweb.controller.promotion.coupon.vo.template.CouponTemplateCardUpdateReqVO)>/updateVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.PermissionController: cn.iocoder.common.framework.vo.CommonResult listRoleResources(java.lang.Integer)>/roleId}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.recommend.ProductRecommendController: cn.iocoder.common.framework.vo.CommonResult updateProductRecommend(cn.iocoder.mall.managementweb.controller.promotion.recommend.vo.ProductRecommendUpdateReqVO)>/updateVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult updateDepartment(cn.iocoder.mall.managementweb.controller.admin.dto.DepartmentUpdateDTO)>/updateDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.PermissionController: cn.iocoder.common.framework.vo.CommonResult assignRoleResource(cn.iocoder.mall.managementweb.controller.permission.dto.PermissionAssignRoleResourceDTO)>/assignRoleResourceDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.brand.BannerController: cn.iocoder.common.framework.vo.CommonResult updateBanner(cn.iocoder.mall.managementweb.controller.promotion.brand.vo.BannerUpdateReqVO)>/updateVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult getUser(java.lang.Integer)>/userId}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult deleteRole(java.lang.Integer)>/roleId}
+VarNode{<cn.iocoder.mall.shopweb.controller.trade.TradeOrderController: cn.iocoder.common.framework.vo.CommonResult getTradeOrderConfirmCreateInfoFromCart(java.lang.Integer)>/couponCardId}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.coupon.CouponTemplateController: cn.iocoder.common.framework.vo.CommonResult pageCouponTemplate(cn.iocoder.mall.managementweb.controller.promotion.coupon.vo.template.CouponTemplatePageReqVO)>/pageVO}
+VarNode{<cn.iocoder.mall.shopweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult updateUserAvatar(java.lang.String)>/avatar}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.recommend.ProductRecommendController: cn.iocoder.common.framework.vo.CommonResult pageProductRecommend(cn.iocoder.mall.managementweb.controller.promotion.recommend.vo.ProductRecommendPageReqVO)>/pageVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductBrandController: cn.iocoder.common.framework.vo.CommonResult createProductBrand(cn.iocoder.mall.managementweb.controller.product.vo.brand.ProductBrandCreateReqVO)>/createVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.pay.PayTransactionController: cn.iocoder.common.framework.vo.CommonResult pagePayTransaction(cn.iocoder.mall.managementweb.controller.pay.vo.transaction.PayTransactionPageReqVO)>/pageReqVO}
+VarNode{<cn.iocoder.mall.shopweb.controller.user.UserController: cn.iocoder.common.framework.vo.CommonResult updateUserNickname(java.lang.String)>/nickname}
+VarNode{<cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult getDepartment(java.lang.Integer)>/departmentId}
+VarNode{<cn.iocoder.mall.managementweb.controller.admin.AdminController: cn.iocoder.common.framework.vo.CommonResult updateAdminStatus(cn.iocoder.mall.managementweb.controller.admin.dto.AdminUpdateStatusDTO)>/updateStatusDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.recommend.ProductRecommendController: cn.iocoder.common.framework.vo.CommonResult deleteProductRecommend(java.lang.Integer)>/productRecommendId}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductBrandController: cn.iocoder.common.framework.vo.CommonResult pageProductBrand(cn.iocoder.mall.managementweb.controller.product.vo.brand.ProductBrandPageReqVO)>/pageVO}
+VarNode{<cn.iocoder.mall.shopweb.controller.pay.PayTransactionController: cn.iocoder.common.framework.vo.CommonResult getPayTransaction(java.lang.String,java.lang.String)>/orderId}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductCategoryController: cn.iocoder.common.framework.vo.CommonResult createProductCategory(cn.iocoder.mall.managementweb.controller.product.vo.category.ProductCategoryCreateReqVO)>/createVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.errorcode.ErrorCodeController: cn.iocoder.common.framework.vo.CommonResult getErrorCode(java.lang.Integer)>/errorCodeId}
+VarNode{<cn.iocoder.mall.managementweb.controller.systemlog.SystemExceptionLogController: cn.iocoder.common.framework.vo.CommonResult pageSystemExceptionLog(cn.iocoder.mall.managementweb.controller.systemlog.dto.SystemExceptionLogPageDTO)>/pageDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult listRoles(java.util.List)>/roleIds}
+VarNode{<cn.iocoder.mall.shopweb.controller.user.PassportController: cn.iocoder.common.framework.vo.CommonResult refreshToken(java.lang.String,javax.servlet.http.HttpServletRequest)>/refreshToken}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.brand.BannerController: cn.iocoder.common.framework.vo.CommonResult pageBanner(cn.iocoder.mall.managementweb.controller.promotion.brand.vo.BannerPageReqVO)>/pageVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.permission.RoleController: cn.iocoder.common.framework.vo.CommonResult updateRole(cn.iocoder.mall.managementweb.controller.permission.dto.RoleUpdateDTO)>/updateDTO}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult getProductAttrValue(java.lang.Integer)>/productAttrValueId}
+VarNode{<cn.iocoder.mall.managementweb.controller.promotion.activity.PromotionActivityController: cn.iocoder.common.framework.vo.CommonResult pagePromotionActivity(cn.iocoder.mall.managementweb.controller.promotion.activity.vo.PromotionActivityPageReqVO)>/pageReqVO}
+VarNode{<cn.iocoder.mall.shopweb.controller.promotion.CouponTemplateController: cn.iocoder.common.framework.vo.CommonResult getCouponTemplate(java.lang.Integer)>/id}
+VarNode{<cn.iocoder.mall.shopweb.controller.user.UserAddressController: cn.iocoder.common.framework.vo.CommonResult createUserAddress(cn.iocoder.mall.shopweb.controller.user.vo.address.UserAddressCreateReqVO)>/createVO}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductBrandController: cn.iocoder.common.framework.vo.CommonResult listProductBrands(java.util.List)>/productBrandIds}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult listProductAttrKeys(java.util.List)>/productAttrKeyIds}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductCategoryController: cn.iocoder.common.framework.vo.CommonResult deleteProductCategory(java.lang.Integer)>/productCategoryId}
+VarNode{<cn.iocoder.mall.managementweb.controller.admin.DepartmentController: cn.iocoder.common.framework.vo.CommonResult deleteDepartment(java.lang.Integer)>/departmentId}
+VarNode{<cn.iocoder.mall.managementweb.controller.product.ProductAttrController: cn.iocoder.common.framework.vo.CommonResult updateProductAttrKey(cn.iocoder.mall.managementweb.controller.product.vo.attr.ProductAttrKeyUpdateReqVO)>/updateVO}
+Sink nodes:
+Dumping /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-flow-graph.dot
+TFGDumper finishes, elapsed time: 0.03s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                1814 (insens) / 1814 (sens)
+#objects:                     1088 (insens) / 1088 (sens)
+#var points-to:               1303 (insens) / 1303 (sens)
+#static field points-to:      2 (sens)
+#instance field points-to:    574 (sens)
+#array points-to:             0 (sens)
+#reachable methods:           369 (insens) / 369 (sens)
+#call graph edges:            326 (insens) / 326 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.27s
+cg starts ...
+Call graph has 369 reachable methods and 326 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.03s
+Tai-e finishes, elapsed time: 4.45s

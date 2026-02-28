@@ -1,0 +1,928 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.3
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Tai-e Commit: a086cc6200102f74b303a2cb800dad4e1b8b3af5
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+10405 classes with 99951 methods in the world
+WorldBuilder finishes, elapsed time: 2.34s
+ir-dumper starts ...
+Dumping IR in /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tir
+66 classes in scope (APP) of class analyses
+ir-dumper finishes, elapsed time: 0.13s
+routerAnalysis starts ...
+Router analysis started at: 2026-02-27 20:42:19
+Router analysis completed at: 2026-02-27 20:42:19 (Duration: 8ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.00s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.00s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+resultAnalysis starts ...
+============================================================
+                 Spring Analysis Result Summary             
+============================================================
+Router Methods (Endpoints)     : 160
+Spring Beans                   : 50
+Aspect Methods (Advice)        : 3
+============================================================
+resultAnalysis finishes, elapsed time: 0.00s
+srfaAnalysis starts ...
+SRFA Analysis started at: 2026-02-27 20:42:19
+Loaded 22 controller classes from RouterAnalysis
+Discovering mapper paths from 6 appClassPath entries
+Extracting XML from fat jar: xmall-content-service-1.0-SNAPSHOT.jar
+Extracted 0 XML files from xmall-content-service-1.0-SNAPSHOT.jar
+Extracted 5 XML files (plain jar) from xmall-content-service-1.0-SNAPSHOT.jar
+Extracting XML from fat jar: xmall-front-web-1.0-SNAPSHOT.jar
+Extracted 0 XML files from xmall-front-web-1.0-SNAPSHOT.jar
+Extracted 1 XML files (plain jar) from xmall-front-web-1.0-SNAPSHOT.jar
+Extracting XML from fat jar: xmall-manager-service-1.0-SNAPSHOT.jar
+Extracted 0 XML files from xmall-manager-service-1.0-SNAPSHOT.jar
+Extracted 6 XML files (plain jar) from xmall-manager-service-1.0-SNAPSHOT.jar
+Extracting XML from fat jar: xmall-manager-web-1.0-SNAPSHOT.jar
+Extracted 0 XML files from xmall-manager-web-1.0-SNAPSHOT.jar
+Extracted 1 XML files (plain jar) from xmall-manager-web-1.0-SNAPSHOT.jar
+Extracting XML from fat jar: xmall-search-service-1.0-SNAPSHOT.jar
+Extracted 0 XML files from xmall-search-service-1.0-SNAPSHOT.jar
+Extracted 6 XML files (plain jar) from xmall-search-service-1.0-SNAPSHOT.jar
+Extracting XML from fat jar: xmall-sso-service-1.0-SNAPSHOT.jar
+Extracted 0 XML files from xmall-sso-service-1.0-SNAPSHOT.jar
+Extracted 5 XML files (plain jar) from xmall-sso-service-1.0-SNAPSHOT.jar
+Auto-discovered 12 mapper path(s)
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-content-service-1_0-SNAPSHOT_1731057260000/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-content-service-1_0-SNAPSHOT_1731057260000/spring
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-front-web-1_0-SNAPSHOT_1731057261000/spring
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-manager-service-1_0-SNAPSHOT_1731057261000/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-manager-service-1_0-SNAPSHOT_1731057261000/spring
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-manager-web-1_0-SNAPSHOT_1731057261000/spring
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-search-service-1_0-SNAPSHOT_1731057261000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-search-service-1_0-SNAPSHOT_1731057261000/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-search-service-1_0-SNAPSHOT_1731057261000/cn/exrick/search/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-search-service-1_0-SNAPSHOT_1731057261000/spring
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-sso-service-1_0-SNAPSHOT_1731057261000/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-sso-service-1_0-SNAPSHOT_1731057261000/spring
+Using 12 mapper search path(s):
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-content-service-1_0-SNAPSHOT_1731057260000/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-content-service-1_0-SNAPSHOT_1731057260000/spring
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-front-web-1_0-SNAPSHOT_1731057261000/spring
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-manager-service-1_0-SNAPSHOT_1731057261000/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-manager-service-1_0-SNAPSHOT_1731057261000/spring
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-manager-web-1_0-SNAPSHOT_1731057261000/spring
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-search-service-1_0-SNAPSHOT_1731057261000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-search-service-1_0-SNAPSHOT_1731057261000/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-search-service-1_0-SNAPSHOT_1731057261000/cn/exrick/search/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-search-service-1_0-SNAPSHOT_1731057261000/spring
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-sso-service-1_0-SNAPSHOT_1731057261000/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/xmall-sso-service-1_0-SNAPSHOT_1731057261000/spring
+Parsed 2 MyBatis mapper files
+Parsed 2 MyBatis mapper files
+  Mapper namespace: cn.exrick.search.mapper.ItemMapper
+    Operation: id=getItemById, type=select, hasDollar=false
+  Mapper namespace: cn.exrick.search.mapper.ItemMapper
+    Operation: id=getItemById, type=select, hasDollar=false
+Collected 0 write field names from INSERT/UPDATE operations
+Extracted 206 source metadata entries (before filtering)
+Resolving 2 mapper namespaces...
+  Namespace resolve: cn.exrick.search.mapper.ItemMapper -> cn.exrick.search.mapper.ItemMapper
+  Namespace resolve: cn.exrick.search.mapper.ItemMapper -> cn.exrick.search.mapper.ItemMapper
+Extracted 1 sink metadata entries (deduplicated, before risk filtering)
+Sources: 206 generated, 0 filtered, 0 deduplicated
+Sinks: 1 generated (risky), 0 filtered (safe), 0 deduplicated
+  Note: 'risky' means uses string concatenation ($), 'safe' means uses prepared statement (#)
+Written taint config to: output/taint-config-generated.yml
+  Sources: 206 (SRFA param) + framework call sources
+  Sinks: 1
+  Transfers: standard set included
+SRFA Analysis completed at: 2026-02-27 20:42:19 (Duration: 77ms)
+srfaAnalysis finishes, elapsed time: 0.08s
+pta starts ...
+Loading taint config from /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-config-generated.yml
+Ignore {"method":"<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>","type":"org.apache.shiro.subject.Subject"} due to missing source "kind"
+Ignore {"method":"<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>","type":"org.apache.shiro.subject.PrincipalCollection"} due to missing source "kind"
+Ignore {"method":"<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>","type":"org.springframework.security.core.context.SecurityContext"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>","type":"org.springframework.security.core.Authentication"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.Object getDetails()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.String getName()>","type":"java.lang.String"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>","type":"java.util.Collection"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>","type":"java.lang.String"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>","type":"javax.servlet.http.HttpSession"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>","type":"javax.servlet.http.HttpSession"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>","type":"java.security.Principal"} due to missing source "kind"
+Ignore {"method":"<java.security.Principal: java.lang.String getName()>","type":"java.lang.String"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<java.lang.ThreadLocal: java.lang.Object get()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<java.lang.InheritableThreadLocal: java.lang.Object get()>","type":"java.lang.Object"} due to missing source "kind"
+Cannot find taint-transfer method '<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find taint-transfer method '<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>'
+Cannot find taint-transfer method '<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>'
+Cannot find taint-transfer method '<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>'
+Cannot find taint-transfer method '<org.apache.shiro.subject.PrincipalCollection: java.util.Collection fromRealm(java.lang.String)>'
+Cannot find taint-transfer method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
+Cannot find taint-transfer method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
+Cannot find taint-transfer method '<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>'
+Cannot find taint-transfer method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+TaintConfig:
+sources:
+  - { kind: "param", method: "<cn.exrick.front.controller.AddressController: cn.exrick.common.pojo.Result addressList(cn.exrick.manager.pojo.TbAddress)>", index: "0", type: "cn.exrick.manager.pojo.TbAddress" }
+  - { kind: "param", method: "<cn.exrick.front.controller.AddressController: cn.exrick.common.pojo.Result address(cn.exrick.manager.pojo.TbAddress)>", index: "0", type: "cn.exrick.manager.pojo.TbAddress" }
+  - { kind: "param", method: "<cn.exrick.front.controller.AddressController: cn.exrick.common.pojo.Result addAddress(cn.exrick.manager.pojo.TbAddress)>", index: "0", type: "cn.exrick.manager.pojo.TbAddress" }
+  - { kind: "param", method: "<cn.exrick.front.controller.AddressController: cn.exrick.common.pojo.Result updateAddress(cn.exrick.manager.pojo.TbAddress)>", index: "0", type: "cn.exrick.manager.pojo.TbAddress" }
+  - { kind: "param", method: "<cn.exrick.front.controller.AddressController: cn.exrick.common.pojo.Result delAddress(cn.exrick.manager.pojo.TbAddress)>", index: "0", type: "cn.exrick.manager.pojo.TbAddress" }
+  - { kind: "param", method: "<cn.exrick.front.controller.CartController: cn.exrick.common.pojo.Result addCart(cn.exrick.manager.dto.front.Cart)>", index: "0", type: "cn.exrick.manager.dto.front.Cart" }
+  - { kind: "param", method: "<cn.exrick.front.controller.CartController: cn.exrick.common.pojo.Result getCartList(cn.exrick.manager.dto.front.Cart)>", index: "0", type: "cn.exrick.manager.dto.front.Cart" }
+  - { kind: "param", method: "<cn.exrick.front.controller.CartController: cn.exrick.common.pojo.Result updateCartNum(cn.exrick.manager.dto.front.Cart)>", index: "0", type: "cn.exrick.manager.dto.front.Cart" }
+  - { kind: "param", method: "<cn.exrick.front.controller.CartController: cn.exrick.common.pojo.Result editCheckAll(cn.exrick.manager.dto.front.Cart)>", index: "0", type: "cn.exrick.manager.dto.front.Cart" }
+  - { kind: "param", method: "<cn.exrick.front.controller.CartController: cn.exrick.common.pojo.Result deleteCartItem(cn.exrick.manager.dto.front.Cart)>", index: "0", type: "cn.exrick.manager.dto.front.Cart" }
+  - { kind: "param", method: "<cn.exrick.front.controller.CartController: cn.exrick.common.pojo.Result delChecked(cn.exrick.manager.dto.front.Cart)>", index: "0", type: "cn.exrick.manager.dto.front.Cart" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getProductDet(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getAllProduct(int,int,java.lang.String,java.lang.Long,int,int)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getAllProduct(int,int,java.lang.String,java.lang.Long,int,int)>", index: "1", type: "int" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getAllProduct(int,int,java.lang.String,java.lang.Long,int,int)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getAllProduct(int,int,java.lang.String,java.lang.Long,int,int)>", index: "3", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getAllProduct(int,int,java.lang.String,java.lang.Long,int,int)>", index: "4", type: "int" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getAllProduct(int,int,java.lang.String,java.lang.Long,int,int)>", index: "5", type: "int" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result searchProduct(java.lang.String,int,int,java.lang.String,int,int)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result searchProduct(java.lang.String,int,int,java.lang.String,int,int)>", index: "1", type: "int" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result searchProduct(java.lang.String,int,int,java.lang.String,int,int)>", index: "2", type: "int" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result searchProduct(java.lang.String,int,int,java.lang.String,int,int)>", index: "3", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result searchProduct(java.lang.String,int,int,java.lang.String,int,int)>", index: "4", type: "int" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result searchProduct(java.lang.String,int,int,java.lang.String,int,int)>", index: "5", type: "int" }
+  - { kind: "param", method: "<cn.exrick.front.controller.GoodsController: java.lang.String getQuickSearch(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.front.controller.MemberController: cn.exrick.common.pojo.Result login(cn.exrick.manager.dto.front.MemberLoginRegist,javax.servlet.http.HttpServletRequest)>", index: "0", type: "cn.exrick.manager.dto.front.MemberLoginRegist" }
+  - { kind: "param", method: "<cn.exrick.front.controller.MemberController: cn.exrick.common.pojo.Result checkLogin(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.front.controller.MemberController: cn.exrick.common.pojo.Result logout(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.front.controller.MemberController: cn.exrick.common.pojo.Result register(cn.exrick.manager.dto.front.MemberLoginRegist,javax.servlet.http.HttpServletRequest)>", index: "0", type: "cn.exrick.manager.dto.front.MemberLoginRegist" }
+  - { kind: "param", method: "<cn.exrick.front.controller.MemberController: cn.exrick.common.pojo.Result imgaeUpload(cn.exrick.manager.dto.front.CommonDto)>", index: "0", type: "cn.exrick.manager.dto.front.CommonDto" }
+  - { kind: "param", method: "<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result getOrderList(java.lang.String,int,int)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result getOrderList(java.lang.String,int,int)>", index: "1", type: "int" }
+  - { kind: "param", method: "<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result getOrderList(java.lang.String,int,int)>", index: "2", type: "int" }
+  - { kind: "param", method: "<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result getOrder(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result addOrder(cn.exrick.manager.dto.front.OrderInfo)>", index: "0", type: "cn.exrick.manager.dto.front.OrderInfo" }
+  - { kind: "param", method: "<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result cancelOrder(cn.exrick.manager.dto.front.Order)>", index: "0", type: "cn.exrick.manager.dto.front.Order" }
+  - { kind: "param", method: "<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result delOrder(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result payOrder(cn.exrick.manager.pojo.TbThanks)>", index: "0", type: "cn.exrick.manager.pojo.TbThanks" }
+  - { kind: "param", method: "<cn.exrick.front.controller.ThanksController: cn.exrick.common.pojo.Result getThanksList(int,int)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.front.controller.ThanksController: cn.exrick.common.pojo.Result getThanksList(int,int)>", index: "1", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ContentController: cn.exrick.common.pojo.DataTablesResult getContentByCid(int)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ContentController: cn.exrick.common.pojo.Result addContent(cn.exrick.manager.pojo.TbPanelContent)>", index: "0", type: "cn.exrick.manager.pojo.TbPanelContent" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ContentController: cn.exrick.common.pojo.Result updateContent(cn.exrick.manager.pojo.TbPanelContent)>", index: "0", type: "cn.exrick.manager.pojo.TbPanelContent" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ContentController: cn.exrick.common.pojo.Result addContent(int[])>", index: "0", type: "int[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.CountController: cn.exrick.common.pojo.Result countOrder(int,java.lang.String,java.lang.String,int)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.CountController: cn.exrick.common.pojo.Result countOrder(int,java.lang.String,java.lang.String,int)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.CountController: cn.exrick.common.pojo.Result countOrder(int,java.lang.String,java.lang.String,int)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.CountController: cn.exrick.common.pojo.Result countOrder(int,java.lang.String,java.lang.String,int)>", index: "3", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.DictController: cn.exrick.common.pojo.Result addDict(cn.exrick.manager.pojo.TbDict)>", index: "0", type: "cn.exrick.manager.pojo.TbDict" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.DictController: cn.exrick.common.pojo.Result updateDict(cn.exrick.manager.pojo.TbDict)>", index: "0", type: "cn.exrick.manager.pojo.TbDict" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.DictController: cn.exrick.common.pojo.Result delDict(int[])>", index: "0", type: "int[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ExpressController: cn.exrick.common.pojo.Result addTbExpress(cn.exrick.manager.pojo.TbExpress)>", index: "0", type: "cn.exrick.manager.pojo.TbExpress" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ExpressController: cn.exrick.common.pojo.Result updateAddress(cn.exrick.manager.pojo.TbExpress)>", index: "0", type: "cn.exrick.manager.pojo.TbExpress" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ExpressController: cn.exrick.common.pojo.Result delAddress(int[])>", index: "0", type: "int[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ImageController: cn.exrick.common.pojo.Result uploadFile(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ImageController: cn.exrick.common.pojo.KindEditorResult kindeditor(org.springframework.web.multipart.MultipartFile,javax.servlet.http.HttpServletRequest)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemCatController: java.util.List getItemCatList(int)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemCatController: cn.exrick.common.pojo.Result addItemCategory(cn.exrick.manager.pojo.TbItemCat)>", index: "0", type: "cn.exrick.manager.pojo.TbItemCat" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemCatController: cn.exrick.common.pojo.Result updateItemCategory(cn.exrick.manager.pojo.TbItemCat)>", index: "0", type: "cn.exrick.manager.pojo.TbItemCat" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemCatController: cn.exrick.common.pojo.Result deleteItemCategory(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result getItemById(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "3", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "4", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "5", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "6", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "7", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "8", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "9", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "1", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "2", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "3", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "4", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "5", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "6", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "7", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "8", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "9", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result stopItem(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result startItem(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result deleteItem(java.lang.Long[])>", index: "0", type: "java.lang.Long[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result addItem(cn.exrick.manager.dto.ItemDto)>", index: "0", type: "cn.exrick.manager.dto.ItemDto" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result updateItem(java.lang.Long,cn.exrick.manager.dto.ItemDto)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result updateItem(java.lang.Long,cn.exrick.manager.dto.ItemDto)>", index: "1", type: "cn.exrick.manager.dto.ItemDto" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "1", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "2", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "3", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "4", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "5", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "6", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "7", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "8", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "1", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "2", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "3", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "4", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "5", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "6", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "7", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>", index: "8", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result createMember(cn.exrick.manager.dto.MemberDto)>", index: "0", type: "cn.exrick.manager.dto.MemberDto" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result stopMember(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result startMember(java.lang.Long[])>", index: "0", type: "java.lang.Long[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result removeMember(java.lang.Long[])>", index: "0", type: "java.lang.Long[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result deleteMember(java.lang.Long[])>", index: "0", type: "java.lang.Long[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result changeMemberPassword(java.lang.Long,cn.exrick.manager.dto.MemberDto)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result changeMemberPassword(java.lang.Long,cn.exrick.manager.dto.MemberDto)>", index: "1", type: "cn.exrick.manager.dto.MemberDto" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result updateMember(java.lang.Long,cn.exrick.manager.dto.MemberDto)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result updateMember(java.lang.Long,cn.exrick.manager.dto.MemberDto)>", index: "1", type: "cn.exrick.manager.dto.MemberDto" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result getMemberById(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateUsername(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: java.lang.Boolean validatePhone(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEmail(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEditUsername(java.lang.Long,java.lang.String)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEditUsername(java.lang.Long,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEditPhone(java.lang.Long,java.lang.String)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEditPhone(java.lang.Long,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEditEmail(java.lang.Long,java.lang.String)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEditEmail(java.lang.Long,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.DataTablesResult getOrderList(int,int,int,java.lang.String,int,java.lang.String)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.DataTablesResult getOrderList(int,int,int,java.lang.String,int,java.lang.String)>", index: "1", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.DataTablesResult getOrderList(int,int,int,java.lang.String,int,java.lang.String)>", index: "2", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.DataTablesResult getOrderList(int,int,int,java.lang.String,int,java.lang.String)>", index: "3", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.DataTablesResult getOrderList(int,int,int,java.lang.String,int,java.lang.String)>", index: "4", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.DataTablesResult getOrderList(int,int,int,java.lang.String,int,java.lang.String)>", index: "5", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result getOrderDetail(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result remark(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result remark(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result deliver(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result deliver(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result deliver(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result deliver(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal)>", index: "3", type: "java.math.BigDecimal" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result cancelOrderByAdmin(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result getUserInfo(java.lang.String[])>", index: "0", type: "java.lang.String[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PageController: java.lang.String showPage(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PanelController: cn.exrick.common.pojo.Result addContentCategory(cn.exrick.manager.pojo.TbPanel)>", index: "0", type: "cn.exrick.manager.pojo.TbPanel" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PanelController: cn.exrick.common.pojo.Result updateContentCategory(cn.exrick.manager.pojo.TbPanel)>", index: "0", type: "cn.exrick.manager.pojo.TbPanel" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PanelController: cn.exrick.common.pojo.Result deleteContentCategory(int[])>", index: "0", type: "int[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payPass(java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payPass(java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payPass(java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result backPay(java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result backPay(java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result backPay(java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payNotShow(java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payNotShow(java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payNotShow(java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payEdit(java.lang.String,java.lang.String,cn.exrick.manager.pojo.TbThanks)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payEdit(java.lang.String,java.lang.String,cn.exrick.manager.pojo.TbThanks)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payEdit(java.lang.String,java.lang.String,cn.exrick.manager.pojo.TbThanks)>", index: "2", type: "cn.exrick.manager.pojo.TbThanks" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result delNotNotify(java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result delNotNotify(java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result delNotNotify(java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payDel(java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payDel(java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payDel(java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getShiroList(cn.exrick.manager.pojo.TbUser)>", index: "0", type: "cn.exrick.manager.pojo.TbUser" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result addShiro(cn.exrick.manager.pojo.TbShiroFilter)>", index: "0", type: "cn.exrick.manager.pojo.TbShiroFilter" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result updateShiro(cn.exrick.manager.pojo.TbShiroFilter)>", index: "0", type: "cn.exrick.manager.pojo.TbShiroFilter" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result delShiro(int[])>", index: "0", type: "int[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result updateBase(cn.exrick.manager.pojo.TbBase)>", index: "0", type: "cn.exrick.manager.pojo.TbBase" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getLog(int,int,int,java.lang.String,int,java.lang.String)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getLog(int,int,int,java.lang.String,int,java.lang.String)>", index: "1", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getLog(int,int,int,java.lang.String,int,java.lang.String)>", index: "2", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getLog(int,int,int,java.lang.String,int,java.lang.String)>", index: "3", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getLog(int,int,int,java.lang.String,int,java.lang.String)>", index: "4", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getLog(int,int,int,java.lang.String,int,java.lang.String)>", index: "5", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result delLog(int[])>", index: "0", type: "int[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ThanksController: cn.exrick.common.pojo.Result addThanks(cn.exrick.manager.pojo.TbThanks)>", index: "0", type: "cn.exrick.manager.pojo.TbThanks" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ThanksController: cn.exrick.common.pojo.Result updateThanks(cn.exrick.manager.pojo.TbThanks)>", index: "0", type: "cn.exrick.manager.pojo.TbThanks" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ThanksController: cn.exrick.common.pojo.Result delThanks(int[])>", index: "0", type: "int[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.ThanksController: cn.exrick.common.pojo.Result getThanks(int)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "3", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "4", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: boolean roleName(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: boolean roleName(int,java.lang.String)>", index: "0", type: "int" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: boolean roleName(int,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result addRole(cn.exrick.manager.pojo.TbRole)>", index: "0", type: "cn.exrick.manager.pojo.TbRole" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result updateRole(cn.exrick.manager.pojo.TbRole)>", index: "0", type: "cn.exrick.manager.pojo.TbRole" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result delRole(int[])>", index: "0", type: "int[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result addPermission(cn.exrick.manager.pojo.TbPermission)>", index: "0", type: "cn.exrick.manager.pojo.TbPermission" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result updatePermission(cn.exrick.manager.pojo.TbPermission)>", index: "0", type: "cn.exrick.manager.pojo.TbPermission" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result delPermission(int[])>", index: "0", type: "int[]" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: boolean getUserByName(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: boolean getUserByPhone(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: boolean getUserByEmail(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result addUser(cn.exrick.manager.pojo.TbUser)>", index: "0", type: "cn.exrick.manager.pojo.TbUser" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result updateUser(cn.exrick.manager.pojo.TbUser)>", index: "0", type: "cn.exrick.manager.pojo.TbUser" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: boolean getUserByEditName(java.lang.Long,java.lang.String)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: boolean getUserByEditName(java.lang.Long,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: boolean getUserByEditPhone(java.lang.Long,java.lang.String)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: boolean getUserByEditPhone(java.lang.Long,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: boolean getUserByEditEmail(java.lang.Long,java.lang.String)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: boolean getUserByEditEmail(java.lang.Long,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result stopUser(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result startUser(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result changePass(cn.exrick.manager.pojo.TbUser)>", index: "0", type: "cn.exrick.manager.pojo.TbUser" }
+  - { kind: "param", method: "<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result delUser(java.lang.Long[])>", index: "0", type: "java.lang.Long[]" }
+
+sinks:
+  - { method: "<cn.exrick.search.mapper.ItemMapper: cn.exrick.manager.dto.front.SearchItem getItemById(java.lang.Long)>", index: "0" }
+
+transfers:
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int,int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(char,char)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String trim()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String strip()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripLeading()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripTrailing()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String intern()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(java.lang.Object)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(char[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.util.Locale,java.lang.String,java.lang.Object[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.CharSequence[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.Iterable)>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: char[] toCharArray()>", from: "base", to: "result", type: "char[]" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char[])>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(long)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.String)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.Object)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.util.Map: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.HashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.TreeMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.concurrent.ConcurrentHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.HashMap" }
+  - { method: "<java.util.Map: void putAll(java.util.Map)>", from: "0", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.Map: java.util.Collection values()>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<java.util.Map: java.util.Set entrySet()>", from: "base", to: "result", type: "java.util.Set" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getValue()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getKey()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ArrayList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.List" }
+  - { method: "<java.util.ArrayList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.ArrayList" }
+  - { method: "<java.util.LinkedList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.LinkedList" }
+  - { method: "<java.util.Collection: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.Collection" }
+  - { method: "<java.util.Iterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ListIterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElse(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElseGet(java.util.function.Supplier)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.util.Optional of(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.util.Optional: java.util.Optional ofNullable(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.lang.Object: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+
+Initializing global bean mock objects for beans...
+Initialized 49 global bean objects.
+Added entry point (Empty): <cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getNavList()>
+Added entry point (Empty): <cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getProductHome()>
+Added entry point (Empty): <cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getRecommendGoods()>
+Added entry point (Empty): <cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getThankGoods()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Added entry point (Empty): <cn.exrick.manager.controller.DictController: cn.exrick.common.pojo.DataTablesResult getDictList()>
+Added entry point (Empty): <cn.exrick.manager.controller.DictController: cn.exrick.common.pojo.DataTablesResult getStopList()>
+Added entry point (Empty): <cn.exrick.manager.controller.ExpressController: cn.exrick.common.pojo.DataTablesResult addressList()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getAllItemCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result importIndex()>
+Added entry point (Empty): <cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result getESInfo()>
+Added entry point (Empty): <cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getRemoveMemberCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result getOrderCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.PageController: java.lang.String showIndex()>
+Added entry point (Empty): <cn.exrick.manager.controller.PanelController: java.util.List getIndexPanel()>
+Added entry point (Empty): <cn.exrick.manager.controller.PanelController: java.util.List getAllIndexPanel()>
+Added entry point (Empty): <cn.exrick.manager.controller.PanelController: java.util.List getIndexBannerPanel()>
+Added entry point (Empty): <cn.exrick.manager.controller.PanelController: java.util.List getRecommendPanel()>
+Added entry point (Empty): <cn.exrick.manager.controller.RedisController: cn.exrick.common.pojo.Result getIndexRedis()>
+Added entry point (Empty): <cn.exrick.manager.controller.RedisController: cn.exrick.common.pojo.Result updateIndexRedis()>
+Added entry point (Empty): <cn.exrick.manager.controller.RedisController: cn.exrick.common.pojo.Result getRecommendRedis()>
+Added entry point (Empty): <cn.exrick.manager.controller.RedisController: cn.exrick.common.pojo.Result updateRecommendRedis()>
+Added entry point (Empty): <cn.exrick.manager.controller.RedisController: cn.exrick.common.pojo.Result getThankRedis()>
+Added entry point (Empty): <cn.exrick.manager.controller.RedisController: cn.exrick.common.pojo.Result updateThankRedis()>
+Added entry point (Empty): <cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result getUserCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result getBase()>
+Added entry point (Empty): <cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result getWeekHot()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result countLog()>
+Added entry point (Empty): <cn.exrick.manager.controller.ThanksController: cn.exrick.common.pojo.DataTablesResult getThanksList()>
+Added entry point (Empty): <cn.exrick.manager.controller.ThanksController: cn.exrick.common.pojo.Result getThanksCount()>
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+>>> AOP Match Found! Method: [<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>], Aspect: [cn.exrick.manager.aop.SystemLogAspect]
+Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result logout()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result getUserInfo()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.DataTablesResult getRoleList()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result getAllRoles()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result getRoleCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.DataTablesResult getPermissionList()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result getPermissionCount()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.DataTablesResult getUserList()>
+Added entry point (Empty): <cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result getUserCount()>
+Initializing global aspect mock objects...
+No bean found for concrete class: org.slf4j.Logger
+No bean found for concrete class: cn.exrick.manager.mapper.TbAddressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbAddressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbAddressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbAddressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbAddressMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemDescMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderShippingMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderShippingMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderShippingMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderShippingMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbDictMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbDictMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbDictMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbDictMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbDictMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbExpressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbExpressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbExpressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbExpressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemCatMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemCatMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemCatMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemCatMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemDescMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemDescMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemDescMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemDescMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderShippingMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderShippingMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbShiroFilterMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbShiroFilterMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbShiroFilterMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbShiroFilterMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbShiroFilterMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbBaseMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbBaseMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbLogMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbLogMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbLogMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbThanksMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRolePermMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRolePermMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRolePermMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRoleMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPermissionMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPermissionMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPermissionMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPermissionMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbRolePermMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPermissionMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbAddressMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbMemberMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelContentMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemCatMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemCatMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbItemMapper
+No bean found for concrete class: org.springframework.jms.core.JmsTemplate
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+No bean found for concrete class: cn.exrick.common.jedis.JedisClient
+No bean found for concrete class: cn.exrick.manager.mapper.TbPanelMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbUserMapper
+No bean found for concrete class: cn.exrick.manager.mapper.TbOrderMapper
+[Pointer analysis] elapsed time: 0.10s
+Detected 0 taint flow(s):
+TFGDumper starts ...
+Source nodes:
+VarNode{<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result cancelOrder(cn.exrick.manager.dto.front.Order)>/order}
+VarNode{<cn.exrick.front.controller.GoodsController: java.lang.String getQuickSearch(java.lang.String)>/key}
+VarNode{<cn.exrick.front.controller.MemberController: cn.exrick.common.pojo.Result checkLogin(java.lang.String)>/token}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payNotShow(java.lang.String,java.lang.String,java.lang.String)>/id}
+VarNode{<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getLog(int,int,int,java.lang.String,int,java.lang.String)>/draw}
+VarNode{<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getLog(int,int,int,java.lang.String,int,java.lang.String)>/start}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result changeMemberPassword(java.lang.Long,cn.exrick.manager.dto.MemberDto)>/id}
+VarNode{<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result payOrder(cn.exrick.manager.pojo.TbThanks)>/tbThanks}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result searchProduct(java.lang.String,int,int,java.lang.String,int,int)>/size}
+VarNode{<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result addOrder(cn.exrick.manager.dto.front.OrderInfo)>/orderInfo}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result updateItem(java.lang.Long,cn.exrick.manager.dto.ItemDto)>/itemDto}
+VarNode{<cn.exrick.manager.controller.ContentController: cn.exrick.common.pojo.Result addContent(int[])>/ids}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/password}
+VarNode{<cn.exrick.manager.controller.UserController: boolean getUserByEmail(java.lang.String)>/email}
+VarNode{<cn.exrick.manager.controller.PanelController: cn.exrick.common.pojo.Result updateContentCategory(cn.exrick.manager.pojo.TbPanel)>/tbPanel}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payPass(java.lang.String,java.lang.String,java.lang.String)>/tokenName}
+VarNode{<cn.exrick.manager.controller.CountController: cn.exrick.common.pojo.Result countOrder(int,java.lang.String,java.lang.String,int)>/endTime}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/length}
+VarNode{<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEditEmail(java.lang.Long,java.lang.String)>/email}
+VarNode{<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result updateBase(cn.exrick.manager.pojo.TbBase)>/tbBase}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/searchItem}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/minDate}
+VarNode{<cn.exrick.manager.controller.ContentController: cn.exrick.common.pojo.Result addContent(cn.exrick.manager.pojo.TbPanelContent)>/tbPanelContent}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/search}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result updateMember(java.lang.Long,cn.exrick.manager.dto.MemberDto)>/memberDto}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/orderDir}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/length}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result addItem(cn.exrick.manager.dto.ItemDto)>/itemDto}
+VarNode{<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEmail(java.lang.String)>/email}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result stopUser(java.lang.Long)>/id}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payEdit(java.lang.String,java.lang.String,cn.exrick.manager.pojo.TbThanks)>/token}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result searchProduct(java.lang.String,int,int,java.lang.String,int,int)>/page}
+VarNode{<cn.exrick.manager.controller.UserController: boolean getUserByEditEmail(java.lang.Long,java.lang.String)>/id}
+VarNode{<cn.exrick.manager.controller.UserController: boolean getUserByPhone(java.lang.String)>/phone}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result addPermission(cn.exrick.manager.pojo.TbPermission)>/tbPermission}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/search}
+VarNode{<cn.exrick.manager.controller.CountController: cn.exrick.common.pojo.Result countOrder(int,java.lang.String,java.lang.String,int)>/year}
+VarNode{<cn.exrick.manager.controller.MemberController: java.lang.Boolean validatePhone(java.lang.String)>/phone}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.DataTablesResult getOrderList(int,int,int,java.lang.String,int,java.lang.String)>/start}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/maxDate}
+VarNode{<cn.exrick.manager.controller.ItemCatController: cn.exrick.common.pojo.Result addItemCategory(cn.exrick.manager.pojo.TbItemCat)>/tbItemCat}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result startMember(java.lang.Long[])>/ids}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result deliver(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal)>/orderId}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.DataTablesResult getOrderList(int,int,int,java.lang.String,int,java.lang.String)>/draw}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/start}
+VarNode{<cn.exrick.front.controller.ThanksController: cn.exrick.common.pojo.Result getThanksList(int,int)>/size}
+VarNode{<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getLog(int,int,int,java.lang.String,int,java.lang.String)>/length}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result backPay(java.lang.String,java.lang.String,java.lang.String)>/token}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result cancelOrderByAdmin(java.lang.String)>/orderId}
+VarNode{<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEditEmail(java.lang.Long,java.lang.String)>/id}
+VarNode{<cn.exrick.manager.controller.ContentController: cn.exrick.common.pojo.Result updateContent(cn.exrick.manager.pojo.TbPanelContent)>/tbPanelContent}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result addUser(cn.exrick.manager.pojo.TbUser)>/tbUser}
+VarNode{<cn.exrick.manager.controller.ExpressController: cn.exrick.common.pojo.Result delAddress(int[])>/ids}
+VarNode{<cn.exrick.manager.controller.ItemCatController: java.util.List getItemCatList(int)>/parentId}
+VarNode{<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEditPhone(java.lang.Long,java.lang.String)>/id}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result stopMember(java.lang.Long)>/id}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/orderCol}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result removeMember(java.lang.Long[])>/ids}
+VarNode{<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEditUsername(java.lang.Long,java.lang.String)>/id}
+VarNode{<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEditPhone(java.lang.Long,java.lang.String)>/phone}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/orderCol}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/start}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/maxDate}
+VarNode{<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getLog(int,int,int,java.lang.String,int,java.lang.String)>/orderDir}
+VarNode{<cn.exrick.manager.controller.UserController: boolean getUserByEditName(java.lang.Long,java.lang.String)>/username}
+VarNode{<cn.exrick.manager.controller.PanelController: cn.exrick.common.pojo.Result addContentCategory(cn.exrick.manager.pojo.TbPanel)>/tbPanel}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result backPay(java.lang.String,java.lang.String,java.lang.String)>/id}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result deliver(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal)>/postFee}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.DataTablesResult getOrderList(int,int,int,java.lang.String,int,java.lang.String)>/orderCol}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/draw}
+VarNode{<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result getOrderList(java.lang.String,int,int)>/userId}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/challenge}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/orderDir}
+VarNode{<cn.exrick.manager.controller.UserController: boolean roleName(int,java.lang.String)>/id}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result delUser(java.lang.Long[])>/ids}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result stopItem(java.lang.Long)>/id}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payDel(java.lang.String,java.lang.String,java.lang.String)>/token}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/searchKey}
+VarNode{<cn.exrick.front.controller.AddressController: cn.exrick.common.pojo.Result addressList(cn.exrick.manager.pojo.TbAddress)>/tbAddress}
+VarNode{<cn.exrick.manager.controller.ExpressController: cn.exrick.common.pojo.Result updateAddress(cn.exrick.manager.pojo.TbExpress)>/tbExpress}
+VarNode{<cn.exrick.manager.controller.CountController: cn.exrick.common.pojo.Result countOrder(int,java.lang.String,java.lang.String,int)>/startTime}
+VarNode{<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getLog(int,int,int,java.lang.String,int,java.lang.String)>/orderCol}
+VarNode{<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateUsername(java.lang.String)>/username}
+VarNode{<cn.exrick.manager.controller.ThanksController: cn.exrick.common.pojo.Result updateThanks(cn.exrick.manager.pojo.TbThanks)>/tbThanks}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/minDate}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payDel(java.lang.String,java.lang.String,java.lang.String)>/tokenName}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result searchProduct(java.lang.String,int,int,java.lang.String,int,int)>/priceGt}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/cid}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/draw}
+VarNode{<cn.exrick.front.controller.MemberController: cn.exrick.common.pojo.Result imgaeUpload(cn.exrick.manager.dto.front.CommonDto)>/common}
+VarNode{<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result delLog(int[])>/ids}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result changeMemberPassword(java.lang.Long,cn.exrick.manager.dto.MemberDto)>/memberDto}
+VarNode{<cn.exrick.manager.controller.ItemCatController: cn.exrick.common.pojo.Result updateItemCategory(cn.exrick.manager.pojo.TbItemCat)>/tbItemCat}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getAllProduct(int,int,java.lang.String,java.lang.Long,int,int)>/cid}
+VarNode{<cn.exrick.manager.controller.ThanksController: cn.exrick.common.pojo.Result addThanks(cn.exrick.manager.pojo.TbThanks)>/tbThanks}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/orderCol}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payPass(java.lang.String,java.lang.String,java.lang.String)>/token}
+VarNode{<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result delOrder(java.lang.String)>/orderId}
+VarNode{<cn.exrick.front.controller.MemberController: cn.exrick.common.pojo.Result login(cn.exrick.manager.dto.front.MemberLoginRegist,javax.servlet.http.HttpServletRequest)>/memberLoginRegist}
+VarNode{<cn.exrick.front.controller.AddressController: cn.exrick.common.pojo.Result address(cn.exrick.manager.pojo.TbAddress)>/tbAddress}
+VarNode{<cn.exrick.manager.controller.PanelController: cn.exrick.common.pojo.Result deleteContentCategory(int[])>/ids}
+VarNode{<cn.exrick.manager.controller.ItemCatController: cn.exrick.common.pojo.Result deleteItemCategory(java.lang.Long)>/id}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getAllProduct(int,int,java.lang.String,java.lang.Long,int,int)>/priceLte}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payPass(java.lang.String,java.lang.String,java.lang.String)>/id}
+VarNode{<cn.exrick.front.controller.MemberController: cn.exrick.common.pojo.Result logout(java.lang.String)>/token}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result changePass(cn.exrick.manager.pojo.TbUser)>/tbUser}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result deleteItem(java.lang.Long[])>/ids}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result updateRole(cn.exrick.manager.pojo.TbRole)>/tbRole}
+VarNode{<cn.exrick.front.controller.CartController: cn.exrick.common.pojo.Result delChecked(cn.exrick.manager.dto.front.Cart)>/cart}
+VarNode{<cn.exrick.manager.controller.DictController: cn.exrick.common.pojo.Result addDict(cn.exrick.manager.pojo.TbDict)>/tbDict}
+VarNode{<cn.exrick.manager.controller.UserController: boolean roleName(int,java.lang.String)>/name}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.DataTablesResult getOrderList(int,int,int,java.lang.String,int,java.lang.String)>/orderDir}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result getOrderDetail(java.lang.String)>/orderId}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/maxDate}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payNotShow(java.lang.String,java.lang.String,java.lang.String)>/tokenName}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/searchKey}
+VarNode{<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result getOrder(java.lang.String)>/orderId}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payEdit(java.lang.String,java.lang.String,cn.exrick.manager.pojo.TbThanks)>/tokenName}
+VarNode{<cn.exrick.front.controller.CartController: cn.exrick.common.pojo.Result addCart(cn.exrick.manager.dto.front.Cart)>/cart}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result searchProduct(java.lang.String,int,int,java.lang.String,int,int)>/priceLte}
+VarNode{<cn.exrick.front.controller.AddressController: cn.exrick.common.pojo.Result delAddress(cn.exrick.manager.pojo.TbAddress)>/tbAddress}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/seccode}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result deliver(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal)>/shippingName}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.DataTablesResult getOrderList(int,int,int,java.lang.String,int,java.lang.String)>/length}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/validate}
+VarNode{<cn.exrick.front.controller.ThanksController: cn.exrick.common.pojo.Result getThanksList(int,int)>/page}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result searchProduct(java.lang.String,int,int,java.lang.String,int,int)>/sort}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/minDate}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/length}
+VarNode{<cn.exrick.manager.controller.PageController: java.lang.String showPage(java.lang.String)>/page}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/length}
+VarNode{<cn.exrick.manager.controller.ContentController: cn.exrick.common.pojo.DataTablesResult getContentByCid(int)>/panelId}
+VarNode{<cn.exrick.manager.controller.UserController: boolean getUserByEditPhone(java.lang.Long,java.lang.String)>/id}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/orderDir}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.DataTablesResult getOrderList(int,int,int,java.lang.String,int,java.lang.String)>/search}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result updateMember(java.lang.Long,cn.exrick.manager.dto.MemberDto)>/id}
+VarNode{<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result updateShiro(cn.exrick.manager.pojo.TbShiroFilter)>/tbShiroFilter}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payDel(java.lang.String,java.lang.String,java.lang.String)>/id}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result addRole(cn.exrick.manager.pojo.TbRole)>/tbRole}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/orderCol}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payNotShow(java.lang.String,java.lang.String,java.lang.String)>/token}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getAllProduct(int,int,java.lang.String,java.lang.Long,int,int)>/priceGt}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result login(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/username}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getAllProduct(int,int,java.lang.String,java.lang.Long,int,int)>/page}
+VarNode{<cn.exrick.manager.controller.CountController: cn.exrick.common.pojo.Result countOrder(int,java.lang.String,java.lang.String,int)>/type}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result remark(java.lang.String,java.lang.String)>/orderId}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result getUserInfo(java.lang.String[])>/ids}
+VarNode{<cn.exrick.front.controller.AddressController: cn.exrick.common.pojo.Result addAddress(cn.exrick.manager.pojo.TbAddress)>/tbAddress}
+VarNode{<cn.exrick.manager.controller.ThanksController: cn.exrick.common.pojo.Result delThanks(int[])>/ids}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/maxDate}
+VarNode{<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result getOrderList(java.lang.String,int,int)>/size}
+VarNode{<cn.exrick.manager.controller.UserController: boolean getUserByEditPhone(java.lang.Long,java.lang.String)>/phone}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getProductDet(java.lang.Long)>/productId}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result deleteMember(java.lang.Long[])>/ids}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemSearchList(int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/cid}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/draw}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getAllProduct(int,int,java.lang.String,java.lang.Long,int,int)>/sort}
+VarNode{<cn.exrick.manager.controller.DictController: cn.exrick.common.pojo.Result delDict(int[])>/ids}
+VarNode{<cn.exrick.manager.controller.DictController: cn.exrick.common.pojo.Result updateDict(cn.exrick.manager.pojo.TbDict)>/tbDict}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result updateUser(cn.exrick.manager.pojo.TbUser)>/tbUser}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result startUser(java.lang.Long)>/id}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/draw}
+VarNode{<cn.exrick.manager.controller.UserController: boolean getUserByName(java.lang.String)>/username}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getDelMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/searchKey}
+VarNode{<cn.exrick.manager.controller.ThanksController: cn.exrick.common.pojo.Result getThanks(int)>/id}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result delRole(int[])>/ids}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/orderDir}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result searchProduct(java.lang.String,int,int,java.lang.String,int,int)>/key}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result remark(java.lang.String,java.lang.String)>/message}
+VarNode{<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getLog(int,int,int,java.lang.String,int,java.lang.String)>/search}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/search}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/start}
+VarNode{<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result addShiro(cn.exrick.manager.pojo.TbShiroFilter)>/tbShiroFilter}
+VarNode{<cn.exrick.front.controller.CartController: cn.exrick.common.pojo.Result deleteCartItem(cn.exrick.manager.dto.front.Cart)>/cart}
+VarNode{<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.Result delShiro(int[])>/ids}
+VarNode{<cn.exrick.front.controller.CartController: cn.exrick.common.pojo.Result editCheckAll(cn.exrick.manager.dto.front.Cart)>/cart}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result payEdit(java.lang.String,java.lang.String,cn.exrick.manager.pojo.TbThanks)>/tbThanks}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result backPay(java.lang.String,java.lang.String,java.lang.String)>/tokenName}
+VarNode{<cn.exrick.front.controller.OrderController: cn.exrick.common.pojo.Result getOrderList(java.lang.String,int,int)>/page}
+VarNode{<cn.exrick.front.controller.GoodsController: cn.exrick.common.pojo.Result getAllProduct(int,int,java.lang.String,java.lang.Long,int,int)>/size}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/start}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result createMember(cn.exrick.manager.dto.MemberDto)>/memberDto}
+VarNode{<cn.exrick.manager.controller.OrderController: cn.exrick.common.pojo.Result deliver(java.lang.String,java.lang.String,java.lang.String,java.math.BigDecimal)>/shippingCode}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result updateItem(java.lang.Long,cn.exrick.manager.dto.ItemDto)>/id}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result updatePermission(cn.exrick.manager.pojo.TbPermission)>/tbPermission}
+VarNode{<cn.exrick.manager.controller.ExpressController: cn.exrick.common.pojo.Result addTbExpress(cn.exrick.manager.pojo.TbExpress)>/tbExpress}
+VarNode{<cn.exrick.manager.controller.UserController: boolean getUserByEditName(java.lang.Long,java.lang.String)>/id}
+VarNode{<cn.exrick.manager.controller.UserController: boolean getUserByEditEmail(java.lang.Long,java.lang.String)>/email}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.DataTablesResult getItemList(int,int,int,int,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/search}
+VarNode{<cn.exrick.front.controller.CartController: cn.exrick.common.pojo.Result updateCartNum(cn.exrick.manager.dto.front.Cart)>/cart}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result delNotNotify(java.lang.String,java.lang.String,java.lang.String)>/tokenName}
+VarNode{<cn.exrick.manager.controller.UserController: boolean roleName(java.lang.String)>/name}
+VarNode{<cn.exrick.manager.controller.MemberController: java.lang.Boolean validateEditUsername(java.lang.Long,java.lang.String)>/username}
+VarNode{<cn.exrick.manager.controller.SystemController: cn.exrick.common.pojo.DataTablesResult getShiroList(cn.exrick.manager.pojo.TbUser)>/tbUser}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result delNotNotify(java.lang.String,java.lang.String,java.lang.String)>/id}
+VarNode{<cn.exrick.manager.controller.PayController: cn.exrick.common.pojo.Result delNotNotify(java.lang.String,java.lang.String,java.lang.String)>/token}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.DataTablesResult getMemberList(int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)>/minDate}
+VarNode{<cn.exrick.front.controller.AddressController: cn.exrick.common.pojo.Result updateAddress(cn.exrick.manager.pojo.TbAddress)>/tbAddress}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result getItemById(java.lang.Long)>/itemId}
+VarNode{<cn.exrick.front.controller.CartController: cn.exrick.common.pojo.Result getCartList(cn.exrick.manager.dto.front.Cart)>/cart}
+VarNode{<cn.exrick.manager.controller.MemberController: cn.exrick.common.pojo.Result getMemberById(java.lang.Long)>/id}
+VarNode{<cn.exrick.front.controller.MemberController: cn.exrick.common.pojo.Result register(cn.exrick.manager.dto.front.MemberLoginRegist,javax.servlet.http.HttpServletRequest)>/memberLoginRegist}
+VarNode{<cn.exrick.manager.controller.ItemController: cn.exrick.common.pojo.Result startItem(java.lang.Long)>/id}
+VarNode{<cn.exrick.manager.controller.UserController: cn.exrick.common.pojo.Result delPermission(int[])>/ids}
+Sink nodes:
+Dumping /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-flow-graph.dot
+TFGDumper finishes, elapsed time: 0.04s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                4022 (insens) / 4022 (sens)
+#objects:                     1472 (insens) / 1472 (sens)
+#var points-to:               2918 (insens) / 2962 (sens)
+#static field points-to:      0 (sens)
+#instance field points-to:    411 (sens)
+#array points-to:             39 (sens)
+#reachable methods:           397 (insens) / 397 (sens)
+#call graph edges:            1016 (insens) / 1016 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.33s
+cg starts ...
+Call graph has 397 reachable methods and 1016 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.04s
+Tai-e finishes, elapsed time: 3.05s

@@ -1,0 +1,558 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.3
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Tai-e Commit: a086cc6200102f74b303a2cb800dad4e1b8b3af5
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+10681 classes with 101752 methods in the world
+WorldBuilder finishes, elapsed time: 3.25s
+ir-dumper starts ...
+Dumping IR in /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tir
+286 classes in scope (APP) of class analyses
+ir-dumper finishes, elapsed time: 0.35s
+routerAnalysis starts ...
+Router analysis started at: 2026-02-27 20:41:39
+Router analysis completed at: 2026-02-27 20:41:39 (Duration: 3ms)
+routerAnalysis finishes, elapsed time: 0.00s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.00s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.13s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+resultAnalysis starts ...
+============================================================
+                 Spring Analysis Result Summary             
+============================================================
+Router Methods (Endpoints)     : 68
+Spring Beans                   : 134
+Aspect Methods (Advice)        : 0
+============================================================
+resultAnalysis finishes, elapsed time: 0.00s
+srfaAnalysis starts ...
+SRFA Analysis started at: 2026-02-27 20:41:39
+Loaded 23 controller classes from RouterAnalysis
+Discovering mapper paths from 9 appClassPath entries
+Extracting XML from fat jar: sduoj-auth.jar
+Extracted 0 XML files from sduoj-auth.jar
+Extracted 1 XML files (plain jar) from sduoj-auth.jar
+Extracting XML from fat jar: sduoj-contest.jar
+Extracted 0 XML files from sduoj-contest.jar
+Extracted 1 XML files (plain jar) from sduoj-contest.jar
+Extracting XML from fat jar: sduoj-filesys.jar
+Extracted 0 XML files from sduoj-filesys.jar
+Extracted 1 XML files (plain jar) from sduoj-filesys.jar
+Extracting XML from fat jar: sduoj-gateway.jar
+Extracted 0 XML files from sduoj-gateway.jar
+Extracted 1 XML files (plain jar) from sduoj-gateway.jar
+Extracting XML from fat jar: sduoj-judger.jar
+Extracted 0 XML files from sduoj-judger.jar
+Extracting XML from fat jar: sduoj-problem.jar
+Extracted 0 XML files from sduoj-problem.jar
+Extracted 1 XML files (plain jar) from sduoj-problem.jar
+Extracting XML from fat jar: sduoj-submit.jar
+Extracted 0 XML files from sduoj-submit.jar
+Extracted 1 XML files (plain jar) from sduoj-submit.jar
+Extracting XML from fat jar: sduoj-user.jar
+Extracted 0 XML files from sduoj-user.jar
+Extracted 1 XML files (plain jar) from sduoj-user.jar
+Extracting XML from fat jar: sduoj-websocket.jar
+Extracted 0 XML files from sduoj-websocket.jar
+Extracted 1 XML files (plain jar) from sduoj-websocket.jar
+Auto-discovered 8 mapper path(s)
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-auth_1731057263000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-contest_1731057264000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-filesys_1731057264000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-gateway_1731057264000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-problem_1731057264000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-submit_1731057264000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-user_1731057264000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-websocket_1731057264000
+Using 8 mapper search path(s):
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-auth_1731057263000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-contest_1731057264000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-filesys_1731057264000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-gateway_1731057264000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-problem_1731057264000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-submit_1731057264000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-user_1731057264000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sduoj-websocket_1731057264000
+Parsed 0 MyBatis mapper files
+Parsed 0 MyBatis mapper files
+Collected 0 write field names from INSERT/UPDATE operations
+Extracted 120 source metadata entries (before filtering)
+Resolving 0 mapper namespaces...
+Extracted 0 sink metadata entries (deduplicated, before risk filtering)
+Sources: 120 generated, 0 filtered, 0 deduplicated
+Sinks: 0 generated (risky), 0 filtered (safe), 0 deduplicated
+  Note: 'risky' means uses string concatenation ($), 'safe' means uses prepared statement (#)
+Written taint config to: output/taint-config-generated.yml
+  Sources: 120 (SRFA param) + framework call sources
+  Sinks: 0
+  Transfers: standard set included
+SRFA Analysis completed at: 2026-02-27 20:41:39 (Duration: 57ms)
+srfaAnalysis finishes, elapsed time: 0.06s
+pta starts ...
+Loading taint config from /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-config-generated.yml
+Ignore {"method":"<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>","type":"org.apache.shiro.subject.Subject"} due to missing source "kind"
+Ignore {"method":"<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>","type":"org.apache.shiro.subject.PrincipalCollection"} due to missing source "kind"
+Ignore {"method":"<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>","type":"org.springframework.security.core.context.SecurityContext"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>","type":"org.springframework.security.core.Authentication"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.Object getDetails()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.String getName()>","type":"java.lang.String"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>","type":"java.util.Collection"} due to missing source "kind"
+Ignore {"method":"<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>","type":"java.lang.String"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>","type":"javax.servlet.http.HttpSession"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>","type":"javax.servlet.http.HttpSession"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>","type":"java.security.Principal"} due to missing source "kind"
+Ignore {"method":"<java.security.Principal: java.lang.String getName()>","type":"java.lang.String"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<java.lang.ThreadLocal: java.lang.Object get()>","type":"java.lang.Object"} due to missing source "kind"
+Ignore {"method":"<java.lang.InheritableThreadLocal: java.lang.Object get()>","type":"java.lang.Object"} due to missing source "kind"
+Cannot find taint-transfer method '<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find taint-transfer method '<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>'
+Cannot find taint-transfer method '<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>'
+Cannot find taint-transfer method '<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>'
+Cannot find taint-transfer method '<org.apache.shiro.subject.PrincipalCollection: java.util.Collection fromRealm(java.lang.String)>'
+Cannot find taint-transfer method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
+Cannot find taint-transfer method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
+Cannot find taint-transfer method '<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>'
+Cannot find taint-transfer method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+TaintConfig:
+sources:
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.common.entity.PageResult list(cn.edu.sdu.qd.oj.contest.dto.ContestListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.contest.dto.ContestListReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.common.entity.PageResult list(cn.edu.sdu.qd.oj.contest.dto.ContestListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.Void participate(java.util.Map,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.util.Map" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.Void participate(java.util.Map,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestDTO queryDetail(java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestDTO queryDetail(java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestProblemDTO queryProblem(java.lang.Long,java.lang.Integer,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestProblemDTO queryProblem(java.lang.Long,java.lang.Integer,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "java.lang.Integer" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestProblemDTO queryProblem(java.lang.Long,java.lang.Integer,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "2", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.String submitCode(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionCreateReqDTO,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionCreateReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.String submitCode(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionCreateReqDTO,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.String submitCode(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionCreateReqDTO,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "2", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.submit.dto.SubmissionDTO querySubmssion(java.lang.String,long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.submit.dto.SubmissionDTO querySubmssion(java.lang.String,long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.submit.dto.SubmissionDTO querySubmssion(java.lang.String,long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "2", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.common.entity.PageResult listSubmission(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionListReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.common.entity.PageResult listSubmission(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.util.List queryRank(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.util.List queryRank(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.Void invalidateSubmission(long,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.Void invalidateSubmission(long,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.Void invalidateSubmission(long,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "2", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: java.lang.Long create(cn.edu.sdu.qd.oj.contest.dto.ContestCreateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.contest.dto.ContestCreateReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: java.lang.Long create(cn.edu.sdu.qd.oj.contest.dto.ContestCreateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: cn.edu.sdu.qd.oj.common.entity.PageResult page(cn.edu.sdu.qd.oj.contest.dto.ContestListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.contest.dto.ContestListReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: cn.edu.sdu.qd.oj.common.entity.PageResult page(cn.edu.sdu.qd.oj.contest.dto.ContestListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: cn.edu.sdu.qd.oj.contest.dto.ContestManageDTO query(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: cn.edu.sdu.qd.oj.contest.dto.ContestManageDTO query(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: java.lang.Void update(cn.edu.sdu.qd.oj.contest.dto.ContestManageDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.contest.dto.ContestManageDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: java.lang.Void update(cn.edu.sdu.qd.oj.contest.dto.ContestManageDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: void exportSubmission(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionExportReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO,javax.servlet.http.HttpServletResponse)>", index: "0", type: "cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionExportReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: void exportSubmission(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionExportReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO,javax.servlet.http.HttpServletResponse)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.filesys.controller.FileController: cn.edu.sdu.qd.oj.filesys.dto.FileDTO upload(org.springframework.web.multipart.MultipartFile,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.filesys.controller.FileController: cn.edu.sdu.qd.oj.filesys.dto.FileDTO upload(org.springframework.web.multipart.MultipartFile,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.filesys.controller.FileController: java.util.List upload(org.springframework.web.multipart.MultipartFile[],cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "org.springframework.web.multipart.MultipartFile[]" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.filesys.controller.FileController: java.util.List upload(org.springframework.web.multipart.MultipartFile[],cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.filesys.controller.FileController: void zipDownload(java.util.List,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.filesys.controller.FileController: void download(long,java.lang.String,javax.servlet.http.HttpServletResponse)>", index: "0", type: "long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.filesys.controller.FileController: void download(long,java.lang.String,javax.servlet.http.HttpServletResponse)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.filesys.controller.FileController: cn.edu.sdu.qd.oj.filesys.dto.FileDTO queryByMd5(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: cn.edu.sdu.qd.oj.checkpoint.dto.CheckpointDTO query(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: cn.edu.sdu.qd.oj.checkpoint.dto.CheckpointDTO upload(java.util.Map,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.util.Map" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: cn.edu.sdu.qd.oj.checkpoint.dto.CheckpointDTO upload(java.util.Map,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: java.util.List upload(org.springframework.web.multipart.MultipartFile[],cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "org.springframework.web.multipart.MultipartFile[]" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: java.util.List upload(org.springframework.web.multipart.MultipartFile[],cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: java.util.List getCheckpoints(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: java.util.List getCheckpoints(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO query(java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO query(java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: cn.edu.sdu.qd.oj.common.entity.PageResult page(cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplatePageReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplatePageReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: cn.edu.sdu.qd.oj.common.entity.PageResult page(cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplatePageReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: java.lang.Long create(cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: java.lang.Long create(cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: java.lang.Void update(cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: java.lang.Void update(cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: java.util.List listByTitle(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: java.util.List listByTitle(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemController: cn.edu.sdu.qd.oj.problem.dto.ProblemDTO queryByCode(java.lang.String,java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemController: cn.edu.sdu.qd.oj.problem.dto.ProblemDTO queryByCode(java.lang.String,java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemController: cn.edu.sdu.qd.oj.problem.dto.ProblemDTO queryByCode(java.lang.String,java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "2", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemController: cn.edu.sdu.qd.oj.common.entity.PageResult queryList(cn.edu.sdu.qd.oj.problem.dto.ProblemListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.problem.dto.ProblemListReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemController: cn.edu.sdu.qd.oj.common.entity.PageResult queryList(cn.edu.sdu.qd.oj.problem.dto.ProblemListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemJudgerController: cn.edu.sdu.qd.oj.problem.dto.ProblemJudgerDTO queryByCode(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO queryByCode(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO queryByCode(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.String createProblemManageBo(cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.String createProblemManageBo(cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: cn.edu.sdu.qd.oj.common.entity.PageResult queryList(cn.edu.sdu.qd.oj.problem.dto.ProblemListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.problem.dto.ProblemListReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: cn.edu.sdu.qd.oj.common.entity.PageResult queryList(cn.edu.sdu.qd.oj.problem.dto.ProblemListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Void updateProblem(cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Void updateProblem(cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Long createDescription(cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Long createDescription(cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Void updateDescription(cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Void updateDescription(cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO queryDescription(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO queryDescription(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.util.List queryDescriptionList(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.util.List queryDescriptionList(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Void delete(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "long" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Void delete(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.tag.controller.TagManageController: java.lang.Long createTag(java.util.Map)>", index: "0", type: "java.util.Map" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.tag.controller.TagManageController: java.lang.Void updateTag(cn.edu.sdu.qd.oj.tag.dto.TagDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.tag.dto.TagDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.tag.controller.TagManageController: java.util.List list(cn.edu.sdu.qd.oj.tag.dto.TagDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.tag.dto.TagDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.String createSubmission(cn.edu.sdu.qd.oj.submit.dto.SubmissionCreateReqDTO,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.submit.dto.SubmissionCreateReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.String createSubmission(cn.edu.sdu.qd.oj.submit.dto.SubmissionCreateReqDTO,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.String createSubmission(cn.edu.sdu.qd.oj.submit.dto.SubmissionCreateReqDTO,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "2", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitController: cn.edu.sdu.qd.oj.submit.dto.SubmissionDTO query(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitController: cn.edu.sdu.qd.oj.submit.dto.SubmissionDTO query(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitController: cn.edu.sdu.qd.oj.common.entity.PageResult page(cn.edu.sdu.qd.oj.submit.dto.SubmissionListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.submit.dto.SubmissionListReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitController: cn.edu.sdu.qd.oj.common.entity.PageResult page(cn.edu.sdu.qd.oj.submit.dto.SubmissionListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.util.List queryACProblem(cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.Void rejudge(java.lang.String[],cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.lang.String[]" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.Void rejudge(java.lang.String[],cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.Void invalidateSubmission(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.Void invalidateSubmission(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitJudgerController: java.lang.Void update(cn.edu.sdu.qd.oj.submit.dto.SubmissionUpdateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.submit.dto.SubmissionUpdateReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.submit.controller.SubmitJudgerController: java.lang.Void update(cn.edu.sdu.qd.oj.submit.dto.SubmissionUpdateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Void register(cn.edu.sdu.qd.oj.user.dto.UserDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.user.dto.UserDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Void emailVerify(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.String verificationEmailSend(java.util.Map)>", index: "0", type: "java.util.Map" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.String forgetPassword(java.util.Map)>", index: "0", type: "java.util.Map" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Void resetPassword(java.util.Map)>", index: "0", type: "java.util.Map" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: cn.edu.sdu.qd.oj.user.dto.UserDTO getProfile(cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Void updateProfile(cn.edu.sdu.qd.oj.user.dto.UserUpdateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.user.dto.UserUpdateReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Void updateProfile(cn.edu.sdu.qd.oj.user.dto.UserUpdateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Boolean isExist(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Boolean isExist(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: cn.edu.sdu.qd.oj.common.entity.ResponseResult login(javax.servlet.http.HttpServletResponse,java.util.Map,java.lang.String,java.lang.String)>", index: "1", type: "java.util.Map" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: cn.edu.sdu.qd.oj.common.entity.ResponseResult login(javax.servlet.http.HttpServletResponse,java.util.Map,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: cn.edu.sdu.qd.oj.common.entity.ResponseResult login(javax.servlet.http.HttpServletResponse,java.util.Map,java.lang.String,java.lang.String)>", index: "3", type: "java.lang.String" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserController: java.util.List queryParticipateContest(cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserManageController: cn.edu.sdu.qd.oj.common.entity.PageResult list(cn.edu.sdu.qd.oj.user.dto.UserListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.user.dto.UserListReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserManageController: cn.edu.sdu.qd.oj.common.entity.PageResult list(cn.edu.sdu.qd.oj.user.dto.UserListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserManageController: java.lang.Void update(cn.edu.sdu.qd.oj.user.dto.UserManageUpdateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "cn.edu.sdu.qd.oj.user.dto.UserManageUpdateReqDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserManageController: java.lang.Void update(cn.edu.sdu.qd.oj.user.dto.UserManageUpdateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserManageController: java.lang.Void addUsers(java.util.List,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserManageController: java.lang.Void addUsers(java.util.List,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserManageController: java.lang.Void delete(java.util.List,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<cn.edu.sdu.qd.oj.user.controller.UserManageController: java.lang.Void delete(java.util.List,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>", index: "1", type: "cn.edu.sdu.qd.oj.common.entity.UserSessionDTO" }
+
+transfers:
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int,int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(char,char)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String trim()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String strip()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripLeading()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripTrailing()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String intern()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(java.lang.Object)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(char[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.util.Locale,java.lang.String,java.lang.Object[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.CharSequence[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.Iterable)>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: char[] toCharArray()>", from: "base", to: "result", type: "char[]" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char[])>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(long)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.String)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.Object)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.util.Map: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.HashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.TreeMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.concurrent.ConcurrentHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.HashMap" }
+  - { method: "<java.util.Map: void putAll(java.util.Map)>", from: "0", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.Map: java.util.Collection values()>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<java.util.Map: java.util.Set entrySet()>", from: "base", to: "result", type: "java.util.Set" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getValue()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getKey()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ArrayList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.List" }
+  - { method: "<java.util.ArrayList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.ArrayList" }
+  - { method: "<java.util.LinkedList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.LinkedList" }
+  - { method: "<java.util.Collection: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.Collection" }
+  - { method: "<java.util.Iterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ListIterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElse(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElseGet(java.util.function.Supplier)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.util.Optional of(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.util.Optional: java.util.Optional ofNullable(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.lang.Object: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+
+Initializing global bean mock objects for beans...
+Initialized 116 global bean objects.
+Added entry point (Empty): <cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestListDTO queryUpcomingContest()>
+No implementation found for interface: cn.edu.sdu.qd.oj.contest.client.ProblemClient
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+No bean found for concrete class: cn.edu.sdu.qd.oj.site.config.SiteProperties
+Added entry point (Empty): <cn.edu.sdu.qd.oj.site.controller.SitePropertyController: java.lang.String getCopyright()>
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+Added entry point (Empty): <cn.edu.sdu.qd.oj.user.controller.UserController: java.util.Map getCaptcha()>
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
+Initializing global aspect mock objects...
+No implementation found for interface: cn.edu.sdu.qd.oj.contest.client.UserClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No implementation found for interface: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.UserClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No bean found for concrete class: cn.edu.sdu.qd.oj.filesys.config.FileSystemProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.filesys.config.FileSystemProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.filesys.config.FileSystemProperties
+No implementation found for interface: cn.edu.sdu.qd.oj.checkpoint.client.FilesysClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No bean found for concrete class: cn.edu.sdu.qd.oj.checkpoint.client.FilesysClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.checkpoint.client.FilesysClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No implementation found for interface: cn.edu.sdu.qd.oj.problem.client.UserClient
+No implementation found for interface: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No implementation found for interface: cn.edu.sdu.qd.oj.submit.client.UserClient
+No implementation found for interface: cn.edu.sdu.qd.oj.submit.client.JudgeTemplateClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.UserClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.submit.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.SubmissionClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.contest.client.ProblemClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.SnowflakeIdWorker
+No bean found for concrete class: cn.edu.sdu.qd.oj.filesys.config.FileSystemProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.common.util.RedisUtils
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.checkpoint.client.FilesysClient
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.UserServiceProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.MailProperties
+No bean found for concrete class: cn.edu.sdu.qd.oj.user.config.MailProperties
+[Pointer analysis] elapsed time: 0.12s
+Detected 0 taint flow(s):
+TFGDumper starts ...
+Source nodes:
+VarNode{<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: cn.edu.sdu.qd.oj.checkpoint.dto.CheckpointDTO upload(java.util.Map,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitController: cn.edu.sdu.qd.oj.common.entity.PageResult page(cn.edu.sdu.qd.oj.submit.dto.SubmissionListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Void updateProblem(cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Long createDescription(cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/problemDescriptionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO queryByCode(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/problemCode}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.Void invalidateSubmission(long,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/contestId}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Void register(cn.edu.sdu.qd.oj.user.dto.UserDTO)>/userDTO}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.Void invalidateSubmission(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitJudgerController: java.lang.Void update(cn.edu.sdu.qd.oj.submit.dto.SubmissionUpdateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: java.lang.Void update(cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/judgeTemplateDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.submit.dto.SubmissionDTO querySubmssion(java.lang.String,long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/submissionIdHex}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: java.lang.Void update(cn.edu.sdu.qd.oj.contest.dto.ContestManageDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.filesys.controller.FileController: void zipDownload(java.util.List,javax.servlet.http.HttpServletResponse)>/fileDownloadReqDTOList}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestDTO queryDetail(java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/contestId}
+VarNode{<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: java.util.List listByTitle(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/title}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Void updateProfile(cn.edu.sdu.qd.oj.user.dto.UserUpdateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: cn.edu.sdu.qd.oj.common.entity.PageResult page(cn.edu.sdu.qd.oj.contest.dto.ContestListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemController: cn.edu.sdu.qd.oj.problem.dto.ProblemDTO queryByCode(java.lang.String,java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/problemCode}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: cn.edu.sdu.qd.oj.contest.dto.ContestManageDTO query(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/contestId}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: cn.edu.sdu.qd.oj.common.entity.PageResult queryList(cn.edu.sdu.qd.oj.problem.dto.ProblemListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.String createSubmission(cn.edu.sdu.qd.oj.submit.dto.SubmissionCreateReqDTO,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemController: cn.edu.sdu.qd.oj.common.entity.PageResult queryList(cn.edu.sdu.qd.oj.problem.dto.ProblemListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/problemListReqDTO}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitController: cn.edu.sdu.qd.oj.submit.dto.SubmissionDTO query(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.filesys.controller.FileController: java.util.List upload(org.springframework.web.multipart.MultipartFile[],cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/files}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserManageController: cn.edu.sdu.qd.oj.common.entity.PageResult list(cn.edu.sdu.qd.oj.user.dto.UserListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserManageController: java.lang.Void update(cn.edu.sdu.qd.oj.user.dto.UserManageUpdateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserManageController: java.lang.Void delete(java.util.List,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/usernameList}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Boolean isExist(java.lang.String,java.lang.String)>/email}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.common.entity.PageResult list(cn.edu.sdu.qd.oj.contest.dto.ContestListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.Void rejudge(java.lang.String[],cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/submissionIdHexs}
+VarNode{<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: java.util.List listByTitle(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: cn.edu.sdu.qd.oj.user.dto.UserDTO getProfile(cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.submit.dto.SubmissionDTO querySubmssion(java.lang.String,long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/contestId}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: cn.edu.sdu.qd.oj.common.entity.ResponseResult login(javax.servlet.http.HttpServletResponse,java.util.Map,java.lang.String,java.lang.String)>/ipv4}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestDTO queryDetail(java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.Void invalidateSubmission(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/submissionIdHex}
+VarNode{<cn.edu.sdu.qd.oj.filesys.controller.FileController: cn.edu.sdu.qd.oj.filesys.dto.FileDTO queryByMd5(java.lang.String)>/md5}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: java.lang.Void update(cn.edu.sdu.qd.oj.contest.dto.ContestManageDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: cn.edu.sdu.qd.oj.contest.dto.ContestManageDTO query(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Boolean isExist(java.lang.String,java.lang.String)>/username}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Void delete(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/id}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.String submitCode(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionCreateReqDTO,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.String createProblemManageBo(cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.Void invalidateSubmission(long,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Void updateProfile(cn.edu.sdu.qd.oj.user.dto.UserUpdateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserManageController: java.lang.Void addUsers(java.util.List,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO queryDescription(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Void updateDescription(cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/problemDescriptionDTO}
+VarNode{<cn.edu.sdu.qd.oj.filesys.controller.FileController: java.util.List upload(org.springframework.web.multipart.MultipartFile[],cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.util.List queryRank(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/contestId}
+VarNode{<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: cn.edu.sdu.qd.oj.checkpoint.dto.CheckpointDTO query(java.lang.Long)>/checkpointId}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.String createSubmission(cn.edu.sdu.qd.oj.submit.dto.SubmissionCreateReqDTO,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/ipv4}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: void exportSubmission(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionExportReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO,javax.servlet.http.HttpServletResponse)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.Void participate(java.util.Map,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/json}
+VarNode{<cn.edu.sdu.qd.oj.tag.controller.TagManageController: java.lang.Void updateTag(cn.edu.sdu.qd.oj.tag.dto.TagDTO)>/tagDTO}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitController: cn.edu.sdu.qd.oj.submit.dto.SubmissionDTO query(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/submissionIdHex}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Long createDescription(cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Void delete(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserManageController: java.lang.Void delete(java.util.List,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: cn.edu.sdu.qd.oj.checkpoint.dto.CheckpointDTO upload(java.util.Map,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/json}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: java.lang.Long create(cn.edu.sdu.qd.oj.contest.dto.ContestCreateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.tag.controller.TagManageController: java.util.List list(cn.edu.sdu.qd.oj.tag.dto.TagDTO)>/tagDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: void exportSubmission(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionExportReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO,javax.servlet.http.HttpServletResponse)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: java.util.List getCheckpoints(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: cn.edu.sdu.qd.oj.common.entity.PageResult queryList(cn.edu.sdu.qd.oj.problem.dto.ProblemListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitJudgerController: java.lang.Void update(cn.edu.sdu.qd.oj.submit.dto.SubmissionUpdateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.String createSubmission(cn.edu.sdu.qd.oj.submit.dto.SubmissionCreateReqDTO,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemJudgerController: cn.edu.sdu.qd.oj.problem.dto.ProblemJudgerDTO queryByCode(java.lang.Long)>/problemId}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: java.util.List queryParticipateContest(cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Void resetPassword(java.util.Map)>/json}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.util.List queryDescriptionList(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/problemCode}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.Void participate(java.util.Map,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.util.List queryDescriptionList(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: java.util.List upload(org.springframework.web.multipart.MultipartFile[],cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestProblemDTO queryProblem(java.lang.Long,java.lang.Integer,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/problemIndex}
+VarNode{<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: cn.edu.sdu.qd.oj.common.entity.PageResult page(cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplatePageReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemController: cn.edu.sdu.qd.oj.common.entity.PageResult queryList(cn.edu.sdu.qd.oj.problem.dto.ProblemListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserManageController: java.lang.Void addUsers(java.util.List,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userDTOList}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: java.lang.Long create(cn.edu.sdu.qd.oj.contest.dto.ContestCreateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO query(java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.String createProblemManageBo(cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/problemManageDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO queryDescription(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/id}
+VarNode{<cn.edu.sdu.qd.oj.tag.controller.TagManageController: java.lang.Long createTag(java.util.Map)>/json}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO queryByCode(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.util.List queryRank(long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.Void emailVerify(java.lang.String)>/token}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: cn.edu.sdu.qd.oj.common.entity.ResponseResult login(javax.servlet.http.HttpServletResponse,java.util.Map,java.lang.String,java.lang.String)>/userAgent}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestProblemDTO queryProblem(java.lang.Long,java.lang.Integer,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/contestId}
+VarNode{<cn.edu.sdu.qd.oj.filesys.controller.FileController: void download(long,java.lang.String,javax.servlet.http.HttpServletResponse)>/filename}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.String forgetPassword(java.util.Map)>/json}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitController: cn.edu.sdu.qd.oj.common.entity.PageResult page(cn.edu.sdu.qd.oj.submit.dto.SubmissionListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: cn.edu.sdu.qd.oj.common.entity.PageResult page(cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplatePageReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO query(java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/id}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.util.List queryACProblem(cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: java.lang.Long create(cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/judgeTemplateDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserManageController: java.lang.Void update(cn.edu.sdu.qd.oj.user.dto.UserManageUpdateReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: java.lang.Void update(cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Void updateProblem(cn.edu.sdu.qd.oj.problem.dto.ProblemManageDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/problem}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.contest.dto.ContestProblemDTO queryProblem(java.lang.Long,java.lang.Integer,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserManageController: cn.edu.sdu.qd.oj.common.entity.PageResult list(cn.edu.sdu.qd.oj.user.dto.UserListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.filesys.controller.FileController: cn.edu.sdu.qd.oj.filesys.dto.FileDTO upload(org.springframework.web.multipart.MultipartFile,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: java.util.List getCheckpoints(java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/problemCode}
+VarNode{<cn.edu.sdu.qd.oj.filesys.controller.FileController: void download(long,java.lang.String,javax.servlet.http.HttpServletResponse)>/fileId}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: java.lang.String verificationEmailSend(java.util.Map)>/json}
+VarNode{<cn.edu.sdu.qd.oj.submit.controller.SubmitController: java.lang.Void rejudge(java.lang.String[],cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.common.entity.PageResult listSubmission(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.common.entity.PageResult list(cn.edu.sdu.qd.oj.contest.dto.ContestListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestManageController: cn.edu.sdu.qd.oj.common.entity.PageResult page(cn.edu.sdu.qd.oj.contest.dto.ContestListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.submit.dto.SubmissionDTO querySubmssion(java.lang.String,long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemController: cn.edu.sdu.qd.oj.problem.dto.ProblemDTO queryByCode(java.lang.String,java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemController: cn.edu.sdu.qd.oj.problem.dto.ProblemDTO queryByCode(java.lang.String,java.lang.Long,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/descriptionId}
+VarNode{<cn.edu.sdu.qd.oj.problem.controller.ProblemManageController: java.lang.Void updateDescription(cn.edu.sdu.qd.oj.problem.dto.ProblemDescriptionDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.checkpoint.controller.CheckpointManageController: java.util.List upload(org.springframework.web.multipart.MultipartFile[],cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/files}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.Void invalidateSubmission(long,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/submissionIdHex}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: cn.edu.sdu.qd.oj.common.entity.PageResult listSubmission(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionListReqDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.filesys.controller.FileController: cn.edu.sdu.qd.oj.filesys.dto.FileDTO upload(org.springframework.web.multipart.MultipartFile,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/file}
+VarNode{<cn.edu.sdu.qd.oj.judgetemplate.controller.JudgeTemplateManageController: java.lang.Long create(cn.edu.sdu.qd.oj.judgetemplate.dto.JudgeTemplateDTO,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/userSessionDTO}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.String submitCode(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionCreateReqDTO,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/ipv4}
+VarNode{<cn.edu.sdu.qd.oj.contest.controller.ContestController: java.lang.String submitCode(cn.edu.sdu.qd.oj.contest.dto.ContestSubmissionCreateReqDTO,java.lang.String,cn.edu.sdu.qd.oj.common.entity.UserSessionDTO)>/reqDTO}
+VarNode{<cn.edu.sdu.qd.oj.user.controller.UserController: cn.edu.sdu.qd.oj.common.entity.ResponseResult login(javax.servlet.http.HttpServletResponse,java.util.Map,java.lang.String,java.lang.String)>/json}
+Sink nodes:
+Dumping /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-flow-graph.dot
+TFGDumper finishes, elapsed time: 0.05s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                3824 (insens) / 3824 (sens)
+#objects:                     1164 (insens) / 1164 (sens)
+#var points-to:               2394 (insens) / 2401 (sens)
+#static field points-to:      1 (sens)
+#instance field points-to:    208 (sens)
+#array points-to:             133 (sens)
+#reachable methods:           588 (insens) / 588 (sens)
+#call graph edges:            1012 (insens) / 1012 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.32s
+cg starts ...
+Call graph has 588 reachable methods and 1012 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.05s
+Tai-e finishes, elapsed time: 4.32s
