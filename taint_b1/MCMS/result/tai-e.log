@@ -1,0 +1,526 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.3
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+27552 classes with 241603 methods in the world
+WorldBuilder finishes, elapsed time: 22.15s
+ir-dumper starts ...
+Dumping IR in /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tir
+13554 classes in scope (APP) of class analyses
+ir-dumper finishes, elapsed time: 11.76s
+routerAnalysis starts ...
+Router analysis started at: 2026-02-28 21:29:30
+Router analysis completed at: 2026-02-28 21:29:30 (Duration: 6ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.01s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.02s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+resultAnalysis starts ...
+============================================================
+                 Spring Analysis Result Summary             
+============================================================
+Router Methods (Endpoints)     : 35
+Spring Beans                   : 91
+Aspect Methods (Advice)        : 7
+============================================================
+resultAnalysis finishes, elapsed time: 0.00s
+srfaAnalysis starts ...
+SRFA Analysis started at: 2026-02-28 21:29:30
+Loaded 9 controller classes from RouterAnalysis
+Discovering mapper paths from 16 appClassPath entries
+Auto-discovered 34 mapper path(s)
+  - /Users/yuntsy/My/Graduate/Data/final/MCMS/src/main/resources
+  - /Users/yuntsy/My/Graduate/Data/final/MCMS/src/main/java/net/mingsoft/cms/dao
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-4_0_4_1592488715000/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/javax_servlet-api-4_0_1_1532351392000/META-INF/maven/javax.servlet/javax.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-web-6_2_1_1733996318000/META-INF
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-jdbc-6_2_0_1731602316000/org/springframework/jdbc/support
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-6_0_0_1720887509497/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-context-6_2_0_1731602337000/org/springframework/remoting/rmi
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves/rewrite
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mbeans
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/deploy
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/webresources
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/loader
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/users
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/connector
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/authenticator
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/startup
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/realm
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/session
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-web-1_13_0_1699061658000/META-INF/maven/org.apache.shiro/shiro-web
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-core-1_13_0_1699061656000/META-INF/maven/org.apache.shiro/shiro-core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/org/quartz/impl/jdbcjobstore
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/META-INF/maven/org.quartz-scheduler/quartz
+Using 34 mapper search path(s):
+  - /Users/yuntsy/My/Graduate/Data/final/MCMS/src/main/resources
+  - /Users/yuntsy/My/Graduate/Data/final/MCMS/src/main/java/net/mingsoft/cms/dao
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-4_0_4_1592488715000/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/javax_servlet-api-4_0_1_1532351392000/META-INF/maven/javax.servlet/javax.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-web-6_2_1_1733996318000/META-INF
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-jdbc-6_2_0_1731602316000/org/springframework/jdbc/support
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-6_0_0_1720887509497/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-context-6_2_0_1731602337000/org/springframework/remoting/rmi
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves/rewrite
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mbeans
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/deploy
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/webresources
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/loader
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/users
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/connector
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/authenticator
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/startup
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/realm
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/session
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-web-1_13_0_1699061658000/META-INF/maven/org.apache.shiro/shiro-web
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-core-1_13_0_1699061656000/META-INF/maven/org.apache.shiro/shiro-core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/org/quartz/impl/jdbcjobstore
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/META-INF/maven/org.quartz-scheduler/quartz
+Parsed 3 MyBatis mapper files
+Parsed 3 MyBatis mapper files
+  Mapper namespace: net.mingsoft.cms.dao.ICmsHistoryLogDao
+    Operation: id=getEntity, type=select, hasDollar=false
+    Operation: id=getByEntity, type=select, hasDollar=false
+    Operation: id=query, type=select, hasDollar=false
+    Operation: id=deleteEntity, type=delete, hasDollar=false
+    Operation: id=delete, type=delete, hasDollar=false
+    Operation: id=updateEntity, type=update, hasDollar=false
+    Operation: id=saveEntity, type=insert, hasDollar=false
+  Mapper namespace: net.mingsoft.cms.dao.IContentDao
+    Operation: id=getEntity, type=select, hasDollar=false
+    Operation: id=getByEntity, type=select, hasDollar=false
+    Operation: id=queryContent, type=select, hasDollar=false
+    Operation: id=query, type=select, hasDollar=false
+    Operation: id=queryIdsByCategoryIdForParser, type=select, hasDollar=true
+      Risky var: ${{order}}
+    Operation: id=queryIdsByCategoryIdForParserAndNotCover, type=select, hasDollar=true
+      Risky var: ${{order}}
+    Operation: id=getSearchCount, type=select, hasDollar=true
+      Risky var: ${{tableName}}
+      Risky var: ${{item.key}}
+    Operation: id=deleteEntity, type=delete, hasDollar=false
+    Operation: id=deleteEntityByCategoryIds, type=delete, hasDollar=false
+    Operation: id=delete, type=delete, hasDollar=false
+    Operation: id=updateEntity, type=update, hasDollar=false
+    Operation: id=saveEntity, type=insert, hasDollar=false
+  Mapper namespace: net.mingsoft.cms.dao.ICategoryDao
+    Operation: id=getEntity, type=select, hasDollar=false
+    Operation: id=getByEntity, type=select, hasDollar=false
+    Operation: id=queryChildren, type=select, hasDollar=false
+    Operation: id=query, type=select, hasDollar=false
+    Operation: id=deleteEntity, type=delete, hasDollar=false
+    Operation: id=delete, type=delete, hasDollar=false
+    Operation: id=updateEntity, type=update, hasDollar=false
+Collected 49 write field names from INSERT/UPDATE operations
+Extracted 43 source metadata entries (before filtering)
+Resolving 3 mapper namespaces...
+  Namespace resolve: net.mingsoft.cms.dao.ICmsHistoryLogDao -> net.mingsoft.cms.dao.ICmsHistoryLogDao
+  Namespace resolve: net.mingsoft.cms.dao.IContentDao -> net.mingsoft.cms.dao.IContentDao
+  Namespace resolve: net.mingsoft.cms.dao.ICategoryDao -> net.mingsoft.cms.dao.ICategoryDao
+Extracted 5 sink metadata entries (deduplicated, before risk filtering)
+Sources: 43 generated, 0 filtered, 0 deduplicated
+Sinks: 5 generated (risky), 0 filtered (safe), 0 deduplicated
+  Note: 'risky' means uses string concatenation ($), 'safe' means uses prepared statement (#)
+Written taint config to: output/taint-config-generated.yml
+  Sources: 43 (SRFA param) + framework call sources
+  Sinks: 5 (SRFA) + common predefined sinks
+  Transfers: standard set included
+SRFA Analysis completed at: 2026-02-28 21:29:30 (Duration: 97ms)
+srfaAnalysis finishes, elapsed time: 0.10s
+pta starts ...
+Loading taint config from /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-config-generated.yml
+Cannot find source method '<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>'
+Cannot find source method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
+Cannot find source method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find source method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.Query createQuery(java.lang.String)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.SQLQuery createSQLQuery(java.lang.String)>'
+Cannot find sink method '<javax.servlet.ServletOutputStream: void write(byte[])>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void print(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void println(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void write(java.lang.String)>'
+Cannot find sink method '<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object getForObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity getForEntity(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object postForObject(java.lang.String,java.lang.Object,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class)>'
+Cannot find sink method '<org.springframework.ldap.core.LdapTemplate: java.util.List search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls,org.springframework.ldap.core.AttributesMapper)>'
+Cannot find sink method '<org.springframework.expression.ExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>'
+Cannot find sink method '<org.springframework.expression.spel.standard.SpelExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object getValue(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlExpression createExpression(java.lang.String)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlScript createScript(java.lang.String)>'
+Cannot find sink method '<freemarker.template.Template: void <init>(java.lang.String,java.io.Reader)>'
+Cannot find sink method '<org.apache.velocity.app.VelocityEngine: boolean evaluate(org.apache.velocity.context.Context,java.io.Writer,java.lang.String,java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parse(java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.lang.String)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.io.InputStream)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void info(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void warn(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void error(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void debug(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void fatal(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void info(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void warn(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void error(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void debug(java.lang.String)>'
+Cannot find sink method '<javax.servlet.http.HttpServletRequest: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>'
+Cannot find taint-transfer method '<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find taint-transfer method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
+Cannot find taint-transfer method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
+Cannot find taint-transfer method '<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>'
+Cannot find taint-transfer method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+TaintConfig:
+sources:
+  - { kind: "param", method: "<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData list(net.mingsoft.cms.bean.ContentBean)>", index: "0", type: "net.mingsoft.cms.bean.ContentBean" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.ContentAction: java.lang.String form(net.mingsoft.cms.entity.ContentEntity,org.springframework.ui.ModelMap)>", index: "0", type: "net.mingsoft.cms.entity.ContentEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData get(net.mingsoft.cms.entity.ContentEntity)>", index: "0", type: "net.mingsoft.cms.entity.ContentEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData getFromFengMian(net.mingsoft.cms.entity.ContentEntity)>", index: "0", type: "net.mingsoft.cms.entity.ContentEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData save(net.mingsoft.cms.entity.ContentEntity)>", index: "0", type: "net.mingsoft.cms.entity.ContentEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData delete(java.util.List)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData update(net.mingsoft.cms.entity.ContentEntity)>", index: "0", type: "net.mingsoft.cms.entity.ContentEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: java.lang.String index(jakarta.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)>", index: "0", type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData list(net.mingsoft.cms.entity.CategoryEntity)>", index: "0", type: "net.mingsoft.cms.entity.CategoryEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateIndex(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)>", index: "0", type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateIndex(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)>", index: "1", type: "jakarta.servlet.http.HttpServletResponse" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateColumn(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.String)>", index: "0", type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateColumn(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.String)>", index: "1", type: "jakarta.servlet.http.HttpServletResponse" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateColumn(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateArticle(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.String)>", index: "0", type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateArticle(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.String)>", index: "1", type: "jakarta.servlet.http.HttpServletResponse" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateArticle(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: java.lang.String viewIndex(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)>", index: "0", type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: java.lang.String viewIndex(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)>", index: "1", type: "jakarta.servlet.http.HttpServletResponse" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData delete(jakarta.servlet.http.HttpServletRequest)>", index: "0", type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.web.ContentAction: net.mingsoft.base.entity.ResultData list(jakarta.servlet.http.HttpServletResponse,jakarta.servlet.http.HttpServletRequest)>", index: "0", type: "jakarta.servlet.http.HttpServletResponse" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.web.ContentAction: net.mingsoft.base.entity.ResultData list(jakarta.servlet.http.HttpServletResponse,jakarta.servlet.http.HttpServletRequest)>", index: "1", type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.web.ContentAction: net.mingsoft.base.entity.ResultData get(net.mingsoft.cms.entity.ContentEntity)>", index: "0", type: "net.mingsoft.cms.entity.ContentEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.web.ContentAction: java.lang.String hit(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.web.MCmsAction: java.lang.String search(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)>", index: "0", type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.web.MCmsAction: java.lang.String search(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse)>", index: "1", type: "jakarta.servlet.http.HttpServletResponse" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.web.CategoryAction: net.mingsoft.base.entity.ResultData list(net.mingsoft.cms.entity.CategoryEntity)>", index: "0", type: "net.mingsoft.cms.entity.CategoryEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.web.CategoryAction: net.mingsoft.base.entity.ResultData get(net.mingsoft.cms.entity.CategoryEntity)>", index: "0", type: "net.mingsoft.cms.entity.CategoryEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.web.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.web.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>", index: "1", type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.web.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData list(net.mingsoft.cms.entity.CategoryEntity)>", index: "0", type: "net.mingsoft.cms.entity.CategoryEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.CategoryAction: java.lang.String form(net.mingsoft.cms.entity.CategoryEntity,org.springframework.ui.ModelMap)>", index: "0", type: "net.mingsoft.cms.entity.CategoryEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData get(net.mingsoft.cms.entity.CategoryEntity)>", index: "0", type: "net.mingsoft.cms.entity.CategoryEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData save(net.mingsoft.cms.entity.CategoryEntity)>", index: "0", type: "net.mingsoft.cms.entity.CategoryEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData delete(java.util.List)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData update(net.mingsoft.cms.entity.CategoryEntity)>", index: "0", type: "net.mingsoft.cms.entity.CategoryEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData verifyPingYin(net.mingsoft.cms.entity.CategoryEntity)>", index: "0", type: "net.mingsoft.cms.entity.CategoryEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData updateTemplate(net.mingsoft.cms.entity.CategoryEntity)>", index: "0", type: "net.mingsoft.cms.entity.CategoryEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData copyCategory(net.mingsoft.cms.entity.CategoryEntity)>", index: "0", type: "net.mingsoft.cms.entity.CategoryEntity" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>", index: "1", type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: "param", method: "<net.mingsoft.cms.action.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "call", method: "<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>", index: "result", type: "org.apache.shiro.subject.Subject" }
+  - { kind: "call", method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", index: "result", type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { kind: "call", method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>", index: "result", type: "java.security.Principal" }
+  - { kind: "call", method: "<java.security.Principal: java.lang.String getName()>", index: "result", type: "java.lang.String" }
+  - { kind: "call", method: "<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<java.lang.ThreadLocal: java.lang.Object get()>", index: "result", type: "java.lang.Object" }
+
+sinks:
+  - { method: "<net.mingsoft.cms.dao.IContentDao: java.util.List queryContent(net.mingsoft.cms.bean.ContentBean)>", index: "0" }
+  - { method: "<net.mingsoft.cms.dao.IContentDao: java.util.List queryIdsByCategoryIdForParser(net.mingsoft.cms.bean.ContentBean)>", index: "0" }
+  - { method: "<net.mingsoft.cms.dao.IContentDao: java.util.List queryIdsByCategoryIdForParserAndNotCover(net.mingsoft.cms.bean.ContentBean)>", index: "0" }
+  - { method: "<net.mingsoft.cms.dao.IContentDao: void deleteEntityByCategoryIds(java.lang.String[])>", index: "0" }
+  - { method: "<net.mingsoft.cms.dao.ICategoryDao: java.util.List queryChildren(net.mingsoft.cms.entity.CategoryEntity)>", index: "0" }
+  - { method: "<java.sql.Statement: java.sql.ResultSet executeQuery(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: int executeUpdate(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: boolean execute(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: void addBatch(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.CallableStatement prepareCall(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List query(java.lang.String,org.springframework.jdbc.core.RowMapper)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.lang.Object queryForObject(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int update(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int[] batchUpdate(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[],java.io.File)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.util.List)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.util.List)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<java.io.FileInputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileOutputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileReader: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileWriter: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.util.List readAllLines(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.nio.file.Path write(java.nio.file.Path,byte[],java.nio.file.OpenOption[])>", index: "0" }
+  - { method: "<java.io.PrintWriter: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void println(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void write(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.ServletOutputStream: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URL: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: java.net.URI create(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void sendRedirect(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.RequestDispatcher: void forward(javax.servlet.ServletRequest,javax.servlet.ServletResponse)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "1" }
+  - { method: "<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "0" }
+  - { method: "<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "1" }
+  - { method: "<javax.xml.xpath.XPath: java.lang.String evaluate(java.lang.String,java.lang.Object)>", index: "0" }
+  - { method: "<javax.xml.xpath.XPath: javax.xml.xpath.XPathExpression compile(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.io.InputStream)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.SAXParser: void parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler)>", index: "0" }
+  - { method: "<org.xml.sax.XMLReader: void parse(org.xml.sax.InputSource)>", index: "0" }
+  - { method: "<java.io.ObjectInputStream: void <init>(java.io.InputStream)>", index: "0" }
+  - { method: "<java.lang.Class: java.lang.Class forName(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.ClassLoader: java.lang.Class loadClass(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>", index: "1" }
+  - { method: "<javax.servlet.ServletContext: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.Cookie: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.Cookie: void setValue(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void addHeader(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void setHeader(java.lang.String,java.lang.String)>", index: "1" }
+
+transfers:
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int,int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(char,char)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String trim()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String strip()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripLeading()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripTrailing()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String intern()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(java.lang.Object)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(char[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.util.Locale,java.lang.String,java.lang.Object[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.CharSequence[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.Iterable)>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: char[] toCharArray()>", from: "base", to: "result", type: "char[]" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char[])>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(long)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.String)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.Object)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.util.Map: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.HashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.TreeMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.concurrent.ConcurrentHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.HashMap" }
+  - { method: "<java.util.Map: void putAll(java.util.Map)>", from: "0", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.Map: java.util.Collection values()>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<java.util.Map: java.util.Set entrySet()>", from: "base", to: "result", type: "java.util.Set" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getValue()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getKey()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ArrayList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.List" }
+  - { method: "<java.util.ArrayList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.ArrayList" }
+  - { method: "<java.util.LinkedList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.LinkedList" }
+  - { method: "<java.util.Collection: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.Collection" }
+  - { method: "<java.util.Iterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ListIterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElse(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElseGet(java.util.function.Supplier)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.util.Optional of(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.util.Optional: java.util.Optional ofNullable(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.lang.Object: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", from: "base", to: "result", type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.util.Collection fromRealm(java.lang.String)>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>", from: "1", to: "base", type: "javax.servlet.http.HttpSession" }
+  - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+
+Initializing global bean mock objects for beans...
+Initialized 65 global bean objects.
+Added entry point (Empty): <net.mingsoft.cms.action.ContentAction: java.lang.String index()>
+Added entry point (Empty): <net.mingsoft.cms.action.ContentAction: java.lang.String main()>
+No bean found for concrete class: net.mingsoft.mdiy.biz.IModelBiz
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData delete(java.util.List)>], Aspect: [net.mingsoft.cms.aop.ContentAop]
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData update(net.mingsoft.cms.entity.ContentEntity)>], Aspect: [net.mingsoft.cms.aop.ContentAop]
+No bean found for concrete class: org.slf4j.Logger
+No bean found for concrete class: org.slf4j.Logger
+No bean found for concrete class: net.mingsoft.mdiy.biz.IModelBiz
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.web.ContentAction: net.mingsoft.base.entity.ResultData get(net.mingsoft.cms.entity.ContentEntity)>], Aspect: [net.mingsoft.cms.aop.ContentAop]
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+No bean found for concrete class: net.mingsoft.config.MSProperties
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.web.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>], Aspect: [net.mingsoft.cms.aop.EditorFileVerifyAop]
+Added entry point (Empty): <net.mingsoft.cms.action.CategoryAction: java.lang.String index()>
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData save(net.mingsoft.cms.entity.CategoryEntity)>], Aspect: [net.mingsoft.cms.aop.CategoryAop]
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData delete(java.util.List)>], Aspect: [net.mingsoft.cms.aop.CategoryAop]
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData update(net.mingsoft.cms.entity.CategoryEntity)>], Aspect: [net.mingsoft.cms.aop.CategoryAop]
+Added entry point (Empty): <net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData changeType()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+No bean found for concrete class: net.mingsoft.config.MSProperties
+>>> AOP Match Found! Method: [<net.mingsoft.cms.action.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>], Aspect: [net.mingsoft.cms.aop.EditorFileVerifyAop]
+Initializing global aspect mock objects...
+No bean found for concrete class: net.mingsoft.mdiy.biz.ITagBiz
+[Pointer analysis] elapsed time: 0.14s
+Detected 1 taint flow(s):
+TaintFlow{<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData list(net.mingsoft.cms.bean.ContentBean)>/0 -> <net.mingsoft.cms.biz.impl.ContentBizImpl: java.util.List queryContent(net.mingsoft.cms.bean.ContentBean)>[1@L87] $r3 = invokeinterface $r2.queryContent(contentBean)/0}
+TFGDumper starts ...
+Source nodes:
+VarNode{<net.mingsoft.cms.action.ContentAction: java.lang.String form(net.mingsoft.cms.entity.ContentEntity,org.springframework.ui.ModelMap)>/content}
+VarNode{<net.mingsoft.cms.action.web.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>/version}
+VarNode{<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData save(net.mingsoft.cms.entity.ContentEntity)>/content}
+VarNode{<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData delete(java.util.List)>/contents}
+VarNode{<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData list(net.mingsoft.cms.entity.CategoryEntity)>/category}
+VarNode{<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData delete(java.util.List)>/categorys}
+VarNode{<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateColumn(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.String)>/request}
+VarNode{<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData get(net.mingsoft.cms.entity.CategoryEntity)>/category}
+VarNode{<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData list(net.mingsoft.cms.bean.ContentBean)>/content}
+VarNode{<net.mingsoft.cms.action.web.ContentAction: java.lang.String hit(java.lang.String)>/contentId}
+VarNode{<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateArticle(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.String)>/request}
+VarNode{<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData update(net.mingsoft.cms.entity.ContentEntity)>/content}
+VarNode{<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData save(net.mingsoft.cms.entity.CategoryEntity)>/category}
+VarNode{<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData list(net.mingsoft.cms.entity.CategoryEntity)>/category}
+VarNode{<net.mingsoft.cms.action.web.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>/request}
+VarNode{<net.mingsoft.cms.action.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>/version}
+VarNode{<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateColumn(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.String)>/response}
+VarNode{<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData get(net.mingsoft.cms.entity.ContentEntity)>/content}
+VarNode{<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData copyCategory(net.mingsoft.cms.entity.CategoryEntity)>/category}
+VarNode{<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData update(net.mingsoft.cms.entity.CategoryEntity)>/category}
+VarNode{<net.mingsoft.cms.action.CategoryAction: java.lang.String form(net.mingsoft.cms.entity.CategoryEntity,org.springframework.ui.ModelMap)>/category}
+VarNode{<net.mingsoft.cms.action.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>/request}
+VarNode{<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData verifyPingYin(net.mingsoft.cms.entity.CategoryEntity)>/category}
+VarNode{<net.mingsoft.cms.action.web.ContentAction: net.mingsoft.base.entity.ResultData get(net.mingsoft.cms.entity.ContentEntity)>/content}
+VarNode{<net.mingsoft.cms.action.web.CategoryAction: net.mingsoft.base.entity.ResultData list(net.mingsoft.cms.entity.CategoryEntity)>/category}
+VarNode{<net.mingsoft.cms.action.web.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>/upfile}
+VarNode{<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateArticle(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.String)>/columnId}
+VarNode{<net.mingsoft.cms.action.EditorAction: java.lang.String editor(org.springframework.web.multipart.MultipartFile,jakarta.servlet.http.HttpServletRequest,java.lang.String)>/upfile}
+VarNode{<net.mingsoft.cms.action.GeneraterAction: java.lang.String index(jakarta.servlet.http.HttpServletRequest,org.springframework.ui.ModelMap)>/request}
+VarNode{<net.mingsoft.cms.action.ContentAction: net.mingsoft.base.entity.ResultData getFromFengMian(net.mingsoft.cms.entity.ContentEntity)>/content}
+VarNode{<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateColumn(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.String)>/categoryId}
+VarNode{<net.mingsoft.cms.action.web.CategoryAction: net.mingsoft.base.entity.ResultData get(net.mingsoft.cms.entity.CategoryEntity)>/category}
+VarNode{<net.mingsoft.cms.action.GeneraterAction: net.mingsoft.base.entity.ResultData generateArticle(jakarta.servlet.http.HttpServletRequest,jakarta.servlet.http.HttpServletResponse,java.lang.String)>/response}
+VarNode{<net.mingsoft.cms.action.CategoryAction: net.mingsoft.base.entity.ResultData updateTemplate(net.mingsoft.cms.entity.CategoryEntity)>/category}
+Sink nodes:
+VarNode{<net.mingsoft.cms.biz.impl.ContentBizImpl: java.util.List queryContent(net.mingsoft.cms.bean.ContentBean)>/contentBean}
+Dumping /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-flow-graph.dot
+TFGDumper finishes, elapsed time: 0.02s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                3168 (insens) / 3168 (sens)
+#objects:                     1030 (insens) / 1030 (sens)
+#var points-to:               4183 (insens) / 4183 (sens)
+#static field points-to:      74 (sens)
+#instance field points-to:    1350 (sens)
+#array points-to:             115 (sens)
+#reachable methods:           482 (insens) / 482 (sens)
+#call graph edges:            1195 (insens) / 1195 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.32s
+cg starts ...
+Call graph has 482 reachable methods and 1195 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.04s
+Tai-e finishes, elapsed time: 34.50s

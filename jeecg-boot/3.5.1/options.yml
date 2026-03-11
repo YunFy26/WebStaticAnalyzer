@@ -1,0 +1,35 @@
+optionsFile: null
+printHelp: false
+classPath: []
+appClassPath:
+  - /Users/yuntsy/My/Graduate/Data/taint/JeecgBoot-3.5.1/jeecg-boot-base-core/target/classes
+  - /Users/yuntsy/My/Graduate/Data/taint/JeecgBoot-3.5.1/jeecg-module-demo/target/classes
+  - /Users/yuntsy/My/Graduate/Data/taint/JeecgBoot-3.5.1/jeecg-module-system/jeecg-system-api/jeecg-system-cloud-api/target
+  - /Users/yuntsy/My/Graduate/Data/taint/JeecgBoot-3.5.1/jeecg-module-system/jeecg-system-api/jeecg-system-local-api/target/classes
+  - /Users/yuntsy/My/Graduate/Data/taint/JeecgBoot-3.5.1/jeecg-module-system/jeecg-system-biz/target/classes
+  - /Users/yuntsy/My/Graduate/Data/taint/JeecgBoot-3.5.1/jeecg-module-system/jeecg-system-start/target/classes
+mainClass:
+inputClasses: []
+javaVersion: 17
+prependJVM: true
+allowPhantom: true
+worldBuilderClass: pascal.taie.frontend.soot.SootWorldBuilder
+outputDir: output
+preBuildIR: false
+worldCacheMode: false
+scope: APP
+nativeModel: true
+planFile: null
+analyses:
+  ir-dumper: ""
+  routerAnalysis: ""
+  beanAnalysis: ""
+  injectPointsAnalysis: ""
+  aspectAnalysis: ""
+  resultAnalysis: ""
+  cg: ""
+  srfaAnalysis: "mapper-paths:;output-path:output/taint-config-generated.yml"
+  pta: "plugins:[org.example.spring.plugin.ProcessDIPlugin,org.example.spring.plugin.ProcessEntryPlugin,org.example.spring.plugin.ProcessAspectPlugin]"
+onlyGenPlan: false
+keepResult:
+  - $KEEP-ALL

@@ -20,4 +20,6 @@ src/test/
 
 /configs/http_ca.crt
 /configs/vulns.json
+/configs/benchmarks
+/configs/jasmine_marks
 

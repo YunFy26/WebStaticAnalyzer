@@ -1,22 +1,13 @@
 optionsFile: null
 printHelp: false
-# WebGoat libs
 classPath: []
 appClassPath:
-  - benchmarks/basemall/gruul-account-open-service/BOOT-INF/gruul-account-open-service.jar
-  - benchmarks/basemall/gruul-afs-open-service/BOOT-INF/gruul-afs-open-service.jar
-  - benchmarks/basemall/gruul-gateway-open/BOOT-INF/gruul-gateway-open.jar
-  - benchmarks/basemall/gruul-goods-open-service/BOOT-INF/gruul-goods-open-service.jar
-  - benchmarks/basemall/gruul-logistics-open/BOOT-INF/gruul-logistics-open.jar
-  - benchmarks/basemall/gruul-order-open-service/BOOT-INF/gruul-order-open-service.jar
-  - benchmarks/basemall/gruul-oss-open-service/BOOT-INF/gruul-oss-open-service.jar
-  - benchmarks/basemall/gruul-payment-open-service/BOOT-INF/gruul-payment-open-service.jar
-  - benchmarks/basemall/gruul-platform-open-service/BOOT-INF/gruul-platform-open-service.jar
-  - benchmarks/basemall/gruul-shops-open-service/BOOT-INF/gruul-shops-open-service.jar
-  - benchmarks/basemall/gruul-sms-open-service/BOOT-INF/gruul-sms-open-service.jar
-
-
-
+  - /Users/yuntsy/My/Graduate/Data/taint/JeecgBoot-3.4.3/jeecg-boot-base-core/target/classes
+  - /Users/yuntsy/My/Graduate/Data/taint/JeecgBoot-3.4.3/jeecg-module-demo/target/classes
+  - /Users/yuntsy/My/Graduate/Data/taint/JeecgBoot-3.4.3/jeecg-module-system/jeecg-system-api/jeecg-system-cloud-api/target
+  - /Users/yuntsy/My/Graduate/Data/taint/JeecgBoot-3.4.3/jeecg-module-system/jeecg-system-api/jeecg-system-local-api/target/classes
+  - /Users/yuntsy/My/Graduate/Data/taint/JeecgBoot-3.4.3/jeecg-module-system/jeecg-system-biz/target/classes
+  - /Users/yuntsy/My/Graduate/Data/taint/JeecgBoot-3.4.3/jeecg-module-system/jeecg-system-start/target/classes
 
 mainClass:
 inputClasses: []
@@ -31,7 +22,7 @@ scope: APP
 nativeModel: true
 planFile: null
 analyses:
-  ir-dumper: ""
+#  ir-dumper: ""
   routerAnalysis: ""
   beanAnalysis: ""
   injectPointsAnalysis: ""

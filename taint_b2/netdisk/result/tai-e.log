@@ -8,24 +8,21 @@ os.name: Mac OS X
 os.version: 26.3
 os.arch: aarch64
 Tai-e Version: 0.5.1
-Tai-e Commit: a086cc6200102f74b303a2cb800dad4e1b8b3af5
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
 Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
 WorldBuilder starts ...
 Warning: main class was not given!
-10614 classes with 101672 methods in the world
-WorldBuilder finishes, elapsed time: 2.73s
-ir-dumper starts ...
-Dumping IR in /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tir
-356 classes in scope (APP) of class analyses
-ir-dumper finishes, elapsed time: 0.35s
+17863 classes with 169461 methods in the world
+WorldBuilder finishes, elapsed time: 14.62s
 routerAnalysis starts ...
-Router analysis started at: 2026-02-27 20:04:46
-Router analysis completed at: 2026-02-27 20:04:46 (Duration: 4ms)
+Router analysis started at: 2026-03-03 14:12:53
+Router analysis completed at: 2026-03-03 14:12:53 (Duration: 6ms)
 routerAnalysis finishes, elapsed time: 0.01s
 beanAnalysis starts ...
-beanAnalysis finishes, elapsed time: 0.00s
+beanAnalysis finishes, elapsed time: 0.03s
 injectPointsAnalysis starts ...
-injectPointsAnalysis finishes, elapsed time: 0.00s
+injectPointsAnalysis finishes, elapsed time: 0.05s
 aspectAnalysis starts ...
 Starting AOP aspect analysis...
 aspectAnalysis finishes, elapsed time: 0.00s
@@ -34,83 +31,89 @@ resultAnalysis starts ...
                  Spring Analysis Result Summary             
 ============================================================
 Router Methods (Endpoints)     : 116
-Spring Beans                   : 225
+Spring Beans                   : 269
 Aspect Methods (Advice)        : 13
 ============================================================
 resultAnalysis finishes, elapsed time: 0.00s
 srfaAnalysis starts ...
-SRFA Analysis started at: 2026-02-27 20:04:46
-Loaded 28 controller classes from RouterAnalysis
+SRFA Analysis started at: 2026-03-03 14:12:53
+Loaded 29 controller classes from RouterAnalysis
 Discovering mapper paths from 6 appClassPath entries
-Extracting XML from fat jar: netdisk-client-provider.jar
-Extracted 0 XML files from netdisk-client-provider.jar
-Extracting XML from fat jar: netdisk-log-provider.jar
-Extracted 0 XML files from netdisk-log-provider.jar
-Extracting XML from fat jar: netdisk-service-provider.jar
-Extracted 0 XML files from netdisk-service-provider.jar
-Extracted 2 XML files (plain jar) from netdisk-service-provider.jar
-Extracting XML from fat jar: netdisk-user-provider.jar
-Extracted 0 XML files from netdisk-user-provider.jar
-Extracting XML from fat jar: netdisk-web-manage.jar
-Extracted 0 XML files from netdisk-web-manage.jar
-Extracted 2 XML files (plain jar) from netdisk-web-manage.jar
-Extracting XML from fat jar: netdisk-web-perpc.jar
-Extracted 0 XML files from netdisk-web-perpc.jar
-Extracted 1 XML files (plain jar) from netdisk-web-perpc.jar
-Auto-discovered 3 mapper path(s)
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/netdisk-service-provider_1731057260000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/netdisk-web-manage_1731057260000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/netdisk-web-perpc_1731057260000
-Using 3 mapper search path(s):
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/netdisk-service-provider_1731057260000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/netdisk-web-manage_1731057260000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/netdisk-web-perpc_1731057260000
+Auto-discovered 0 mapper path(s)
+No MyBatis mapper paths found. Sink config will be empty.
 Parsed 0 MyBatis mapper files
 Parsed 0 MyBatis mapper files
 Collected 0 write field names from INSERT/UPDATE operations
 Extracted 244 source metadata entries (before filtering)
 Resolving 0 mapper namespaces...
 Extracted 0 sink metadata entries (deduplicated, before risk filtering)
-Sources: 244 generated, 0 filtered, 0 deduplicated
+Sources: 0 generated, 244 filtered, 0 deduplicated
 Sinks: 0 generated (risky), 0 filtered (safe), 0 deduplicated
   Note: 'risky' means uses string concatenation ($), 'safe' means uses prepared statement (#)
 Written taint config to: output/taint-config-generated.yml
-  Sources: 244 (SRFA param) + framework call sources
-  Sinks: 0
+  Sources: 0 (SRFA param) + framework call sources
+  Sinks: 0 (SRFA) + common predefined sinks
   Transfers: standard set included
-SRFA Analysis completed at: 2026-02-27 20:04:46 (Duration: 52ms)
-srfaAnalysis finishes, elapsed time: 0.05s
+SRFA Analysis completed at: 2026-03-03 14:12:54 (Duration: 10ms)
+srfaAnalysis finishes, elapsed time: 0.01s
 pta starts ...
 Loading taint config from /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-config-generated.yml
-Ignore {"method":"<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>","type":"org.apache.shiro.subject.Subject"} due to missing source "kind"
-Ignore {"method":"<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>","type":"org.apache.shiro.subject.PrincipalCollection"} due to missing source "kind"
-Ignore {"method":"<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>","type":"org.springframework.security.core.context.SecurityContext"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>","type":"org.springframework.security.core.Authentication"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.Object getDetails()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.String getName()>","type":"java.lang.String"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>","type":"java.util.Collection"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>","type":"java.lang.String"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>","type":"javax.servlet.http.HttpSession"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>","type":"javax.servlet.http.HttpSession"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>","type":"java.security.Principal"} due to missing source "kind"
-Ignore {"method":"<java.security.Principal: java.lang.String getName()>","type":"java.lang.String"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<java.lang.ThreadLocal: java.lang.Object get()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<java.lang.InheritableThreadLocal: java.lang.Object get()>","type":"java.lang.Object"} due to missing source "kind"
+Cannot find source method '<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>'
+Cannot find source method '<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>'
+Cannot find source method '<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>'
+Cannot find source method '<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>'
+Cannot find source method '<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>'
+Cannot find source method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
+Cannot find source method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find source method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.Query createQuery(java.lang.String)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.SQLQuery createSQLQuery(java.lang.String)>'
+Cannot find sink method '<javax.servlet.ServletOutputStream: void write(byte[])>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void print(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void println(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void write(java.lang.String)>'
+Cannot find sink method '<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object getForObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity getForEntity(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object postForObject(java.lang.String,java.lang.Object,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class)>'
+Cannot find sink method '<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>'
+Cannot find sink method '<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>'
+Cannot find sink method '<org.springframework.ldap.core.LdapTemplate: java.util.List search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls,org.springframework.ldap.core.AttributesMapper)>'
+Cannot find sink method '<javax.xml.xpath.XPath: java.lang.String evaluate(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<javax.xml.xpath.XPath: javax.xml.xpath.XPathExpression compile(java.lang.String)>'
+Cannot find sink method '<org.springframework.expression.spel.standard.SpelExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object getValue(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlExpression createExpression(java.lang.String)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlScript createScript(java.lang.String)>'
+Cannot find sink method '<freemarker.template.Template: void <init>(java.lang.String,java.io.Reader)>'
+Cannot find sink method '<org.apache.velocity.app.VelocityEngine: boolean evaluate(org.apache.velocity.context.Context,java.io.Writer,java.lang.String,java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parse(java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.lang.String)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.io.InputStream)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void info(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void warn(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void error(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void debug(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void fatal(java.lang.String)>'
+Cannot find sink method '<javax.servlet.http.HttpServletRequest: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>'
 Cannot find taint-transfer method '<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>'
 Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>'
 Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>'
 Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>'
 Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
 Cannot find taint-transfer method '<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>'
@@ -124,256 +127,80 @@ Cannot find taint-transfer method '<org.springframework.security.core.Authentica
 Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
 Cannot find taint-transfer method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
 Cannot find taint-transfer method '<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>'
 Cannot find taint-transfer method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
 TaintConfig:
 sources:
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result checkFileByMd5(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result checkFileByMd5(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)>", index: "4", type: "long" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)>", index: "5", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>", index: "3", type: "long" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>", index: "4", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>", index: "5", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>", index: "6", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>", index: "7", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>", index: "8", type: "java.lang.Boolean" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>", index: "9", type: "java.lang.Boolean" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result fileHasBreak(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result fileHasBreak(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result fileHasBreak(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result fileHasBreak(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result findPageFiles(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result findPageFiles(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result findPageFiles(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result findPageFiles(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result findFilesByBusinessId(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result findFilesByBusinessId(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result findFilesByBusissIdAndType(java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result findFilesByBusissIdAndType(java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result findFilesByBusissIdAndType(java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result delete(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result delete(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result getChunkStorepathList(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result getChunkStorepathList(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: void getBytesByStorepath(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: void getBytesByStorepath(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result findPersonalFiles(java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result findPersonalFiles(java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result findPersonalFiles(java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mkdirInPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mkdirInPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mkdirInPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mkdirInPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result mkdirInPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "4", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result saveToPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result saveToPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result saveToPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result saveToPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result saveToPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "4", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result saveToApplNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result saveToApplNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result saveToApplNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result saveToApplNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result saveToApplNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "4", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.client.controller.FileController: com.micro.common.Result saveToApplNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "5", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "com.micro.model.PageInfo" }
-  - { kind: "param", method: "<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "4", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "5", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "6", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "7", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.controller.AdminController: com.micro.model.Result findDetail(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.controller.CollectController: void collectLog(com.micro.model.LogInfo)>", index: "0", type: "com.micro.model.LogInfo" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppController: com.micro.disk.bean.PageInfo findListByAppid(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppController: com.micro.disk.bean.PageInfo findListByAppid(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppController: com.micro.disk.bean.PageInfo findListByAppid(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppController: com.micro.common.Result findOne(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppController: com.micro.common.Result save(com.micro.disk.bean.AppBean,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.AppBean" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppController: com.micro.common.Result update(com.micro.disk.bean.AppBean)>", index: "0", type: "com.micro.disk.bean.AppBean" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppController: com.micro.common.Result delete(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppFileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppFileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppFileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.AppFileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.manage.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.FileController: void download(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.FileController: void download(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.LoginController: com.micro.common.Result login(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.LoginController: com.micro.common.Result login(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.LoginController: com.micro.common.Result logout(java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.MenuController: com.micro.common.Result findMenus(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeComponentController: com.micro.common.Result findOne(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeComponentController: com.micro.common.Result save(com.micro.disk.bean.TypeComponentBean,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.TypeComponentBean" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeComponentController: com.micro.common.Result update(com.micro.disk.bean.TypeComponentBean)>", index: "0", type: "com.micro.disk.bean.TypeComponentBean" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeComponentController: com.micro.common.Result delete(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.disk.bean.PageInfo findTypeSuffix(com.micro.disk.bean.PageInfo,java.lang.String)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.disk.bean.PageInfo findTypeSuffix(com.micro.disk.bean.PageInfo,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result findTypeSuffixOne(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result findOperateBySuffix(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>", index: "4", type: "org.springframework.web.multipart.MultipartFile" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>", index: "5", type: "org.springframework.web.multipart.MultipartFile" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>", index: "4", type: "org.springframework.web.multipart.MultipartFile" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>", index: "5", type: "org.springframework.web.multipart.MultipartFile" }
-  - { kind: "param", method: "<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result delete(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.UserController: com.micro.disk.user.bean.Page findList(com.micro.disk.user.bean.Page,java.lang.String,java.lang.String)>", index: "0", type: "com.micro.disk.user.bean.Page" }
-  - { kind: "param", method: "<com.micro.manage.controller.UserController: com.micro.disk.user.bean.Page findList(com.micro.disk.user.bean.Page,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.UserController: com.micro.disk.user.bean.Page findList(com.micro.disk.user.bean.Page,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.UserController: com.micro.disk.bean.PageInfo findUserHistoryCapacity(com.micro.disk.bean.PageInfo,java.lang.String)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.manage.controller.UserController: com.micro.disk.bean.PageInfo findUserHistoryCapacity(com.micro.disk.bean.PageInfo,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.UserController: com.micro.common.Result saveCapacity(java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.manage.controller.UserController: com.micro.common.Result saveCapacity(java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.Long" }
-  - { kind: "param", method: "<com.micro.manage.controller.UserController: com.micro.common.Result saveCapacity(java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.disk.bean.PageInfo findPageList(com.micro.disk.bean.PageInfo,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.disk.bean.PageInfo findPageList(com.micro.disk.bean.PageInfo,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result addAlbum(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result addAlbum(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result findOne(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result deleteAlbum(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result deleteAlbumCascade(java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result updateAlbum(java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result updateAlbum(java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result updateAlbum(java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.disk.bean.PageInfo findInAlbumImg(com.micro.disk.bean.PageInfo,java.lang.String)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.disk.bean.PageInfo findInAlbumImg(com.micro.disk.bean.PageInfo,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.disk.bean.PageInfo findNotInAlbumImg(com.micro.disk.bean.PageInfo,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result setImgToAlbum(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result setImgToAlbum(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result removeImgOutAlbum(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result removeImgOutAlbum(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result moveImgToAlbum(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result moveImgToAlbum(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result setAlbumCover(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result setAlbumCover(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result deleteAlbumCover(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result addFolder(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result addFolder(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findOne(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findFolderProp(java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.disk.bean.PageInfo findEditHistory(com.micro.disk.bean.PageInfo,java.lang.String)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.disk.bean.PageInfo findEditHistory(com.micro.disk.bean.PageInfo,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result rename(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result rename(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result delete(java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findFolderTree(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findFolderTree(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findFolderList(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findFolderList(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result copyTo(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result copyTo(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result moveTo(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result moveTo(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findParentListByPid(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findParentListById(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findUserTree(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findUserTree(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareSecret(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareSecret(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareSecret(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "2", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareSecret(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "3", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareSecret(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "4", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareFriends(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareFriends(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareFriends(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareFriends(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "3", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo search(com.micro.disk.bean.PageInfo,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo search(com.micro.disk.bean.PageInfo,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findListCard(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findListCard(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findListCard(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findListCard(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "3", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "4", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "5", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "6", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileController: com.micro.common.Result findTypeList(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileDownloadController: void download(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileDownloadController: com.micro.common.Result getDownloadInfo(java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileDownloadController: com.micro.common.Result mergeFiles(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileDownloadController: com.micro.common.Result mergeFiles(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileDownloadController: com.micro.common.Result mergeFiles(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileDownloadController: void downloadZip(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileDownloadController: void downloadZip(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileEditController: com.micro.common.Result editFile(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileEditController: com.micro.common.Result editFile(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileEditController: com.micro.common.Result addFile(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileEditController: com.micro.common.Result addFile(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileEditController: com.micro.common.Result addFile(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileOpenController: com.micro.common.Result findComponentsBySuffix(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileOpenController: void previewThumbnail(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileOpenController: void writeByte(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileOpenController: void writeByte(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileOpenController: com.micro.common.Result writeTextStr(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileOpenController: com.micro.common.Result writeTextStr(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileOpenController: com.micro.common.Result writeTextStrByMd5(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileOpenController: com.micro.common.Result writeTextStrByMd5(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileUploadController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,com.micro.perpc.pojo.ChunkPojo,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileUploadController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,com.micro.perpc.pojo.ChunkPojo,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "1", type: "com.micro.perpc.pojo.ChunkPojo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileUploadController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,com.micro.perpc.pojo.ChunkPojo,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileUploadController: com.micro.common.Result checkFile(java.lang.String,long)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileUploadController: com.micro.common.Result checkFile(java.lang.String,long)>", index: "1", type: "long" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileUploadController: com.micro.common.Result checkChunk(java.lang.String,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileUploadController: com.micro.common.Result checkChunk(java.lang.String,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.micro.perpc.controller.FileUploadController: com.micro.common.Result mergeChunk(com.micro.disk.bean.MergeFileBean,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.MergeFileBean" }
-  - { kind: "param", method: "<com.micro.perpc.controller.LoginController: com.micro.common.Result login(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.LoginController: com.micro.common.Result login(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.LoginController: com.micro.common.Result logout(java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.MenuController: com.micro.common.Result findMenus(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.NoticeController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.RubbishController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.RubbishController: com.micro.common.Result delete(java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.RubbishController: com.micro.common.Result recover(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.RubbishController: com.micro.common.Result recover(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareByFriendsController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareByFriendsController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareByFriendsController: com.micro.common.Result findShareList(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareByFriendsController: com.micro.common.Result findShareList(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareBySelfController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "0", type: "com.micro.disk.bean.PageInfo" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareBySelfController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareBySelfController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>", index: "2", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareBySelfController: com.micro.common.Result findShareList(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareBySelfController: com.micro.common.Result findShareList(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareBySelfController: com.micro.common.Result findFriends(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareBySelfController: com.micro.common.Result cancelShare(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result findShareInfo(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result validateCode(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result validateCode(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result findShareList(java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result findShareList(java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result findShareList(java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result saveFromShare(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result saveFromShare(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result saveFromShare(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>", index: "2", type: "java.lang.String" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>", index: "result", type: "java.security.Principal" }
+  - { kind: "call", method: "<java.security.Principal: java.lang.String getName()>", index: "result", type: "java.lang.String" }
+  - { kind: "call", method: "<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<java.lang.ThreadLocal: java.lang.Object get()>", index: "result", type: "java.lang.Object" }
+
+sinks:
+  - { method: "<java.sql.Statement: java.sql.ResultSet executeQuery(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: int executeUpdate(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: boolean execute(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: void addBatch(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.CallableStatement prepareCall(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List query(java.lang.String,org.springframework.jdbc.core.RowMapper)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.lang.Object queryForObject(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int update(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int[] batchUpdate(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[],java.io.File)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.util.List)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.util.List)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<java.io.FileInputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileOutputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileReader: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileWriter: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.util.List readAllLines(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.nio.file.Path write(java.nio.file.Path,byte[],java.nio.file.OpenOption[])>", index: "0" }
+  - { method: "<java.io.PrintWriter: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void println(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void write(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.ServletOutputStream: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URL: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: java.net.URI create(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void sendRedirect(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.RequestDispatcher: void forward(javax.servlet.ServletRequest,javax.servlet.ServletResponse)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "1" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.io.InputStream)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.SAXParser: void parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler)>", index: "0" }
+  - { method: "<org.xml.sax.XMLReader: void parse(org.xml.sax.InputSource)>", index: "0" }
+  - { method: "<org.springframework.expression.ExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>", index: "0" }
+  - { method: "<java.io.ObjectInputStream: void <init>(java.io.InputStream)>", index: "0" }
+  - { method: "<com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.slf4j.Logger: void info(java.lang.String)>", index: "0" }
+  - { method: "<org.slf4j.Logger: void warn(java.lang.String)>", index: "0" }
+  - { method: "<org.slf4j.Logger: void error(java.lang.String)>", index: "0" }
+  - { method: "<org.slf4j.Logger: void debug(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.Class: java.lang.Class forName(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.ClassLoader: java.lang.Class loadClass(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>", index: "1" }
+  - { method: "<javax.servlet.ServletContext: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.Cookie: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.Cookie: void setValue(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void addHeader(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void setHeader(java.lang.String,java.lang.String)>", index: "1" }
 
 transfers:
   - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
@@ -446,22 +273,23 @@ transfers:
   - { method: "<java.util.Optional: java.util.Optional of(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
   - { method: "<java.util.Optional: java.util.Optional ofNullable(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
   - { method: "<java.lang.Object: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>", from: "1", to: "base", type: "javax.servlet.http.HttpSession" }
   - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
 
 Initializing global bean mock objects for beans...
-Initialized 203 global bean objects.
+Initialized 234 global bean objects.
 Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
 Added entry point (Empty): <com.micro.controller.AdminController: com.micro.model.Result findProject()>
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 >>> AOP Match Found! Method: [<com.micro.manage.controller.FileController: void download(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>], Aspect: [com.micro.manage.aop.AllowDownloadAop]
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 Added entry point (Empty): <com.micro.manage.controller.TypeComponentController: com.micro.common.Result findList()>
 >>> AOP Match Found! Method: [<com.micro.manage.controller.TypeComponentController: com.micro.common.Result save(com.micro.disk.bean.TypeComponentBean,javax.servlet.http.HttpServletRequest)>], Aspect: [com.micro.manage.aop.AllowOperateAop]
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 >>> AOP Match Found! Method: [<com.micro.manage.controller.TypeComponentController: com.micro.common.Result update(com.micro.disk.bean.TypeComponentBean)>], Aspect: [com.micro.manage.aop.AllowOperateAop]
 >>> AOP Match Found! Method: [<com.micro.manage.controller.TypeComponentController: com.micro.common.Result delete(java.lang.String)>], Aspect: [com.micro.manage.aop.AllowOperateAop]
 Added entry point (Empty): <com.micro.manage.controller.TypeController: com.micro.common.Result init()>
@@ -474,351 +302,69 @@ Concrete class not found for type: org.springframework.web.multipart.support.Sta
 Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
 Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
 >>> AOP Match Found! Method: [<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result delete(java.lang.String)>], Aspect: [com.micro.manage.aop.AllowOperateAop]
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 >>> AOP Match Found! Method: [<com.micro.perpc.controller.FileDownloadController: void download(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>], Aspect: [com.micro.perpc.aop.AllowDownloadAop]
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 >>> AOP Match Found! Method: [<com.micro.perpc.controller.FileDownloadController: com.micro.common.Result mergeFiles(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>], Aspect: [com.micro.perpc.aop.AllowDownloadAop]
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 Added entry point (Empty): <com.micro.perpc.controller.FileEditController: com.micro.common.Result editOffice()>
 Added entry point (Empty): <com.micro.perpc.controller.FileEditController: com.micro.common.Result addOffice()>
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
 >>> AOP Match Found! Method: [<com.micro.perpc.controller.FileOpenController: void writeByte(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>], Aspect: [com.micro.perpc.aop.AllowPreviewAop]
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
 Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
 >>> AOP Match Found! Method: [<com.micro.perpc.controller.FileUploadController: com.micro.common.Result checkFile(java.lang.String,long)>], Aspect: [com.micro.perpc.aop.FileCheckAop]
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 >>> AOP Match Found! Method: [<com.micro.perpc.controller.FileUploadController: com.micro.common.Result mergeChunk(com.micro.disk.bean.MergeFileBean,javax.servlet.http.HttpServletRequest)>], Aspect: [com.micro.perpc.aop.FileMergeAop]
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 Initializing global aspect mock objects...
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
-No bean found for concrete class: com.micro.common.json.JsonUtils
-No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
-No bean found for concrete class: com.micro.store.context.StoreContext
-No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
-No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
-No bean found for concrete class: com.micro.search.context.SearchContext
-No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
-No bean found for concrete class: com.micro.common.json.JsonUtils
-No bean found for concrete class: com.micro.office.preview.PreviewContext
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
-No bean found for concrete class: com.micro.common.json.JsonUtils
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
 No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
 No bean found for concrete class: org.springframework.jdbc.core.JdbcTemplate
+No bean found for concrete class: com.fasterxml.jackson.core.JsonFactory
+No bean found for concrete class: com.fasterxml.jackson.databind.SerializationConfig
+No bean found for concrete class: com.fasterxml.jackson.core.JsonFactory
+No bean found for concrete class: com.fasterxml.jackson.core.JsonFactory
+No bean found for concrete class: com.fasterxml.jackson.databind.SerializationConfig
+No bean found for concrete class: com.fasterxml.jackson.databind.DeserializationConfig
 >>> AOP Match Found! Method: [<com.micro.lock.LockZookeeper: void getLock(java.lang.String)>], Aspect: [com.micro.lock.LockAop]
-[Pointer analysis] elapsed time: 0.20s
+No bean found for concrete class: com.fasterxml.jackson.databind.DeserializationConfig
+No subclass found for abstract class: com.fasterxml.jackson.databind.deser.DefaultDeserializationContext
+No subclass found for abstract class: com.fasterxml.jackson.databind.ser.DefaultSerializerProvider
+[Pointer analysis] elapsed time: 0.81s
+Imprecise reflective calls:
+[Class.forName]<com.thoughtworks.xstream.core.JVM: java.lang.Class loadClassForName(java.lang.String,boolean)>[8@L328] $r3 = invokestatic java.lang.Class.forName(r0, initialize, $r2), #targets: 64
+[Class.forName]<com.thoughtworks.xstream.XStream: java.lang.Class class$(java.lang.String)>[0@L617] $r1 = invokestatic java.lang.Class.forName(r0), #targets: 59
 Detected 0 taint flow(s):
 TFGDumper starts ...
 Source nodes:
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareFriends(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/type}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>/name}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result updateAlbum(java.lang.String,java.lang.String,java.lang.String)>/albumname}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)>/file}
-VarNode{<com.micro.perpc.controller.FileUploadController: com.micro.common.Result checkChunk(java.lang.String,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/chunkNumber}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result findPersonalFiles(java.lang.String,java.lang.String,java.lang.String)>/appId}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result findFilesByBusinessId(java.lang.String,java.lang.String)>/businessId}
-VarNode{<com.micro.perpc.controller.FileDownloadController: com.micro.common.Result mergeFiles(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/downloadsuffix}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareSecret(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/idjson}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result findFilesByBusissIdAndType(java.lang.String,java.lang.String,java.lang.String)>/appId}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.common.Result findTypeList(java.lang.String)>/typecode}
-VarNode{<com.micro.manage.controller.TypeComponentController: com.micro.common.Result delete(java.lang.String)>/id}
-VarNode{<com.micro.manage.controller.AppController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String)>/name}
-VarNode{<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/orderfield}
-VarNode{<com.micro.perpc.controller.MenuController: com.micro.common.Result findMenus(java.lang.String)>/roleid}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)>/filename}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result moveImgToAlbum(java.lang.String,java.lang.String)>/idjson}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result saveToPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/userId}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findParentListById(java.lang.String)>/id}
-VarNode{<com.micro.manage.controller.TypeComponentController: com.micro.common.Result save(com.micro.disk.bean.TypeComponentBean,javax.servlet.http.HttpServletRequest)>/bean}
-VarNode{<com.micro.client.controller.FileController: void getBytesByStorepath(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)>/storePath}
-VarNode{<com.micro.perpc.controller.FileUploadController: com.micro.common.Result checkFile(java.lang.String,long)>/filesize}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>/allowMultiple}
-VarNode{<com.micro.perpc.controller.ShareByFriendsController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/status}
-VarNode{<com.micro.perpc.controller.FileDownloadController: void download(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/fileid}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result moveTo(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/idjson}
-VarNode{<com.micro.manage.controller.FileController: void download(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/filename}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mkdirInPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/userName}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result findFilesByBusinessId(java.lang.String,java.lang.String)>/appId}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result getChunkStorepathList(java.lang.String,java.lang.String)>/fileId}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result copyTo(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/idjson}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>/id}
-VarNode{<com.micro.perpc.controller.RubbishController: com.micro.common.Result recover(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/idjson}
-VarNode{<com.micro.manage.controller.AppController: com.micro.common.Result update(com.micro.disk.bean.AppBean)>/bean}
-VarNode{<com.micro.perpc.controller.FileDownloadController: void downloadZip(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/filename}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findListCard(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/pi}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>/filename}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareSecret(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/title}
-VarNode{<com.micro.perpc.controller.FileUploadController: com.micro.common.Result checkChunk(java.lang.String,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/filemd5}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result saveToPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/fileId}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result delete(java.lang.String)>/id}
-VarNode{<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/projectname}
-VarNode{<com.micro.manage.controller.AppFileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String)>/filemd5}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/ordertype}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result deleteAlbumCover(java.lang.String)>/albumid}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)>/appId}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result findPersonalFiles(java.lang.String,java.lang.String,java.lang.String)>/folderId}
-VarNode{<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result saveFromShare(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/folderid}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/pi}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findFolderList(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>/pid}
-VarNode{<com.micro.manage.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String)>/filename}
-VarNode{<com.micro.manage.controller.LoginController: com.micro.common.Result login(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/username}
-VarNode{<com.micro.perpc.controller.FileOpenController: com.micro.common.Result writeTextStrByMd5(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/code}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result getChunkStorepathList(java.lang.String,java.lang.String)>/appId}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.disk.bean.PageInfo findTypeSuffix(com.micro.disk.bean.PageInfo,java.lang.String)>/pi}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result saveToPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/appId}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result findPageFiles(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>/limit}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findListCard(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/ordertype}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result fileHasBreak(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/businessId}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareFriends(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/userJson}
-VarNode{<com.micro.perpc.controller.FileOpenController: void previewThumbnail(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/url}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result checkFileByMd5(java.lang.String,java.lang.String)>/appId}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo search(com.micro.disk.bean.PageInfo,java.lang.String,javax.servlet.http.HttpServletRequest)>/pi}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result setImgToAlbum(java.lang.String,java.lang.String)>/idjson}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>/json}
-VarNode{<com.micro.manage.controller.MenuController: com.micro.common.Result findMenus(java.lang.String)>/roleid}
-VarNode{<com.micro.manage.controller.LoginController: com.micro.common.Result logout(java.lang.String,javax.servlet.http.HttpServletRequest)>/token}
-VarNode{<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/targetmethod}
-VarNode{<com.micro.perpc.controller.RubbishController: com.micro.common.Result delete(java.lang.String,javax.servlet.http.HttpServletRequest)>/idjson}
-VarNode{<com.micro.perpc.controller.ShareByFriendsController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/pi}
-VarNode{<com.micro.manage.controller.UserController: com.micro.common.Result saveCapacity(java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest)>/totalcapacity}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/filename}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findFolderList(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>/idjson}
-VarNode{<com.micro.client.controller.FileController: void getBytesByStorepath(java.lang.String,java.lang.String,javax.servlet.http.HttpServletResponse)>/appId}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>/filebig}
-VarNode{<com.micro.manage.controller.AppController: com.micro.disk.bean.PageInfo findListByAppid(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String)>/appid}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareSecret(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/sharetype}
-VarNode{<com.micro.perpc.controller.FileUploadController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,com.micro.perpc.pojo.ChunkPojo,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/token}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareSecret(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/type}
-VarNode{<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/starttime}
-VarNode{<com.micro.manage.controller.UserController: com.micro.common.Result saveCapacity(java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest)>/capacityunit}
-VarNode{<com.micro.perpc.controller.ShareBySelfController: com.micro.common.Result findShareList(java.lang.String,java.lang.String)>/id}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>/suffix}
-VarNode{<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/ordertype}
-VarNode{<com.micro.perpc.controller.FileEditController: com.micro.common.Result editFile(java.lang.String,java.lang.String)>/fileid}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result addFolder(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/pid}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/pi}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.disk.bean.PageInfo findInAlbumImg(com.micro.disk.bean.PageInfo,java.lang.String)>/albumid}
-VarNode{<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/username}
-VarNode{<com.micro.manage.controller.LoginController: com.micro.common.Result login(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/password}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result findFilesByBusissIdAndType(java.lang.String,java.lang.String,java.lang.String)>/businessId}
-VarNode{<com.micro.manage.controller.UserController: com.micro.disk.bean.PageInfo findUserHistoryCapacity(com.micro.disk.bean.PageInfo,java.lang.String)>/userid}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result deleteAlbumCascade(java.lang.String,javax.servlet.http.HttpServletRequest)>/albumid}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result deleteAlbum(java.lang.String)>/albumid}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result fileHasBreak(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/businessType}
-VarNode{<com.micro.perpc.controller.FileEditController: com.micro.common.Result addFile(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/content}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result findTypeSuffixOne(java.lang.String)>/id}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result findPageFiles(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>/page}
-VarNode{<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result findShareList(java.lang.String,java.lang.String,java.lang.String)>/token}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result saveToApplNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/businessType}
-VarNode{<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/pi}
-VarNode{<com.micro.perpc.controller.ShareBySelfController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/status}
-VarNode{<com.micro.controller.AdminController: com.micro.model.PageInfo findList(com.micro.model.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/endtime}
-VarNode{<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result saveFromShare(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/idjson}
-VarNode{<com.micro.perpc.controller.RubbishController: com.micro.common.Result recover(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/folderid}
-VarNode{<com.micro.perpc.controller.ShareBySelfController: com.micro.common.Result cancelShare(java.lang.String)>/idjson}
-VarNode{<com.micro.manage.controller.UserController: com.micro.disk.user.bean.Page findList(com.micro.disk.user.bean.Page,java.lang.String,java.lang.String)>/username}
-VarNode{<com.micro.perpc.controller.ShareByFriendsController: com.micro.common.Result findShareList(java.lang.String,java.lang.String)>/id}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>/file}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo search(com.micro.disk.bean.PageInfo,java.lang.String,javax.servlet.http.HttpServletRequest)>/filename}
-VarNode{<com.micro.perpc.controller.ShareBySelfController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/pi}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>/appId}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/orderfield}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result findOne(java.lang.String)>/albumid}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result delete(java.lang.String,java.lang.String)>/fileId}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>/filemd5}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.disk.bean.PageInfo findPageList(com.micro.disk.bean.PageInfo,java.lang.String,javax.servlet.http.HttpServletRequest)>/albumname}
-VarNode{<com.micro.perpc.controller.FileUploadController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,com.micro.perpc.pojo.ChunkPojo,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/file}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.disk.bean.PageInfo findEditHistory(com.micro.disk.bean.PageInfo,java.lang.String)>/fileid}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mkdirInPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/folderName}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/ordertype}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result saveToPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/userName}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result setImgToAlbum(java.lang.String,java.lang.String)>/albumid}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result updateAlbum(java.lang.String,java.lang.String,java.lang.String)>/albumid}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/orderfield}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.disk.bean.PageInfo findEditHistory(com.micro.disk.bean.PageInfo,java.lang.String)>/pi}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>/filesize}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result checkFileByMd5(java.lang.String,java.lang.String)>/filemd5}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mkdirInPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/parentFolderId}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result rename(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/id}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/pid}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result saveToApplNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/appId}
-VarNode{<com.micro.perpc.controller.FileOpenController: com.micro.common.Result writeTextStrByMd5(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/filemd5}
-VarNode{<com.micro.perpc.controller.FileOpenController: void writeByte(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/fileid}
-VarNode{<com.micro.perpc.controller.FileUploadController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,com.micro.perpc.pojo.ChunkPojo,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/chunkPojo}
-VarNode{<com.micro.manage.controller.AppController: com.micro.disk.bean.PageInfo findListByAppid(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String)>/pi}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>/businessType}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>/businessId}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result findPageFiles(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>/userId}
-VarNode{<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result validateCode(java.lang.String,java.lang.String)>/code}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.disk.bean.PageInfo findInAlbumImg(com.micro.disk.bean.PageInfo,java.lang.String)>/pi}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>/suffix}
-VarNode{<com.micro.perpc.controller.ShareBySelfController: com.micro.common.Result findFriends(java.lang.String)>/shareid}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>/secondUpload}
-VarNode{<com.micro.perpc.controller.FileEditController: com.micro.common.Result addFile(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/pid}
-VarNode{<com.micro.manage.controller.AppFileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String)>/appid}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mkdirInPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/appId}
-VarNode{<com.micro.manage.controller.FileController: void download(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/md5}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result removeImgOutAlbum(java.lang.String,java.lang.String)>/idjson}
-VarNode{<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result validateCode(java.lang.String,java.lang.String)>/id}
-VarNode{<com.micro.perpc.controller.LoginController: com.micro.common.Result login(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/username}
-VarNode{<com.micro.controller.AdminController: com.micro.model.Result findDetail(java.lang.String)>/traceid}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>/name}
-VarNode{<com.micro.manage.controller.AppFileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String)>/pi}
-VarNode{<com.micro.manage.controller.TypeComponentController: com.micro.common.Result update(com.micro.disk.bean.TypeComponentBean)>/bean}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result saveToApplNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/userId}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findListCard(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/orderfield}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result delete(java.lang.String,java.lang.String)>/appId}
-VarNode{<com.micro.perpc.controller.FileDownloadController: com.micro.common.Result mergeFiles(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/downloadname}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareFriends(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/idjson}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result moveImgToAlbum(java.lang.String,java.lang.String)>/albumid}
-VarNode{<com.micro.perpc.controller.NoticeController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,javax.servlet.http.HttpServletRequest)>/pi}
-VarNode{<com.micro.manage.controller.AppController: com.micro.common.Result findOne(java.lang.String)>/id}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findListCard(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/pid}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findUserTree(java.lang.String,java.lang.String)>/pid}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result copyTo(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/toid}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/typecode}
-VarNode{<com.micro.manage.controller.AppController: com.micro.common.Result delete(java.lang.String)>/id}
-VarNode{<com.micro.manage.controller.UserController: com.micro.disk.user.bean.Page findList(com.micro.disk.user.bean.Page,java.lang.String,java.lang.String)>/pi}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result addAlbum(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/albumname}
-VarNode{<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result findShareList(java.lang.String,java.lang.String,java.lang.String)>/id}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findUserTree(java.lang.String,java.lang.String)>/type}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>/file}
-VarNode{<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result findShareList(java.lang.String,java.lang.String,java.lang.String)>/pid}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result updateAlbum(java.lang.String,java.lang.String,java.lang.String)>/albumdesc}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>/userId}
-VarNode{<com.micro.perpc.controller.ShareBySelfController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/type}
-VarNode{<com.micro.manage.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String)>/md5}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result fileHasBreak(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/filemd5}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareFriends(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/title}
-VarNode{<com.micro.perpc.controller.FileEditController: com.micro.common.Result addFile(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/filename}
-VarNode{<com.micro.perpc.controller.RubbishController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,javax.servlet.http.HttpServletRequest)>/pi}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result saveToPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/targetFolderId}
-VarNode{<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result findShareInfo(java.lang.String)>/id}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/filesuffix}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result findPersonalFiles(java.lang.String,java.lang.String,java.lang.String)>/userId}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)>/filemd5}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)>/userId}
-VarNode{<com.micro.manage.controller.FileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String)>/pi}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>/filebig}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result removeImgOutAlbum(java.lang.String,java.lang.String)>/albumid}
-VarNode{<com.micro.perpc.controller.FileDownloadController: com.micro.common.Result mergeFiles(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/idjson}
-VarNode{<com.micro.perpc.controller.ShareExtractController: com.micro.common.Result saveFromShare(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/shareid}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findParentListByPid(java.lang.String)>/pid}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findOne(java.lang.String)>/id}
-VarNode{<com.micro.perpc.controller.ShareByFriendsController: com.micro.common.Result findShareList(java.lang.String,java.lang.String)>/pid}
-VarNode{<com.micro.perpc.controller.FileController: com.micro.disk.bean.PageInfo findSpecialList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/showtype}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>/json}
-VarNode{<com.micro.perpc.controller.FileOpenController: com.micro.common.Result writeTextStr(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/fileid}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result moveTo(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/toid}
-VarNode{<com.micro.manage.controller.AppFileController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String,java.lang.String)>/filename}
-VarNode{<com.micro.manage.controller.UserController: com.micro.disk.user.bean.Page findList(com.micro.disk.user.bean.Page,java.lang.String,java.lang.String)>/nickname}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.disk.bean.PageInfo findPageList(com.micro.disk.bean.PageInfo,java.lang.String,javax.servlet.http.HttpServletRequest)>/pi}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result saveToApplNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/userName}
-VarNode{<com.micro.perpc.controller.LoginController: com.micro.common.Result login(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/password}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result save(java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile,org.springframework.web.multipart.MultipartFile)>/typecode}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result uploadChunk(org.springframework.web.multipart.MultipartFile,java.lang.String,java.lang.String,java.lang.String,long,java.lang.String)>/chunknum}
-VarNode{<com.micro.perpc.controller.FileDownloadController: void downloadZip(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/path}
-VarNode{<com.micro.manage.controller.AppController: com.micro.disk.bean.PageInfo findList(com.micro.disk.bean.PageInfo,java.lang.String)>/pi}
-VarNode{<com.micro.perpc.controller.FileOpenController: com.micro.common.Result writeTextStr(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/code}
-VarNode{<com.micro.perpc.controller.ShareBySelfController: com.micro.common.Result findShareList(java.lang.String,java.lang.String)>/pid}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result shareSecret(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Integer,javax.servlet.http.HttpServletRequest)>/effect}
-VarNode{<com.micro.perpc.controller.FileOpenController: void writeByte(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/code}
-VarNode{<com.micro.manage.controller.UserController: com.micro.disk.bean.PageInfo findUserHistoryCapacity(com.micro.disk.bean.PageInfo,java.lang.String)>/pi}
-VarNode{<com.micro.controller.CollectController: void collectLog(com.micro.model.LogInfo)>/bean}
-VarNode{<com.micro.perpc.controller.FileOpenController: com.micro.common.Result findComponentsBySuffix(java.lang.String)>/filesuffix}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findFolderTree(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>/idjson}
-VarNode{<com.micro.perpc.controller.FileUploadController: com.micro.common.Result checkFile(java.lang.String,long)>/filemd5}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result findPageFiles(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>/appId}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result setAlbumCover(java.lang.String,java.lang.String)>/albumid}
-VarNode{<com.micro.perpc.controller.LoginController: com.micro.common.Result logout(java.lang.String,javax.servlet.http.HttpServletRequest)>/token}
-VarNode{<com.micro.perpc.controller.FileEditController: com.micro.common.Result editFile(java.lang.String,java.lang.String)>/content}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result delete(java.lang.String,javax.servlet.http.HttpServletRequest)>/ids}
-VarNode{<com.micro.manage.controller.AppController: com.micro.disk.bean.PageInfo findListByAppid(com.micro.disk.bean.PageInfo,java.lang.String,java.lang.String)>/username}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result setAlbumCover(java.lang.String,java.lang.String)>/fileid}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result saveToApplNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/businessId}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findFolderTree(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>/pid}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result fileHasBreak(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/appId}
-VarNode{<com.micro.manage.controller.AppController: com.micro.common.Result save(com.micro.disk.bean.AppBean,javax.servlet.http.HttpServletRequest)>/bean}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result findFilesByBusissIdAndType(java.lang.String,java.lang.String,java.lang.String)>/businessType}
-VarNode{<com.micro.perpc.controller.FileUploadController: com.micro.common.Result mergeChunk(com.micro.disk.bean.MergeFileBean,javax.servlet.http.HttpServletRequest)>/bean}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.disk.bean.PageInfo findTypeSuffix(com.micro.disk.bean.PageInfo,java.lang.String)>/typecode}
-VarNode{<com.micro.manage.controller.TypeComponentController: com.micro.common.Result findOne(java.lang.String)>/id}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result addFolder(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/name}
-VarNode{<com.micro.manage.controller.UserController: com.micro.common.Result saveCapacity(java.lang.String,java.lang.Long,java.lang.String,javax.servlet.http.HttpServletRequest)>/userid}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result saveToApplNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/fileId}
-VarNode{<com.micro.manage.controller.TypeSuffixController: com.micro.common.Result findOperateBySuffix(java.lang.String)>/suffix}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mergeChunk(java.lang.String,java.lang.String,java.lang.String,long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean,java.lang.Boolean)>/userName}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result findFolderProp(java.lang.String,javax.servlet.http.HttpServletRequest)>/id}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.disk.bean.PageInfo findNotInAlbumImg(com.micro.disk.bean.PageInfo,javax.servlet.http.HttpServletRequest)>/pi}
-VarNode{<com.micro.perpc.controller.FileCommonController: com.micro.common.Result rename(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/filename}
-VarNode{<com.micro.client.controller.FileController: com.micro.common.Result mkdirInPersonalNetdisk(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/userId}
-VarNode{<com.micro.perpc.controller.FileDownloadController: com.micro.common.Result getDownloadInfo(java.lang.String,javax.servlet.http.HttpServletRequest)>/idjson}
-VarNode{<com.micro.perpc.controller.FileAlbumController: com.micro.common.Result addAlbum(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest)>/albumdesc}
+VarNode{<org.springframework.web.context.request.RequestContextHolder: org.springframework.web.context.request.RequestAttributes getRequestAttributes()>/$r3}
+VarNode{<com.micro.chain.core.ContextHolder: com.micro.chain.core.ContextRequest getReq()>/$r1}
+VarNode{<com.fasterxml.jackson.core.io.JsonStringEncoder: com.fasterxml.jackson.core.io.JsonStringEncoder getInstance()>/$r1}
+VarNode{<org.springframework.web.context.request.RequestContextHolder: org.springframework.web.context.request.RequestAttributes getRequestAttributes()>/$r1}
+VarNode{<com.fasterxml.jackson.core.JsonFactory: com.fasterxml.jackson.core.util.BufferRecycler _getBufferRecycler()>/$r4}
+VarNode{<com.micro.chain.core.ContextHolder: com.micro.chain.core.ContextResponse getRes()>/$r1}
 Sink nodes:
 Dumping /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-flow-graph.dot
-TFGDumper finishes, elapsed time: 0.09s
+TFGDumper finishes, elapsed time: 0.13s
 -------------- Pointer analysis statistics: --------------
-#var pointers:                5507 (insens) / 5507 (sens)
-#objects:                     1958 (insens) / 1958 (sens)
-#var points-to:               5228 (insens) / 5231 (sens)
-#static field points-to:      4 (sens)
-#instance field points-to:    1220 (sens)
-#array points-to:             31 (sens)
-#reachable methods:           630 (insens) / 630 (sens)
-#call graph edges:            1810 (insens) / 1810 (sens)
+#var pointers:                4,4381 (insens) / 4,4381 (sens)
+#objects:                     5121 (insens) / 5121 (sens)
+#var points-to:               26,7834 (insens) / 26,7834 (sens)
+#static field points-to:      4625 (sens)
+#instance field points-to:    6,2010 (sens)
+#array points-to:             5922 (sens)
+#reachable methods:           6650 (insens) / 6650 (sens)
+#call graph edges:            2,8630 (insens) / 2,8630 (sens)
 ----------------------------------------
-pta finishes, elapsed time: 0.43s
+pta finishes, elapsed time: 1.32s
 cg starts ...
-Call graph has 630 reachable methods and 1810 edges
+Call graph has 6650 reachable methods and 28630 edges
 Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
 Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
 Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
-cg finishes, elapsed time: 0.08s
-Tai-e finishes, elapsed time: 3.75s
+cg finishes, elapsed time: 0.61s
+Tai-e finishes, elapsed time: 16.77s

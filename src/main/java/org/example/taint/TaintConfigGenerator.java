@@ -84,7 +84,22 @@ public class TaintConfigGenerator {
      * - Simple params: filter by annotation risk level (HIGH or MEDIUM)
      * - POJO-expanded fields: filter by @RequestBody + F_write membership
      */
+//    private boolean shouldGenerateSourceConfig(SourceMetadata meta, Set<String> writeFields) {
+//        return true;
+//    }
     private boolean shouldGenerateSourceConfig(SourceMetadata meta, Set<String> writeFields) {
-        return true;
+        if (meta.isSimpleParam()) {
+            // 简单类型：按注解风险等级过滤
+            return SpringAnnotationRules.hasHighOrMediumRisk(meta.getAnnotations());
+        } else {
+            // 对象类型：
+            // 1. 有 @RequestBody → 原逻辑（结合 writeFields）
+            if (SpringAnnotationRules.isRequestBody(meta.getAnnotations())) {
+                return writeFields.contains(meta.getFieldName());
+            }
+            // 2. 无注解 / @ModelAttribute → Spring MVC 表单绑定，直接放行
+            //    这覆盖了 list(SysUser user) 这类 Query 对象参数
+            return true;
+        }
     }
 }

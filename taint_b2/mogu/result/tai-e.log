@@ -8,24 +8,21 @@ os.name: Mac OS X
 os.version: 26.3
 os.arch: aarch64
 Tai-e Version: 0.5.1
-Tai-e Commit: a086cc6200102f74b303a2cb800dad4e1b8b3af5
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
 Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
 WorldBuilder starts ...
 Warning: main class was not given!
-11070 classes with 104408 methods in the world
-WorldBuilder finishes, elapsed time: 2.53s
-ir-dumper starts ...
-Dumping IR in /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tir
-180 classes in scope (APP) of class analyses
-ir-dumper finishes, elapsed time: 0.24s
+37893 classes with 342343 methods in the world
+WorldBuilder finishes, elapsed time: 45.37s
 routerAnalysis starts ...
-Router analysis started at: 2026-02-27 20:04:01
-Router analysis completed at: 2026-02-27 20:04:01 (Duration: 9ms)
-routerAnalysis finishes, elapsed time: 0.01s
+Router analysis started at: 2026-03-03 14:12:32
+Router analysis completed at: 2026-03-03 14:12:32 (Duration: 88ms)
+routerAnalysis finishes, elapsed time: 0.09s
 beanAnalysis starts ...
-beanAnalysis finishes, elapsed time: 0.00s
+beanAnalysis finishes, elapsed time: 0.05s
 injectPointsAnalysis starts ...
-injectPointsAnalysis finishes, elapsed time: 0.00s
+injectPointsAnalysis finishes, elapsed time: 0.07s
 aspectAnalysis starts ...
 Starting AOP aspect analysis...
 aspectAnalysis finishes, elapsed time: 0.01s
@@ -34,120 +31,79 @@ resultAnalysis starts ...
                  Spring Analysis Result Summary             
 ============================================================
 Router Methods (Endpoints)     : 233
-Spring Beans                   : 113
+Spring Beans                   : 274
 Aspect Methods (Advice)        : 6
 ============================================================
 resultAnalysis finishes, elapsed time: 0.00s
 srfaAnalysis starts ...
-SRFA Analysis started at: 2026-02-27 20:04:01
-Loaded 54 controller classes from RouterAnalysis
+SRFA Analysis started at: 2026-03-03 14:12:32
+Loaded 55 controller classes from RouterAnalysis
 Discovering mapper paths from 8 appClassPath entries
-Extracting XML from fat jar: mogu_admin-0.0.1-SNAPSHOT.jar
-Extracted 0 XML files from mogu_admin-0.0.1-SNAPSHOT.jar
-Extracted 1 XML files (plain jar) from mogu_admin-0.0.1-SNAPSHOT.jar
-Extracting XML from fat jar: mogu_gateway-0.0.1-SNAPSHOT.jar
-Extracted 0 XML files from mogu_gateway-0.0.1-SNAPSHOT.jar
-Extracted 1 XML files (plain jar) from mogu_gateway-0.0.1-SNAPSHOT.jar
-Extracting XML from fat jar: mogu_monitor-0.0.1-SNAPSHOT.jar
-Extracted 0 XML files from mogu_monitor-0.0.1-SNAPSHOT.jar
-Extracted 1 XML files (plain jar) from mogu_monitor-0.0.1-SNAPSHOT.jar
-Extracting XML from fat jar: mogu_picture-0.0.1-SNAPSHOT.jar
-Extracted 0 XML files from mogu_picture-0.0.1-SNAPSHOT.jar
-Extracted 3 XML files (plain jar) from mogu_picture-0.0.1-SNAPSHOT.jar
-Extracting XML from fat jar: mogu_search-0.0.1-SNAPSHOT.jar
-Extracted 0 XML files from mogu_search-0.0.1-SNAPSHOT.jar
-Extracted 1 XML files (plain jar) from mogu_search-0.0.1-SNAPSHOT.jar
-Extracting XML from fat jar: mogu_sms-0.0.1-SNAPSHOT.jar
-Extracted 0 XML files from mogu_sms-0.0.1-SNAPSHOT.jar
-Extracted 1 XML files (plain jar) from mogu_sms-0.0.1-SNAPSHOT.jar
-Extracting XML from fat jar: mogu_spider-0.0.1-SNAPSHOT.jar
-Extracted 0 XML files from mogu_spider-0.0.1-SNAPSHOT.jar
-Extracted 1 XML files (plain jar) from mogu_spider-0.0.1-SNAPSHOT.jar
-Extracting XML from fat jar: mogu_web-0.0.1-SNAPSHOT.jar
-Extracted 0 XML files from mogu_web-0.0.1-SNAPSHOT.jar
-Extracted 1 XML files (plain jar) from mogu_web-0.0.1-SNAPSHOT.jar
-Auto-discovered 9 mapper path(s)
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_admin-0_0_1-SNAPSHOT_1731057261000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_gateway-0_0_1-SNAPSHOT_1731057262000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_monitor-0_0_1-SNAPSHOT_1731057262000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_picture-0_0_1-SNAPSHOT_1731057262000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_picture-0_0_1-SNAPSHOT_1731057262000/mapper
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_search-0_0_1-SNAPSHOT_1731057262000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_sms-0_0_1-SNAPSHOT_1731057262000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_spider-0_0_1-SNAPSHOT_1731057262000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_web-0_0_1-SNAPSHOT_1731057262000
-Using 9 mapper search path(s):
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_admin-0_0_1-SNAPSHOT_1731057261000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_gateway-0_0_1-SNAPSHOT_1731057262000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_monitor-0_0_1-SNAPSHOT_1731057262000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_picture-0_0_1-SNAPSHOT_1731057262000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_picture-0_0_1-SNAPSHOT_1731057262000/mapper
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_search-0_0_1-SNAPSHOT_1731057262000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_sms-0_0_1-SNAPSHOT_1731057262000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_spider-0_0_1-SNAPSHOT_1731057262000
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mogu_web-0_0_1-SNAPSHOT_1731057262000
+Auto-discovered 0 mapper path(s)
+No MyBatis mapper paths found. Sink config will be empty.
 Parsed 0 MyBatis mapper files
 Parsed 0 MyBatis mapper files
 Collected 0 write field names from INSERT/UPDATE operations
 Extracted 226 source metadata entries (before filtering)
 Resolving 0 mapper namespaces...
 Extracted 0 sink metadata entries (deduplicated, before risk filtering)
-Sources: 226 generated, 0 filtered, 0 deduplicated
+Sources: 219 generated, 7 filtered, 0 deduplicated
 Sinks: 0 generated (risky), 0 filtered (safe), 0 deduplicated
   Note: 'risky' means uses string concatenation ($), 'safe' means uses prepared statement (#)
 Written taint config to: output/taint-config-generated.yml
-  Sources: 226 (SRFA param) + framework call sources
-  Sinks: 0
+  Sources: 219 (SRFA param) + framework call sources
+  Sinks: 0 (SRFA) + common predefined sinks
   Transfers: standard set included
-SRFA Analysis completed at: 2026-02-27 20:04:01 (Duration: 164ms)
-srfaAnalysis finishes, elapsed time: 0.17s
+SRFA Analysis completed at: 2026-03-03 14:12:32 (Duration: 15ms)
+srfaAnalysis finishes, elapsed time: 0.02s
 pta starts ...
 Loading taint config from /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-config-generated.yml
-Ignore {"method":"<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>","type":"org.apache.shiro.subject.Subject"} due to missing source "kind"
-Ignore {"method":"<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>","type":"org.apache.shiro.subject.PrincipalCollection"} due to missing source "kind"
-Ignore {"method":"<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>","type":"org.springframework.security.core.context.SecurityContext"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>","type":"org.springframework.security.core.Authentication"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.Object getDetails()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.String getName()>","type":"java.lang.String"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>","type":"java.util.Collection"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>","type":"java.lang.String"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>","type":"javax.servlet.http.HttpSession"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>","type":"javax.servlet.http.HttpSession"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>","type":"java.security.Principal"} due to missing source "kind"
-Ignore {"method":"<java.security.Principal: java.lang.String getName()>","type":"java.lang.String"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<java.lang.ThreadLocal: java.lang.Object get()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<java.lang.InheritableThreadLocal: java.lang.Object get()>","type":"java.lang.Object"} due to missing source "kind"
+Cannot find source method '<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>'
+Cannot find source method '<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>'
+Cannot find source method '<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>'
+Cannot find source method '<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find source method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.Query createQuery(java.lang.String)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.SQLQuery createSQLQuery(java.lang.String)>'
+Cannot find sink method '<javax.servlet.ServletOutputStream: void write(byte[])>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void print(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void println(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void write(java.lang.String)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object getForObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity getForEntity(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object postForObject(java.lang.String,java.lang.Object,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class)>'
+Cannot find sink method '<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>'
+Cannot find sink method '<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>'
+Cannot find sink method '<org.springframework.ldap.core.LdapTemplate: java.util.List search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls,org.springframework.ldap.core.AttributesMapper)>'
+Cannot find sink method '<org.springframework.expression.spel.standard.SpelExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object getValue(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlExpression createExpression(java.lang.String)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlScript createScript(java.lang.String)>'
+Cannot find sink method '<org.apache.velocity.app.VelocityEngine: boolean evaluate(org.apache.velocity.context.Context,java.io.Writer,java.lang.String,java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.lang.String)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.io.InputStream)>'
+Cannot find sink method '<javax.servlet.http.HttpServletRequest: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>'
 Cannot find taint-transfer method '<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>'
 Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>'
 Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>'
 Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>'
 Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
 Cannot find taint-transfer method '<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>'
 Cannot find taint-transfer method '<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>'
 Cannot find taint-transfer method '<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>'
 Cannot find taint-transfer method '<org.apache.shiro.subject.PrincipalCollection: java.util.Collection fromRealm(java.lang.String)>'
-Cannot find taint-transfer method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
-Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
-Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
 Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
-Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
-Cannot find taint-transfer method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
-Cannot find taint-transfer method '<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>'
 Cannot find taint-transfer method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
 TaintConfig:
 sources:
@@ -274,7 +230,6 @@ sources:
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.String cropperPicture(org.springframework.web.multipart.MultipartFile)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.String getPicture(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.String getPicture(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.Object uploadPics(javax.servlet.http.HttpServletRequest,java.util.List)>", index: "1", type: "java.util.List" }
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.Object uploadPicsByUrl(com.moxi.mougblog.base.vo.FileVO,org.springframework.validation.BindingResult)>", index: "0", type: "com.moxi.mougblog.base.vo.FileVO" }
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String createFile(com.moxi.mogublog.commons.entity.NetworkDisk)>", index: "0", type: "com.moxi.mogublog.commons.entity.NetworkDisk" }
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String getFileList(com.moxi.mogublog.commons.entity.NetworkDisk)>", index: "0", type: "com.moxi.mogublog.commons.entity.NetworkDisk" }
@@ -284,13 +239,11 @@ sources:
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String unzipFile(com.moxi.mogublog.commons.entity.NetworkDisk)>", index: "0", type: "com.moxi.mogublog.commons.entity.NetworkDisk" }
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String moveFile(com.moxi.mogublog.picture.vo.NetworkDiskVO)>", index: "0", type: "com.moxi.mogublog.picture.vo.NetworkDiskVO" }
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String batchMoveFile(com.moxi.mogublog.picture.vo.NetworkDiskVO)>", index: "0", type: "com.moxi.mogublog.picture.vo.NetworkDiskVO" }
-  - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String selectFileByFileType(com.moxi.mogublog.commons.entity.NetworkDisk)>", index: "0", type: "com.moxi.mogublog.commons.entity.NetworkDisk" }
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String initStorageSize(java.lang.String,java.lang.Long)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String initStorageSize(java.lang.String,java.lang.Long)>", index: "1", type: "java.lang.Long" }
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String editStorageSize(java.lang.String,java.lang.Long)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String editStorageSize(java.lang.String,java.lang.Long)>", index: "1", type: "java.lang.Long" }
   - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String getStorageByAdminUid(java.util.List)>", index: "0", type: "java.util.List" }
-  - { kind: "param", method: "<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String uploadFile(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.commons.entity.NetworkDisk)>", index: "1", type: "com.moxi.mogublog.commons.entity.NetworkDisk" }
   - { kind: "param", method: "<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String searchBlog(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer,java.lang.Integer)>", index: "1", type: "java.lang.String" }
   - { kind: "param", method: "<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String searchBlog(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer,java.lang.Integer)>", index: "2", type: "java.lang.Integer" }
   - { kind: "param", method: "<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String searchBlog(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer,java.lang.Integer)>", index: "3", type: "java.lang.Integer" }
@@ -298,16 +251,12 @@ sources:
   - { kind: "param", method: "<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String deleteElasticSearchByUid(java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String addElasticSearchIndexByUid(java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.moxi.mogublog.spider.restapi.PictureSpiderRestApi: java.lang.String spiderPicture(com.moxi.mogublog.spider.entity.PictureSpider)>", index: "0", type: "com.moxi.mogublog.spider.entity.PictureSpider" }
-  - { kind: "param", method: "<com.moxi.mogublog.web.controller.FreemarkerController: java.lang.String index(java.util.Map,java.lang.String)>", index: "0", type: "java.util.Map" }
   - { kind: "param", method: "<com.moxi.mogublog.web.controller.FreemarkerController: java.lang.String index(java.util.Map,java.lang.String)>", index: "1", type: "java.lang.String" }
-  - { kind: "param", method: "<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String renderAuth(java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.moxi.mogublog.web.restapi.AuthRestApi: void login(java.lang.String,me.zhyd.oauth.model.AuthCallback,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.moxi.mogublog.web.restapi.AuthRestApi: void login(java.lang.String,me.zhyd.oauth.model.AuthCallback,javax.servlet.http.HttpServletResponse)>", index: "1", type: "me.zhyd.oauth.model.AuthCallback" }
   - { kind: "param", method: "<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String decryptData(java.util.Map)>", index: "0", type: "java.util.Map" }
   - { kind: "param", method: "<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.Object revokeAuth(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.Object revokeAuth(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
   - { kind: "param", method: "<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.Object refreshAuth(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.Object refreshAuth(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
   - { kind: "param", method: "<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String verifyUser(java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String deleteUserAccessToken(java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String getSystemConfig(java.lang.String)>", index: "0", type: "java.lang.String" }
@@ -377,6 +326,94 @@ sources:
   - { kind: "param", method: "<com.moxi.mogublog.web.restapi.TagRestApi: java.lang.String getArticleByTagUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>", index: "2", type: "java.lang.Long" }
   - { kind: "param", method: "<com.moxi.mogublog.web.restapi.TagRestApi: java.lang.String getArticleByTagUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>", index: "3", type: "java.lang.Long" }
   - { kind: "param", method: "<com.moxi.mogublog.web.restapi.WechatRestApi: java.lang.String getUserLoginStatus(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "call", method: "<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>", index: "result", type: "org.springframework.security.core.context.SecurityContext" }
+  - { kind: "call", method: "<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>", index: "result", type: "org.springframework.security.core.Authentication" }
+  - { kind: "call", method: "<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<org.springframework.security.core.Authentication: java.lang.Object getDetails()>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>", index: "result", type: "java.util.Collection" }
+  - { kind: "call", method: "<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>", index: "result", type: "java.lang.String" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>", index: "result", type: "java.security.Principal" }
+  - { kind: "call", method: "<java.security.Principal: java.lang.String getName()>", index: "result", type: "java.lang.String" }
+  - { kind: "call", method: "<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<java.lang.ThreadLocal: java.lang.Object get()>", index: "result", type: "java.lang.Object" }
+
+sinks:
+  - { method: "<java.sql.Statement: java.sql.ResultSet executeQuery(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: int executeUpdate(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: boolean execute(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: void addBatch(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.CallableStatement prepareCall(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List query(java.lang.String,org.springframework.jdbc.core.RowMapper)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.lang.Object queryForObject(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int update(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int[] batchUpdate(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[],java.io.File)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.util.List)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.util.List)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<java.io.FileInputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileOutputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileReader: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileWriter: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.util.List readAllLines(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.nio.file.Path write(java.nio.file.Path,byte[],java.nio.file.OpenOption[])>", index: "0" }
+  - { method: "<java.io.PrintWriter: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void println(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void write(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.ServletOutputStream: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URL: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: java.net.URI create(java.lang.String)>", index: "0" }
+  - { method: "<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void sendRedirect(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.RequestDispatcher: void forward(javax.servlet.ServletRequest,javax.servlet.ServletResponse)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "1" }
+  - { method: "<javax.xml.xpath.XPath: java.lang.String evaluate(java.lang.String,java.lang.Object)>", index: "0" }
+  - { method: "<javax.xml.xpath.XPath: javax.xml.xpath.XPathExpression compile(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.io.InputStream)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.SAXParser: void parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler)>", index: "0" }
+  - { method: "<org.xml.sax.XMLReader: void parse(org.xml.sax.InputSource)>", index: "0" }
+  - { method: "<org.springframework.expression.ExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>", index: "0" }
+  - { method: "<freemarker.template.Template: void <init>(java.lang.String,java.io.Reader)>", index: "0" }
+  - { method: "<java.io.ObjectInputStream: void <init>(java.io.InputStream)>", index: "0" }
+  - { method: "<com.alibaba.fastjson.JSON: java.lang.Object parse(java.lang.String)>", index: "0" }
+  - { method: "<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.apache.logging.log4j.Logger: void info(java.lang.String)>", index: "0" }
+  - { method: "<org.apache.logging.log4j.Logger: void warn(java.lang.String)>", index: "0" }
+  - { method: "<org.apache.logging.log4j.Logger: void error(java.lang.String)>", index: "0" }
+  - { method: "<org.apache.logging.log4j.Logger: void debug(java.lang.String)>", index: "0" }
+  - { method: "<org.apache.logging.log4j.Logger: void fatal(java.lang.String)>", index: "0" }
+  - { method: "<org.slf4j.Logger: void info(java.lang.String)>", index: "0" }
+  - { method: "<org.slf4j.Logger: void warn(java.lang.String)>", index: "0" }
+  - { method: "<org.slf4j.Logger: void error(java.lang.String)>", index: "0" }
+  - { method: "<org.slf4j.Logger: void debug(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.Class: java.lang.Class forName(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.ClassLoader: java.lang.Class loadClass(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>", index: "1" }
+  - { method: "<javax.servlet.ServletContext: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.Cookie: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.Cookie: void setValue(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void addHeader(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void setHeader(java.lang.String,java.lang.String)>", index: "1" }
 
 transfers:
   - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
@@ -449,18 +486,32 @@ transfers:
   - { method: "<java.util.Optional: java.util.Optional of(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
   - { method: "<java.util.Optional: java.util.Optional ofNullable(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
   - { method: "<java.lang.Object: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>", from: "base", to: "result", type: "org.springframework.security.core.Authentication" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.Object getDetails()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>", from: "1", to: "base", type: "javax.servlet.http.HttpSession" }
   - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
 
 Initializing global bean mock objects for beans...
-Initialized 106 global bean objects.
+Initialized 227 global bean objects.
+No implementation found for interface: com.moxi.mogublog.xo.service.AdminService
 No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
 No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
 No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
 No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
 No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
 No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
-No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
-No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
+No implementation found for interface: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.BlogVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
@@ -468,7 +519,7 @@ No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
-No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
+No implementation found for interface: com.moxi.mogublog.xo.service.BlogSortService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.BlogSortVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
@@ -478,7 +529,7 @@ No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String blogSortByClickCount()>
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String blogSortByCite()>
-No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
+No implementation found for interface: com.moxi.mogublog.xo.service.CategoryMenuService
 No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
 No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
 No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
@@ -486,22 +537,21 @@ No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuServi
 No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
 No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
 No bean found for concrete class: com.moxi.mogublog.xo.service.CategoryMenuService
-No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
+No implementation found for interface: com.moxi.mogublog.xo.service.CommentService
 No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.CommentRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
 No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
 No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
 No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
-No bean found for concrete class: com.moxi.mogublog.xo.service.FeedbackService
+No implementation found for interface: com.moxi.mogublog.xo.service.FeedbackService
 No bean found for concrete class: com.moxi.mogublog.xo.service.FeedbackService
 No bean found for concrete class: com.moxi.mogublog.xo.service.FeedbackService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
-No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
-No bean found for concrete class: com.moxi.mogublog.xo.service.WebVisitService
+No implementation found for interface: com.moxi.mogublog.xo.service.UserService
+No implementation found for interface: com.moxi.mogublog.xo.service.WebVisitService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.IndexRestApi: java.lang.String init()>
 No bean found for concrete class: com.moxi.mogublog.xo.service.WebVisitService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.IndexRestApi: java.lang.String getVisitByWeek()>
@@ -511,43 +561,35 @@ No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.IndexRestApi: java.lang.String getBlogCountByBlogSort()>
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.IndexRestApi: java.lang.String getBlogContributeCount()>
-No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
+No implementation found for interface: com.moxi.mogublog.xo.service.LinkService
 No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.LinkRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.LinkVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
 No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
 No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
 No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
 No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
-No bean found for concrete class: com.moxi.mogublog.xo.service.RoleService
-No bean found for concrete class: com.moxi.mogublog.commons.config.jwt.Audience
-No bean found for concrete class: com.moxi.mogublog.commons.config.jwt.JwtTokenUtil
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No implementation found for interface: com.moxi.mogublog.xo.service.RoleService
 No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
-No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
-No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+No implementation found for interface: com.moxi.mogublog.commons.feign.PictureFeignClient
 No bean found for concrete class: com.moxi.mogublog.xo.service.RoleService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
+No implementation found for interface: com.moxi.mogublog.xo.service.WebConfigService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.LoginRestApi: java.lang.String getWebSiteName()>
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.LoginRestApi: java.lang.String logout()>
-No bean found for concrete class: com.moxi.mogublog.xo.service.SysLogService
-No bean found for concrete class: com.moxi.mogublog.xo.service.ExceptionLogService
+No implementation found for interface: com.moxi.mogublog.xo.service.SysLogService
+No implementation found for interface: com.moxi.mogublog.xo.service.ExceptionLogService
+No implementation found for interface: com.moxi.mogublog.xo.service.PictureService
 No bean found for concrete class: com.moxi.mogublog.xo.service.PictureService
 No bean found for concrete class: com.moxi.mogublog.xo.service.PictureService
 No bean found for concrete class: com.moxi.mogublog.xo.service.PictureService
 No bean found for concrete class: com.moxi.mogublog.xo.service.PictureService
-No bean found for concrete class: com.moxi.mogublog.xo.service.PictureService
-No bean found for concrete class: com.moxi.mogublog.xo.service.PictureSortService
+No implementation found for interface: com.moxi.mogublog.xo.service.PictureSortService
 No bean found for concrete class: com.moxi.mogublog.xo.service.PictureSortService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
 No bean found for concrete class: com.moxi.mogublog.xo.service.PictureSortService
 No bean found for concrete class: com.moxi.mogublog.xo.service.PictureSortService
 No bean found for concrete class: com.moxi.mogublog.xo.service.PictureSortService
 No bean found for concrete class: com.moxi.mogublog.xo.service.PictureSortService
-No bean found for concrete class: com.moxi.mogublog.xo.service.ResourceSortService
+No implementation found for interface: com.moxi.mogublog.xo.service.ResourceSortService
 No bean found for concrete class: com.moxi.mogublog.xo.service.ResourceSortService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.ResourceSortRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.ResourceSortVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
 No bean found for concrete class: com.moxi.mogublog.xo.service.ResourceSortService
@@ -558,51 +600,45 @@ No bean found for concrete class: com.moxi.mogublog.xo.service.RoleService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.RoleRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.RoleVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
 No bean found for concrete class: com.moxi.mogublog.xo.service.RoleService
 No bean found for concrete class: com.moxi.mogublog.xo.service.RoleService
-No bean found for concrete class: com.moxi.mogublog.commons.feign.SearchFeignClient
+No implementation found for interface: com.moxi.mogublog.commons.feign.SearchFeignClient
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.SearchIndexRestApi: java.lang.String initElasticIndex()>
 No bean found for concrete class: com.moxi.mogublog.commons.feign.SearchFeignClient
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.SearchIndexRestApi: java.lang.String initSolrIndex()>
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.ServerMonitorRestApi: java.lang.String getInfo()>
-No bean found for concrete class: com.moxi.mogublog.xo.service.StudyVideoService
+No implementation found for interface: com.moxi.mogublog.xo.service.StudyVideoService
 No bean found for concrete class: com.moxi.mogublog.xo.service.StudyVideoService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.StudyVideoRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.StudyVideoVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
 No bean found for concrete class: com.moxi.mogublog.xo.service.StudyVideoService
 No bean found for concrete class: com.moxi.mogublog.xo.service.StudyVideoService
-No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectItemService
+No implementation found for interface: com.moxi.mogublog.xo.service.SubjectItemService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectItemService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String add(java.util.List,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
 No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectItemService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectItemService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectItemService
-No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectService
+No implementation found for interface: com.moxi.mogublog.xo.service.SubjectService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.SubjectRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.SubjectVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
 No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SubjectService
-No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No implementation found for interface: com.moxi.mogublog.xo.service.SysDictDataService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String add(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.SysDictDataVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
-No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictTypeService
+No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
+No implementation found for interface: com.moxi.mogublog.xo.service.SysDictTypeService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictTypeService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.SysDictTypeRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.SysDictTypeVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictTypeService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictTypeService
-No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
+No implementation found for interface: com.moxi.mogublog.xo.service.SysParamsService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.SysParamsRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.SysParamsVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
-No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No implementation found for interface: com.moxi.mogublog.xo.service.SystemConfigService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.SystemConfigRestApi: java.lang.String getSystemConfig()>
 No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
@@ -610,7 +646,7 @@ No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.SystemRestApi: java.lang.String getMe()>
 No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
 No bean found for concrete class: com.moxi.mogublog.xo.service.AdminService
-No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
+No implementation found for interface: com.moxi.mogublog.xo.service.TagService
 No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
 >>> AOP Match Found! Method: [<com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.TagVO,org.springframework.validation.BindingResult)>], Aspect: [com.moxi.mogublog.admin.annotion.AvoidRepeatableCommit.AvoidRepeatableCommitAspect]
 No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
@@ -620,15 +656,10 @@ No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String tagSortByClickCount()>
 No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String tagSortByCite()>
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No implementation found for interface: com.moxi.mogublog.xo.service.TodoService
 No bean found for concrete class: com.moxi.mogublog.xo.service.TodoService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.TodoService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.TodoService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-No bean found for concrete class: com.moxi.mogublog.xo.service.TodoService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.TodoService
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
@@ -638,7 +669,7 @@ No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
 No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.WebConfigRestApi: java.lang.String getWebConfig()>
 No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
-No bean found for concrete class: com.moxi.mogublog.xo.service.WebNavbarService
+No implementation found for interface: com.moxi.mogublog.xo.service.WebNavbarService
 No bean found for concrete class: com.moxi.mogublog.xo.service.WebNavbarService
 Added entry point (Empty): <com.moxi.mogublog.admin.restapi.WebNavbarRestApi: java.lang.String getAllList()>
 No bean found for concrete class: com.moxi.mogublog.xo.service.WebNavbarService
@@ -647,15 +678,10 @@ No bean found for concrete class: com.moxi.mogublog.xo.service.WebNavbarService
 No bean found for concrete class: com.moxi.mogublog.xo.service.WebNavbarService
 No bean found for concrete class: com.moxi.mogublog.xo.service.WebVisitService
 Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 Added entry point (Empty): <com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.Object ckeditorUploadCopyFile()>
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 Added entry point (Empty): <com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String getFileTree()>
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 Added entry point (Empty): <com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String getStorage()>
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-No bean found for concrete class: com.moxi.mogublog.commons.feign.WebFeignClient
+No implementation found for interface: com.moxi.mogublog.commons.feign.WebFeignClient
 No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchTemplate
 No bean found for concrete class: com.moxi.mogublog.commons.feign.WebFeignClient
 Added entry point (Empty): <com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String initElasticSearchIndex()>
@@ -677,33 +703,22 @@ Added entry point (Empty): <com.moxi.mogublog.web.restapi.AboutMeRestApi: java.l
 No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
 No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
-No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
 No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
-No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
-No bean found for concrete class: com.moxi.mogublog.xo.utils.RabbitMqUtil
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
-No bean found for concrete class: com.moxi.mogublog.xo.utils.RabbitMqUtil
 No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
-No bean found for concrete class: com.moxi.mogublog.xo.utils.RabbitMqUtil
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
@@ -713,58 +728,39 @@ No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
 Added entry point (Empty): <com.moxi.mogublog.web.restapi.ClassifyRestApi: java.lang.String getBlogSortList()>
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
 No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
-No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
 No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
 No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
-No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
 No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
-No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
 No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
 No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
-No bean found for concrete class: com.moxi.mogublog.xo.utils.RabbitMqUtil
 No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
 No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
-No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
-No bean found for concrete class: com.moxi.mogublog.xo.service.CommentReportService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
+No implementation found for interface: com.moxi.mogublog.xo.service.CommentReportService
 No bean found for concrete class: com.moxi.mogublog.xo.service.CommentService
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 Added entry point (Empty): <com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getHotBlog()>
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
 No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
 Added entry point (Empty): <com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getHotTag()>
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysParamsService
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
 No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
 Added entry point (Empty): <com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getLink()>
 No bean found for concrete class: com.moxi.mogublog.xo.service.LinkService
@@ -775,27 +771,16 @@ Added entry point (Empty): <com.moxi.mogublog.web.restapi.IndexRestApi: java.lan
 No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
 No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
-No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
 No bean found for concrete class: com.moxi.mogublog.xo.service.WebConfigService
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
-No bean found for concrete class: com.moxi.mogublog.xo.utils.RabbitMqUtil
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
 No bean found for concrete class: com.moxi.mogublog.xo.service.UserService
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.StudyVideoService
 No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
-No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
 No bean found for concrete class: com.moxi.mogublog.xo.service.ResourceSortService
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
 Added entry point (Empty): <com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String getSearchModel()>
@@ -808,276 +793,316 @@ No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataServic
 No bean found for concrete class: com.moxi.mogublog.xo.service.SysDictDataService
 No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
 Added entry point (Empty): <com.moxi.mogublog.web.restapi.TagRestApi: java.lang.String getTagList()>
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogService
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletRequestWrapper
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
 Added entry point (Empty): <com.moxi.mogublog.web.restapi.WechatRestApi: java.lang.String getWechatOrCodeTicket()>
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
 Initializing global aspect mock objects...
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
-No bean found for concrete class: com.moxi.mogublog.utils.RedisUtil
+No implementation found for interface: org.apache.commons.logging.Log
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
-No bean found for concrete class: com.moxi.mogublog.commons.feign.AdminFeignClient
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No implementation found for interface: com.moxi.mogublog.commons.feign.AdminFeignClient
 No bean found for concrete class: org.springframework.data.elasticsearch.core.ElasticsearchTemplate
 No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
-No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
 No bean found for concrete class: com.moxi.mogublog.xo.service.BlogSortService
 No bean found for concrete class: com.moxi.mogublog.xo.service.TagService
 No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
 No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
 No bean found for concrete class: com.moxi.mogublog.commons.feign.PictureFeignClient
-No bean found for concrete class: com.moxi.mogublog.xo.utils.WebUtil
+No bean found for concrete class: com.moxi.mogublog.xo.service.SystemConfigService
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
+No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: com.moxi.mogublog.commons.feign.WebFeignClient
-[Pointer analysis] elapsed time: 0.16s
+No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
+No bean found for concrete class: com.fasterxml.jackson.core.JsonFactory
+No bean found for concrete class: com.fasterxml.jackson.databind.SerializationConfig
+No bean found for concrete class: com.fasterxml.jackson.core.JsonFactory
+No bean found for concrete class: com.fasterxml.jackson.databind.type.TypeFactory
+No bean found for concrete class: com.fasterxml.jackson.databind.SerializationConfig
+No bean found for concrete class: com.fasterxml.jackson.databind.DeserializationConfig
+No bean found for concrete class: com.fasterxml.jackson.databind.DeserializationConfig
+No subclass found for abstract class: com.fasterxml.jackson.databind.deser.DefaultDeserializationContext
+No bean found for concrete class: com.fasterxml.jackson.core.JsonFactory
+No subclass found for abstract class: com.fasterxml.jackson.databind.ser.DefaultSerializerProvider
+[Pointer analysis] elapsed time: 2.39s
+Imprecise reflective calls:
+[Array.newInstance]<com.alibaba.fastjson.serializer.ObjectArrayCodec: java.lang.Object toObjectArray(com.alibaba.fastjson.parser.DefaultJSONParser,java.lang.Class,com.alibaba.fastjson.JSONArray)>[3@L190] $r2 = invokestatic java.lang.reflect.Array.newInstance(componentType, $i0), #targets: 121
+[Array.newInstance]<com.alibaba.fastjson.util.FieldInfo: java.lang.reflect.Type getFieldType(java.lang.Class,java.lang.reflect.Type,java.lang.reflect.Type)>[11@L256] $r27 = invokestatic java.lang.reflect.Array.newInstance($r26, %intconst0), #targets: 121
+[Array.newInstance]<com.fasterxml.jackson.databind.deser.std.ObjectArrayDeserializer: java.lang.Object[] handleNonArray(com.fasterxml.jackson.core.JsonParser,com.fasterxml.jackson.databind.DeserializationContext)>[57@L293] $r10 = invokestatic java.lang.reflect.Array.newInstance($r9, %intconst2), #targets: 53
+[Array.newInstance]<com.fasterxml.jackson.databind.type.ArrayType: com.fasterxml.jackson.databind.type.ArrayType construct(com.fasterxml.jackson.databind.JavaType,com.fasterxml.jackson.databind.type.TypeBindings,java.lang.Object,java.lang.Object)>[2@L47] $r2 = invokestatic java.lang.reflect.Array.newInstance($r1, %intconst0), #targets: 53
+[Array.newInstance]<com.fasterxml.jackson.databind.type.ArrayType: com.fasterxml.jackson.databind.JavaType withContentType(com.fasterxml.jackson.databind.JavaType)>[2@L53] $r2 = invokestatic java.lang.reflect.Array.newInstance($r1, %intconst0), #targets: 53
+[Array.newInstance]<com.fasterxml.jackson.databind.util.ObjectBuffer: java.lang.Object[] completeAndClearBuffer(java.lang.Object[],int,java.lang.Class)>[2@L139] $r2 = invokestatic java.lang.reflect.Array.newInstance(componentType, i2), #targets: 53
 Detected 0 taint flow(s):
 TFGDumper starts ...
 Source nodes:
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String replyBlogLink(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.LinkVO)>/linkVO}
-VarNode{<com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.BlogSortVO,org.springframework.validation.BindingResult)>/blogSortVO}
-VarNode{<com.moxi.mogublog.web.restapi.ResourceRestApi: java.lang.String getBlogByUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/resourceSortUid}
-VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getSameBlogByTagUid(java.lang.String,java.lang.Long,java.lang.Long)>/tagUid}
-VarNode{<com.moxi.mogublog.admin.restapi.SysParamsRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.SysParamsVO,org.springframework.validation.BindingResult)>/SysParamsVO}
+VarNode{<com.moxi.mogublog.admin.restapi.StudyVideoRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.StudyVideoVO,org.springframework.validation.BindingResult)>/studyVideoVO}
+VarNode{<com.moxi.mogublog.admin.restapi.UserRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
 VarNode{<com.moxi.mogublog.web.restapi.LoginRestApi: java.lang.String bindUserEmail(java.lang.String)>/token}
-VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String forceLogout(java.util.List)>/tokenUidList}
-VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogBySearch(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Long)>/pageSize}
-VarNode{<com.moxi.mogublog.admin.restapi.PictureRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.PictureVO,org.springframework.validation.BindingResult)>/pictureVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SysParamsRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/SysParamsVoList}
-VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String getPraiseListByUser(java.lang.Long,java.lang.Long)>/currentPage}
-VarNode{<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String edit(java.util.List,org.springframework.validation.BindingResult)>/subjectItemVOList}
-VarNode{<com.moxi.mogublog.admin.restapi.SysDictTypeRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.SysDictTypeVO,org.springframework.validation.BindingResult)>/sysDictTypeVO}
-VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String selectFileByFileType(com.moxi.mogublog.commons.entity.NetworkDisk)>/networkDisk}
-VarNode{<com.moxi.mogublog.admin.restapi.StudyVideoRestApi: java.lang.String deleteBatch(java.util.List,org.springframework.validation.BindingResult)>/studyVideoVOList}
-VarNode{<com.moxi.mogublog.admin.restapi.RoleRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.RoleVO,org.springframework.validation.BindingResult)>/roleVO}
-VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.CategoryMenuVO,org.springframework.validation.BindingResult)>/categoryMenuVO}
-VarNode{<com.moxi.mogublog.admin.restapi.LinkRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.LinkVO,org.springframework.validation.BindingResult)>/linkVO}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: void login(java.lang.String,me.zhyd.oauth.model.AuthCallback,javax.servlet.http.HttpServletResponse)>/callback}
-VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String getFileList(com.moxi.mogublog.commons.entity.NetworkDisk)>/networkDisk}
-VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.AdminVO,org.springframework.validation.BindingResult)>/adminVO}
-VarNode{<com.moxi.mogublog.admin.restapi.WebNavbarRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.WebNavbarVO,org.springframework.validation.BindingResult)>/webNavbarVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/subjectItemVOList}
-VarNode{<com.moxi.mogublog.admin.restapi.SysParamsRestApi: java.lang.String edit(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.SysParamsVO,org.springframework.validation.BindingResult)>/SysParamsVO}
-VarNode{<com.moxi.mogublog.admin.restapi.LinkRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.LinkVO,org.springframework.validation.BindingResult)>/linkVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String sortByCreateTime(java.lang.String,java.lang.Boolean)>/isDesc}
-VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String getOnlineAdminList(com.moxi.mogublog.xo.vo.AdminVO,org.springframework.validation.BindingResult)>/adminVO}
-VarNode{<com.moxi.mogublog.admin.restapi.LinkRestApi: java.lang.String stick(com.moxi.mogublog.xo.vo.LinkVO,org.springframework.validation.BindingResult)>/linkVO}
-VarNode{<com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.BlogSortVO,org.springframework.validation.BindingResult)>/blogSortVO}
-VarNode{<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String addElasticSearchIndexByUid(java.lang.String)>/uid}
+VarNode{<freemarker.template.TemplateException: java.lang.String getMessage()>/$r6}
+VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getBlogByUid(java.lang.String,java.lang.Integer)>/oid}
 VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String getListByUser(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.UserVO)>/userVO}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String updateUserPwd(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>/newPwd}
-VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.CategoryMenuVO,org.springframework.validation.BindingResult)>/categoryMenuVO}
-VarNode{<com.moxi.mogublog.admin.restapi.PictureRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.PictureVO)>/pictureVO}
-VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.CategoryMenuVO,org.springframework.validation.BindingResult)>/categoryMenuVO}
-VarNode{<com.moxi.mogublog.admin.restapi.UserRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
-VarNode{<com.moxi.mogublog.admin.restapi.WebNavbarRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.WebNavbarVO,org.springframework.validation.BindingResult)>/webNavbarVO}
-VarNode{<com.moxi.mogublog.web.restapi.SysDictDataRestApi: java.lang.String getListByDictType(java.lang.String)>/dictType}
-VarNode{<com.moxi.mogublog.admin.restapi.FeedbackRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.FeedbackVO,org.springframework.validation.BindingResult)>/feedbackVO}
-VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String reportComment(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
-VarNode{<com.moxi.mogublog.web.restapi.LoginRestApi: java.lang.String register(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
-VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogByAuthor(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
-VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogByTag(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
+VarNode{<com.moxi.mogublog.admin.restapi.ResourceSortRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.ResourceSortVO,org.springframework.validation.BindingResult)>/resourceSortVO}
+VarNode{<com.moxi.mogublog.admin.restapi.ResourceSortRestApi: java.lang.String stick(com.moxi.mogublog.xo.vo.ResourceSortVO,org.springframework.validation.BindingResult)>/resourceSortVO}
+VarNode{<com.moxi.mogublog.web.restapi.TagRestApi: java.lang.String getArticleByTagUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/tagUid}
+VarNode{<com.moxi.mogublog.admin.restapi.LinkRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.LinkVO,org.springframework.validation.BindingResult)>/linkVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String sortByCreateTime(java.lang.String,java.lang.Boolean)>/subjectUid}
+VarNode{<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String delete(javax.servlet.http.HttpServletRequest,java.util.List,org.springframework.validation.BindingResult)>/sysDictDataVoList}
 VarNode{<com.moxi.mogublog.admin.restapi.LinkRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.LinkVO,org.springframework.validation.BindingResult)>/linkVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SystemRestApi: java.lang.String changePwd(java.lang.String,java.lang.String)>/oldPwd}
-VarNode{<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String stick(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>/pictureSortVO}
-VarNode{<com.moxi.mogublog.admin.restapi.CommentRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
-VarNode{<com.moxi.mogublog.admin.restapi.WebConfigRestApi: java.lang.String editWebConfig(com.moxi.mogublog.xo.vo.WebConfigVO,org.springframework.validation.BindingResult)>/webConfigVO}
-VarNode{<com.moxi.mogublog.admin.restapi.TodoRestApi: java.lang.String getList(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.TodoVO,org.springframework.validation.BindingResult)>/todoVO}
-VarNode{<com.moxi.mogublog.web.restapi.ResourceRestApi: java.lang.String getBlogByUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
-VarNode{<com.moxi.mogublog.admin.restapi.CommentRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
-VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getSameBlogByTagUid(java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
-VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String moveFile(com.moxi.mogublog.picture.vo.NetworkDiskVO)>/networkDiskVO}
-VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getSameBlogByTagUid(java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
-VarNode{<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String deleteElasticSearchByUids(java.lang.String)>/uids}
-VarNode{<com.moxi.mogublog.admin.restapi.LogRestApi: java.lang.String getExceptionList(com.moxi.mogublog.xo.vo.ExceptionLogVO,org.springframework.validation.BindingResult)>/exceptionLogVO}
-VarNode{<com.moxi.mogublog.admin.restapi.PictureRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.PictureVO,org.springframework.validation.BindingResult)>/pictureVO}
-VarNode{<com.moxi.mogublog.admin.restapi.RoleRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.RoleVO,org.springframework.validation.BindingResult)>/roleVO}
-VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String sqlSearchBlog(java.lang.String,java.lang.Long,java.lang.Long)>/keywords}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String edit(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.FeedbackVO,org.springframework.validation.BindingResult)>/feedbackVO}
-VarNode{<com.moxi.mogublog.admin.restapi.LoginRestApi: java.lang.String info(javax.servlet.http.HttpServletRequest,java.lang.String)>/token}
-VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogByTime(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Long)>/currentPage}
+VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogBySort(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
+VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String getAll(java.lang.String)>/keyword}
+VarNode{<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String deleteElasticSearchByUid(java.lang.String)>/uid}
+VarNode{<com.moxi.mogublog.admin.restapi.UserRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
+VarNode{<com.moxi.mogublog.admin.restapi.CommentRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
+VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogByLevel(javax.servlet.http.HttpServletRequest,java.lang.Integer,java.lang.Long,java.lang.Integer)>/currentPage}
+VarNode{<com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.String getPicture(java.lang.String,java.lang.String)>/fileIds}
+VarNode{<com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.TagVO,org.springframework.validation.BindingResult)>/tagVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SysDictTypeRestApi: java.lang.String delete(javax.servlet.http.HttpServletRequest,java.util.List,org.springframework.validation.BindingResult)>/sysDictTypeVoList}
+VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String getPraiseListByUser(java.lang.Long,java.lang.Long)>/currentPage}
+VarNode{<com.moxi.mogublog.admin.restapi.FeedbackRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.FeedbackVO,org.springframework.validation.BindingResult)>/feedbackVO}
+VarNode{<com.moxi.mogublog.web.restapi.ClassifyRestApi: java.lang.String getArticleByBlogSortUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
+VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String batchDeleteFile(java.util.List)>/networkDiskVOList}
+VarNode{<com.fasterxml.jackson.core.io.JsonStringEncoder: com.fasterxml.jackson.core.io.JsonStringEncoder getInstance()>/$r1}
+VarNode{<org.apache.logging.log4j.spi.GarbageFreeSortedArrayThreadContextMap: java.util.Map getImmutableMapOrNull()>/$r2}
+VarNode{<com.moxi.mogublog.admin.restapi.SysDictTypeRestApi: java.lang.String edit(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.SysDictTypeVO,org.springframework.validation.BindingResult)>/sysDictTypeVO}
+VarNode{<org.apache.logging.log4j.message.ParameterFormatter: java.text.SimpleDateFormat getSimpleDateFormat()>/$r1}
+VarNode{<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String sortByCreateTime(java.lang.String,java.lang.Boolean)>/isDesc}
+VarNode{<freemarker.core.Environment: void process()>/$r1}
+VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.BlogVO,org.springframework.validation.BindingResult)>/blogVO}
+VarNode{<com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String stick(com.moxi.mogublog.xo.vo.TagVO,org.springframework.validation.BindingResult)>/tagVO}
+VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String restPwd(com.moxi.mogublog.xo.vo.AdminVO,org.springframework.validation.BindingResult)>/adminVO}
+VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogByAuthor(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
+VarNode{<freemarker.core.Environment: freemarker.core.Environment getCurrentEnvironment()>/$r1}
+VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String deleteFile(com.moxi.mogublog.picture.vo.NetworkDiskVO)>/networkDiskVO}
+VarNode{<com.moxi.mogublog.web.restapi.TagRestApi: java.lang.String getArticleByTagUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
 VarNode{<com.moxi.mogublog.admin.restapi.StudyVideoRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.StudyVideoVO,org.springframework.validation.BindingResult)>/studyVideoVO}
-VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogByAuthor(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
+VarNode{<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String editStorageSize(java.lang.String,java.lang.Long)>/maxStorageSize}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String deleteUserAccessToken(java.lang.String)>/accessToken}
+VarNode{<org.simpleframework.xml.core.SessionManager: void close()>/$r2}
+VarNode{<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String searchBlog(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer,java.lang.Integer)>/currentPage}
+VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String edit(com.moxi.mogublog.picture.vo.NetworkDiskVO)>/networkDiskVO}
+VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogByLevel(javax.servlet.http.HttpServletRequest,java.lang.Integer,java.lang.Long,java.lang.Integer)>/useSort}
+VarNode{<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>/pictureSortVO}
+VarNode{<com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.BlogSortVO,org.springframework.validation.BindingResult)>/blogSortVO}
 VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String decryptData(java.util.Map)>/map}
-VarNode{<com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String stick(com.moxi.mogublog.xo.vo.BlogSortVO,org.springframework.validation.BindingResult)>/blogSortVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.SysDictDataVO,org.springframework.validation.BindingResult)>/sysDictDataVO}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String updateUserPwd(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>/newPwd}
+VarNode{<com.moxi.mogublog.admin.restapi.TodoRestApi: java.lang.String delete(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.TodoVO,org.springframework.validation.BindingResult)>/todoVO}
+VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String editBatch(java.util.List)>/blogVOList}
+VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String sqlSearchBlog(java.lang.String,java.lang.Long,java.lang.Long)>/keywords}
+VarNode{<org.springframework.transaction.support.TransactionSynchronizationManager: boolean isActualTransactionActive()>/$r1}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.Object refreshAuth(java.lang.String,java.lang.String)>/source}
+VarNode{<com.moxi.mogublog.admin.restapi.WebConfigRestApi: java.lang.String editWebConfig(com.moxi.mogublog.xo.vo.WebConfigVO,org.springframework.validation.BindingResult)>/webConfigVO}
+VarNode{<com.moxi.mogublog.admin.restapi.CommentRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
+VarNode{<com.moxi.mogublog.admin.restapi.UserRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
+VarNode{<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String getStorageByAdminUid(java.util.List)>/adminUidList}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String bindUserEmail(java.lang.String,java.lang.String)>/code}
+VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String getButtonAll(java.lang.String)>/keyword}
+VarNode{<com.moxi.mogublog.admin.restapi.StudyVideoRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.StudyVideoVO,org.springframework.validation.BindingResult)>/studyVideoVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SubjectRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/subjectVOList}
+VarNode{<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String add(java.util.List,org.springframework.validation.BindingResult)>/subjectItemVOList}
+VarNode{<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String addElasticSearchIndexByUid(java.lang.String)>/uid}
+VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogBySort(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/blogSortUid}
+VarNode{<com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.BlogSortVO,org.springframework.validation.BindingResult)>/blogSortVO}
+VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getSameBlogByBlogUid(java.lang.String)>/blogUid}
+VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogByTime(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Long)>/pageSize}
+VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String forceLogout(java.util.List)>/tokenUidList}
+VarNode{<com.moxi.mogublog.web.restapi.LoginRestApi: java.lang.String register(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
+VarNode{<org.springframework.transaction.support.TransactionSynchronizationManager: boolean isSynchronizationActive()>/$r1}
+VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.BlogVO,org.springframework.validation.BindingResult)>/blogVO}
+VarNode{<com.moxi.mogublog.admin.restapi.TodoRestApi: java.lang.String edit(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.TodoVO,org.springframework.validation.BindingResult)>/todoVO}
+VarNode{<com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.TagVO,org.springframework.validation.BindingResult)>/tagVO}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String editUser(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.UserVO)>/userVO}
+VarNode{<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>/pictureSortVO}
+VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getSameBlogByTagUid(java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.Object revokeAuth(java.lang.String,java.lang.String)>/source}
+VarNode{<com.google.gson.Gson: com.google.gson.TypeAdapter getAdapter(com.google.gson.reflect.TypeToken)>/$r5}
+VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String getFileList(com.moxi.mogublog.commons.entity.NetworkDisk)>/networkDisk}
+VarNode{<com.moxi.mogublog.admin.restapi.LoginRestApi: java.lang.String info(javax.servlet.http.HttpServletRequest,java.lang.String)>/token}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String bindUserEmail(java.lang.String,java.lang.String)>/token}
+VarNode{<com.moxi.mogublog.web.restapi.WechatRestApi: java.lang.String getUserLoginStatus(java.lang.String)>/ticket}
+VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String sqlSearchBlog(java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
+VarNode{<com.moxi.mogublog.admin.restapi.TodoRestApi: java.lang.String getList(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.TodoVO,org.springframework.validation.BindingResult)>/todoVO}
+VarNode{<com.vladsch.flexmark.util.sequence.SegmentedSequenceTree: com.vladsch.flexmark.util.sequence.builder.tree.Segment getCachedSegment()>/$r2}
+VarNode{<com.moxi.mogublog.admin.restapi.RoleRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.RoleVO,org.springframework.validation.BindingResult)>/roleVO}
+VarNode{<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>/pictureSortVO}
+VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String getPraiseListByUser(java.lang.Long,java.lang.Long)>/pageSize}
+VarNode{<com.moxi.mogublog.admin.restapi.ResourceSortRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.ResourceSortVO,org.springframework.validation.BindingResult)>/resourceSortVO}
+VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String getListByDictType(java.lang.String)>/dictType}
+VarNode{<com.moxi.mogublog.web.restapi.ClassifyRestApi: java.lang.String getArticleByBlogSortUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/blogSortUid}
 VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.AdminVO,org.springframework.validation.BindingResult)>/adminVO}
+VarNode{<com.moxi.mogublog.admin.restapi.PictureRestApi: java.lang.String setCover(com.moxi.mogublog.xo.vo.PictureVO,org.springframework.validation.BindingResult)>/pictureVO}
+VarNode{<com.moxi.mogublog.web.restapi.SysDictDataRestApi: java.lang.String getListByDictType(java.lang.String)>/dictType}
+VarNode{<com.moxi.mogublog.web.controller.FreemarkerController: java.lang.String index(java.util.Map,java.lang.String)>/uid}
+VarNode{<org.springframework.web.context.request.RequestContextHolder: org.springframework.web.context.request.RequestAttributes getRequestAttributes()>/$r3}
+VarNode{<org.springframework.web.context.request.RequestContextHolder: org.springframework.web.context.request.RequestAttributes getRequestAttributes()>/$r1}
+VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.AdminVO,org.springframework.validation.BindingResult)>/adminVO}
+VarNode{<com.moxi.mogublog.web.restapi.TagRestApi: java.lang.String getArticleByTagUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
+VarNode{<com.moxi.mogublog.web.restapi.LoginRestApi: java.lang.String login(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
+VarNode{<org.springframework.transaction.support.TransactionSynchronizationManager: void bindResource(java.lang.Object,java.lang.Object)>/$r4}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: void login(java.lang.String,me.zhyd.oauth.model.AuthCallback,javax.servlet.http.HttpServletResponse)>/source}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String getSystemConfig(java.lang.String)>/token}
+VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String sqlSearchBlog(java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String replyBlogLink(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.LinkVO)>/linkVO}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.Object revokeAuth(java.lang.String,java.lang.String)>/token}
+VarNode{<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>/pictureSortVO}
+VarNode{<com.moxi.mogublog.admin.restapi.RoleRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.RoleVO,org.springframework.validation.BindingResult)>/roleVO}
 VarNode{<com.moxi.mogublog.spider.restapi.PictureSpiderRestApi: java.lang.String spiderPicture(com.moxi.mogublog.spider.entity.PictureSpider)>/pictureSpider}
+VarNode{<com.moxi.mogublog.admin.restapi.CommentRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
+VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String recorderVisitPage(java.lang.String)>/pageName}
+VarNode{<com.moxi.mogublog.web.restapi.ClassifyRestApi: java.lang.String getArticleByBlogSortUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
+VarNode{<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String initStorageSize(java.lang.String,java.lang.Long)>/maxStorageSize}
+VarNode{<com.moxi.mogublog.admin.restapi.LogRestApi: java.lang.String getExceptionList(com.moxi.mogublog.xo.vo.ExceptionLogVO,org.springframework.validation.BindingResult)>/exceptionLogVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String add(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.SysDictDataVO,org.springframework.validation.BindingResult)>/sysDictDataVO}
+VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogByTag(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
+VarNode{<com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.Object uploadPicsByUrl(com.moxi.mougblog.base.vo.FileVO,org.springframework.validation.BindingResult)>/fileVO}
+VarNode{<com.moxi.mogublog.admin.restapi.TodoRestApi: java.lang.String add(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.TodoVO,org.springframework.validation.BindingResult)>/todoVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SubjectRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.SubjectVO,org.springframework.validation.BindingResult)>/subjectVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String getListByDictTypeList(java.util.List)>/dictTypeList}
+VarNode{<com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/tagVoList}
+VarNode{<com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.String getPicture(java.lang.String,java.lang.String)>/code}
+VarNode{<com.moxi.mogublog.admin.restapi.WebNavbarRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.WebNavbarVO,org.springframework.validation.BindingResult)>/webNavbarVO}
+VarNode{<com.moxi.mogublog.web.restapi.SysDictDataRestApi: java.lang.String getListByDictTypeList(java.util.List)>/dictTypeList}
+VarNode{<com.moxi.mogublog.admin.restapi.SubjectRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.SubjectVO,org.springframework.validation.BindingResult)>/subjectVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SysParamsRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.SysParamsVO,org.springframework.validation.BindingResult)>/sysParamsVO}
+VarNode{<com.moxi.mogublog.admin.restapi.FeedbackRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/feedbackVOList}
+VarNode{<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String editStorageSize(java.lang.String,java.lang.Long)>/adminUid}
+VarNode{<freemarker.core._SettingEvaluationEnvironment: freemarker.core._SettingEvaluationEnvironment getCurrent()>/$r1}
+VarNode{<com.alibaba.fastjson.serializer.SerializeWriter: void <init>(java.io.Writer,int,com.alibaba.fastjson.serializer.SerializerFeature[])>/$r3}
+VarNode{<com.moxi.mogublog.admin.restapi.WebNavbarRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.WebNavbarVO,org.springframework.validation.BindingResult)>/webNavbarVO}
+VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogByAuthor(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/author}
+VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogBySearch(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Long)>/currentPage}
+VarNode{<com.moxi.mogublog.admin.restapi.PictureRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.PictureVO)>/pictureVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SysParamsRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/SysParamsVoList}
+VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String getListByApp(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
+VarNode{<com.moxi.mogublog.admin.restapi.TodoRestApi: java.lang.String toggleAll(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.TodoVO,org.springframework.validation.BindingResult)>/todoVO}
+VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String deleteBatch(java.util.List)>/blogVoList}
+VarNode{<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String stick(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>/pictureSortVO}
+VarNode{<com.moxi.mogublog.admin.restapi.StudyVideoRestApi: java.lang.String deleteBatch(java.util.List,org.springframework.validation.BindingResult)>/studyVideoVOList}
+VarNode{<com.moxi.mogublog.admin.restapi.CommentRestApi: java.lang.String deleteBatch(java.util.List,org.springframework.validation.BindingResult)>/commentVoList}
+VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String delete(java.util.List)>/adminUids}
+VarNode{<com.moxi.mogublog.admin.restapi.RoleRestApi: java.lang.String update(com.moxi.mogublog.xo.vo.RoleVO,org.springframework.validation.BindingResult)>/roleVO}
+VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String createFile(com.moxi.mogublog.commons.entity.NetworkDisk)>/networkDisk}
+VarNode{<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String initStorageSize(java.lang.String,java.lang.Long)>/adminUid}
+VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String moveFile(com.moxi.mogublog.picture.vo.NetworkDiskVO)>/networkDiskVO}
+VarNode{<com.moxi.mogublog.admin.restapi.UserRestApi: java.lang.String resetUserPassword(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
+VarNode{<com.moxi.mogublog.web.restapi.ResourceRestApi: java.lang.String getBlogByUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
+VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.AdminVO,org.springframework.validation.BindingResult)>/adminVO}
+VarNode{<com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String stick(com.moxi.mogublog.xo.vo.BlogSortVO,org.springframework.validation.BindingResult)>/blogSortVO}
+VarNode{<com.google.common.escape.Platform: char[] charBufferFromThreadLocal()>/$r1}
+VarNode{<org.apache.logging.log4j.spi.CopyOnWriteSortedArrayThreadContextMap: java.util.Map getImmutableMapOrNull()>/$r2}
+VarNode{<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String edit(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.SysDictDataVO,org.springframework.validation.BindingResult)>/sysDictDataVO}
+VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.CategoryMenuVO,org.springframework.validation.BindingResult)>/categoryMenuVO}
+VarNode{<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String getPictureSortByUid(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>/pictureSortVO}
+VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.BlogVO,org.springframework.validation.BindingResult)>/blogVO}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String updateUserPwd(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>/oldPwd}
+VarNode{<com.moxi.mogublog.web.restapi.SubjectRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.SubjectVO,org.springframework.validation.BindingResult)>/subjectVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String edit(java.util.List,org.springframework.validation.BindingResult)>/subjectItemVOList}
+VarNode{<com.fasterxml.jackson.core.JsonFactory: com.fasterxml.jackson.core.util.BufferRecycler _getBufferRecycler()>/$r4}
+VarNode{<com.moxi.mogublog.admin.restapi.LoginRestApi: java.lang.String login(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.Boolean)>/password}
+VarNode{<com.moxi.mogublog.admin.restapi.CreatCodeRestApi: java.lang.String validCode(javax.servlet.http.HttpServletRequest,java.lang.String)>/info}
+VarNode{<com.moxi.mogublog.admin.restapi.SysDictTypeRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.SysDictTypeVO,org.springframework.validation.BindingResult)>/sysDictTypeVO}
+VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String addLinkCount(java.lang.String)>/uid}
+VarNode{<com.moxi.mogublog.admin.restapi.LinkRestApi: java.lang.String stick(com.moxi.mogublog.xo.vo.LinkVO,org.springframework.validation.BindingResult)>/linkVO}
+VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.CategoryMenuVO,org.springframework.validation.BindingResult)>/categoryMenuVO}
+VarNode{<com.moxi.mogublog.admin.restapi.LoginRestApi: java.lang.String login(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.Boolean)>/isRememberMe}
+VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String praiseBlogByUid(java.lang.String)>/uid}
+VarNode{<org.simpleframework.xml.core.SessionManager: org.simpleframework.xml.core.Session open(boolean)>/$r2}
+VarNode{<com.moxi.mogublog.admin.restapi.WebNavbarRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.WebNavbarVO,org.springframework.validation.BindingResult)>/webNavbarVO}
+VarNode{<com.moxi.mogublog.admin.restapi.UserRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SystemConfigRestApi: java.lang.String cleanRedisByKey(java.util.List)>/key}
+VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getSameBlogByTagUid(java.lang.String,java.lang.Long,java.lang.Long)>/tagUid}
+VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getBlogByUid(java.lang.String,java.lang.Integer)>/uid}
+VarNode{<com.moxi.mogublog.admin.restapi.PictureRestApi: java.lang.String add(java.util.List,org.springframework.validation.BindingResult)>/pictureVOList}
+VarNode{<com.moxi.mogublog.admin.restapi.SystemRestApi: java.lang.String changePwd(java.lang.String,java.lang.String)>/newPwd}
+VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getSameBlogByTagUid(java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
+VarNode{<com.moxi.mogublog.admin.restapi.SysParamsRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.SysParamsVO,org.springframework.validation.BindingResult)>/SysParamsVO}
+VarNode{<com.moxi.mogublog.admin.restapi.LoginRestApi: java.lang.String login(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.Boolean)>/username}
+VarNode{<com.vladsch.flexmark.util.sequence.SegmentedSequenceTree: com.vladsch.flexmark.util.sequence.SegmentedSequenceTree$Cache getCache(int)>/$r2}
+VarNode{<com.moxi.mogublog.admin.restapi.SystemRestApi: java.lang.String changePwd(java.lang.String,java.lang.String)>/oldPwd}
+VarNode{<com.moxi.mogublog.admin.restapi.WebVisitRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.WebVisitVO,org.springframework.validation.BindingResult)>/webVisitVO}
+VarNode{<com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.TagVO,org.springframework.validation.BindingResult)>/tagVO}
+VarNode{<com.moxi.mogublog.admin.restapi.ResourceSortRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.ResourceSortVO,org.springframework.validation.BindingResult)>/resourceSortVO}
+VarNode{<com.moxi.mogublog.admin.restapi.WebNavbarRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.WebNavbarVO,org.springframework.validation.BindingResult)>/webNavbarVO}
+VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogBySearch(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Long)>/pageSize}
+VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
+VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String deleteBatch(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String verifyUser(java.lang.String)>/accessToken}
+VarNode{<com.moxi.mogublog.admin.restapi.SysParamsRestApi: java.lang.String edit(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.SysParamsVO,org.springframework.validation.BindingResult)>/SysParamsVO}
+VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogByTime(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Long)>/currentPage}
+VarNode{<com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/blogSortVoList}
+VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.CategoryMenuVO,org.springframework.validation.BindingResult)>/categoryMenuVO}
+VarNode{<com.moxi.mogublog.admin.restapi.RoleRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.RoleVO,org.springframework.validation.BindingResult)>/roleVO}
+VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String stick(com.moxi.mogublog.xo.vo.CategoryMenuVO,org.springframework.validation.BindingResult)>/categoryMenuVO}
+VarNode{<com.alibaba.fastjson.parser.JSONLexerBase: void <init>(int)>/$r5}
+VarNode{<com.moxi.mogublog.admin.restapi.LogRestApi: java.lang.String getLogList(com.moxi.mogublog.xo.vo.SysLogVO,org.springframework.validation.BindingResult)>/sysLogVO}
+VarNode{<org.springframework.amqp.rabbit.connection.ConsumerChannelRegistry: com.rabbitmq.client.Channel getConsumerChannel(org.springframework.amqp.rabbit.connection.ConnectionFactory)>/$r1}
+VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getNewBlog(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Long)>/currentPage}
+VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String getOnlineAdminList(com.moxi.mogublog.xo.vo.AdminVO,org.springframework.validation.BindingResult)>/adminVO}
+VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String edit(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.FeedbackVO,org.springframework.validation.BindingResult)>/feedbackVO}
+VarNode{<org.apache.logging.log4j.message.ParameterizedMessage: java.lang.StringBuilder getThreadLocalStringBuilder()>/$r1}
+VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getBlogPraiseCountByUid(java.lang.String)>/uid}
+VarNode{<com.moxi.mogublog.admin.restapi.LinkRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.LinkVO,org.springframework.validation.BindingResult)>/linkVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SystemConfigRestApi: java.lang.String editSystemConfig(com.moxi.mogublog.xo.vo.SystemConfigVO)>/systemConfigVO}
+VarNode{<com.moxi.mogublog.admin.restapi.PictureRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.PictureVO,org.springframework.validation.BindingResult)>/pictureVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.SysDictDataVO,org.springframework.validation.BindingResult)>/sysDictDataVO}
+VarNode{<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String deleteElasticSearchByUids(java.lang.String)>/uids}
+VarNode{<org.springframework.transaction.support.TransactionSynchronizationManager: boolean isCurrentTransactionReadOnly()>/$r1}
+VarNode{<org.apache.logging.log4j.spi.DefaultThreadContextMap: java.util.Map getImmutableMapOrNull()>/$r2}
+VarNode{<com.moxi.mogublog.admin.restapi.PictureRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.PictureVO,org.springframework.validation.BindingResult)>/pictureVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SubjectRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.SubjectVO,org.springframework.validation.BindingResult)>/subjectVO}
+VarNode{<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String searchBlog(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer,java.lang.Integer)>/pageSize}
+VarNode{<com.moxi.mogublog.web.restapi.SortRestApi: java.lang.String getArticleByMonth(java.lang.String)>/monthDate}
+VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogByLevel(javax.servlet.http.HttpServletRequest,java.lang.Integer,java.lang.Long,java.lang.Integer)>/level}
+VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String bindUserEmail(java.lang.String)>/userUid}
+VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogByTag(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/tagUid}
+VarNode{<com.moxi.mogublog.admin.restapi.LinkRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.LinkVO,org.springframework.validation.BindingResult)>/linkVO}
+VarNode{<com.moxi.mogublog.web.restapi.ResourceRestApi: java.lang.String getBlogByUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/resourceSortUid}
+VarNode{<com.moxi.mogublog.admin.restapi.ResourceSortRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/resourceSortVOList}
+VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.CategoryMenuVO,org.springframework.validation.BindingResult)>/categoryMenuVO}
+VarNode{<org.springframework.transaction.support.TransactionSynchronizationManager: java.lang.Object doUnbindResource(java.lang.Object)>/$r1}
+VarNode{<com.moxi.mogublog.admin.restapi.SystemRestApi: java.lang.String editMe(com.moxi.mogublog.xo.vo.AdminVO,org.springframework.validation.BindingResult)>/adminVO}
+VarNode{<org.springframework.transaction.support.TransactionSynchronizationManager: java.lang.Object doGetResource(java.lang.Object)>/$r1}
+VarNode{<com.moxi.mogublog.web.restapi.SubjectRestApi: java.lang.String getItemList(com.moxi.mogublog.xo.vo.SubjectItemVO,org.springframework.validation.BindingResult)>/subjectItemVO}
+VarNode{<com.moxi.mogublog.admin.restapi.CommentRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
+VarNode{<com.moxi.mogublog.admin.restapi.FeedbackRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.FeedbackVO,org.springframework.validation.BindingResult)>/feedbackVO}
 VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.BlogVO,org.springframework.validation.BindingResult)>/blogVO}
 VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getNewBlog(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Long)>/pageSize}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String editUser(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.UserVO)>/userVO}
-VarNode{<com.moxi.mogublog.admin.restapi.WebNavbarRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.WebNavbarVO,org.springframework.validation.BindingResult)>/webNavbarVO}
-VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.BlogVO,org.springframework.validation.BindingResult)>/blogVO}
-VarNode{<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String searchBlog(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer,java.lang.Integer)>/keywords}
-VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.CategoryMenuVO,org.springframework.validation.BindingResult)>/categoryMenuVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SubjectRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.SubjectVO,org.springframework.validation.BindingResult)>/subjectVO}
-VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogBySort(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/blogSortUid}
-VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogByLevel(javax.servlet.http.HttpServletRequest,java.lang.Integer,java.lang.Long,java.lang.Integer)>/useSort}
-VarNode{<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>/pictureSortVO}
-VarNode{<com.moxi.mogublog.admin.restapi.CommentRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
-VarNode{<com.moxi.mogublog.admin.restapi.WebNavbarRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.WebNavbarVO,org.springframework.validation.BindingResult)>/webNavbarVO}
-VarNode{<com.moxi.mogublog.admin.restapi.LinkRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.LinkVO,org.springframework.validation.BindingResult)>/linkVO}
-VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String deleteBatch(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
-VarNode{<com.moxi.mogublog.admin.restapi.TodoRestApi: java.lang.String add(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.TodoVO,org.springframework.validation.BindingResult)>/todoVO}
-VarNode{<com.moxi.mogublog.admin.restapi.ResourceSortRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.ResourceSortVO,org.springframework.validation.BindingResult)>/resourceSortVO}
-VarNode{<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String deleteElasticSearchByUid(java.lang.String)>/uid}
-VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogByTime(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Long)>/pageSize}
-VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogBySort(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
-VarNode{<com.moxi.mogublog.admin.restapi.ResourceSortRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.ResourceSortVO,org.springframework.validation.BindingResult)>/resourceSortVO}
-VarNode{<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String initStorageSize(java.lang.String,java.lang.Long)>/adminUid}
-VarNode{<com.moxi.mogublog.web.restapi.TagRestApi: java.lang.String getArticleByTagUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
-VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String sqlSearchBlog(java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
-VarNode{<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String searchBlog(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer,java.lang.Integer)>/currentPage}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.Object refreshAuth(java.lang.String,java.lang.String)>/token}
-VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String uploadPics(java.util.List)>/filedatas}
-VarNode{<com.moxi.mogublog.admin.restapi.SystemRestApi: java.lang.String changePwd(java.lang.String,java.lang.String)>/newPwd}
-VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogByLevel(javax.servlet.http.HttpServletRequest,java.lang.Integer,java.lang.Long,java.lang.Integer)>/level}
-VarNode{<com.moxi.mogublog.admin.restapi.LoginRestApi: java.lang.String login(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.Boolean)>/username}
-VarNode{<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String uploadFile(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.commons.entity.NetworkDisk)>/networkDisk}
-VarNode{<com.moxi.mogublog.admin.restapi.ResourceSortRestApi: java.lang.String stick(com.moxi.mogublog.xo.vo.ResourceSortVO,org.springframework.validation.BindingResult)>/resourceSortVO}
-VarNode{<com.moxi.mogublog.admin.restapi.FeedbackRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/feedbackVOList}
-VarNode{<com.moxi.mogublog.admin.restapi.LogRestApi: java.lang.String getLogList(com.moxi.mogublog.xo.vo.SysLogVO,org.springframework.validation.BindingResult)>/sysLogVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SystemConfigRestApi: java.lang.String editSystemConfig(com.moxi.mogublog.xo.vo.SystemConfigVO)>/systemConfigVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String sortByCreateTime(java.lang.String,java.lang.Boolean)>/subjectUid}
-VarNode{<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String initStorageSize(java.lang.String,java.lang.Long)>/maxStorageSize}
-VarNode{<com.moxi.mogublog.web.restapi.SysDictDataRestApi: java.lang.String getListByDictTypeList(java.util.List)>/dictTypeList}
-VarNode{<com.moxi.mogublog.admin.restapi.LoginRestApi: java.lang.String login(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.Boolean)>/password}
-VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getBlogByUid(java.lang.String,java.lang.Integer)>/oid}
-VarNode{<com.moxi.mogublog.admin.restapi.StudyVideoRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.StudyVideoVO,org.springframework.validation.BindingResult)>/studyVideoVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SysDictTypeRestApi: java.lang.String edit(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.SysDictTypeVO,org.springframework.validation.BindingResult)>/sysDictTypeVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.SubjectItemVO,org.springframework.validation.BindingResult)>/subjectItemVO}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String verifyUser(java.lang.String)>/accessToken}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.Object refreshAuth(java.lang.String,java.lang.String)>/source}
-VarNode{<com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/tagVoList}
-VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getBlogPraiseCountByUid(java.lang.String)>/uid}
-VarNode{<com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.String getPicture(java.lang.String,java.lang.String)>/fileIds}
-VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getSameBlogByBlogUid(java.lang.String)>/blogUid}
-VarNode{<com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.TagVO,org.springframework.validation.BindingResult)>/tagVO}
-VarNode{<com.moxi.mogublog.admin.restapi.TodoRestApi: java.lang.String toggleAll(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.TodoVO,org.springframework.validation.BindingResult)>/todoVO}
-VarNode{<com.moxi.mogublog.web.restapi.ClassifyRestApi: java.lang.String getArticleByBlogSortUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
-VarNode{<com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.TagVO,org.springframework.validation.BindingResult)>/tagVO}
-VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogBySearch(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Long)>/currentPage}
-VarNode{<com.moxi.mogublog.admin.restapi.UserRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
-VarNode{<com.moxi.mogublog.admin.restapi.PictureRestApi: java.lang.String add(java.util.List,org.springframework.validation.BindingResult)>/pictureVOList}
-VarNode{<com.moxi.mogublog.admin.restapi.StudyVideoRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.StudyVideoVO,org.springframework.validation.BindingResult)>/studyVideoVO}
-VarNode{<com.moxi.mogublog.web.controller.FreemarkerController: java.lang.String index(java.util.Map,java.lang.String)>/map}
-VarNode{<com.moxi.mogublog.admin.restapi.UserRestApi: java.lang.String delete(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
-VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String edit(com.moxi.mogublog.picture.vo.NetworkDiskVO)>/networkDiskVO}
-VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String deleteFile(com.moxi.mogublog.picture.vo.NetworkDiskVO)>/networkDiskVO}
-VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String praiseBlogByUid(java.lang.String)>/uid}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String updateUserPwd(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>/oldPwd}
-VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String sqlSearchBlog(java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
-VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String createFile(com.moxi.mogublog.commons.entity.NetworkDisk)>/networkDisk}
-VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String deleteBatch(java.util.List)>/blogVoList}
-VarNode{<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String add(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.SysDictDataVO,org.springframework.validation.BindingResult)>/sysDictDataVO}
-VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String addLinkCount(java.lang.String)>/uid}
-VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String unzipFile(com.moxi.mogublog.commons.entity.NetworkDisk)>/networkDisk}
 VarNode{<com.moxi.mogublog.web.restapi.LoginRestApi: java.lang.String logout(java.lang.String)>/token}
-VarNode{<com.moxi.mogublog.web.restapi.TagRestApi: java.lang.String getArticleByTagUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/tagUid}
-VarNode{<com.moxi.mogublog.web.restapi.TagRestApi: java.lang.String getArticleByTagUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
-VarNode{<com.moxi.mogublog.admin.restapi.RoleRestApi: java.lang.String update(com.moxi.mogublog.xo.vo.RoleVO,org.springframework.validation.BindingResult)>/roleVO}
-VarNode{<com.moxi.mogublog.admin.restapi.UserRestApi: java.lang.String resetUserPassword(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
-VarNode{<com.moxi.mogublog.admin.restapi.FeedbackRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.FeedbackVO,org.springframework.validation.BindingResult)>/feedbackVO}
-VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String getAll(java.lang.String)>/keyword}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String bindUserEmail(java.lang.String,java.lang.String)>/token}
-VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogBySort(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
-VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.BlogVO,org.springframework.validation.BindingResult)>/blogVO}
-VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getBlogByLevel(javax.servlet.http.HttpServletRequest,java.lang.Integer,java.lang.Long,java.lang.Integer)>/currentPage}
-VarNode{<com.moxi.mogublog.admin.restapi.SysDictTypeRestApi: java.lang.String delete(javax.servlet.http.HttpServletRequest,java.util.List,org.springframework.validation.BindingResult)>/sysDictTypeVoList}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.Object revokeAuth(java.lang.String,java.lang.String)>/source}
-VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.BlogVO,org.springframework.validation.BindingResult)>/blogVO}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String bindUserEmail(java.lang.String,java.lang.String)>/code}
-VarNode{<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String editStorageSize(java.lang.String,java.lang.Long)>/maxStorageSize}
-VarNode{<com.moxi.mogublog.admin.restapi.SystemConfigRestApi: java.lang.String cleanRedisByKey(java.util.List)>/key}
-VarNode{<com.moxi.mogublog.web.restapi.ResourceRestApi: java.lang.String getBlogByUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/pageSize}
-VarNode{<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String editStorageSize(java.lang.String,java.lang.Long)>/adminUid}
-VarNode{<com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.TagVO,org.springframework.validation.BindingResult)>/tagVO}
-VarNode{<com.moxi.mogublog.web.restapi.SubjectRestApi: java.lang.String getItemList(com.moxi.mogublog.xo.vo.SubjectItemVO,org.springframework.validation.BindingResult)>/subjectItemVO}
-VarNode{<com.moxi.mogublog.admin.restapi.TagRestApi: java.lang.String stick(com.moxi.mogublog.xo.vo.TagVO,org.springframework.validation.BindingResult)>/tagVO}
-VarNode{<com.moxi.mogublog.admin.restapi.PictureRestApi: java.lang.String setCover(com.moxi.mogublog.xo.vo.PictureVO,org.springframework.validation.BindingResult)>/pictureVO}
-VarNode{<com.moxi.mogublog.admin.restapi.CommentRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
-VarNode{<com.moxi.mogublog.web.restapi.ClassifyRestApi: java.lang.String getArticleByBlogSortUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/blogSortUid}
-VarNode{<com.moxi.mogublog.admin.restapi.UserRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
-VarNode{<com.moxi.mogublog.web.controller.FreemarkerController: java.lang.String index(java.util.Map,java.lang.String)>/uid}
-VarNode{<com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.Object uploadPicsByUrl(com.moxi.mougblog.base.vo.FileVO,org.springframework.validation.BindingResult)>/fileVO}
-VarNode{<com.moxi.mogublog.admin.restapi.TodoRestApi: java.lang.String delete(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.TodoVO,org.springframework.validation.BindingResult)>/todoVO}
-VarNode{<com.moxi.mogublog.web.restapi.SubjectRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.SubjectVO,org.springframework.validation.BindingResult)>/subjectVO}
-VarNode{<com.moxi.mogublog.admin.restapi.ResourceSortRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/resourceSortVOList}
-VarNode{<com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/blogSortVoList}
-VarNode{<com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.String getPicture(java.lang.String,java.lang.String)>/code}
-VarNode{<com.moxi.mogublog.web.restapi.BlogContentRestApi: java.lang.String getBlogByUid(java.lang.String,java.lang.Integer)>/uid}
-VarNode{<com.moxi.mogublog.admin.restapi.WebVisitRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.WebVisitVO,org.springframework.validation.BindingResult)>/webVisitVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String add(java.util.List,org.springframework.validation.BindingResult)>/subjectItemVOList}
-VarNode{<com.moxi.mogublog.admin.restapi.SysParamsRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.SysParamsVO,org.springframework.validation.BindingResult)>/sysParamsVO}
-VarNode{<com.moxi.mogublog.admin.restapi.CommentRestApi: java.lang.String deleteBatch(java.util.List,org.springframework.validation.BindingResult)>/commentVoList}
+VarNode{<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.SubjectItemVO,org.springframework.validation.BindingResult)>/subjectItemVO}
+VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String reportComment(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
+VarNode{<com.moxi.mogublog.admin.restapi.SubjectItemRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/subjectItemVOList}
+VarNode{<com.moxi.mogublog.web.restapi.ResourceRestApi: java.lang.String getBlogByUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
+VarNode{<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String searchBlog(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer,java.lang.Integer)>/keywords}
+VarNode{<com.moxi.mogublog.admin.restapi.SysDictTypeRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.SysDictTypeVO,org.springframework.validation.BindingResult)>/sysDictTypeVO}
+VarNode{<org.springframework.transaction.support.TransactionSynchronizationManager: void registerSynchronization(org.springframework.transaction.support.TransactionSynchronization)>/$r2}
+VarNode{<com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.BlogSortVO,org.springframework.validation.BindingResult)>/blogSortVO}
 VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogByTag(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
-VarNode{<com.moxi.mogublog.admin.restapi.SystemRestApi: java.lang.String editMe(com.moxi.mogublog.xo.vo.AdminVO,org.springframework.validation.BindingResult)>/adminVO}
-VarNode{<com.moxi.mogublog.search.restapi.ElasticSearchRestApi: java.lang.String searchBlog(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer,java.lang.Integer)>/pageSize}
-VarNode{<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String getListByDictType(java.lang.String)>/dictType}
-VarNode{<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String delete(javax.servlet.http.HttpServletRequest,java.util.List,org.springframework.validation.BindingResult)>/sysDictDataVoList}
-VarNode{<com.moxi.mogublog.picture.restapi.FileRestApi: java.lang.Object uploadPics(javax.servlet.http.HttpServletRequest,java.util.List)>/filedatas}
-VarNode{<com.moxi.mogublog.web.restapi.SortRestApi: java.lang.String getArticleByMonth(java.lang.String)>/monthDate}
-VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String getPraiseListByUser(java.lang.Long,java.lang.Long)>/pageSize}
-VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
-VarNode{<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>/pictureSortVO}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String renderAuth(java.lang.String)>/source}
-VarNode{<com.moxi.mogublog.admin.restapi.LoginRestApi: java.lang.String login(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.Boolean)>/isRememberMe}
-VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.AdminVO,org.springframework.validation.BindingResult)>/adminVO}
-VarNode{<com.moxi.mogublog.admin.restapi.RoleRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.RoleVO,org.springframework.validation.BindingResult)>/roleVO}
-VarNode{<com.moxi.mogublog.admin.restapi.TodoRestApi: java.lang.String edit(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.TodoVO,org.springframework.validation.BindingResult)>/todoVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SubjectRestApi: java.lang.String delete(java.util.List,org.springframework.validation.BindingResult)>/subjectVOList}
-VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String bindUserEmail(java.lang.String)>/userUid}
-VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String getNewBlog(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Long)>/currentPage}
-VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SysDictTypeRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.SysDictTypeVO,org.springframework.validation.BindingResult)>/sysDictTypeVO}
-VarNode{<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String getPictureSortByUid(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>/pictureSortVO}
-VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogByTag(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/tagUid}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: void login(java.lang.String,me.zhyd.oauth.model.AuthCallback,javax.servlet.http.HttpServletResponse)>/source}
-VarNode{<com.moxi.mogublog.web.restapi.LoginRestApi: java.lang.String login(com.moxi.mogublog.xo.vo.UserVO,org.springframework.validation.BindingResult)>/userVO}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.Object revokeAuth(java.lang.String,java.lang.String)>/token}
-VarNode{<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String getList(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>/pictureSortVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String edit(javax.servlet.http.HttpServletRequest,com.moxi.mogublog.xo.vo.SysDictDataVO,org.springframework.validation.BindingResult)>/sysDictDataVO}
-VarNode{<com.moxi.mogublog.admin.restapi.SysDictDataRestApi: java.lang.String getListByDictTypeList(java.util.List)>/dictTypeList}
-VarNode{<com.moxi.mogublog.admin.restapi.CreatCodeRestApi: java.lang.String validCode(javax.servlet.http.HttpServletRequest,java.lang.String)>/info}
-VarNode{<com.moxi.mogublog.web.restapi.IndexRestApi: java.lang.String recorderVisitPage(java.lang.String)>/pageName}
-VarNode{<com.moxi.mogublog.picture.restapi.StorageRestApi: java.lang.String getStorageByAdminUid(java.util.List)>/adminUidList}
+VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String uploadPics(java.util.List)>/filedatas}
+VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogByAuthor(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
+VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String unzipFile(com.moxi.mogublog.commons.entity.NetworkDisk)>/networkDisk}
 VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String batchMoveFile(com.moxi.mogublog.picture.vo.NetworkDiskVO)>/networkDiskVO}
-VarNode{<com.moxi.mogublog.admin.restapi.ResourceSortRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.ResourceSortVO,org.springframework.validation.BindingResult)>/resourceSortVO}
-VarNode{<com.moxi.mogublog.web.restapi.CommentRestApi: java.lang.String getListByApp(com.moxi.mogublog.xo.vo.CommentVO,org.springframework.validation.BindingResult)>/commentVO}
-VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String getButtonAll(java.lang.String)>/keyword}
-VarNode{<com.moxi.mogublog.admin.restapi.SubjectRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.SubjectVO,org.springframework.validation.BindingResult)>/subjectVO}
-VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String delete(java.util.List)>/adminUids}
-VarNode{<com.moxi.mogublog.admin.restapi.SubjectRestApi: java.lang.String add(com.moxi.mogublog.xo.vo.SubjectVO,org.springframework.validation.BindingResult)>/subjectVO}
-VarNode{<com.moxi.mogublog.admin.restapi.AdminRestApi: java.lang.String restPwd(com.moxi.mogublog.xo.vo.AdminVO,org.springframework.validation.BindingResult)>/adminVO}
-VarNode{<com.moxi.mogublog.admin.restapi.BlogRestApi: java.lang.String editBatch(java.util.List)>/blogVOList}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String getSystemConfig(java.lang.String)>/token}
-VarNode{<com.moxi.mogublog.web.restapi.AuthRestApi: java.lang.String deleteUserAccessToken(java.lang.String)>/accessToken}
-VarNode{<com.moxi.mogublog.picture.restapi.NetworkDiskRestApi: java.lang.String batchDeleteFile(java.util.List)>/networkDiskVOList}
-VarNode{<com.moxi.mogublog.admin.restapi.CategoryMenuRestApi: java.lang.String stick(com.moxi.mogublog.xo.vo.CategoryMenuVO,org.springframework.validation.BindingResult)>/categoryMenuVO}
-VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogByAuthor(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/author}
-VarNode{<com.moxi.mogublog.admin.restapi.BlogSortRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.BlogSortVO,org.springframework.validation.BindingResult)>/blogSortVO}
-VarNode{<com.moxi.mogublog.admin.restapi.PictureSortRestApi: java.lang.String edit(com.moxi.mogublog.xo.vo.PictureSortVO,org.springframework.validation.BindingResult)>/pictureSortVO}
-VarNode{<com.moxi.mogublog.web.restapi.WechatRestApi: java.lang.String getUserLoginStatus(java.lang.String)>/ticket}
-VarNode{<com.moxi.mogublog.web.restapi.ClassifyRestApi: java.lang.String getArticleByBlogSortUid(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
+VarNode{<org.springframework.cglib.core.AbstractClassGenerator: java.lang.Class generate(org.springframework.cglib.core.AbstractClassGenerator$ClassLoaderData)>/$r1}
+VarNode{<com.moxi.mogublog.web.restapi.SearchRestApi: java.lang.String searchBlogBySort(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Long,java.lang.Long)>/currentPage}
 Sink nodes:
 Dumping /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-flow-graph.dot
-TFGDumper finishes, elapsed time: 0.10s
+TFGDumper finishes, elapsed time: 0.47s
 -------------- Pointer analysis statistics: --------------
-#var pointers:                5072 (insens) / 5072 (sens)
-#objects:                     2271 (insens) / 2271 (sens)
-#var points-to:               3754 (insens) / 3754 (sens)
-#static field points-to:      2 (sens)
-#instance field points-to:    1111 (sens)
-#array points-to:             6 (sens)
-#reachable methods:           453 (insens) / 453 (sens)
-#call graph edges:            984 (insens) / 984 (sens)
+#var pointers:                20,6927 (insens) / 20,6927 (sens)
+#objects:                     1,5836 (insens) / 1,5836 (sens)
+#var points-to:               67,6256 (insens) / 67,6256 (sens)
+#static field points-to:      4961 (sens)
+#instance field points-to:    21,1799 (sens)
+#array points-to:             1,0091 (sens)
+#reachable methods:           1,8981 (insens) / 1,8981 (sens)
+#call graph edges:            8,1718 (insens) / 8,1727 (sens)
 ----------------------------------------
-pta finishes, elapsed time: 0.39s
+pta finishes, elapsed time: 3.85s
 cg starts ...
-Call graph has 453 reachable methods and 984 edges
+Call graph has 18981 reachable methods and 81718 edges
 Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
 Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
 Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
-cg finishes, elapsed time: 0.05s
-Tai-e finishes, elapsed time: 3.50s
+cg finishes, elapsed time: 1.83s
+Tai-e finishes, elapsed time: 51.41s

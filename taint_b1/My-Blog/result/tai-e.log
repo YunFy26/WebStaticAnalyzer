@@ -1,0 +1,766 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.3
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+27353 classes with 240367 methods in the world
+WorldBuilder finishes, elapsed time: 21.32s
+ir-dumper starts ...
+Dumping IR in /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tir
+13454 classes in scope (APP) of class analyses
+ir-dumper finishes, elapsed time: 11.74s
+routerAnalysis starts ...
+Router analysis started at: 2026-02-28 21:30:05
+Router analysis completed at: 2026-02-28 21:30:05 (Duration: 8ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.01s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.00s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+resultAnalysis starts ...
+============================================================
+                 Spring Analysis Result Summary             
+============================================================
+Router Methods (Endpoints)     : 54
+Spring Beans                   : 82
+Aspect Methods (Advice)        : 0
+============================================================
+resultAnalysis finishes, elapsed time: 0.00s
+srfaAnalysis starts ...
+SRFA Analysis started at: 2026-02-28 21:30:05
+Loaded 12 controller classes from RouterAnalysis
+Discovering mapper paths from 16 appClassPath entries
+Auto-discovered 33 mapper path(s)
+  - /Users/yuntsy/My/Graduate/Data/final/My-Blog/src/main/resources/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-4_0_4_1592488715000/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/javax_servlet-api-4_0_1_1532351392000/META-INF/maven/javax.servlet/javax.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-web-6_2_1_1733996318000/META-INF
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-jdbc-6_2_0_1731602316000/org/springframework/jdbc/support
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-6_0_0_1720887509497/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-context-6_2_0_1731602337000/org/springframework/remoting/rmi
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves/rewrite
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mbeans
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/deploy
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/webresources
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/loader
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/users
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/connector
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/authenticator
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/startup
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/realm
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/session
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-web-1_13_0_1699061658000/META-INF/maven/org.apache.shiro/shiro-web
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-core-1_13_0_1699061656000/META-INF/maven/org.apache.shiro/shiro-core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/org/quartz/impl/jdbcjobstore
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/META-INF/maven/org.quartz-scheduler/quartz
+Using 33 mapper search path(s):
+  - /Users/yuntsy/My/Graduate/Data/final/My-Blog/src/main/resources/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-4_0_4_1592488715000/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/javax_servlet-api-4_0_1_1532351392000/META-INF/maven/javax.servlet/javax.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-web-6_2_1_1733996318000/META-INF
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-jdbc-6_2_0_1731602316000/org/springframework/jdbc/support
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-6_0_0_1720887509497/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-context-6_2_0_1731602337000/org/springframework/remoting/rmi
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves/rewrite
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mbeans
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/deploy
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/webresources
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/loader
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/users
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/connector
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/authenticator
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/startup
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/realm
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/session
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-web-1_13_0_1699061658000/META-INF/maven/org.apache.shiro/shiro-web
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-core-1_13_0_1699061656000/META-INF/maven/org.apache.shiro/shiro-core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/org/quartz/impl/jdbcjobstore
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/META-INF/maven/org.quartz-scheduler/quartz
+Parsed 8 MyBatis mapper files
+Parsed 8 MyBatis mapper files
+  Mapper namespace: com.site.blog.my.core.dao.BlogTagMapper
+    Operation: id=batchInsertBlogTag, type=insert, hasDollar=false
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=update, hasDollar=false
+    Operation: id=deleteBatch, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+    Operation: id=findTagList, type=select, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=selectByTagName, type=select, hasDollar=false
+  Mapper namespace: com.site.blog.my.core.dao.BlogLinkMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=update, hasDollar=false
+    Operation: id=deleteBatch, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=findLinkList, type=select, hasDollar=false
+  Mapper namespace: com.site.blog.my.core.dao.BlogTagRelationMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=batchInsert, type=insert, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=deleteByBlogId, type=delete, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=selectByBlogIdAndTagId, type=select, hasDollar=false
+    Operation: id=selectDistinctTagIds, type=select, hasDollar=false
+  Mapper namespace: com.site.blog.my.core.dao.BlogCategoryMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=update, hasDollar=false
+    Operation: id=deleteBatch, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+    Operation: id=findCategoryList, type=select, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=selectByCategoryIds, type=select, hasDollar=false
+    Operation: id=selectByCategoryName, type=select, hasDollar=false
+  Mapper namespace: com.site.blog.my.core.dao.BlogMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=update, hasDollar=false
+    Operation: id=deleteBatch, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKeyWithBLOBs, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+    Operation: id=updateBlogCategorys, type=update, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=findBlogList, type=select, hasDollar=false
+    Operation: id=getTotalBlogs, type=select, hasDollar=false
+    Operation: id=findBlogListByType, type=select, hasDollar=false
+    Operation: id=getBlogsPageByTagId, type=select, hasDollar=false
+    Operation: id=getTotalBlogsByTagId, type=select, hasDollar=false
+    Operation: id=selectBySubUrl, type=select, hasDollar=false
+  Mapper namespace: com.site.blog.my.core.dao.BlogConfigMapper
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+  Mapper namespace: com.site.blog.my.core.dao.AdminUserMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+    Operation: id=login, type=select, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+  Mapper namespace: com.site.blog.my.core.dao.BlogCommentMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=update, hasDollar=false
+    Operation: id=checkDone, type=update, hasDollar=false
+    Operation: id=deleteBatch, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+    Operation: id=findBlogCommentList, type=select, hasDollar=false
+    Operation: id=getTotalBlogComments, type=select, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+Collected 46 write field names from INSERT/UPDATE operations
+Extracted 91 source metadata entries (before filtering)
+Resolving 8 mapper namespaces...
+  Namespace resolve: com.site.blog.my.core.dao.BlogTagMapper -> com.site.blog.my.core.dao.BlogTagMapper
+  Namespace resolve: com.site.blog.my.core.dao.BlogLinkMapper -> com.site.blog.my.core.dao.BlogLinkMapper
+  Namespace resolve: com.site.blog.my.core.dao.BlogTagRelationMapper -> com.site.blog.my.core.dao.BlogTagRelationMapper
+  Namespace resolve: com.site.blog.my.core.dao.BlogCategoryMapper -> com.site.blog.my.core.dao.BlogCategoryMapper
+  Namespace resolve: com.site.blog.my.core.dao.BlogMapper -> com.site.blog.my.core.dao.BlogMapper
+  Namespace resolve: com.site.blog.my.core.dao.BlogConfigMapper -> com.site.blog.my.core.dao.BlogConfigMapper
+  Namespace resolve: com.site.blog.my.core.dao.AdminUserMapper -> com.site.blog.my.core.dao.AdminUserMapper
+  Namespace resolve: com.site.blog.my.core.dao.BlogCommentMapper -> com.site.blog.my.core.dao.BlogCommentMapper
+Extracted 67 sink metadata entries (deduplicated, before risk filtering)
+Sources: 91 generated, 0 filtered, 0 deduplicated
+Sinks: 67 generated (risky), 0 filtered (safe), 0 deduplicated
+  Note: 'risky' means uses string concatenation ($), 'safe' means uses prepared statement (#)
+Written taint config to: output/taint-config-generated.yml
+  Sources: 91 (SRFA param) + framework call sources
+  Sinks: 67 (SRFA) + common predefined sinks
+  Transfers: standard set included
+SRFA Analysis completed at: 2026-02-28 21:30:05 (Duration: 126ms)
+srfaAnalysis finishes, elapsed time: 0.13s
+pta starts ...
+Loading taint config from /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-config-generated.yml
+Cannot find source method '<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>'
+Cannot find source method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
+Cannot find source method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find source method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.Query createQuery(java.lang.String)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.SQLQuery createSQLQuery(java.lang.String)>'
+Cannot find sink method '<javax.servlet.ServletOutputStream: void write(byte[])>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void print(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void println(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void write(java.lang.String)>'
+Cannot find sink method '<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object getForObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity getForEntity(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object postForObject(java.lang.String,java.lang.Object,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class)>'
+Cannot find sink method '<org.springframework.ldap.core.LdapTemplate: java.util.List search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls,org.springframework.ldap.core.AttributesMapper)>'
+Cannot find sink method '<org.springframework.expression.ExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>'
+Cannot find sink method '<org.springframework.expression.spel.standard.SpelExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object getValue(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlExpression createExpression(java.lang.String)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlScript createScript(java.lang.String)>'
+Cannot find sink method '<freemarker.template.Template: void <init>(java.lang.String,java.io.Reader)>'
+Cannot find sink method '<org.apache.velocity.app.VelocityEngine: boolean evaluate(org.apache.velocity.context.Context,java.io.Writer,java.lang.String,java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parse(java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.lang.String)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.io.InputStream)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void info(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void warn(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void error(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void debug(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void fatal(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void info(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void warn(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void error(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void debug(java.lang.String)>'
+Cannot find sink method '<javax.servlet.http.HttpServletRequest: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>'
+Cannot find taint-transfer method '<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find taint-transfer method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
+Cannot find taint-transfer method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
+Cannot find taint-transfer method '<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>'
+Cannot find taint-transfer method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+TaintConfig:
+sources:
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result list(java.util.Map)>", index: "0", type: "java.util.Map" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>", index: "0", type: "java.lang.Integer[]" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result list(java.util.Map)>", index: "0", type: "java.util.Map" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result save(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result save(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result save(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result save(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>", index: "3", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result save(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>", index: "4", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result info(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>", index: "1", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>", index: "3", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>", index: "4", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>", index: "5", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>", index: "0", type: "java.lang.Integer[]" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result list(java.util.Map)>", index: "0", type: "java.util.Map" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: java.lang.String edit(javax.servlet.http.HttpServletRequest,java.lang.Long)>", index: "1", type: "java.lang.Long" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "2", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "3", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "4", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "5", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "6", type: "java.lang.Byte" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "7", type: "java.lang.Byte" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "3", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "4", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "5", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "6", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "7", type: "java.lang.Byte" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>", index: "8", type: "java.lang.Byte" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: void uploadFileByEditormd(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.web.multipart.MultipartFile)>", index: "2", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>", index: "0", type: "java.lang.Integer[]" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result list(java.util.Map)>", index: "0", type: "java.util.Map" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result checkDone(java.lang.Integer[])>", index: "0", type: "java.lang.Integer[]" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result checkDone(java.lang.Long,java.lang.String)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result checkDone(java.lang.Long,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>", index: "0", type: "java.lang.Integer[]" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.AdminController: java.lang.String login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.AdminController: java.lang.String login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.AdminController: java.lang.String login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.AdminController: java.lang.String login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)>", index: "3", type: "javax.servlet.http.HttpSession" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.AdminController: java.lang.String passwordUpdate(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.AdminController: java.lang.String passwordUpdate(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.AdminController: java.lang.String nameUpdate(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.AdminController: java.lang.String nameUpdate(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.TagController: com.site.blog.my.core.util.Result list(java.util.Map)>", index: "0", type: "java.util.Map" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.TagController: com.site.blog.my.core.util.Result save(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.TagController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>", index: "0", type: "java.lang.Integer[]" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.UploadController: com.site.blog.my.core.util.Result upload(javax.servlet.http.HttpServletRequest,org.springframework.web.multipart.MultipartFile)>", index: "1", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result website(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result website(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result website(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result website(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "3", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result userInfo(java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result userInfo(java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result userInfo(java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result footer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result footer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result footer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result footer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "3", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result footer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "4", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String page(javax.servlet.http.HttpServletRequest,int)>", index: "1", type: "int" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String detail(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Integer)>", index: "1", type: "java.lang.Long" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String detail(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Integer)>", index: "2", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String tag(javax.servlet.http.HttpServletRequest,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String tag(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String tag(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>", index: "2", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String category(javax.servlet.http.HttpServletRequest,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String category(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String category(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>", index: "2", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String search(javax.servlet.http.HttpServletRequest,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String search(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String search(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>", index: "2", type: "java.lang.Integer" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "1", type: "javax.servlet.http.HttpSession" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "2", type: "java.lang.Long" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "3", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "4", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "5", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "6", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: "7", type: "java.lang.String" }
+  - { kind: "param", method: "<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String detail(javax.servlet.http.HttpServletRequest,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "call", method: "<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>", index: "result", type: "org.apache.shiro.subject.Subject" }
+  - { kind: "call", method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", index: "result", type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { kind: "call", method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>", index: "result", type: "java.security.Principal" }
+  - { kind: "call", method: "<java.security.Principal: java.lang.String getName()>", index: "result", type: "java.lang.String" }
+  - { kind: "call", method: "<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<java.lang.ThreadLocal: java.lang.Object get()>", index: "result", type: "java.lang.Object" }
+
+sinks:
+  - { method: "<com.site.blog.my.core.dao.BlogTagMapper: int batchInsertBlogTag(java.util.List)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagMapper: int insert(com.site.blog.my.core.entity.BlogTag)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagMapper: int insertSelective(com.site.blog.my.core.entity.BlogTag)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagMapper: int deleteBatch(java.lang.Integer[])>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagMapper: int updateByPrimaryKeySelective(com.site.blog.my.core.entity.BlogTag)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagMapper: int updateByPrimaryKey(com.site.blog.my.core.entity.BlogTag)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagMapper: java.util.List findTagList(com.site.blog.my.core.util.PageQueryUtil)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagMapper: com.site.blog.my.core.entity.BlogTag selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagMapper: com.site.blog.my.core.entity.BlogTag selectByTagName(java.lang.String)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogLinkMapper: int insert(com.site.blog.my.core.entity.BlogLink)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogLinkMapper: int insertSelective(com.site.blog.my.core.entity.BlogLink)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogLinkMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogLinkMapper: int deleteBatch(java.lang.Integer[])>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogLinkMapper: int updateByPrimaryKeySelective(com.site.blog.my.core.entity.BlogLink)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogLinkMapper: int updateByPrimaryKey(com.site.blog.my.core.entity.BlogLink)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogLinkMapper: com.site.blog.my.core.entity.BlogLink selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogLinkMapper: java.util.List findLinkList(com.site.blog.my.core.util.PageQueryUtil)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagRelationMapper: int insert(com.site.blog.my.core.entity.BlogTagRelation)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagRelationMapper: int insertSelective(com.site.blog.my.core.entity.BlogTagRelation)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagRelationMapper: int batchInsert(java.util.List)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagRelationMapper: int updateByPrimaryKeySelective(com.site.blog.my.core.entity.BlogTagRelation)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagRelationMapper: int updateByPrimaryKey(com.site.blog.my.core.entity.BlogTagRelation)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagRelationMapper: int deleteByPrimaryKey(java.lang.Long)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagRelationMapper: int deleteByBlogId(java.lang.Long)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagRelationMapper: com.site.blog.my.core.entity.BlogTagRelation selectByPrimaryKey(java.lang.Long)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogTagRelationMapper: java.util.List selectDistinctTagIds(java.lang.Integer[])>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCategoryMapper: int insert(com.site.blog.my.core.entity.BlogCategory)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCategoryMapper: int insertSelective(com.site.blog.my.core.entity.BlogCategory)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCategoryMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCategoryMapper: int deleteBatch(java.lang.Integer[])>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCategoryMapper: int updateByPrimaryKeySelective(com.site.blog.my.core.entity.BlogCategory)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCategoryMapper: int updateByPrimaryKey(com.site.blog.my.core.entity.BlogCategory)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCategoryMapper: java.util.List findCategoryList(com.site.blog.my.core.util.PageQueryUtil)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCategoryMapper: com.site.blog.my.core.entity.BlogCategory selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCategoryMapper: java.util.List selectByCategoryIds(java.util.List)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCategoryMapper: com.site.blog.my.core.entity.BlogCategory selectByCategoryName(java.lang.String)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: int insert(com.site.blog.my.core.entity.Blog)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: int insertSelective(com.site.blog.my.core.entity.Blog)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: int deleteByPrimaryKey(java.lang.Long)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: int deleteBatch(java.lang.Integer[])>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: int updateByPrimaryKeySelective(com.site.blog.my.core.entity.Blog)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: int updateByPrimaryKeyWithBLOBs(com.site.blog.my.core.entity.Blog)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: int updateByPrimaryKey(com.site.blog.my.core.entity.Blog)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: com.site.blog.my.core.entity.Blog selectByPrimaryKey(java.lang.Long)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: java.util.List findBlogList(com.site.blog.my.core.util.PageQueryUtil)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: int getTotalBlogs(com.site.blog.my.core.util.PageQueryUtil)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: java.util.List getBlogsPageByTagId(com.site.blog.my.core.util.PageQueryUtil)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: int getTotalBlogsByTagId(com.site.blog.my.core.util.PageQueryUtil)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogMapper: com.site.blog.my.core.entity.Blog selectBySubUrl(java.lang.String)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogConfigMapper: int updateByPrimaryKeySelective(com.site.blog.my.core.entity.BlogConfig)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogConfigMapper: com.site.blog.my.core.entity.BlogConfig selectByPrimaryKey(java.lang.String)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.AdminUserMapper: int insert(com.site.blog.my.core.entity.AdminUser)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.AdminUserMapper: int insertSelective(com.site.blog.my.core.entity.AdminUser)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.AdminUserMapper: int updateByPrimaryKeySelective(com.site.blog.my.core.entity.AdminUser)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.AdminUserMapper: int updateByPrimaryKey(com.site.blog.my.core.entity.AdminUser)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.AdminUserMapper: com.site.blog.my.core.entity.AdminUser selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCommentMapper: int insert(com.site.blog.my.core.entity.BlogComment)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCommentMapper: int insertSelective(com.site.blog.my.core.entity.BlogComment)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCommentMapper: int deleteByPrimaryKey(java.lang.Long)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCommentMapper: int checkDone(java.lang.Integer[])>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCommentMapper: int deleteBatch(java.lang.Integer[])>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCommentMapper: int updateByPrimaryKeySelective(com.site.blog.my.core.entity.BlogComment)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCommentMapper: int updateByPrimaryKey(com.site.blog.my.core.entity.BlogComment)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCommentMapper: java.util.List findBlogCommentList(java.util.Map)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCommentMapper: int getTotalBlogComments(java.util.Map)>", index: "0" }
+  - { method: "<com.site.blog.my.core.dao.BlogCommentMapper: com.site.blog.my.core.entity.BlogComment selectByPrimaryKey(java.lang.Long)>", index: "0" }
+  - { method: "<java.sql.Statement: java.sql.ResultSet executeQuery(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: int executeUpdate(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: boolean execute(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: void addBatch(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.CallableStatement prepareCall(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List query(java.lang.String,org.springframework.jdbc.core.RowMapper)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.lang.Object queryForObject(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int update(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int[] batchUpdate(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[],java.io.File)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.util.List)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.util.List)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<java.io.FileInputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileOutputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileReader: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileWriter: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.util.List readAllLines(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.nio.file.Path write(java.nio.file.Path,byte[],java.nio.file.OpenOption[])>", index: "0" }
+  - { method: "<java.io.PrintWriter: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void println(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void write(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.ServletOutputStream: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URL: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: java.net.URI create(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void sendRedirect(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.RequestDispatcher: void forward(javax.servlet.ServletRequest,javax.servlet.ServletResponse)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "1" }
+  - { method: "<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "0" }
+  - { method: "<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "1" }
+  - { method: "<javax.xml.xpath.XPath: java.lang.String evaluate(java.lang.String,java.lang.Object)>", index: "0" }
+  - { method: "<javax.xml.xpath.XPath: javax.xml.xpath.XPathExpression compile(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.io.InputStream)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.SAXParser: void parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler)>", index: "0" }
+  - { method: "<org.xml.sax.XMLReader: void parse(org.xml.sax.InputSource)>", index: "0" }
+  - { method: "<java.io.ObjectInputStream: void <init>(java.io.InputStream)>", index: "0" }
+  - { method: "<java.lang.Class: java.lang.Class forName(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.ClassLoader: java.lang.Class loadClass(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>", index: "1" }
+  - { method: "<javax.servlet.ServletContext: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.Cookie: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.Cookie: void setValue(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void addHeader(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void setHeader(java.lang.String,java.lang.String)>", index: "1" }
+
+transfers:
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int,int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(char,char)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String trim()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String strip()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripLeading()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripTrailing()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String intern()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(java.lang.Object)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(char[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.util.Locale,java.lang.String,java.lang.Object[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.CharSequence[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.Iterable)>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: char[] toCharArray()>", from: "base", to: "result", type: "char[]" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char[])>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(long)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.String)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.Object)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.util.Map: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.HashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.TreeMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.concurrent.ConcurrentHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.HashMap" }
+  - { method: "<java.util.Map: void putAll(java.util.Map)>", from: "0", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.Map: java.util.Collection values()>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<java.util.Map: java.util.Set entrySet()>", from: "base", to: "result", type: "java.util.Set" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getValue()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getKey()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ArrayList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.List" }
+  - { method: "<java.util.ArrayList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.ArrayList" }
+  - { method: "<java.util.LinkedList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.LinkedList" }
+  - { method: "<java.util.Collection: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.Collection" }
+  - { method: "<java.util.Iterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ListIterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElse(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElseGet(java.util.function.Supplier)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.util.Optional of(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.util.Optional: java.util.Optional ofNullable(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.lang.Object: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", from: "base", to: "result", type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.util.Collection fromRealm(java.lang.String)>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>", from: "1", to: "base", type: "javax.servlet.http.HttpSession" }
+  - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+
+Initializing global bean mock objects for beans...
+Initialized 52 global bean objects.
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <com.site.blog.my.core.controller.admin.AdminController: java.lang.String login()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Initializing global aspect mock objects...
+[Pointer analysis] elapsed time: 0.05s
+Detected 26 taint flow(s):
+TaintFlow{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>/0 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: java.lang.Boolean deleteBatch(java.lang.Integer[])>[1@L108] $i0 = invokeinterface $r2.deleteBatch(ids)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/2 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: java.lang.String saveBlog(com.site.blog.my.core.entity.Blog)>[2@L43] $r4 = invokeinterface $r2.selectByPrimaryKey($r3)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/2 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: java.lang.String updateBlog(com.site.blog.my.core.entity.Blog)>[20@L134] $r13 = invokeinterface $r11.selectByPrimaryKey($r12)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/0 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: java.lang.String updateBlog(com.site.blog.my.core.entity.Blog)>[2@L124] $r4 = invokeinterface $r2.selectByPrimaryKey($r3)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/0 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: java.lang.String updateBlog(com.site.blog.my.core.entity.Blog)>[93@L183] invokeinterface $r25.deleteByBlogId($r26)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/3 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: java.lang.String saveBlog(com.site.blog.my.core.entity.Blog)>[2@L43] $r4 = invokeinterface $r2.selectByPrimaryKey($r3)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/3 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: java.lang.String updateBlog(com.site.blog.my.core.entity.Blog)>[20@L134] $r13 = invokeinterface $r11.selectByPrimaryKey($r12)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.BlogController: java.lang.String edit(javax.servlet.http.HttpServletRequest,java.lang.Long)>/1 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: com.site.blog.my.core.entity.Blog getBlogById(java.lang.Long)>[1@L118] $r3 = invokeinterface $r2.selectByPrimaryKey(blogId)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>/0 -> <com.site.blog.my.core.service.impl.CategoryServiceImpl: java.lang.Boolean deleteBatch(java.lang.Integer[])>[11@L71] $i1 = invokeinterface $r4.deleteBatch(ids)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String)>/0 -> <com.site.blog.my.core.service.impl.CategoryServiceImpl: java.lang.Boolean saveCategory(java.lang.String,java.lang.String)>[1@L38] $r3 = invokeinterface $r2.selectByCategoryName(categoryName)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.String,java.lang.String)>/0 -> <com.site.blog.my.core.service.impl.CategoryServiceImpl: java.lang.Boolean updateCategory(java.lang.Integer,java.lang.String,java.lang.String)>[1@L51] $r3 = invokeinterface $r2.selectByPrimaryKey(categoryId)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result checkDone(java.lang.Integer[])>/0 -> <com.site.blog.my.core.service.impl.CommentServiceImpl: java.lang.Boolean checkDone(java.lang.Integer[])>[1@L42] $i0 = invokeinterface $r2.checkDone(ids)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result checkDone(java.lang.Long,java.lang.String)>/0 -> <com.site.blog.my.core.service.impl.CommentServiceImpl: java.lang.Boolean reply(java.lang.Long,java.lang.String)>[1@L52] $r3 = invokeinterface $r2.selectByPrimaryKey(commentId)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>/0 -> <com.site.blog.my.core.service.impl.CommentServiceImpl: java.lang.Boolean deleteBatch(java.lang.Integer[])>[1@L47] $i0 = invokeinterface $r2.deleteBatch(ids)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>/0 -> <com.site.blog.my.core.service.impl.LinkServiceImpl: java.lang.Boolean deleteBatch(java.lang.Integer[])>[1@L52] $i0 = invokeinterface $r2.deleteBatch(ids)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result info(java.lang.Integer)>/0 -> <com.site.blog.my.core.service.impl.LinkServiceImpl: com.site.blog.my.core.entity.BlogLink selectById(java.lang.Integer)>[1@L42] $r3 = invokeinterface $r2.selectByPrimaryKey(id)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>/0 -> <com.site.blog.my.core.service.impl.LinkServiceImpl: com.site.blog.my.core.entity.BlogLink selectById(java.lang.Integer)>[1@L42] $r3 = invokeinterface $r2.selectByPrimaryKey(id)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.TagController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>/0 -> <com.site.blog.my.core.service.impl.TagServiceImpl: java.lang.Boolean deleteBatch(java.lang.Integer[])>[1@L52] $r3 = invokeinterface $r2.selectDistinctTagIds(ids)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.TagController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>/0 -> <com.site.blog.my.core.service.impl.TagServiceImpl: java.lang.Boolean deleteBatch(java.lang.Integer[])>[8@L57] $i0 = invokeinterface $r4.deleteBatch(ids)/0}
+TaintFlow{<com.site.blog.my.core.controller.admin.TagController: com.site.blog.my.core.util.Result save(java.lang.String)>/0 -> <com.site.blog.my.core.service.impl.TagServiceImpl: java.lang.Boolean saveTag(java.lang.String)>[1@L40] $r3 = invokeinterface $r2.selectByTagName(tagName)/0}
+TaintFlow{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String category(javax.servlet.http.HttpServletRequest,java.lang.String)>/1 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: com.site.blog.my.core.util.PageResult getBlogsPageByCategory(java.lang.String,int)>[5@L254] $r4 = invokeinterface $r3.selectByCategoryName(categoryName)/0}
+TaintFlow{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String category(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>/1 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: com.site.blog.my.core.util.PageResult getBlogsPageByCategory(java.lang.String,int)>[5@L254] $r4 = invokeinterface $r3.selectByCategoryName(categoryName)/0}
+TaintFlow{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String detail(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Integer)>/1 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: com.site.blog.my.core.controller.vo.BlogDetailVO getBlogDetail(java.lang.Long)>[1@L222] $r3 = invokeinterface $r2.selectByPrimaryKey(id)/0}
+TaintFlow{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String detail(javax.servlet.http.HttpServletRequest,java.lang.String)>/1 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: com.site.blog.my.core.controller.vo.BlogDetailVO getBlogDetailBySubUrl(java.lang.String)>[1@L296] $r3 = invokeinterface $r2.selectBySubUrl(subUrl)/0}
+TaintFlow{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String tag(javax.servlet.http.HttpServletRequest,java.lang.String)>/1 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: com.site.blog.my.core.util.PageResult getBlogsPageByTag(java.lang.String,int)>[5@L234] $r4 = invokeinterface $r3.selectByTagName(tagName)/0}
+TaintFlow{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String tag(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>/1 -> <com.site.blog.my.core.service.impl.BlogServiceImpl: com.site.blog.my.core.util.PageResult getBlogsPageByTag(java.lang.String,int)>[5@L234] $r4 = invokeinterface $r3.selectByTagName(tagName)/0}
+TFGDumper starts ...
+Source nodes:
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result info(java.lang.Integer)>/id}
+VarNode{<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result list(java.util.Map)>/params}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/commentator}
+VarNode{<com.site.blog.my.core.controller.admin.AdminController: java.lang.String login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)>/session}
+VarNode{<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result website(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/websiteLogo}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String category(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>/categoryName}
+VarNode{<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result userInfo(java.lang.String,java.lang.String,java.lang.String)>/yourName}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/email}
+VarNode{<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result footer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/footerAbout}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String search(javax.servlet.http.HttpServletRequest,java.lang.String)>/keyword}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String category(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>/page}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogTitle}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/enableComment}
+VarNode{<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result footer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/footerPoweredByURL}
+VarNode{<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.String,java.lang.String)>/categoryName}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/session}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/verifyCode}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>/linkRank}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogContent}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String category(javax.servlet.http.HttpServletRequest,java.lang.String)>/categoryName}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>/linkId}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogStatus}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result save(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>/linkRank}
+VarNode{<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result website(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/websiteDescription}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/websiteUrl}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result save(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>/linkUrl}
+VarNode{<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result userInfo(java.lang.String,java.lang.String,java.lang.String)>/yourAvatar}
+VarNode{<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result website(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/websiteIcon}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogStatus}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogCategoryId}
+VarNode{<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result footer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/footerCopyRight}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>/ids}
+VarNode{<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result footer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/footerPoweredBy}
+VarNode{<com.site.blog.my.core.controller.admin.AdminController: java.lang.String login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)>/password}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String tag(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>/page}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String page(javax.servlet.http.HttpServletRequest,int)>/pageNum}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/blogId}
+VarNode{<com.site.blog.my.core.controller.admin.AdminController: java.lang.String login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)>/verifyCode}
+VarNode{<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String)>/categoryIcon}
+VarNode{<com.site.blog.my.core.controller.admin.TagController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>/ids}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogCoverImage}
+VarNode{<com.site.blog.my.core.controller.admin.AdminController: java.lang.String passwordUpdate(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>/newPassword}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String search(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>/keyword}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String search(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>/page}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>/linkName}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result save(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>/linkName}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String tag(javax.servlet.http.HttpServletRequest,java.lang.String)>/tagName}
+VarNode{<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result list(java.util.Map)>/params}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/enableComment}
+VarNode{<com.site.blog.my.core.controller.admin.TagController: com.site.blog.my.core.util.Result save(java.lang.String)>/tagName}
+VarNode{<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result footer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/footerICP}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogCoverImage}
+VarNode{<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String)>/categoryName}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>/linkUrl}
+VarNode{<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result checkDone(java.lang.Integer[])>/ids}
+VarNode{<com.site.blog.my.core.controller.admin.AdminController: java.lang.String nameUpdate(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>/nickName}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result save(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>/linkType}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogTitle}
+VarNode{<com.site.blog.my.core.controller.admin.AdminController: java.lang.String login(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)>/userName}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String detail(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Integer)>/commentPage}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String detail(javax.servlet.http.HttpServletRequest,java.lang.String)>/subUrl}
+VarNode{<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result userInfo(java.lang.String,java.lang.String,java.lang.String)>/yourEmail}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogContent}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogId}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result list(java.util.Map)>/params}
+VarNode{<com.site.blog.my.core.controller.admin.AdminController: java.lang.String passwordUpdate(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>/originalPassword}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>/linkDescription}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: com.site.blog.my.core.util.Result comment(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpSession,java.lang.Long,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/commentBody}
+VarNode{<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>/ids}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String detail(javax.servlet.http.HttpServletRequest,java.lang.Long,java.lang.Integer)>/blogId}
+VarNode{<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.String,java.lang.String)>/categoryIcon}
+VarNode{<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result checkDone(java.lang.Long,java.lang.String)>/commentId}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>/ids}
+VarNode{<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.String,java.lang.String)>/categoryId}
+VarNode{<com.site.blog.my.core.controller.admin.TagController: com.site.blog.my.core.util.Result list(java.util.Map)>/params}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result update(java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>/linkType}
+VarNode{<com.site.blog.my.core.controller.admin.CommentController: com.site.blog.my.core.util.Result checkDone(java.lang.Long,java.lang.String)>/replyBody}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result list(java.util.Map)>/params}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogTags}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogCategoryId}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogSubUrl}
+VarNode{<com.site.blog.my.core.controller.admin.CategoryController: com.site.blog.my.core.util.Result delete(java.lang.Integer[])>/ids}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result save(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogSubUrl}
+VarNode{<com.site.blog.my.core.controller.admin.AdminController: java.lang.String nameUpdate(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>/loginUserName}
+VarNode{<com.site.blog.my.core.controller.admin.ConfigurationController: com.site.blog.my.core.util.Result website(java.lang.String,java.lang.String,java.lang.String,java.lang.String)>/websiteName}
+VarNode{<com.site.blog.my.core.controller.admin.LinkController: com.site.blog.my.core.util.Result save(java.lang.Integer,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String)>/linkDescription}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: com.site.blog.my.core.util.Result update(java.lang.Long,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,java.lang.String,java.lang.String,java.lang.Byte,java.lang.Byte)>/blogTags}
+VarNode{<com.site.blog.my.core.controller.blog.MyBlogController: java.lang.String tag(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.Integer)>/tagName}
+VarNode{<com.site.blog.my.core.controller.admin.BlogController: java.lang.String edit(javax.servlet.http.HttpServletRequest,java.lang.Long)>/blogId}
+Sink nodes:
+VarNode{<com.site.blog.my.core.service.impl.BlogServiceImpl: java.lang.String saveBlog(com.site.blog.my.core.entity.Blog)>/$r3}
+VarNode{<com.site.blog.my.core.service.impl.BlogServiceImpl: com.site.blog.my.core.entity.Blog getBlogById(java.lang.Long)>/blogId}
+VarNode{<com.site.blog.my.core.service.impl.CommentServiceImpl: java.lang.Boolean deleteBatch(java.lang.Integer[])>/ids}
+VarNode{<com.site.blog.my.core.service.impl.BlogServiceImpl: java.lang.Boolean deleteBatch(java.lang.Integer[])>/ids}
+VarNode{<com.site.blog.my.core.service.impl.BlogServiceImpl: java.lang.String updateBlog(com.site.blog.my.core.entity.Blog)>/$r3}
+VarNode{<com.site.blog.my.core.service.impl.TagServiceImpl: java.lang.Boolean saveTag(java.lang.String)>/tagName}
+VarNode{<com.site.blog.my.core.service.impl.CategoryServiceImpl: java.lang.Boolean updateCategory(java.lang.Integer,java.lang.String,java.lang.String)>/categoryId}
+VarNode{<com.site.blog.my.core.service.impl.LinkServiceImpl: com.site.blog.my.core.entity.BlogLink selectById(java.lang.Integer)>/id}
+VarNode{<com.site.blog.my.core.service.impl.BlogServiceImpl: com.site.blog.my.core.util.PageResult getBlogsPageByCategory(java.lang.String,int)>/categoryName}
+VarNode{<com.site.blog.my.core.service.impl.CategoryServiceImpl: java.lang.Boolean deleteBatch(java.lang.Integer[])>/ids}
+VarNode{<com.site.blog.my.core.service.impl.CommentServiceImpl: java.lang.Boolean checkDone(java.lang.Integer[])>/ids}
+VarNode{<com.site.blog.my.core.service.impl.BlogServiceImpl: com.site.blog.my.core.controller.vo.BlogDetailVO getBlogDetailBySubUrl(java.lang.String)>/subUrl}
+VarNode{<com.site.blog.my.core.service.impl.BlogServiceImpl: com.site.blog.my.core.controller.vo.BlogDetailVO getBlogDetail(java.lang.Long)>/id}
+VarNode{<com.site.blog.my.core.service.impl.LinkServiceImpl: java.lang.Boolean deleteBatch(java.lang.Integer[])>/ids}
+VarNode{<com.site.blog.my.core.service.impl.BlogServiceImpl: java.lang.String updateBlog(com.site.blog.my.core.entity.Blog)>/$r26}
+VarNode{<com.site.blog.my.core.service.impl.CommentServiceImpl: java.lang.Boolean reply(java.lang.Long,java.lang.String)>/commentId}
+VarNode{<com.site.blog.my.core.service.impl.TagServiceImpl: java.lang.Boolean deleteBatch(java.lang.Integer[])>/ids}
+VarNode{<com.site.blog.my.core.service.impl.BlogServiceImpl: java.lang.String updateBlog(com.site.blog.my.core.entity.Blog)>/$r12}
+VarNode{<com.site.blog.my.core.service.impl.CategoryServiceImpl: java.lang.Boolean saveCategory(java.lang.String,java.lang.String)>/categoryName}
+VarNode{<com.site.blog.my.core.service.impl.BlogServiceImpl: com.site.blog.my.core.util.PageResult getBlogsPageByTag(java.lang.String,int)>/tagName}
+Dumping /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-flow-graph.dot
+TFGDumper finishes, elapsed time: 0.02s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                1620 (insens) / 1620 (sens)
+#objects:                     562 (insens) / 562 (sens)
+#var points-to:               1888 (insens) / 1889 (sens)
+#static field points-to:      19 (sens)
+#instance field points-to:    291 (sens)
+#array points-to:             14 (sens)
+#reachable methods:           268 (insens) / 268 (sens)
+#call graph edges:            727 (insens) / 727 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.20s
+cg starts ...
+Call graph has 268 reachable methods and 727 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.02s
+Tai-e finishes, elapsed time: 33.52s

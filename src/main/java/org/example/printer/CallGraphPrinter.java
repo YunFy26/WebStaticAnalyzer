@@ -347,13 +347,15 @@ public class CallGraphPrinter {
 
         String directoryPath = "output/callFlows";
         Files.createDirectories(Paths.get(directoryPath));
-        String fileName = String.valueOf(entryMethod.getDeclaringClass()) + '.' +
-            entryMethod.getName() + '(' +
-            entryMethod.getParamTypes()
-                .stream()
-                .map(Type::toString)
-                .collect(Collectors.joining(",")) +
-            ')' + ".dot";
+//        String fileName = String.valueOf(entryMethod.getDeclaringClass()) + '.' +
+//            entryMethod.getName() + '(' +
+//            entryMethod.getParamTypes()
+//                .stream()
+//                .map(Type::toString)
+//                .collect(Collectors.joining(",")) +
+//            ')' + ".dot";
+        String fileName = entryMethod.getDeclaringClass() + "." +
+            entryMethod.getName() + ".dot";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(directoryPath + '/' + fileName))) {
             writer.write(dotContent);
         }

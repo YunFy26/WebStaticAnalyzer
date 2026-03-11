@@ -8,24 +8,21 @@ os.name: Mac OS X
 os.version: 26.3
 os.arch: aarch64
 Tai-e Version: 0.5.1
-Tai-e Commit: a086cc6200102f74b303a2cb800dad4e1b8b3af5
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
 Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
 WorldBuilder starts ...
 Warning: main class was not given!
-10808 classes with 102422 methods in the world
-WorldBuilder finishes, elapsed time: 2.90s
-ir-dumper starts ...
-Dumping IR in /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tir
-327 classes in scope (APP) of class analyses
-ir-dumper finishes, elapsed time: 0.39s
+38225 classes with 377897 methods in the world
+WorldBuilder finishes, elapsed time: 42.50s
 routerAnalysis starts ...
-Router analysis started at: 2026-02-27 20:43:20
-Router analysis completed at: 2026-02-27 20:43:20 (Duration: 5ms)
-routerAnalysis finishes, elapsed time: 0.01s
+Router analysis started at: 2026-03-03 14:16:08
+Router analysis completed at: 2026-03-03 14:16:08 (Duration: 17ms)
+routerAnalysis finishes, elapsed time: 0.02s
 beanAnalysis starts ...
-beanAnalysis finishes, elapsed time: 0.01s
+beanAnalysis finishes, elapsed time: 0.06s
 injectPointsAnalysis starts ...
-injectPointsAnalysis finishes, elapsed time: 0.05s
+injectPointsAnalysis finishes, elapsed time: 0.08s
 aspectAnalysis starts ...
 Starting AOP aspect analysis...
 aspectAnalysis finishes, elapsed time: 0.00s
@@ -34,187 +31,116 @@ resultAnalysis starts ...
                  Spring Analysis Result Summary             
 ============================================================
 Router Methods (Endpoints)     : 146
-Spring Beans                   : 143
+Spring Beans                   : 262
 Aspect Methods (Advice)        : 0
 ============================================================
 resultAnalysis finishes, elapsed time: 0.00s
 srfaAnalysis starts ...
-SRFA Analysis started at: 2026-02-27 20:43:21
-Loaded 27 controller classes from RouterAnalysis
+SRFA Analysis started at: 2026-03-03 14:16:08
+Loaded 28 controller classes from RouterAnalysis
 Discovering mapper paths from 7 appClassPath entries
-Extracting XML from fat jar: admin-boot.jar
-Extracted 0 XML files from admin-boot.jar
-Extracted 7 XML files (plain jar) from admin-boot.jar
-Extracting XML from fat jar: oms-boot.jar
-Extracted 0 XML files from oms-boot.jar
-Extracted 2 XML files (plain jar) from oms-boot.jar
-Extracting XML from fat jar: pms-boot.jar
-Extracted 0 XML files from pms-boot.jar
-Extracted 2 XML files (plain jar) from pms-boot.jar
-Extracting XML from fat jar: sms-boot.jar
-Extracted 0 XML files from sms-boot.jar
-Extracted 5 XML files (plain jar) from sms-boot.jar
-Extracting XML from fat jar: ums-boot.jar
-Extracted 0 XML files from ums-boot.jar
-Extracting XML from fat jar: youlai-auth.jar
-Extracted 0 XML files from youlai-auth.jar
-Extracting XML from fat jar: youlai-gateway.jar
-Extracted 0 XML files from youlai-gateway.jar
-Auto-discovered 4 mapper path(s)
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/admin-boot_1731057262000/mapper
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/oms-boot_1731057263000/mapper
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/pms-boot_1731057263000/mapper
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sms-boot_1731057263000/mapper
-Using 4 mapper search path(s):
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/admin-boot_1731057262000/mapper
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/oms-boot_1731057263000/mapper
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/pms-boot_1731057263000/mapper
-  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/sms-boot_1731057263000/mapper
-Parsed 11 MyBatis mapper files
-Parsed 11 MyBatis mapper files
-  Mapper namespace: com.youlai.admin.mapper.SysDictItemMapper
-    Operation: id=list, type=select, hasDollar=false
-  Mapper namespace: com.youlai.admin.mapper.SysRoleMenuMapper
-    Operation: id=listMenuIdsByRoleId, type=select, hasDollar=false
-  Mapper namespace: com.youlai.admin.mapper.SysPermissionMapper
-    Operation: id=listPermPages, type=select, hasDollar=false
-    Operation: id=listBtnPermByRoles, type=select, hasDollar=false
-  Mapper namespace: com.youlai.admin.mapper.SysUserMapper
-    Operation: id=listUserPages, type=select, hasDollar=false
-    Operation: id=getUserFormData, type=select, hasDollar=false
-    Operation: id=getAuthInfoByUsername, type=select, hasDollar=false
-    Operation: id=listExportUsers, type=select, hasDollar=false
-  Mapper namespace: com.youlai.admin.mapper.SysRolePermissionMapper
-    Operation: id=listPermIdsByRoleId, type=select, hasDollar=false
-  Mapper namespace: com.youlai.admin.mapper.SysUserRoleMapper
-    Operation: id=listRoleIdsByUserId, type=select, hasDollar=false
-  Mapper namespace: com.youlai.mall.oms.mapper.OrderItemMapper
-    Operation: id=listOrderItemsByOrderId, type=select, hasDollar=false
-  Mapper namespace: com.youlai.mall.oms.mapper.OrderMapper
-    Operation: id=listOrderPages, type=select, hasDollar=false
-  Mapper namespace: com.youlai.mall.pms.mapper.PmsSkuMapper
-    Operation: id=listSkuBySpuId, type=select, hasDollar=false
-    Operation: id=getSkuInfo, type=select, hasDollar=false
-  Mapper namespace: com.youlai.mall.pms.mapper.PmsSpuMapper
-    Operation: id=listPmsSpuPages, type=select, hasDollar=false
-    Operation: id=listSpuPages, type=select, hasDollar=false
-  Mapper namespace: com.youlai.mall.sms.mapper.SmsAdvertMapper
-    Operation: id=listAdvertsPage, type=select, hasDollar=false
+Auto-discovered 0 mapper path(s)
+No MyBatis mapper paths found. Sink config will be empty.
+Parsed 0 MyBatis mapper files
+Parsed 0 MyBatis mapper files
 Collected 0 write field names from INSERT/UPDATE operations
 Extracted 162 source metadata entries (before filtering)
-Resolving 11 mapper namespaces...
-  Namespace resolve: com.youlai.admin.mapper.SysDictItemMapper -> com.youlai.admin.mapper.SysDictItemMapper
-  Namespace resolve: com.youlai.admin.mapper.SysRoleMenuMapper -> com.youlai.admin.mapper.SysRoleMenuMapper
-  Namespace resolve: com.youlai.admin.mapper.SysPermissionMapper -> com.youlai.admin.mapper.SysPermissionMapper
-  Namespace resolve: com.youlai.admin.mapper.SysUserMapper -> com.youlai.admin.mapper.SysUserMapper
-  Namespace resolve: com.youlai.admin.mapper.SysRolePermissionMapper -> com.youlai.admin.mapper.SysRolePermissionMapper
-  Namespace resolve: com.youlai.admin.mapper.SysUserRoleMapper -> com.youlai.admin.mapper.SysUserRoleMapper
-  Namespace resolve: com.youlai.mall.oms.mapper.OrderItemMapper -> com.youlai.mall.oms.mapper.OrderItemMapper
-  Namespace resolve: com.youlai.mall.oms.mapper.OrderMapper -> com.youlai.mall.oms.mapper.OrderMapper
-  Namespace resolve: com.youlai.mall.pms.mapper.PmsSkuMapper -> com.youlai.mall.pms.mapper.PmsSkuMapper
-  Namespace resolve: com.youlai.mall.pms.mapper.PmsSpuMapper -> com.youlai.mall.pms.mapper.PmsSpuMapper
-  Namespace resolve: com.youlai.mall.sms.mapper.SmsAdvertMapper -> com.youlai.mall.sms.mapper.SmsAdvertMapper
-Extracted 7 sink metadata entries (deduplicated, before risk filtering)
-Sources: 162 generated, 0 filtered, 0 deduplicated
-Sinks: 7 generated (risky), 0 filtered (safe), 0 deduplicated
+Resolving 0 mapper namespaces...
+Extracted 0 sink metadata entries (deduplicated, before risk filtering)
+Sources: 133 generated, 29 filtered, 0 deduplicated
+Sinks: 0 generated (risky), 0 filtered (safe), 0 deduplicated
   Note: 'risky' means uses string concatenation ($), 'safe' means uses prepared statement (#)
 Written taint config to: output/taint-config-generated.yml
-  Sources: 162 (SRFA param) + framework call sources
-  Sinks: 7
+  Sources: 133 (SRFA param) + framework call sources
+  Sinks: 0 (SRFA) + common predefined sinks
   Transfers: standard set included
-SRFA Analysis completed at: 2026-02-27 20:43:21 (Duration: 84ms)
-srfaAnalysis finishes, elapsed time: 0.09s
+SRFA Analysis completed at: 2026-03-03 14:16:08 (Duration: 18ms)
+srfaAnalysis finishes, elapsed time: 0.02s
 pta starts ...
 Loading taint config from /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-config-generated.yml
-Ignore {"method":"<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>","type":"org.apache.shiro.subject.Subject"} due to missing source "kind"
-Ignore {"method":"<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>","type":"org.apache.shiro.subject.PrincipalCollection"} due to missing source "kind"
-Ignore {"method":"<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>","type":"org.springframework.security.core.context.SecurityContext"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>","type":"org.springframework.security.core.Authentication"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.Object getDetails()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.Authentication: java.lang.String getName()>","type":"java.lang.String"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>","type":"java.util.Collection"} due to missing source "kind"
-Ignore {"method":"<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>","type":"java.lang.String"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>","type":"javax.servlet.http.HttpSession"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>","type":"javax.servlet.http.HttpSession"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>","type":"java.security.Principal"} due to missing source "kind"
-Ignore {"method":"<java.security.Principal: java.lang.String getName()>","type":"java.lang.String"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<java.lang.ThreadLocal: java.lang.Object get()>","type":"java.lang.Object"} due to missing source "kind"
-Ignore {"method":"<java.lang.InheritableThreadLocal: java.lang.Object get()>","type":"java.lang.Object"} due to missing source "kind"
+Cannot find source method '<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>'
+Cannot find source method '<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>'
+Cannot find source method '<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>'
+Cannot find source method '<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find source method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.Query createQuery(java.lang.String)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.SQLQuery createSQLQuery(java.lang.String)>'
+Cannot find sink method '<javax.servlet.ServletOutputStream: void write(byte[])>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void print(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void println(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void write(java.lang.String)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object getForObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity getForEntity(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object postForObject(java.lang.String,java.lang.Object,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class)>'
+Cannot find sink method '<org.springframework.ldap.core.LdapTemplate: java.util.List search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls,org.springframework.ldap.core.AttributesMapper)>'
+Cannot find sink method '<org.springframework.expression.spel.standard.SpelExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object getValue(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlExpression createExpression(java.lang.String)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlScript createScript(java.lang.String)>'
+Cannot find sink method '<freemarker.template.Template: void <init>(java.lang.String,java.io.Reader)>'
+Cannot find sink method '<org.apache.velocity.app.VelocityEngine: boolean evaluate(org.apache.velocity.context.Context,java.io.Writer,java.lang.String,java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parse(java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.lang.String)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.io.InputStream)>'
+Cannot find sink method '<javax.servlet.http.HttpServletRequest: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>'
 Cannot find taint-transfer method '<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>'
 Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>'
 Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>'
 Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>'
 Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
 Cannot find taint-transfer method '<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>'
 Cannot find taint-transfer method '<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>'
 Cannot find taint-transfer method '<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>'
 Cannot find taint-transfer method '<org.apache.shiro.subject.PrincipalCollection: java.util.Collection fromRealm(java.lang.String)>'
-Cannot find taint-transfer method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
-Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
-Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
 Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
-Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
-Cannot find taint-transfer method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
-Cannot find taint-transfer method '<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>'
-Cannot find taint-transfer method '<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>'
 Cannot find taint-transfer method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
 TaintConfig:
 sources:
-  - { kind: "param", method: "<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result listDepts(com.youlai.admin.pojo.query.DeptQuery)>", index: "0", type: "com.youlai.admin.pojo.query.DeptQuery" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result getDeptDetail(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result addDept(com.youlai.admin.pojo.entity.SysDept)>", index: "0", type: "com.youlai.admin.pojo.entity.SysDept" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result updateDept(java.lang.Long,com.youlai.admin.pojo.entity.SysDept)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result updateDept(java.lang.Long,com.youlai.admin.pojo.entity.SysDept)>", index: "1", type: "com.youlai.admin.pojo.entity.SysDept" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result deleteDepartments(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.PageResult listDictItemPages(com.youlai.admin.pojo.query.DictItemPageQuery)>", index: "0", type: "com.youlai.admin.pojo.query.DictItemPageQuery" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result getDictItemFormData(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result saveDictItem(com.youlai.admin.pojo.form.DictItemForm)>", index: "0", type: "com.youlai.admin.pojo.form.DictItemForm" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result updateDictItem(java.lang.Long,com.youlai.admin.pojo.form.DictItemForm)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result updateDictItem(java.lang.Long,com.youlai.admin.pojo.form.DictItemForm)>", index: "1", type: "com.youlai.admin.pojo.form.DictItemForm" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result deleteDictItems(java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result getDictItemsByTypeCode(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.PageResult listDictTypePages(com.youlai.admin.pojo.query.DictTypePageQuery)>", index: "0", type: "com.youlai.admin.pojo.query.DictTypePageQuery" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result getDictTypeFormData(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result saveDictType(com.youlai.admin.pojo.form.DictTypeForm)>", index: "0", type: "com.youlai.admin.pojo.form.DictTypeForm" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result updateDict(java.lang.Long,com.youlai.admin.pojo.form.DictTypeForm)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result updateDict(java.lang.Long,com.youlai.admin.pojo.form.DictTypeForm)>", index: "1", type: "com.youlai.admin.pojo.form.DictTypeForm" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result deleteDictTypes(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result listMenus(java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result detail(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result addMenu(com.youlai.admin.pojo.entity.SysMenu)>", index: "0", type: "com.youlai.admin.pojo.entity.SysMenu" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result updateMenu(com.youlai.admin.pojo.entity.SysMenu)>", index: "0", type: "com.youlai.admin.pojo.entity.SysMenu" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result deleteMenus(java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result updateMenuVisible(java.lang.Long,java.lang.Integer)>", index: "0", type: "java.lang.Long" }
-  - { kind: "param", method: "<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result updateMenuVisible(java.lang.Long,java.lang.Integer)>", index: "1", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.PageResult listClientPages(com.youlai.admin.pojo.query.ClientPageQuery)>", index: "0", type: "com.youlai.admin.pojo.query.ClientPageQuery" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result detail(java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result add(com.youlai.admin.pojo.entity.SysOauthClient)>", index: "0", type: "com.youlai.admin.pojo.entity.SysOauthClient" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result update(java.lang.String,com.youlai.admin.pojo.entity.SysOauthClient)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result update(java.lang.String,com.youlai.admin.pojo.entity.SysOauthClient)>", index: "1", type: "com.youlai.admin.pojo.entity.SysOauthClient" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result delete(java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result getOAuth2ClientById(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.PageResult listPermPages(com.youlai.admin.pojo.query.PermPageQuery)>", index: "0", type: "com.youlai.admin.pojo.query.PermPageQuery" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result listPermissions(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result getPermissionDetail(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result addPerm(com.youlai.admin.pojo.entity.SysPermission)>", index: "0", type: "com.youlai.admin.pojo.entity.SysPermission" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result updatePerm(java.lang.Long,com.youlai.admin.pojo.entity.SysPermission)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result updatePerm(java.lang.Long,com.youlai.admin.pojo.entity.SysPermission)>", index: "1", type: "com.youlai.admin.pojo.entity.SysPermission" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result deletePermissions(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.PageResult listRolePages(com.youlai.admin.pojo.query.RolePageQuery)>", index: "0", type: "com.youlai.admin.pojo.query.RolePageQuery" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result getRoleDetail(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result addRole(com.youlai.admin.pojo.form.RoleForm)>", index: "0", type: "com.youlai.admin.pojo.form.RoleForm" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result updateRole(com.youlai.admin.pojo.form.RoleForm)>", index: "0", type: "com.youlai.admin.pojo.form.RoleForm" }
@@ -224,7 +150,6 @@ sources:
   - { kind: "param", method: "<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result getRoleResources(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result updateRoleResource(java.lang.Long,com.youlai.admin.pojo.form.RoleResourceForm)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result updateRoleResource(java.lang.Long,com.youlai.admin.pojo.form.RoleResourceForm)>", index: "1", type: "com.youlai.admin.pojo.form.RoleResourceForm" }
-  - { kind: "param", method: "<com.youlai.admin.controller.SysUserController: com.youlai.common.result.PageResult listUserPages(com.youlai.admin.pojo.query.UserPageQuery)>", index: "0", type: "com.youlai.admin.pojo.query.UserPageQuery" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result getUserFormData(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result saveUser(com.youlai.admin.pojo.form.UserForm)>", index: "0", type: "com.youlai.admin.pojo.form.UserForm" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUser(java.lang.Long,com.youlai.admin.pojo.form.UserForm)>", index: "0", type: "java.lang.Long" }
@@ -235,9 +160,6 @@ sources:
   - { kind: "param", method: "<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUserPassword(java.lang.Long,java.lang.Integer)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUserPassword(java.lang.Long,java.lang.Integer)>", index: "1", type: "java.lang.Integer" }
   - { kind: "param", method: "<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result getAuthInfoByUsername(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result importUsers(com.youlai.admin.pojo.dto.UserImportDTO)>", index: "0", type: "com.youlai.admin.pojo.dto.UserImportDTO" }
-  - { kind: "param", method: "<com.youlai.admin.controller.SysUserController: void exportUsers(com.youlai.admin.pojo.query.UserPageQuery,javax.servlet.http.HttpServletResponse)>", index: "0", type: "com.youlai.admin.pojo.query.UserPageQuery" }
-  - { kind: "param", method: "<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.PageResult listOrderPages(com.youlai.mall.oms.pojo.query.OrderPageQuery)>", index: "0", type: "com.youlai.mall.oms.pojo.query.OrderPageQuery" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.Result getOrderDetail(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.Result updateOrderStatus(java.lang.Long,java.lang.Integer,java.lang.Boolean)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.Result updateOrderStatus(java.lang.Long,java.lang.Integer,java.lang.Boolean)>", index: "1", type: "java.lang.Integer" }
@@ -247,23 +169,16 @@ sources:
   - { kind: "param", method: "<com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result updateCartItem(java.lang.Long,com.youlai.mall.oms.pojo.dto.CartItemDTO)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result updateCartItem(java.lang.Long,com.youlai.mall.oms.pojo.dto.CartItemDTO)>", index: "1", type: "com.youlai.mall.oms.pojo.dto.CartItemDTO" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result removeCartItem(java.lang.Long)>", index: "0", type: "java.lang.Long" }
-  - { kind: "param", method: "<com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result check(boolean)>", index: "0", type: "boolean" }
-  - { kind: "param", method: "<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.PageResult listOrderPages(com.youlai.mall.oms.pojo.query.OrderPageQuery)>", index: "0", type: "com.youlai.mall.oms.pojo.query.OrderPageQuery" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result confirmOrder(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result submitOrder(com.youlai.mall.oms.pojo.form.OrderSubmitForm)>", index: "0", type: "com.youlai.mall.oms.pojo.form.OrderSubmitForm" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result pay(java.lang.Long,java.lang.Integer,java.lang.String)>", index: "0", type: "java.lang.Long" }
-  - { kind: "param", method: "<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result pay(java.lang.Long,java.lang.Integer,java.lang.String)>", index: "1", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result pay(java.lang.Long,java.lang.Integer,java.lang.String)>", index: "2", type: "java.lang.String" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result deleteOrder(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result cancel(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.app.WxPayCallbackController: com.youlai.mall.oms.pojo.vo.WxPayResponseVO wxPayOrderNotify(java.lang.String,org.springframework.http.HttpHeaders)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.app.WxPayCallbackController: com.youlai.mall.oms.pojo.vo.WxPayResponseVO wxPayOrderNotify(java.lang.String,org.springframework.http.HttpHeaders)>", index: "1", type: "org.springframework.http.HttpHeaders" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.app.WxPayCallbackController: com.youlai.mall.oms.pojo.vo.WxPayResponseVO wxPayRefundNotify(java.lang.String,org.springframework.http.HttpHeaders)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.youlai.mall.oms.controller.app.WxPayCallbackController: com.youlai.mall.oms.pojo.vo.WxPayResponseVO wxPayRefundNotify(java.lang.String,org.springframework.http.HttpHeaders)>", index: "1", type: "org.springframework.http.HttpHeaders" }
-  - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsAttributeController: com.youlai.common.result.Result listAttributes(java.lang.Long,java.lang.Integer)>", index: "0", type: "java.lang.Long" }
-  - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsAttributeController: com.youlai.common.result.Result listAttributes(java.lang.Long,java.lang.Integer)>", index: "1", type: "java.lang.Integer" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsAttributeController: com.youlai.common.result.Result saveBatch(com.youlai.mall.pms.pojo.form.PmsCategoryAttributeForm)>", index: "0", type: "com.youlai.mall.pms.pojo.form.PmsCategoryAttributeForm" }
-  - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.PageResult listBrandPages(com.youlai.mall.pms.pojo.query.BrandPageQuery)>", index: "0", type: "com.youlai.mall.pms.pojo.query.BrandPageQuery" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result getBrandList(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result addBrand(com.youlai.mall.pms.pojo.entity.PmsBrand)>", index: "0", type: "com.youlai.mall.pms.pojo.entity.PmsBrand" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result updateBrand(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsBrand)>", index: "0", type: "java.lang.Long" }
@@ -283,36 +198,26 @@ sources:
   - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result updateStockNum(java.lang.Long,java.lang.Integer)>", index: "1", type: "java.lang.Integer" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result deductStock(java.lang.Long,java.lang.Integer)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result deductStock(java.lang.Long,java.lang.Integer)>", index: "1", type: "java.lang.Integer" }
-  - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.PageResult listPmsSpuPages(com.youlai.mall.pms.pojo.query.SpuPageQuery)>", index: "0", type: "com.youlai.mall.pms.pojo.query.SpuPageQuery" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result detail(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result addSpu(com.youlai.mall.pms.pojo.form.PmsSpuForm)>", index: "0", type: "com.youlai.mall.pms.pojo.form.PmsSpuForm" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result updateSpuById(java.lang.Long,com.youlai.mall.pms.pojo.form.PmsSpuForm)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result updateSpuById(java.lang.Long,com.youlai.mall.pms.pojo.form.PmsSpuForm)>", index: "1", type: "com.youlai.mall.pms.pojo.form.PmsSpuForm" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result delete(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.youlai.mall.pms.controller.app.CategoryController: com.youlai.common.result.Result list(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result getSkuInfo(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result getStockNum(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result lockStock(com.youlai.mall.pms.pojo.dto.LockStockDTO)>", index: "0", type: "com.youlai.mall.pms.pojo.dto.LockStockDTO" }
-  - { kind: "param", method: "<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result unlockStock(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result deductStock(java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result checkPrice(com.youlai.mall.pms.pojo.dto.CheckPriceDTO)>", index: "0", type: "com.youlai.mall.pms.pojo.dto.CheckPriceDTO" }
-  - { kind: "param", method: "<com.youlai.mall.pms.controller.app.SpuController: com.youlai.common.result.PageResult listSpuPages(com.youlai.mall.pms.pojo.query.SpuPageQuery)>", index: "0", type: "com.youlai.mall.pms.pojo.query.SpuPageQuery" }
   - { kind: "param", method: "<com.youlai.mall.pms.controller.app.SpuController: com.youlai.common.result.Result getSpuDetail(java.lang.Long)>", index: "0", type: "java.lang.Long" }
-  - { kind: "param", method: "<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.PageResult listAdvertPages(com.youlai.mall.sms.pojo.query.AdvertPageQuery)>", index: "0", type: "com.youlai.mall.sms.pojo.query.AdvertPageQuery" }
   - { kind: "param", method: "<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result getAdvertDetail(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result addAvert(com.youlai.mall.sms.pojo.entity.SmsAdvert)>", index: "0", type: "com.youlai.mall.sms.pojo.entity.SmsAdvert" }
   - { kind: "param", method: "<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result updateAdvert(java.lang.Long,com.youlai.mall.sms.pojo.entity.SmsAdvert)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result updateAdvert(java.lang.Long,com.youlai.mall.sms.pojo.entity.SmsAdvert)>", index: "1", type: "com.youlai.mall.sms.pojo.entity.SmsAdvert" }
   - { kind: "param", method: "<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result deleteAdverts(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.PageResult listCouponPages(com.youlai.mall.sms.pojo.query.CouponPageQuery)>", index: "0", type: "com.youlai.mall.sms.pojo.query.CouponPageQuery" }
   - { kind: "param", method: "<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result getCouponFormData(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result saveCoupon(com.youlai.mall.sms.pojo.form.CouponForm)>", index: "0", type: "com.youlai.mall.sms.pojo.form.CouponForm" }
   - { kind: "param", method: "<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result updateCoupon(java.lang.Long,com.youlai.mall.sms.pojo.form.CouponForm)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result updateCoupon(java.lang.Long,com.youlai.mall.sms.pojo.form.CouponForm)>", index: "1", type: "com.youlai.mall.sms.pojo.form.CouponForm" }
   - { kind: "param", method: "<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result deleteCoupons(java.lang.String)>", index: "0", type: "java.lang.String" }
-  - { kind: "param", method: "<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.PageResult listPageMembers(java.lang.Long,java.lang.Long,java.lang.String)>", index: "0", type: "java.lang.Long" }
-  - { kind: "param", method: "<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.PageResult listPageMembers(java.lang.Long,java.lang.Long,java.lang.String)>", index: "1", type: "java.lang.Long" }
-  - { kind: "param", method: "<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.PageResult listPageMembers(java.lang.Long,java.lang.Long,java.lang.String)>", index: "2", type: "java.lang.String" }
   - { kind: "param", method: "<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result getMemberInfo(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result update(java.lang.Long,com.youlai.mall.ums.pojo.entity.UmsMember)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result update(java.lang.Long,com.youlai.mall.ums.pojo.entity.UmsMember)>", index: "1", type: "com.youlai.mall.ums.pojo.entity.UmsMember" }
@@ -336,15 +241,93 @@ sources:
   - { kind: "param", method: "<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result getMemberByMobile(java.lang.String)>", index: "0", type: "java.lang.String" }
   - { kind: "param", method: "<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result listMemberAddress(java.lang.Long)>", index: "0", type: "java.lang.Long" }
   - { kind: "param", method: "<com.youlai.auth.controller.AuthController: java.lang.Object postAccessToken(java.security.Principal,java.util.Map)>", index: "1", type: "java.util.Map" }
+  - { kind: "call", method: "<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>", index: "result", type: "org.springframework.security.core.context.SecurityContext" }
+  - { kind: "call", method: "<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>", index: "result", type: "org.springframework.security.core.Authentication" }
+  - { kind: "call", method: "<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<org.springframework.security.core.Authentication: java.lang.Object getDetails()>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>", index: "result", type: "java.util.Collection" }
+  - { kind: "call", method: "<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>", index: "result", type: "java.lang.String" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>", index: "result", type: "java.security.Principal" }
+  - { kind: "call", method: "<java.security.Principal: java.lang.String getName()>", index: "result", type: "java.lang.String" }
+  - { kind: "call", method: "<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<java.lang.ThreadLocal: java.lang.Object get()>", index: "result", type: "java.lang.Object" }
 
 sinks:
-  - { method: "<com.youlai.admin.mapper.SysRoleMenuMapper: java.util.List listMenuIdsByRoleId(java.lang.Long)>", index: "0" }
-  - { method: "<com.youlai.admin.mapper.SysPermissionMapper: java.util.List listBtnPermByRoles(java.util.List)>", index: "0" }
-  - { method: "<com.youlai.admin.mapper.SysUserMapper: com.youlai.admin.pojo.po.UserFormPO getUserFormData(java.lang.Long)>", index: "0" }
-  - { method: "<com.youlai.admin.mapper.SysUserMapper: com.youlai.admin.dto.UserAuthDTO getAuthInfoByUsername(java.lang.String)>", index: "0" }
-  - { method: "<com.youlai.admin.mapper.SysUserMapper: java.util.List listExportUsers(com.youlai.admin.pojo.query.UserPageQuery)>", index: "0" }
-  - { method: "<com.youlai.admin.mapper.SysRolePermissionMapper: java.util.List listPermIdsByRoleId(java.lang.Long)>", index: "0" }
-  - { method: "<com.youlai.mall.pms.mapper.PmsSkuMapper: com.youlai.mall.pms.pojo.dto.SkuInfoDTO getSkuInfo(java.lang.Long)>", index: "0" }
+  - { method: "<java.sql.Statement: java.sql.ResultSet executeQuery(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: int executeUpdate(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: boolean execute(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: void addBatch(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.CallableStatement prepareCall(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List query(java.lang.String,org.springframework.jdbc.core.RowMapper)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.lang.Object queryForObject(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int update(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int[] batchUpdate(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[],java.io.File)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.util.List)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.util.List)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<java.io.FileInputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileOutputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileReader: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileWriter: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.util.List readAllLines(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.nio.file.Path write(java.nio.file.Path,byte[],java.nio.file.OpenOption[])>", index: "0" }
+  - { method: "<java.io.PrintWriter: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void println(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void write(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.ServletOutputStream: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URL: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: java.net.URI create(java.lang.String)>", index: "0" }
+  - { method: "<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void sendRedirect(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.RequestDispatcher: void forward(javax.servlet.ServletRequest,javax.servlet.ServletResponse)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "1" }
+  - { method: "<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "0" }
+  - { method: "<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "1" }
+  - { method: "<javax.xml.xpath.XPath: java.lang.String evaluate(java.lang.String,java.lang.Object)>", index: "0" }
+  - { method: "<javax.xml.xpath.XPath: javax.xml.xpath.XPathExpression compile(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.io.InputStream)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.SAXParser: void parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler)>", index: "0" }
+  - { method: "<org.xml.sax.XMLReader: void parse(org.xml.sax.InputSource)>", index: "0" }
+  - { method: "<org.springframework.expression.ExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>", index: "0" }
+  - { method: "<java.io.ObjectInputStream: void <init>(java.io.InputStream)>", index: "0" }
+  - { method: "<com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.apache.logging.log4j.Logger: void info(java.lang.String)>", index: "0" }
+  - { method: "<org.apache.logging.log4j.Logger: void warn(java.lang.String)>", index: "0" }
+  - { method: "<org.apache.logging.log4j.Logger: void error(java.lang.String)>", index: "0" }
+  - { method: "<org.apache.logging.log4j.Logger: void debug(java.lang.String)>", index: "0" }
+  - { method: "<org.apache.logging.log4j.Logger: void fatal(java.lang.String)>", index: "0" }
+  - { method: "<org.slf4j.Logger: void info(java.lang.String)>", index: "0" }
+  - { method: "<org.slf4j.Logger: void warn(java.lang.String)>", index: "0" }
+  - { method: "<org.slf4j.Logger: void error(java.lang.String)>", index: "0" }
+  - { method: "<org.slf4j.Logger: void debug(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.Class: java.lang.Class forName(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.ClassLoader: java.lang.Class loadClass(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>", index: "1" }
+  - { method: "<javax.servlet.ServletContext: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.Cookie: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.Cookie: void setValue(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void addHeader(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void setHeader(java.lang.String,java.lang.String)>", index: "1" }
 
 transfers:
   - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
@@ -417,18 +400,30 @@ transfers:
   - { method: "<java.util.Optional: java.util.Optional of(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
   - { method: "<java.util.Optional: java.util.Optional ofNullable(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
   - { method: "<java.lang.Object: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>", from: "base", to: "result", type: "org.springframework.security.core.Authentication" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.Object getDetails()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>", from: "1", to: "base", type: "javax.servlet.http.HttpSession" }
   - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
 
 Initializing global bean mock objects for beans...
-Initialized 111 global bean objects.
+Initialized 189 global bean objects.
 Added entry point (Empty): <com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result lisetDeptOptions()>
 Added entry point (Empty): <com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result listResources()>
 Added entry point (Empty): <com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result listMenuOptions()>
 Added entry point (Empty): <com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result listRoutes()>
 Added entry point (Empty): <com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result listRoleOptions()>
 Added entry point (Empty): <com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result getLoginUserInfo()>
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
-Concrete class not found for type: javax.servlet.http.HttpServletResponseWrapper
 Added entry point (Empty): <com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result getCart()>
 Added entry point (Empty): <com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result deleteCart()>
 Added entry point (Empty): <com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result getBrandList()>
@@ -448,205 +443,195 @@ No bean found for concrete class: org.springframework.data.redis.core.RedisTempl
 No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: org.springframework.amqp.rabbit.core.RabbitTemplate
-No bean found for concrete class: org.redisson.api.RedissonClient
+No implementation found for interface: org.redisson.api.RedissonClient
+No implementation found for interface: com.youlai.mall.pms.api.SkuFeignClient
+No implementation found for interface: com.github.binarywang.wxpay.service.WxPayService
 No bean found for concrete class: com.youlai.mall.pms.api.SkuFeignClient
-No bean found for concrete class: com.youlai.mall.pms.api.SkuFeignClient
+No bean found for concrete class: com.github.binarywang.wxpay.service.WxPayService
+No bean found for concrete class: com.github.binarywang.wxpay.service.WxPayService
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
 No bean found for concrete class: org.springframework.data.redis.core.StringRedisTemplate
-No bean found for concrete class: com.youlai.mall.ums.api.MemberFeignClient
+No implementation found for interface: com.youlai.mall.ums.api.MemberFeignClient
 No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
 No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
 No bean found for concrete class: org.springframework.data.redis.core.RedisTemplate
 No bean found for concrete class: com.youlai.mall.pms.api.SkuFeignClient
 No bean found for concrete class: com.youlai.mall.pms.api.SkuFeignClient
+No bean found for concrete class: com.github.binarywang.wxpay.service.WxPayService
 No bean found for concrete class: com.youlai.mall.ums.api.MemberFeignClient
 No bean found for concrete class: com.youlai.mall.oms.config.WxPayProperties
 No bean found for concrete class: com.youlai.mall.ums.api.MemberFeignClient
-[Pointer analysis] elapsed time: 0.09s
+No subclass found for abstract class: org.apache.xmlbeans.impl.piccolo.xml.XMLInputReader
+[Pointer analysis] elapsed time: 0.92s
 Detected 0 taint flow(s):
 TFGDumper starts ...
 Source nodes:
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result deductStock(java.lang.Long,java.lang.Integer)>/num}
-VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result update(java.lang.Long,com.youlai.mall.ums.pojo.entity.UmsMember)>/memberId}
-VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result delete(java.lang.String)>/ids}
-VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result getRoleResources(java.lang.Long)>/roleId}
-VarNode{<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result deletePermissions(java.lang.String)>/ids}
-VarNode{<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result addPerm(com.youlai.admin.pojo.entity.SysPermission)>/permission}
-VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result deleteUsers(java.lang.String)>/ids}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result delete(java.lang.String)>/ids}
-VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result getMemberByMobile(java.lang.String)>/mobile}
-VarNode{<com.youlai.auth.controller.AuthController: java.lang.Object postAccessToken(java.security.Principal,java.util.Map)>/parameters}
-VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result saveUser(com.youlai.admin.pojo.form.UserForm)>/userForm}
-VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result update(java.lang.String,com.youlai.admin.pojo.entity.SysOauthClient)>/clientId}
-VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.PageResult listUserPages(com.youlai.admin.pojo.query.UserPageQuery)>/queryParams}
-VarNode{<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result updateDictItem(java.lang.Long,com.youlai.admin.pojo.form.DictItemForm)>/DictItemForm}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result updateSpuById(java.lang.Long,com.youlai.mall.pms.pojo.form.PmsSpuForm)>/formData}
-VarNode{<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result saveCoupon(com.youlai.mall.sms.pojo.form.CouponForm)>/couponForm}
-VarNode{<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result getDictTypeFormData(java.lang.Long)>/id}
-VarNode{<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result addDept(com.youlai.admin.pojo.entity.SysDept)>/dept}
-VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.PageResult listClientPages(com.youlai.admin.pojo.query.ClientPageQuery)>/queryParams}
-VarNode{<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result listMenus(java.lang.String)>/name}
-VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result updateMemberStatus(java.lang.Long,com.youlai.mall.ums.pojo.entity.UmsMember)>/member}
-VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUser(java.lang.Long,com.youlai.admin.pojo.form.UserForm)>/userForm}
-VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.PageResult listPageMembers(java.lang.Long,java.lang.Long,java.lang.String)>/nickName}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.PageResult listBrandPages(com.youlai.mall.pms.pojo.query.BrandPageQuery)>/queryParams}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result deleteBrands(java.lang.String)>/ids}
-VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.PageResult listPageMembers(java.lang.Long,java.lang.Long,java.lang.String)>/pageNum}
-VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result getMemberById(java.lang.Long)>/memberId}
-VarNode{<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result deleteDictTypes(java.lang.String)>/ids}
-VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result pay(java.lang.Long,java.lang.Integer,java.lang.String)>/orderId}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result addSpu(com.youlai.mall.pms.pojo.form.PmsSpuForm)>/formData}
-VarNode{<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.Result getOrderInfo(java.lang.Long)>/orderId}
-VarNode{<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result updateCoupon(java.lang.Long,com.youlai.mall.sms.pojo.form.CouponForm)>/couponForm}
-VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result getMemberInfo(java.lang.Long)>/memberId}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result detail(java.lang.Long)>/id}
-VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result updateRole(com.youlai.admin.pojo.form.RoleForm)>/roleForm}
-VarNode{<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result saveDictType(com.youlai.admin.pojo.form.DictTypeForm)>/dictTypeForm}
-VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.PageResult listPageMembers(java.lang.Long,java.lang.Long,java.lang.String)>/pageSize}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result addBrand(com.youlai.mall.pms.pojo.entity.PmsBrand)>/brand}
-VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result submitOrder(com.youlai.mall.oms.pojo.form.OrderSubmitForm)>/orderSubmitForm}
-VarNode{<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result listDepts(com.youlai.admin.pojo.query.DeptQuery)>/queryParams}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result getBrandList(java.lang.Integer)>/id}
-VarNode{<com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result addCartItem(java.lang.Long)>/skuId}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsAttributeController: com.youlai.common.result.Result saveBatch(com.youlai.mall.pms.pojo.form.PmsCategoryAttributeForm)>/pmsCategoryAttributeForm}
-VarNode{<com.youlai.mall.ums.controller.app.AddressController: com.youlai.common.result.Result getAddressDetail(java.lang.Long)>/addressId}
-VarNode{<com.youlai.mall.oms.controller.app.WxPayCallbackController: com.youlai.mall.oms.pojo.vo.WxPayResponseVO wxPayOrderNotify(java.lang.String,org.springframework.http.HttpHeaders)>/headers}
-VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result add(com.youlai.admin.pojo.entity.SysOauthClient)>/client}
-VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result getOAuth2ClientById(java.lang.String)>/clientId}
-VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result delete(java.lang.String)>/ids}
-VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUser(java.lang.Long,com.youlai.admin.pojo.form.UserForm)>/userId}
-VarNode{<com.youlai.mall.ums.controller.app.AddressController: com.youlai.common.result.Result updateAddress(java.lang.Long,com.youlai.mall.ums.pojo.form.AddressForm)>/addressId}
-VarNode{<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result updateDept(java.lang.Long,com.youlai.admin.pojo.entity.SysDept)>/dept}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result updateStockNum(java.lang.Long,java.lang.Integer)>/skuId}
-VarNode{<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result getDictItemFormData(java.lang.Long)>/id}
-VarNode{<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result updateCoupon(java.lang.Long,com.youlai.mall.sms.pojo.form.CouponForm)>/couponId}
-VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result detail(java.lang.String)>/clientId}
-VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result confirmOrder(java.lang.Long)>/skuId}
-VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUserPassword(java.lang.Long,java.lang.Integer)>/status}
-VarNode{<com.youlai.mall.pms.controller.app.SpuController: com.youlai.common.result.Result getSpuDetail(java.lang.Long)>/spuId}
-VarNode{<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result lockStock(com.youlai.mall.pms.pojo.dto.LockStockDTO)>/lockStockDTO}
-VarNode{<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.Result updateOrderStatus(java.lang.Long,java.lang.Integer,java.lang.Boolean)>/status}
-VarNode{<com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result check(boolean)>/checked}
-VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result getAuthInfoByUsername(java.lang.String)>/username}
-VarNode{<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.PageResult listDictTypePages(com.youlai.admin.pojo.query.DictTypePageQuery)>/queryParams}
-VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUserPassword(java.lang.Long,java.lang.String)>/password}
-VarNode{<com.youlai.mall.oms.controller.app.WxPayCallbackController: com.youlai.mall.oms.pojo.vo.WxPayResponseVO wxPayRefundNotify(java.lang.String,org.springframework.http.HttpHeaders)>/headers}
-VarNode{<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result deleteCoupons(java.lang.String)>/ids}
-VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result update(java.lang.String,com.youlai.admin.pojo.entity.SysOauthClient)>/client}
-VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result deductBalance(java.lang.Long,java.lang.Long)>/memberId}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result updateSku(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsSku)>/sku}
-VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result importUsers(com.youlai.admin.pojo.dto.UserImportDTO)>/userImportDTO}
-VarNode{<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result deleteMenus(java.lang.String)>/ids}
-VarNode{<com.youlai.mall.oms.controller.app.WxPayCallbackController: com.youlai.mall.oms.pojo.vo.WxPayResponseVO wxPayRefundNotify(java.lang.String,org.springframework.http.HttpHeaders)>/notifyData}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.PageResult listPmsSpuPages(com.youlai.mall.pms.pojo.query.SpuPageQuery)>/queryParams}
-VarNode{<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result updateAdvert(java.lang.Long,com.youlai.mall.sms.pojo.entity.SmsAdvert)>/id}
+VarNode{<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result getDictItemsByTypeCode(java.lang.String)>/typeCode}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result detail(java.lang.Long)>/id}
+VarNode{<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.Result updateOrderStatus(java.lang.Long,java.lang.Integer,java.lang.Boolean)>/orderId}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result updateBrand(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsBrand)>/brand}
 VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result updateMemberStatus(java.lang.Long,com.youlai.mall.ums.pojo.entity.UmsMember)>/memberId}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result updateSku(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsSku)>/skuId}
+VarNode{<org.apache.poi.util.LocaleUtil: java.util.Locale getUserLocale()>/$r1}
+VarNode{<org.springframework.web.context.request.RequestContextHolder: org.springframework.web.context.request.RequestAttributes getRequestAttributes()>/$r3}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result getBrandList(java.lang.Integer)>/id}
 VarNode{<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result getStockNum(java.lang.Long)>/skuId}
-VarNode{<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result updateDict(java.lang.Long,com.youlai.admin.pojo.form.DictTypeForm)>/id}
-VarNode{<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.PageResult listAdvertPages(com.youlai.mall.sms.pojo.query.AdvertPageQuery)>/queryParams}
-VarNode{<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.PageResult listCouponPages(com.youlai.mall.sms.pojo.query.CouponPageQuery)>/queryParams}
-VarNode{<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.Result getOrderDetail(java.lang.Long)>/orderId}
-VarNode{<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result getDeptDetail(java.lang.Long)>/deptId}
-VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result deductBalance(java.lang.Long)>/balances}
-VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.PageResult listRolePages(com.youlai.admin.pojo.query.RolePageQuery)>/queryParams}
-VarNode{<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result unlockStock(java.lang.String)>/orderToken}
-VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.PageResult listOrderPages(com.youlai.mall.oms.pojo.query.OrderPageQuery)>/queryParams}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result updateSpuById(java.lang.Long,com.youlai.mall.pms.pojo.form.PmsSpuForm)>/id}
-VarNode{<com.youlai.mall.pms.controller.app.CategoryController: com.youlai.common.result.Result list(java.lang.Long)>/parentId}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsAttributeController: com.youlai.common.result.Result listAttributes(java.lang.Long,java.lang.Integer)>/type}
-VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result updateBalance(java.lang.Long,java.lang.Long)>/balance}
-VarNode{<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.PageResult listOrderPages(com.youlai.mall.oms.pojo.query.OrderPageQuery)>/queryParams}
-VarNode{<com.youlai.mall.ums.controller.app.AddressController: com.youlai.common.result.Result addAddress(com.youlai.mall.ums.pojo.form.AddressForm)>/addressForm}
-VarNode{<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result updatePerm(java.lang.Long,com.youlai.admin.pojo.entity.SysPermission)>/permissionId}
-VarNode{<com.youlai.mall.pms.controller.app.SpuController: com.youlai.common.result.PageResult listSpuPages(com.youlai.mall.pms.pojo.query.SpuPageQuery)>/queryParams}
-VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result listMemberAddress(java.lang.Long)>/memberId}
-VarNode{<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result addMenu(com.youlai.admin.pojo.entity.SysMenu)>/menu}
-VarNode{<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.PageResult listPermPages(com.youlai.admin.pojo.query.PermPageQuery)>/permPageQuery}
-VarNode{<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result deleteDictItems(java.lang.String)>/ids}
-VarNode{<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result getSkuInfo(java.lang.Long)>/skuId}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result getSkuDetail(java.lang.Long)>/skuId}
-VarNode{<com.youlai.mall.ums.controller.app.AddressController: com.youlai.common.result.Result deleteAddress(java.lang.String)>/ids}
-VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result pay(java.lang.Long,java.lang.Integer,java.lang.String)>/payType}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result updateStockNum(java.lang.Long,java.lang.Integer)>/skuId}
+VarNode{<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result updateDept(java.lang.Long,com.youlai.admin.pojo.entity.SysDept)>/dept}
 VarNode{<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.Result updateOrderStatus(java.lang.Long,java.lang.Integer,java.lang.Boolean)>/orderEx}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result patch(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsCategory)>/id}
+VarNode{<org.apache.poi.POIXMLTypeLoader: org.apache.xmlbeans.SchemaTypeLoader getTypeLoader(org.apache.xmlbeans.SchemaType)>/$r1}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result deductStock(java.lang.Long,java.lang.Integer)>/num}
+VarNode{<com.youlai.mall.oms.controller.app.WxPayCallbackController: com.youlai.mall.oms.pojo.vo.WxPayResponseVO wxPayOrderNotify(java.lang.String,org.springframework.http.HttpHeaders)>/headers}
+VarNode{<org.apache.poi.hssf.record.crypto.Biff8EncryptionKey: java.lang.String getCurrentUserPassword()>/$r1}
+VarNode{<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result getPermissionDetail(java.lang.Long)>/permissionId}
+VarNode{<org.apache.xmlbeans.XmlBeans: org.apache.xmlbeans.QNameCache getQNameCache()>/$r1}
+VarNode{<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result deleteDictItems(java.lang.String)>/ids}
+VarNode{<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result updateDict(java.lang.Long,com.youlai.admin.pojo.form.DictTypeForm)>/dictTypeForm}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result addBrand(com.youlai.mall.pms.pojo.entity.PmsBrand)>/brand}
+VarNode{<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result saveDictItem(com.youlai.admin.pojo.form.DictItemForm)>/DictItemForm}
+VarNode{<com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result updateCartItem(java.lang.Long,com.youlai.mall.oms.pojo.dto.CartItemDTO)>/skuId}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result deleteBrands(java.lang.String)>/ids}
+VarNode{<com.youlai.auth.controller.AuthController: java.lang.Object postAccessToken(java.security.Principal,java.util.Map)>/parameters}
+VarNode{<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result getSkuInfo(java.lang.Long)>/skuId}
+VarNode{<org.apache.xmlbeans.impl.common.SystemCache: java.lang.Object getSaxLoader()>/$r2}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result updateBrand(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsBrand)>/id}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result updateSpuById(java.lang.Long,com.youlai.mall.pms.pojo.form.PmsSpuForm)>/formData}
+VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUserPassword(java.lang.Long,java.lang.Integer)>/userId}
+VarNode{<com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result addCartItem(java.lang.Long)>/skuId}
+VarNode{<com.youlai.mall.ums.controller.app.AddressController: com.youlai.common.result.Result updateAddress(java.lang.Long,com.youlai.mall.ums.pojo.form.AddressForm)>/addressId}
+VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result detail(java.lang.String)>/clientId}
+VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUser(java.lang.Long,com.youlai.admin.pojo.form.UserForm)>/userId}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result updateStockNum(java.lang.Long,java.lang.Integer)>/stockNum}
+VarNode{<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result addPerm(com.youlai.admin.pojo.entity.SysPermission)>/permission}
+VarNode{<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result updateMenuVisible(java.lang.Long,java.lang.Integer)>/menuId}
+VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result deleteRoles(java.lang.String)>/ids}
+VarNode{<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result deleteDictTypes(java.lang.String)>/ids}
+VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result getUserFormData(java.lang.Long)>/userId}
+VarNode{<org.apache.xmlbeans.impl.schema.SchemaTypeLoaderImpl$SchemaTypeLoaderCache: void addToTypeLoaderCache(org.apache.xmlbeans.SchemaTypeLoader,java.lang.ClassLoader)>/$r2}
+VarNode{<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result updateMenu(com.youlai.admin.pojo.entity.SysMenu)>/menu}
+VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result submitOrder(com.youlai.mall.oms.pojo.form.OrderSubmitForm)>/orderSubmitForm}
+VarNode{<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result saveCoupon(com.youlai.mall.sms.pojo.form.CouponForm)>/couponForm}
+VarNode{<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.Result getOrderDetail(java.lang.Long)>/orderId}
+VarNode{<org.apache.xmlbeans.impl.store.CharUtil: org.apache.xmlbeans.impl.store.CharUtil getThreadLocalCharUtil()>/$r1}
+VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result updateBalance(java.lang.Long,java.lang.Long)>/balance}
+VarNode{<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result updatePerm(java.lang.Long,com.youlai.admin.pojo.entity.SysPermission)>/permissionId}
+VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUserPassword(java.lang.Long,java.lang.String)>/userId}
+VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result cancel(java.lang.Long)>/id}
+VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result addProductViewHistory(com.youlai.mall.pms.pojo.vo.ProductHistoryVO)>/product}
+VarNode{<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result getDictItemFormData(java.lang.Long)>/id}
+VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result getRoleResources(java.lang.Long)>/roleId}
+VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result confirmOrder(java.lang.Long)>/skuId}
+VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result saveUser(com.youlai.admin.pojo.form.UserForm)>/userForm}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result updateSku(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsSku)>/sku}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result addSpu(com.youlai.mall.pms.pojo.form.PmsSpuForm)>/formData}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsAttributeController: com.youlai.common.result.Result saveBatch(com.youlai.mall.pms.pojo.form.PmsCategoryAttributeForm)>/pmsCategoryAttributeForm}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result update(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsCategory)>/id}
+VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result updateRoleResource(java.lang.Long,com.youlai.admin.pojo.form.RoleResourceForm)>/roleResourceForm}
+VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result delete(java.lang.String)>/ids}
+VarNode{<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result deleteAdverts(java.lang.String)>/ids}
 VarNode{<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result getAdvertDetail(java.lang.Long)>/id}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result update(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsCategory)>/category}
 VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result updateRoleResource(java.lang.Long,com.youlai.admin.pojo.form.RoleResourceForm)>/roleId}
 VarNode{<com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result delete(java.lang.String)>/ids}
+VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result getByOpenid(java.lang.String)>/openid}
 VarNode{<com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result removeCartItem(java.lang.Long)>/skuId}
-VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result getUserFormData(java.lang.Long)>/userId}
-VarNode{<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result updateMenuVisible(java.lang.Long,java.lang.Integer)>/menuId}
+VarNode{<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result checkPrice(com.youlai.mall.pms.pojo.dto.CheckPriceDTO)>/checkPriceDTO}
+VarNode{<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result updateAdvert(java.lang.Long,com.youlai.mall.sms.pojo.entity.SmsAdvert)>/advert}
+VarNode{<org.apache.xmlbeans.XmlFactoryHook$ThreadContext: org.apache.xmlbeans.XmlFactoryHook getHook()>/$r1}
+VarNode{<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result saveDictType(com.youlai.admin.pojo.form.DictTypeForm)>/dictTypeForm}
+VarNode{<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result updateDept(java.lang.Long,com.youlai.admin.pojo.entity.SysDept)>/deptId}
+VarNode{<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result deleteCoupons(java.lang.String)>/ids}
+VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result delete(java.lang.String)>/ids}
+VarNode{<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result deleteDepartments(java.lang.String)>/ids}
+VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result addMember(com.youlai.mall.ums.dto.MemberDTO)>/member}
+VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result addRole(com.youlai.admin.pojo.form.RoleForm)>/roleForm}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result update(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsCategory)>/category}
+VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result updateMemberStatus(java.lang.Long,com.youlai.mall.ums.pojo.entity.UmsMember)>/member}
+VarNode{<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result updateAdvert(java.lang.Long,com.youlai.mall.sms.pojo.entity.SmsAdvert)>/id}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result updateSpuById(java.lang.Long,com.youlai.mall.pms.pojo.form.PmsSpuForm)>/id}
+VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result updateRole(com.youlai.admin.pojo.form.RoleForm)>/roleForm}
+VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result getMemberByMobile(java.lang.String)>/mobile}
+VarNode{<org.apache.xmlbeans.impl.values.NamespaceContext: org.apache.xmlbeans.impl.values.NamespaceContext$NamespaceContextStack getNamespaceContextStack()>/$r1}
 VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result getRoleDetail(java.lang.Long)>/roleId}
 VarNode{<com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result patch(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsCategory)>/category}
-VarNode{<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result updatePerm(java.lang.Long,com.youlai.admin.pojo.entity.SysPermission)>/permission}
-VarNode{<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result getDictItemsByTypeCode(java.lang.String)>/typeCode}
-VarNode{<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result getPermissionDetail(java.lang.Long)>/permissionId}
-VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result updateRoleStatus(java.lang.Long,java.lang.Integer)>/roleId}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result updateBrand(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsBrand)>/brand}
-VarNode{<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result updateAdvert(java.lang.Long,com.youlai.mall.sms.pojo.entity.SmsAdvert)>/advert}
-VarNode{<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result deleteDepartments(java.lang.String)>/ids}
-VarNode{<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result updateDict(java.lang.Long,com.youlai.admin.pojo.form.DictTypeForm)>/dictTypeForm}
-VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result addProductViewHistory(com.youlai.mall.pms.pojo.vo.ProductHistoryVO)>/product}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result deductStock(java.lang.Long,java.lang.Integer)>/skuId}
-VarNode{<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result updateMenu(com.youlai.admin.pojo.entity.SysMenu)>/menu}
-VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result pay(java.lang.Long,java.lang.Integer,java.lang.String)>/appId}
-VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result updateRoleStatus(java.lang.Long,java.lang.Integer)>/status}
-VarNode{<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result updateMenuVisible(java.lang.Long,java.lang.Integer)>/visible}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsBrandController: com.youlai.common.result.Result updateBrand(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsBrand)>/id}
-VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result addMember(com.youlai.mall.ums.dto.MemberDTO)>/member}
-VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result deductBalance(java.lang.Long,java.lang.Long)>/amount}
-VarNode{<com.youlai.mall.ums.controller.app.AddressController: com.youlai.common.result.Result updateAddress(java.lang.Long,com.youlai.mall.ums.pojo.form.AddressForm)>/addressForm}
-VarNode{<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.Result updateOrderStatus(java.lang.Long,java.lang.Integer,java.lang.Boolean)>/orderId}
-VarNode{<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result saveDictItem(com.youlai.admin.pojo.form.DictItemForm)>/DictItemForm}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result updateStockNum(java.lang.Long,java.lang.Integer)>/stockNum}
-VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result updateBalance(java.lang.Long,java.lang.Long)>/memberId}
-VarNode{<com.youlai.admin.controller.SysUserController: void exportUsers(com.youlai.admin.pojo.query.UserPageQuery,javax.servlet.http.HttpServletResponse)>/queryParams}
-VarNode{<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result getCouponFormData(java.lang.Long)>/couponId}
-VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUserPassword(java.lang.Long,java.lang.String)>/userId}
-VarNode{<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.PageResult listDictItemPages(com.youlai.admin.pojo.query.DictItemPageQuery)>/queryParams}
-VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result deleteOrder(java.lang.Long)>/orderId}
-VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result cancel(java.lang.Long)>/id}
-VarNode{<com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result updateCartItem(java.lang.Long,com.youlai.mall.oms.pojo.dto.CartItemDTO)>/cartItem}
-VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result addRole(com.youlai.admin.pojo.form.RoleForm)>/roleForm}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsAttributeController: com.youlai.common.result.Result listAttributes(java.lang.Long,java.lang.Integer)>/categoryId}
-VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUserPassword(java.lang.Long,java.lang.Integer)>/userId}
-VarNode{<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result addAvert(com.youlai.mall.sms.pojo.entity.SmsAdvert)>/advert}
-VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result update(java.lang.Long,com.youlai.mall.ums.pojo.entity.UmsMember)>/member}
-VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result updateRoleResource(java.lang.Long,com.youlai.admin.pojo.form.RoleResourceForm)>/roleResourceForm}
-VarNode{<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result detail(java.lang.Long)>/id}
-VarNode{<com.youlai.mall.oms.controller.app.WxPayCallbackController: com.youlai.mall.oms.pojo.vo.WxPayResponseVO wxPayOrderNotify(java.lang.String,org.springframework.http.HttpHeaders)>/notifyData}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result update(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsCategory)>/id}
-VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result deleteRoles(java.lang.String)>/ids}
-VarNode{<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result detail(java.lang.Long)>/id}
 VarNode{<com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result addCategory(com.youlai.mall.pms.pojo.entity.PmsCategory)>/category}
-VarNode{<com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result updateCartItem(java.lang.Long,com.youlai.mall.oms.pojo.dto.CartItemDTO)>/skuId}
-VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result getByOpenid(java.lang.String)>/openid}
-VarNode{<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result updateDept(java.lang.Long,com.youlai.admin.pojo.entity.SysDept)>/deptId}
+VarNode{<org.terracotta.statistics.AbstractOperationStatistic: void end(java.lang.Enum)>/$r3}
+VarNode{<com.youlai.mall.oms.controller.app.WxPayCallbackController: com.youlai.mall.oms.pojo.vo.WxPayResponseVO wxPayOrderNotify(java.lang.String,org.springframework.http.HttpHeaders)>/notifyData}
+VarNode{<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result getCouponFormData(java.lang.Long)>/couponId}
+VarNode{<com.youlai.mall.ums.controller.app.AddressController: com.youlai.common.result.Result updateAddress(java.lang.Long,com.youlai.mall.ums.pojo.form.AddressForm)>/addressForm}
+VarNode{<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result deletePermissions(java.lang.String)>/ids}
+VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result update(java.lang.String,com.youlai.admin.pojo.entity.SysOauthClient)>/clientId}
+VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result updateRoleStatus(java.lang.Long,java.lang.Integer)>/roleId}
+VarNode{<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result updateDictItem(java.lang.Long,com.youlai.admin.pojo.form.DictItemForm)>/DictItemForm}
+VarNode{<com.youlai.mall.ums.controller.app.AddressController: com.youlai.common.result.Result addAddress(com.youlai.mall.ums.pojo.form.AddressForm)>/addressForm}
+VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result getAuthInfoByUsername(java.lang.String)>/username}
+VarNode{<com.youlai.mall.ums.controller.app.AddressController: com.youlai.common.result.Result getAddressDetail(java.lang.Long)>/addressId}
+VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result pay(java.lang.Long,java.lang.Integer,java.lang.String)>/orderId}
+VarNode{<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result updateCoupon(java.lang.Long,com.youlai.mall.sms.pojo.form.CouponForm)>/couponForm}
+VarNode{<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result updatePerm(java.lang.Long,com.youlai.admin.pojo.entity.SysPermission)>/permission}
+VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result deductBalance(java.lang.Long,java.lang.Long)>/memberId}
+VarNode{<org.apache.xmlbeans.impl.store.Locale: org.apache.xmlbeans.impl.store.Locale$ScrubBuffer getScrubBuffer(int)>/$r1}
+VarNode{<org.springframework.web.context.request.RequestContextHolder: org.springframework.web.context.request.RequestAttributes getRequestAttributes()>/$r1}
+VarNode{<com.youlai.mall.oms.controller.app.WxPayCallbackController: com.youlai.mall.oms.pojo.vo.WxPayResponseVO wxPayRefundNotify(java.lang.String,org.springframework.http.HttpHeaders)>/headers}
+VarNode{<com.youlai.mall.ums.controller.app.AddressController: com.youlai.common.result.Result deleteAddress(java.lang.String)>/ids}
+VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result deductBalance(java.lang.Long,java.lang.Long)>/amount}
+VarNode{<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result addDept(com.youlai.admin.pojo.entity.SysDept)>/dept}
+VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result deductBalance(java.lang.Long)>/balances}
+VarNode{<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result getDictTypeFormData(java.lang.Long)>/id}
+VarNode{<com.youlai.mall.oms.controller.app.CartController: com.youlai.common.result.Result updateCartItem(java.lang.Long,com.youlai.mall.oms.pojo.dto.CartItemDTO)>/cartItem}
+VarNode{<com.youlai.admin.controller.SysDictTypeController: com.youlai.common.result.Result updateDict(java.lang.Long,com.youlai.admin.pojo.form.DictTypeForm)>/id}
+VarNode{<com.youlai.mall.pms.controller.app.SpuController: com.youlai.common.result.Result getSpuDetail(java.lang.Long)>/spuId}
+VarNode{<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.Result updateOrderStatus(java.lang.Long,java.lang.Integer,java.lang.Boolean)>/status}
+VarNode{<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result deleteMenus(java.lang.String)>/ids}
+VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result add(com.youlai.admin.pojo.entity.SysOauthClient)>/client}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsSpuController: com.youlai.common.result.Result delete(java.lang.String)>/ids}
+VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result update(java.lang.Long,com.youlai.mall.ums.pojo.entity.UmsMember)>/memberId}
+VarNode{<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result lockStock(com.youlai.mall.pms.pojo.dto.LockStockDTO)>/lockStockDTO}
 VarNode{<com.youlai.admin.controller.SysDictItemController: com.youlai.common.result.Result updateDictItem(java.lang.Long,com.youlai.admin.pojo.form.DictItemForm)>/id}
-VarNode{<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result checkPrice(com.youlai.mall.pms.pojo.dto.CheckPriceDTO)>/checkPriceDTO}
-VarNode{<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result deleteAdverts(java.lang.String)>/ids}
+VarNode{<com.youlai.admin.controller.SysRoleController: com.youlai.common.result.Result updateRoleStatus(java.lang.Long,java.lang.Integer)>/status}
+VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result getMemberById(java.lang.Long)>/memberId}
+VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result updateBalance(java.lang.Long,java.lang.Long)>/memberId}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result updateSku(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsSku)>/skuId}
+VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUser(java.lang.Long,com.youlai.admin.pojo.form.UserForm)>/userForm}
+VarNode{<com.youlai.mall.sms.controller.admin.SmsAdvertController: com.youlai.common.result.Result addAvert(com.youlai.mall.sms.pojo.entity.SmsAdvert)>/advert}
+VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result getMemberInfo(java.lang.Long)>/memberId}
+VarNode{<com.youlai.admin.controller.SysDeptController: com.youlai.common.result.Result getDeptDetail(java.lang.Long)>/deptId}
+VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result update(java.lang.String,com.youlai.admin.pojo.entity.SysOauthClient)>/client}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result patch(java.lang.Long,com.youlai.mall.pms.pojo.entity.PmsCategory)>/id}
+VarNode{<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result detail(java.lang.Long)>/id}
+VarNode{<com.youlai.mall.oms.controller.app.WxPayCallbackController: com.youlai.mall.oms.pojo.vo.WxPayResponseVO wxPayRefundNotify(java.lang.String,org.springframework.http.HttpHeaders)>/notifyData}
+VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result deleteUsers(java.lang.String)>/ids}
+VarNode{<com.youlai.mall.oms.controller.admin.OmsOrderController: com.youlai.common.result.Result getOrderInfo(java.lang.Long)>/orderId}
+VarNode{<com.youlai.mall.sms.controller.admin.SmsCouponController: com.youlai.common.result.Result updateCoupon(java.lang.Long,com.youlai.mall.sms.pojo.form.CouponForm)>/couponId}
+VarNode{<org.apache.xmlbeans.impl.schema.SchemaTypeLoaderImpl$SchemaTypeLoaderCache: org.apache.xmlbeans.SchemaTypeLoader getFromTypeLoaderCache(java.lang.ClassLoader)>/$r2}
 VarNode{<com.youlai.admin.controller.SysPermissionController: com.youlai.common.result.Result listPermissions(java.lang.Long)>/menuId}
-VarNode{<com.youlai.mall.pms.controller.app.SkuController: com.youlai.common.result.Result deductStock(java.lang.String)>/orderToken}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsCategoryController: com.youlai.common.result.Result detail(java.lang.Long)>/id}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result deductStock(java.lang.Long,java.lang.Integer)>/skuId}
+VarNode{<com.youlai.admin.controller.SysMenuController: com.youlai.common.result.Result addMenu(com.youlai.admin.pojo.entity.SysMenu)>/menu}
+VarNode{<com.youlai.mall.ums.controller.admin.UmsMemberController: com.youlai.common.result.Result update(java.lang.Long,com.youlai.mall.ums.pojo.entity.UmsMember)>/member}
+VarNode{<com.youlai.mall.oms.controller.app.OrderController: com.youlai.common.result.Result deleteOrder(java.lang.Long)>/orderId}
+VarNode{<com.youlai.mall.pms.controller.admin.PmsSkuController: com.youlai.common.result.Result getSkuDetail(java.lang.Long)>/skuId}
+VarNode{<com.youlai.admin.controller.SysOauthClientController: com.youlai.common.result.Result getOAuth2ClientById(java.lang.String)>/clientId}
+VarNode{<com.youlai.mall.ums.controller.app.MemberController: com.youlai.common.result.Result listMemberAddress(java.lang.Long)>/memberId}
+VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUserPassword(java.lang.Long,java.lang.String)>/password}
+VarNode{<com.youlai.admin.controller.SysUserController: com.youlai.common.result.Result updateUserPassword(java.lang.Long,java.lang.Integer)>/status}
 Sink nodes:
 Dumping /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-flow-graph.dot
-TFGDumper finishes, elapsed time: 0.03s
+TFGDumper finishes, elapsed time: 0.22s
 -------------- Pointer analysis statistics: --------------
-#var pointers:                3700 (insens) / 3700 (sens)
-#objects:                     1634 (insens) / 1634 (sens)
-#var points-to:               3154 (insens) / 3155 (sens)
-#static field points-to:      19 (sens)
-#instance field points-to:    665 (sens)
-#array points-to:             79 (sens)
-#reachable methods:           709 (insens) / 709 (sens)
-#call graph edges:            1001 (insens) / 1001 (sens)
+#var pointers:                6,7678 (insens) / 6,7678 (sens)
+#objects:                     7437 (insens) / 7437 (sens)
+#var points-to:               14,2230 (insens) / 14,2230 (sens)
+#static field points-to:      2175 (sens)
+#instance field points-to:    2,5109 (sens)
+#array points-to:             2693 (sens)
+#reachable methods:           8168 (insens) / 8168 (sens)
+#call graph edges:            2,7778 (insens) / 2,7778 (sens)
 ----------------------------------------
-pta finishes, elapsed time: 0.27s
+pta finishes, elapsed time: 1.66s
 cg starts ...
-Call graph has 709 reachable methods and 1001 edges
+Call graph has 8168 reachable methods and 27778 edges
 Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
 Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
 Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
-cg finishes, elapsed time: 0.05s
-Tai-e finishes, elapsed time: 3.87s
+cg finishes, elapsed time: 0.62s
+Tai-e finishes, elapsed time: 45.08s

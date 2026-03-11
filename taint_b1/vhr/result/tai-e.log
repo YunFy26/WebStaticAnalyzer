@@ -1,0 +1,868 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.3
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+27477 classes with 240640 methods in the world
+WorldBuilder finishes, elapsed time: 23.29s
+ir-dumper starts ...
+Dumping IR in /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tir
+13488 classes in scope (APP) of class analyses
+ir-dumper finishes, elapsed time: 11.64s
+routerAnalysis starts ...
+Router analysis started at: 2026-02-28 21:36:20
+Router analysis completed at: 2026-02-28 21:36:21 (Duration: 6ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.01s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.00s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+resultAnalysis starts ...
+============================================================
+                 Spring Analysis Result Summary             
+============================================================
+Router Methods (Endpoints)     : 51
+Spring Beans                   : 113
+Aspect Methods (Advice)        : 0
+============================================================
+resultAnalysis finishes, elapsed time: 0.00s
+srfaAnalysis starts ...
+SRFA Analysis started at: 2026-02-28 21:36:21
+Loaded 14 controller classes from RouterAnalysis
+Discovering mapper paths from 20 appClassPath entries
+Auto-discovered 33 mapper path(s)
+  - /Users/yuntsy/My/Graduate/Data/final/vhr/vhr/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-4_0_4_1592488715000/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/javax_servlet-api-4_0_1_1532351392000/META-INF/maven/javax.servlet/javax.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-web-6_2_1_1733996318000/META-INF
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-jdbc-6_2_0_1731602316000/org/springframework/jdbc/support
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-6_0_0_1720887509497/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-context-6_2_0_1731602337000/org/springframework/remoting/rmi
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves/rewrite
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mbeans
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/deploy
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/webresources
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/loader
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/users
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/connector
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/authenticator
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/startup
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/realm
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/session
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-web-1_13_0_1699061658000/META-INF/maven/org.apache.shiro/shiro-web
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-core-1_13_0_1699061656000/META-INF/maven/org.apache.shiro/shiro-core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/org/quartz/impl/jdbcjobstore
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/META-INF/maven/org.quartz-scheduler/quartz
+Using 33 mapper search path(s):
+  - /Users/yuntsy/My/Graduate/Data/final/vhr/vhr/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-4_0_4_1592488715000/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/javax_servlet-api-4_0_1_1532351392000/META-INF/maven/javax.servlet/javax.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-web-6_2_1_1733996318000/META-INF
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-jdbc-6_2_0_1731602316000/org/springframework/jdbc/support
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-6_0_0_1720887509497/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-context-6_2_0_1731602337000/org/springframework/remoting/rmi
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves/rewrite
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mbeans
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/deploy
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/webresources
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/loader
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/users
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/connector
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/authenticator
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/startup
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/realm
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/session
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-web-1_13_0_1699061658000/META-INF/maven/org.apache.shiro/shiro-web
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-core-1_13_0_1699061656000/META-INF/maven/org.apache.shiro/shiro-core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/org/quartz/impl/jdbcjobstore
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/META-INF/maven/org.quartz-scheduler/quartz
+Parsed 22 MyBatis mapper files
+Parsed 22 MyBatis mapper files
+  Mapper namespace: org.javaboy.vhr.mapper.HrRoleMapper
+    Operation: id=addRole, type=insert, hasDollar=false
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByHrid, type=delete, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.EmployeeecMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.EmployeetrainMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.OpLogMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.MenuMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=getMidsByRid, type=select, hasDollar=false
+    Operation: id=getMenusByHrId, type=select, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.AppraiseMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.PoliticsstatusMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.SalaryMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.EmpSalaryMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.NationMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.EmployeeMapper
+    Operation: id=updateEmployeeSalaryById, type=insert, hasDollar=false
+    Operation: id=addEmps, type=insert, hasDollar=false
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=getEmployeeByPageWithSalary, type=select, hasDollar=false
+    Operation: id=getEmployeeById, type=select, hasDollar=false
+    Operation: id=getEmployeeByPage, type=select, hasDollar=false
+    Operation: id=getTotal, type=select, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.MailSendLogMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=updateMailSendLogStatus, type=update, hasDollar=false
+    Operation: id=updateCount, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.EmployeeremoveMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.PositionMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=deletePositionsByIds, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.MsgContentMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.SysMsgMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.DepartmentMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=addDep, type=select, hasDollar=false
+    Operation: id=deleteDepById, type=select, hasDollar=false
+    Operation: id=getAllDepartmentsByParentId, type=select, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.JobLevelMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteJobLevelsByIds, type=delete, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.AdjustSalaryMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.MenuRoleMapper
+    Operation: id=insertRecord, type=insert, hasDollar=false
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByRid, type=delete, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.HrMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=getAllHrsExceptCurrentHr, type=select, hasDollar=false
+    Operation: id=getAllHrs, type=select, hasDollar=false
+    Operation: id=getHrRolesById, type=select, hasDollar=false
+    Operation: id=loadUserByUsername, type=select, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateUserface, type=update, hasDollar=false
+    Operation: id=updatePasswd, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+  Mapper namespace: org.javaboy.vhr.mapper.RoleMapper
+    Operation: id=insert, type=insert, hasDollar=false
+    Operation: id=insertSelective, type=insert, hasDollar=false
+    Operation: id=selectByPrimaryKey, type=select, hasDollar=false
+    Operation: id=deleteByPrimaryKey, type=delete, hasDollar=false
+    Operation: id=updateByPrimaryKeySelective, type=update, hasDollar=false
+    Operation: id=updateByPrimaryKey, type=update, hasDollar=false
+Collected 96 write field names from INSERT/UPDATE operations
+Extracted 42 source metadata entries (before filtering)
+Resolving 22 mapper namespaces...
+  Namespace resolve: org.javaboy.vhr.mapper.HrRoleMapper -> org.javaboy.vhr.mapper.HrRoleMapper
+  Namespace resolve: org.javaboy.vhr.mapper.EmployeeecMapper -> org.javaboy.vhr.mapper.EmployeeecMapper
+  Namespace resolve: org.javaboy.vhr.mapper.EmployeetrainMapper -> org.javaboy.vhr.mapper.EmployeetrainMapper
+  Namespace resolve: org.javaboy.vhr.mapper.OpLogMapper -> org.javaboy.vhr.mapper.OpLogMapper
+  Namespace resolve: org.javaboy.vhr.mapper.MenuMapper -> org.javaboy.vhr.mapper.MenuMapper
+  Namespace resolve: org.javaboy.vhr.mapper.AppraiseMapper -> org.javaboy.vhr.mapper.AppraiseMapper
+  Namespace resolve: org.javaboy.vhr.mapper.PoliticsstatusMapper -> org.javaboy.vhr.mapper.PoliticsstatusMapper
+  Namespace resolve: org.javaboy.vhr.mapper.SalaryMapper -> org.javaboy.vhr.mapper.SalaryMapper
+  Namespace resolve: org.javaboy.vhr.mapper.EmpSalaryMapper -> org.javaboy.vhr.mapper.EmpSalaryMapper
+  Namespace resolve: org.javaboy.vhr.mapper.NationMapper -> org.javaboy.vhr.mapper.NationMapper
+  Namespace resolve: org.javaboy.vhr.mapper.EmployeeMapper -> org.javaboy.vhr.mapper.EmployeeMapper
+  Namespace resolve: org.javaboy.vhr.mapper.MailSendLogMapper -> org.javaboy.vhr.mapper.MailSendLogMapper
+  Namespace resolve: org.javaboy.vhr.mapper.EmployeeremoveMapper -> org.javaboy.vhr.mapper.EmployeeremoveMapper
+  Namespace resolve: org.javaboy.vhr.mapper.PositionMapper -> org.javaboy.vhr.mapper.PositionMapper
+  Namespace resolve: org.javaboy.vhr.mapper.MsgContentMapper -> org.javaboy.vhr.mapper.MsgContentMapper
+  Namespace resolve: org.javaboy.vhr.mapper.SysMsgMapper -> org.javaboy.vhr.mapper.SysMsgMapper
+  Namespace resolve: org.javaboy.vhr.mapper.DepartmentMapper -> org.javaboy.vhr.mapper.DepartmentMapper
+  Namespace resolve: org.javaboy.vhr.mapper.JobLevelMapper -> org.javaboy.vhr.mapper.JobLevelMapper
+  Namespace resolve: org.javaboy.vhr.mapper.AdjustSalaryMapper -> org.javaboy.vhr.mapper.AdjustSalaryMapper
+  Namespace resolve: org.javaboy.vhr.mapper.MenuRoleMapper -> org.javaboy.vhr.mapper.MenuRoleMapper
+  Namespace resolve: org.javaboy.vhr.mapper.HrMapper -> org.javaboy.vhr.mapper.HrMapper
+  Namespace resolve: org.javaboy.vhr.mapper.RoleMapper -> org.javaboy.vhr.mapper.RoleMapper
+Extracted 141 sink metadata entries (deduplicated, before risk filtering)
+Sources: 42 generated, 0 filtered, 0 deduplicated
+Sinks: 141 generated (risky), 0 filtered (safe), 0 deduplicated
+  Note: 'risky' means uses string concatenation ($), 'safe' means uses prepared statement (#)
+Written taint config to: output/taint-config-generated.yml
+  Sources: 42 (SRFA param) + framework call sources
+  Sinks: 141 (SRFA) + common predefined sinks
+  Transfers: standard set included
+SRFA Analysis completed at: 2026-02-28 21:36:21 (Duration: 116ms)
+srfaAnalysis finishes, elapsed time: 0.12s
+pta starts ...
+Loading taint config from /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-config-generated.yml
+Cannot find source method '<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>'
+Cannot find source method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
+Cannot find source method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find source method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.Query createQuery(java.lang.String)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.SQLQuery createSQLQuery(java.lang.String)>'
+Cannot find sink method '<javax.servlet.ServletOutputStream: void write(byte[])>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void print(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void println(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void write(java.lang.String)>'
+Cannot find sink method '<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object getForObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity getForEntity(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object postForObject(java.lang.String,java.lang.Object,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class)>'
+Cannot find sink method '<org.springframework.ldap.core.LdapTemplate: java.util.List search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls,org.springframework.ldap.core.AttributesMapper)>'
+Cannot find sink method '<org.springframework.expression.ExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>'
+Cannot find sink method '<org.springframework.expression.spel.standard.SpelExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object getValue(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlExpression createExpression(java.lang.String)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlScript createScript(java.lang.String)>'
+Cannot find sink method '<freemarker.template.Template: void <init>(java.lang.String,java.io.Reader)>'
+Cannot find sink method '<org.apache.velocity.app.VelocityEngine: boolean evaluate(org.apache.velocity.context.Context,java.io.Writer,java.lang.String,java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parse(java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.lang.String)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.io.InputStream)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void info(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void warn(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void error(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void debug(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void fatal(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void info(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void warn(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void error(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void debug(java.lang.String)>'
+Cannot find sink method '<javax.servlet.http.HttpServletRequest: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>'
+Cannot find taint-transfer method '<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find taint-transfer method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
+Cannot find taint-transfer method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
+Cannot find taint-transfer method '<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>'
+Cannot find taint-transfer method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+TaintConfig:
+sources:
+  - { kind: "param", method: "<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.Hr getCurrentHr(org.springframework.security.core.Authentication)>", index: "0", type: "org.springframework.security.core.Authentication" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHr(org.javaboy.vhr.model.Hr,org.springframework.security.core.Authentication)>", index: "0", type: "org.javaboy.vhr.model.Hr" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHr(org.javaboy.vhr.model.Hr,org.springframework.security.core.Authentication)>", index: "1", type: "org.springframework.security.core.Authentication" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHrPasswd(java.util.Map)>", index: "0", type: "java.util.Map" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHrUserface(org.springframework.web.multipart.MultipartFile,java.lang.Integer,org.springframework.security.core.Authentication)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHrUserface(org.springframework.web.multipart.MultipartFile,java.lang.Integer,org.springframework.security.core.Authentication)>", index: "1", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHrUserface(org.springframework.web.multipart.MultipartFile,java.lang.Integer,org.springframework.security.core.Authentication)>", index: "2", type: "org.springframework.security.core.Authentication" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.salary.SalaryController: org.javaboy.vhr.model.RespBean addSalary(org.javaboy.vhr.model.Salary)>", index: "0", type: "org.javaboy.vhr.model.Salary" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.salary.SalaryController: org.javaboy.vhr.model.RespBean deleteSalaryById(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.salary.SalaryController: org.javaboy.vhr.model.RespBean updateSalaryById(org.javaboy.vhr.model.Salary)>", index: "0", type: "org.javaboy.vhr.model.Salary" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.salary.SobConfigController: org.javaboy.vhr.model.RespPageBean getEmployeeByPageWithSalary(java.lang.Integer,java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.salary.SobConfigController: org.javaboy.vhr.model.RespPageBean getEmployeeByPageWithSalary(java.lang.Integer,java.lang.Integer)>", index: "1", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.salary.SobConfigController: org.javaboy.vhr.model.RespBean updateEmployeeSalaryById(java.lang.Integer,java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.salary.SobConfigController: org.javaboy.vhr.model.RespBean updateEmployeeSalaryById(java.lang.Integer,java.lang.Integer)>", index: "1", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespPageBean getEmployeeByPage(java.lang.Integer,java.lang.Integer,org.javaboy.vhr.model.Employee,java.util.Date[])>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespPageBean getEmployeeByPage(java.lang.Integer,java.lang.Integer,org.javaboy.vhr.model.Employee,java.util.Date[])>", index: "1", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespPageBean getEmployeeByPage(java.lang.Integer,java.lang.Integer,org.javaboy.vhr.model.Employee,java.util.Date[])>", index: "2", type: "org.javaboy.vhr.model.Employee" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespPageBean getEmployeeByPage(java.lang.Integer,java.lang.Integer,org.javaboy.vhr.model.Employee,java.util.Date[])>", index: "3", type: "java.util.Date[]" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespBean addEmp(org.javaboy.vhr.model.Employee)>", index: "0", type: "org.javaboy.vhr.model.Employee" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespBean deleteEmpByEid(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespBean updateEmp(org.javaboy.vhr.model.Employee)>", index: "0", type: "org.javaboy.vhr.model.Employee" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespBean importData(org.springframework.web.multipart.MultipartFile)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.HrController: java.util.List getAllHrs(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.HrController: org.javaboy.vhr.model.RespBean updateHr(org.javaboy.vhr.model.Hr)>", index: "0", type: "org.javaboy.vhr.model.Hr" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.HrController: org.javaboy.vhr.model.RespBean updateHrRole(java.lang.Integer,java.lang.Integer[])>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.HrController: org.javaboy.vhr.model.RespBean updateHrRole(java.lang.Integer,java.lang.Integer[])>", index: "1", type: "java.lang.Integer[]" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.HrController: org.javaboy.vhr.model.RespBean deleteHrById(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.JobLevelController: org.javaboy.vhr.model.RespBean addJobLevel(org.javaboy.vhr.model.JobLevel)>", index: "0", type: "org.javaboy.vhr.model.JobLevel" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.JobLevelController: org.javaboy.vhr.model.RespBean updateJobLevelById(org.javaboy.vhr.model.JobLevel)>", index: "0", type: "org.javaboy.vhr.model.JobLevel" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.JobLevelController: org.javaboy.vhr.model.RespBean deleteJobLevelById(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.JobLevelController: org.javaboy.vhr.model.RespBean deleteJobLevelsByIds(java.lang.Integer[])>", index: "0", type: "java.lang.Integer[]" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.PermissController: java.util.List getMidsByRid(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.PermissController: org.javaboy.vhr.model.RespBean updateMenuRole(java.lang.Integer,java.lang.Integer[])>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.PermissController: org.javaboy.vhr.model.RespBean updateMenuRole(java.lang.Integer,java.lang.Integer[])>", index: "1", type: "java.lang.Integer[]" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.PermissController: org.javaboy.vhr.model.RespBean addRole(org.javaboy.vhr.model.Role)>", index: "0", type: "org.javaboy.vhr.model.Role" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.PermissController: org.javaboy.vhr.model.RespBean deleteRoleById(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.DepartmentController: org.javaboy.vhr.model.RespBean addDep(org.javaboy.vhr.model.Department)>", index: "0", type: "org.javaboy.vhr.model.Department" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.DepartmentController: org.javaboy.vhr.model.RespBean deleteDepById(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.PositionController: org.javaboy.vhr.model.RespBean addPosition(org.javaboy.vhr.model.Position)>", index: "0", type: "org.javaboy.vhr.model.Position" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.PositionController: org.javaboy.vhr.model.RespBean updatePositions(org.javaboy.vhr.model.Position)>", index: "0", type: "org.javaboy.vhr.model.Position" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.PositionController: org.javaboy.vhr.model.RespBean deletePositionById(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<org.javaboy.vhr.controller.system.basic.PositionController: org.javaboy.vhr.model.RespBean deletePositionsByIds(java.lang.Integer[])>", index: "0", type: "java.lang.Integer[]" }
+  - { kind: "call", method: "<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>", index: "result", type: "org.apache.shiro.subject.Subject" }
+  - { kind: "call", method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", index: "result", type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { kind: "call", method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>", index: "result", type: "java.security.Principal" }
+  - { kind: "call", method: "<java.security.Principal: java.lang.String getName()>", index: "result", type: "java.lang.String" }
+  - { kind: "call", method: "<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<java.lang.ThreadLocal: java.lang.Object get()>", index: "result", type: "java.lang.Object" }
+
+sinks:
+  - { method: "<org.javaboy.vhr.mapper.HrRoleMapper: int insert(org.javaboy.vhr.model.HrRole)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrRoleMapper: int insertSelective(org.javaboy.vhr.model.HrRole)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrRoleMapper: org.javaboy.vhr.model.HrRole selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrRoleMapper: void deleteByHrid(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrRoleMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrRoleMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.HrRole)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrRoleMapper: int updateByPrimaryKey(org.javaboy.vhr.model.HrRole)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeecMapper: int insert(org.javaboy.vhr.model.Employeeec)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeecMapper: int insertSelective(org.javaboy.vhr.model.Employeeec)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeecMapper: org.javaboy.vhr.model.Employeeec selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeecMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeecMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Employeeec)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeecMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Employeeec)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeetrainMapper: int insert(org.javaboy.vhr.model.Employeetrain)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeetrainMapper: int insertSelective(org.javaboy.vhr.model.Employeetrain)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeetrainMapper: org.javaboy.vhr.model.Employeetrain selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeetrainMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeetrainMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Employeetrain)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeetrainMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Employeetrain)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.OpLogMapper: int insert(org.javaboy.vhr.model.OpLog)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.OpLogMapper: int insertSelective(org.javaboy.vhr.model.OpLog)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.OpLogMapper: org.javaboy.vhr.model.OpLog selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.OpLogMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.OpLogMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.OpLog)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.OpLogMapper: int updateByPrimaryKey(org.javaboy.vhr.model.OpLog)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuMapper: int insert(org.javaboy.vhr.model.Menu)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuMapper: int insertSelective(org.javaboy.vhr.model.Menu)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuMapper: java.util.List getMidsByRid(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuMapper: java.util.List getMenusByHrId(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuMapper: org.javaboy.vhr.model.Menu selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Menu)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Menu)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.AppraiseMapper: int insert(org.javaboy.vhr.model.Appraise)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.AppraiseMapper: int insertSelective(org.javaboy.vhr.model.Appraise)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.AppraiseMapper: org.javaboy.vhr.model.Appraise selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.AppraiseMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.AppraiseMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Appraise)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.AppraiseMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Appraise)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PoliticsstatusMapper: int insert(org.javaboy.vhr.model.Politicsstatus)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PoliticsstatusMapper: int insertSelective(org.javaboy.vhr.model.Politicsstatus)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PoliticsstatusMapper: org.javaboy.vhr.model.Politicsstatus selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PoliticsstatusMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PoliticsstatusMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Politicsstatus)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PoliticsstatusMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Politicsstatus)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.SalaryMapper: int insert(org.javaboy.vhr.model.Salary)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.SalaryMapper: int insertSelective(org.javaboy.vhr.model.Salary)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.SalaryMapper: org.javaboy.vhr.model.Salary selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.SalaryMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.SalaryMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Salary)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.SalaryMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Salary)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmpSalaryMapper: int insert(org.javaboy.vhr.model.EmpSalary)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmpSalaryMapper: int insertSelective(org.javaboy.vhr.model.EmpSalary)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmpSalaryMapper: org.javaboy.vhr.model.EmpSalary selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmpSalaryMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmpSalaryMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.EmpSalary)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmpSalaryMapper: int updateByPrimaryKey(org.javaboy.vhr.model.EmpSalary)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.NationMapper: int insert(org.javaboy.vhr.model.Nation)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.NationMapper: int insertSelective(org.javaboy.vhr.model.Nation)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.NationMapper: org.javaboy.vhr.model.Nation selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.NationMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.NationMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Nation)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.NationMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Nation)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeMapper: java.lang.Integer addEmps(java.util.List)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeMapper: int insert(org.javaboy.vhr.model.Employee)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeMapper: int insertSelective(org.javaboy.vhr.model.Employee)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeMapper: org.javaboy.vhr.model.Employee getEmployeeById(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeMapper: org.javaboy.vhr.model.Employee selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Employee)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Employee)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MailSendLogMapper: java.lang.Integer insert(org.javaboy.vhr.model.MailSendLog)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeremoveMapper: int insert(org.javaboy.vhr.model.Employeeremove)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeremoveMapper: int insertSelective(org.javaboy.vhr.model.Employeeremove)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeremoveMapper: org.javaboy.vhr.model.Employeeremove selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeremoveMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeremoveMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Employeeremove)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.EmployeeremoveMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Employeeremove)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PositionMapper: int insert(org.javaboy.vhr.model.Position)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PositionMapper: int insertSelective(org.javaboy.vhr.model.Position)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PositionMapper: org.javaboy.vhr.model.Position selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PositionMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PositionMapper: java.lang.Integer deletePositionsByIds(java.lang.Integer[])>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PositionMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Position)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.PositionMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Position)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MsgContentMapper: int insert(org.javaboy.vhr.model.MsgContent)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MsgContentMapper: int insertSelective(org.javaboy.vhr.model.MsgContent)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MsgContentMapper: org.javaboy.vhr.model.MsgContent selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MsgContentMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MsgContentMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.MsgContent)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MsgContentMapper: int updateByPrimaryKey(org.javaboy.vhr.model.MsgContent)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.SysMsgMapper: int insert(org.javaboy.vhr.model.SysMsg)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.SysMsgMapper: int insertSelective(org.javaboy.vhr.model.SysMsg)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.SysMsgMapper: org.javaboy.vhr.model.SysMsg selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.SysMsgMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.SysMsgMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.SysMsg)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.SysMsgMapper: int updateByPrimaryKey(org.javaboy.vhr.model.SysMsg)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.DepartmentMapper: int insert(org.javaboy.vhr.model.Department)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.DepartmentMapper: int insertSelective(org.javaboy.vhr.model.Department)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.DepartmentMapper: void addDep(org.javaboy.vhr.model.Department)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.DepartmentMapper: void deleteDepById(org.javaboy.vhr.model.Department)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.DepartmentMapper: java.util.List getAllDepartmentsByParentId(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.DepartmentMapper: org.javaboy.vhr.model.Department selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.DepartmentMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.DepartmentMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Department)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.DepartmentMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Department)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.JobLevelMapper: int insert(org.javaboy.vhr.model.JobLevel)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.JobLevelMapper: int insertSelective(org.javaboy.vhr.model.JobLevel)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.JobLevelMapper: org.javaboy.vhr.model.JobLevel selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.JobLevelMapper: java.lang.Integer deleteJobLevelsByIds(java.lang.Integer[])>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.JobLevelMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.JobLevelMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.JobLevel)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.JobLevelMapper: int updateByPrimaryKey(org.javaboy.vhr.model.JobLevel)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.AdjustSalaryMapper: int insert(org.javaboy.vhr.model.AdjustSalary)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.AdjustSalaryMapper: int insertSelective(org.javaboy.vhr.model.AdjustSalary)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.AdjustSalaryMapper: org.javaboy.vhr.model.AdjustSalary selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.AdjustSalaryMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.AdjustSalaryMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.AdjustSalary)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.AdjustSalaryMapper: int updateByPrimaryKey(org.javaboy.vhr.model.AdjustSalary)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuRoleMapper: int insert(org.javaboy.vhr.model.MenuRole)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuRoleMapper: int insertSelective(org.javaboy.vhr.model.MenuRole)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuRoleMapper: org.javaboy.vhr.model.MenuRole selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuRoleMapper: void deleteByRid(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuRoleMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuRoleMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.MenuRole)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.MenuRoleMapper: int updateByPrimaryKey(org.javaboy.vhr.model.MenuRole)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrMapper: int insert(org.javaboy.vhr.model.Hr)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrMapper: int insertSelective(org.javaboy.vhr.model.Hr)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrMapper: java.util.List getAllHrsExceptCurrentHr(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrMapper: java.util.List getHrRolesById(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrMapper: org.javaboy.vhr.model.Hr loadUserByUsername(java.lang.String)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrMapper: org.javaboy.vhr.model.Hr selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Hr)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.HrMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Hr)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.RoleMapper: int insert(org.javaboy.vhr.model.Role)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.RoleMapper: int insertSelective(org.javaboy.vhr.model.Role)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.RoleMapper: org.javaboy.vhr.model.Role selectByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.RoleMapper: int deleteByPrimaryKey(java.lang.Integer)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.RoleMapper: int updateByPrimaryKeySelective(org.javaboy.vhr.model.Role)>", index: "0" }
+  - { method: "<org.javaboy.vhr.mapper.RoleMapper: int updateByPrimaryKey(org.javaboy.vhr.model.Role)>", index: "0" }
+  - { method: "<java.sql.Statement: java.sql.ResultSet executeQuery(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: int executeUpdate(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: boolean execute(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: void addBatch(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.CallableStatement prepareCall(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List query(java.lang.String,org.springframework.jdbc.core.RowMapper)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.lang.Object queryForObject(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int update(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int[] batchUpdate(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[],java.io.File)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.util.List)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.util.List)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<java.io.FileInputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileOutputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileReader: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileWriter: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.util.List readAllLines(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.nio.file.Path write(java.nio.file.Path,byte[],java.nio.file.OpenOption[])>", index: "0" }
+  - { method: "<java.io.PrintWriter: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void println(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void write(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.ServletOutputStream: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URL: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: java.net.URI create(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void sendRedirect(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.RequestDispatcher: void forward(javax.servlet.ServletRequest,javax.servlet.ServletResponse)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "1" }
+  - { method: "<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "0" }
+  - { method: "<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "1" }
+  - { method: "<javax.xml.xpath.XPath: java.lang.String evaluate(java.lang.String,java.lang.Object)>", index: "0" }
+  - { method: "<javax.xml.xpath.XPath: javax.xml.xpath.XPathExpression compile(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.io.InputStream)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.SAXParser: void parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler)>", index: "0" }
+  - { method: "<org.xml.sax.XMLReader: void parse(org.xml.sax.InputSource)>", index: "0" }
+  - { method: "<java.io.ObjectInputStream: void <init>(java.io.InputStream)>", index: "0" }
+  - { method: "<java.lang.Class: java.lang.Class forName(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.ClassLoader: java.lang.Class loadClass(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>", index: "1" }
+  - { method: "<javax.servlet.ServletContext: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.Cookie: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.Cookie: void setValue(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void addHeader(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void setHeader(java.lang.String,java.lang.String)>", index: "1" }
+
+transfers:
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int,int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(char,char)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String trim()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String strip()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripLeading()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripTrailing()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String intern()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(java.lang.Object)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(char[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.util.Locale,java.lang.String,java.lang.Object[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.CharSequence[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.Iterable)>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: char[] toCharArray()>", from: "base", to: "result", type: "char[]" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char[])>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(long)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.String)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.Object)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.util.Map: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.HashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.TreeMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.concurrent.ConcurrentHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.HashMap" }
+  - { method: "<java.util.Map: void putAll(java.util.Map)>", from: "0", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.Map: java.util.Collection values()>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<java.util.Map: java.util.Set entrySet()>", from: "base", to: "result", type: "java.util.Set" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getValue()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getKey()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ArrayList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.List" }
+  - { method: "<java.util.ArrayList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.ArrayList" }
+  - { method: "<java.util.LinkedList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.LinkedList" }
+  - { method: "<java.util.Collection: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.Collection" }
+  - { method: "<java.util.Iterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ListIterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElse(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElseGet(java.util.function.Supplier)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.util.Optional of(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.util.Optional: java.util.Optional ofNullable(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.lang.Object: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", from: "base", to: "result", type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.util.Collection fromRealm(java.lang.String)>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>", from: "1", to: "base", type: "javax.servlet.http.HttpSession" }
+  - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+
+Initializing global bean mock objects for beans...
+Initialized 69 global bean objects.
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <org.javaboy.vhr.controller.config.SystemConfigController: java.util.List getMenusByHrId()>
+Added entry point (Empty): <org.javaboy.vhr.controller.salary.SalaryController: java.util.List getAllSalaries()>
+Added entry point (Empty): <org.javaboy.vhr.controller.salary.SobConfigController: java.util.List getAllSalaries()>
+Added entry point (Empty): <org.javaboy.vhr.controller.LoginController: org.javaboy.vhr.model.RespBean login()>
+Added entry point (Empty): <org.javaboy.vhr.controller.ChatController: java.util.List getAllHrs()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: java.util.List getAllNations()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: java.util.List getAllPoliticsstatus()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: java.util.List getAllJobLevels()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: java.util.List getAllPositions()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespBean maxWorkID()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: java.util.List getAllDepartments()>
+Added entry point (Empty): <org.javaboy.vhr.controller.emp.EmpBasicController: org.springframework.http.ResponseEntity exportData()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <org.javaboy.vhr.controller.system.HrController: java.util.List getAllRoles()>
+Added entry point (Empty): <org.javaboy.vhr.controller.system.basic.JobLevelController: java.util.List getAllJobLevels()>
+Added entry point (Empty): <org.javaboy.vhr.controller.system.basic.PermissController: java.util.List getAllRoles()>
+Added entry point (Empty): <org.javaboy.vhr.controller.system.basic.PermissController: java.util.List getAllMenus()>
+Added entry point (Empty): <org.javaboy.vhr.controller.system.basic.DepartmentController: java.util.List getAllDepartments()>
+Added entry point (Empty): <org.javaboy.vhr.controller.system.basic.PositionController: java.util.List getAllPositions()>
+Initializing global aspect mock objects...
+[Pointer analysis] elapsed time: 0.05s
+Detected 23 taint flow(s):
+TaintFlow{<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHr(org.javaboy.vhr.model.Hr,org.springframework.security.core.Authentication)>/0 -> <org.javaboy.vhr.service.HrService: java.lang.Integer updateHr(org.javaboy.vhr.model.Hr)>[1@L48] $i0 = invokeinterface $r2.updateByPrimaryKeySelective(hr)/0}
+TaintFlow{<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespBean addEmp(org.javaboy.vhr.model.Employee)>/0 -> <org.javaboy.vhr.service.EmployeeService: java.lang.Integer addEmp(org.javaboy.vhr.model.Employee)>[26@L60] $i0 = invokeinterface $r15.insertSelective(employee)/0}
+TaintFlow{<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespBean deleteEmpByEid(java.lang.Integer)>/0 -> <org.javaboy.vhr.service.EmployeeService: java.lang.Integer deleteEmpByEid(java.lang.Integer)>[1@L83] $i0 = invokeinterface $r2.deleteByPrimaryKey(id)/0}
+TaintFlow{<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespBean updateEmp(org.javaboy.vhr.model.Employee)>/0 -> <org.javaboy.vhr.service.EmployeeService: java.lang.Integer updateEmp(org.javaboy.vhr.model.Employee)>[1@L87] $i0 = invokeinterface $r2.updateByPrimaryKeySelective(employee)/0}
+TaintFlow{<org.javaboy.vhr.controller.salary.SalaryController: org.javaboy.vhr.model.RespBean addSalary(org.javaboy.vhr.model.Salary)>/0 -> <org.javaboy.vhr.service.SalaryService: java.lang.Integer addSalary(org.javaboy.vhr.model.Salary)>[4@L22] $i0 = invokeinterface $r3.insertSelective(salary)/0}
+TaintFlow{<org.javaboy.vhr.controller.salary.SalaryController: org.javaboy.vhr.model.RespBean deleteSalaryById(java.lang.Integer)>/0 -> <org.javaboy.vhr.service.SalaryService: java.lang.Integer deleteSalaryById(java.lang.Integer)>[1@L26] $i0 = invokeinterface $r2.deleteByPrimaryKey(id)/0}
+TaintFlow{<org.javaboy.vhr.controller.salary.SalaryController: org.javaboy.vhr.model.RespBean updateSalaryById(org.javaboy.vhr.model.Salary)>/0 -> <org.javaboy.vhr.service.SalaryService: java.lang.Integer updateSalaryById(org.javaboy.vhr.model.Salary)>[1@L30] $i0 = invokeinterface $r2.updateByPrimaryKeySelective(salary)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.HrController: org.javaboy.vhr.model.RespBean deleteHrById(java.lang.Integer)>/0 -> <org.javaboy.vhr.service.HrService: java.lang.Integer deleteHrById(java.lang.Integer)>[1@L58] $i0 = invokeinterface $r2.deleteByPrimaryKey(id)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.HrController: org.javaboy.vhr.model.RespBean updateHr(org.javaboy.vhr.model.Hr)>/0 -> <org.javaboy.vhr.service.HrService: java.lang.Integer updateHr(org.javaboy.vhr.model.Hr)>[1@L48] $i0 = invokeinterface $r2.updateByPrimaryKeySelective(hr)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.HrController: org.javaboy.vhr.model.RespBean updateHrRole(java.lang.Integer,java.lang.Integer[])>/0 -> <org.javaboy.vhr.service.HrService: boolean updateHrRole(java.lang.Integer,java.lang.Integer[])>[1@L53] invokeinterface $r2.deleteByHrid(hrid)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.DepartmentController: org.javaboy.vhr.model.RespBean addDep(org.javaboy.vhr.model.Department)>/0 -> <org.javaboy.vhr.service.DepartmentService: void addDep(org.javaboy.vhr.model.Department)>[4@L29] invokeinterface $r3.addDep(dep)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.JobLevelController: org.javaboy.vhr.model.RespBean addJobLevel(org.javaboy.vhr.model.JobLevel)>/0 -> <org.javaboy.vhr.service.JobLevelService: java.lang.Integer addJobLevel(org.javaboy.vhr.model.JobLevel)>[7@L32] $i0 = invokeinterface $r4.insertSelective(jobLevel)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.JobLevelController: org.javaboy.vhr.model.RespBean deleteJobLevelById(java.lang.Integer)>/0 -> <org.javaboy.vhr.service.JobLevelService: java.lang.Integer deleteJobLevelById(java.lang.Integer)>[1@L40] $i0 = invokeinterface $r2.deleteByPrimaryKey(id)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.JobLevelController: org.javaboy.vhr.model.RespBean deleteJobLevelsByIds(java.lang.Integer[])>/0 -> <org.javaboy.vhr.service.JobLevelService: java.lang.Integer deleteJobLevelsByIds(java.lang.Integer[])>[1@L44] $r3 = invokeinterface $r2.deleteJobLevelsByIds(ids)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.JobLevelController: org.javaboy.vhr.model.RespBean updateJobLevelById(org.javaboy.vhr.model.JobLevel)>/0 -> <org.javaboy.vhr.service.JobLevelService: java.lang.Integer updateJobLevelById(org.javaboy.vhr.model.JobLevel)>[1@L36] $i0 = invokeinterface $r2.updateByPrimaryKeySelective(jobLevel)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.PermissController: java.util.List getMidsByRid(java.lang.Integer)>/0 -> <org.javaboy.vhr.service.MenuService: java.util.List getMidsByRid(java.lang.Integer)>[1@L47] $r3 = invokeinterface $r2.getMidsByRid(rid)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.PermissController: org.javaboy.vhr.model.RespBean addRole(org.javaboy.vhr.model.Role)>/0 -> <org.javaboy.vhr.service.RoleService: java.lang.Integer addRole(org.javaboy.vhr.model.Role)>[13@L31] $i0 = invokeinterface $r3.insert(role)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.PermissController: org.javaboy.vhr.model.RespBean deleteRoleById(java.lang.Integer)>/0 -> <org.javaboy.vhr.service.RoleService: java.lang.Integer deleteRoleById(java.lang.Integer)>[1@L35] $i0 = invokeinterface $r2.deleteByPrimaryKey(rid)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.PermissController: org.javaboy.vhr.model.RespBean updateMenuRole(java.lang.Integer,java.lang.Integer[])>/0 -> <org.javaboy.vhr.service.MenuService: boolean updateMenuRole(java.lang.Integer,java.lang.Integer[])>[1@L52] invokeinterface $r2.deleteByRid(rid)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.PositionController: org.javaboy.vhr.model.RespBean addPosition(org.javaboy.vhr.model.Position)>/0 -> <org.javaboy.vhr.service.PositionService: java.lang.Integer addPosition(org.javaboy.vhr.model.Position)>[7@L32] $i0 = invokeinterface $r4.insertSelective(position)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.PositionController: org.javaboy.vhr.model.RespBean deletePositionById(java.lang.Integer)>/0 -> <org.javaboy.vhr.service.PositionService: java.lang.Integer deletePositionById(java.lang.Integer)>[1@L40] $i0 = invokeinterface $r2.deleteByPrimaryKey(id)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.PositionController: org.javaboy.vhr.model.RespBean deletePositionsByIds(java.lang.Integer[])>/0 -> <org.javaboy.vhr.service.PositionService: java.lang.Integer deletePositionsByIds(java.lang.Integer[])>[1@L44] $r3 = invokeinterface $r2.deletePositionsByIds(ids)/0}
+TaintFlow{<org.javaboy.vhr.controller.system.basic.PositionController: org.javaboy.vhr.model.RespBean updatePositions(org.javaboy.vhr.model.Position)>/0 -> <org.javaboy.vhr.service.PositionService: java.lang.Integer updatePositions(org.javaboy.vhr.model.Position)>[1@L36] $i0 = invokeinterface $r2.updateByPrimaryKeySelective(position)/0}
+TFGDumper starts ...
+Source nodes:
+VarNode{<org.javaboy.vhr.controller.system.basic.PositionController: org.javaboy.vhr.model.RespBean deletePositionsByIds(java.lang.Integer[])>/ids}
+VarNode{<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHr(org.javaboy.vhr.model.Hr,org.springframework.security.core.Authentication)>/authentication}
+VarNode{<org.javaboy.vhr.controller.system.basic.PermissController: org.javaboy.vhr.model.RespBean updateMenuRole(java.lang.Integer,java.lang.Integer[])>/mids}
+VarNode{<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHrUserface(org.springframework.web.multipart.MultipartFile,java.lang.Integer,org.springframework.security.core.Authentication)>/authentication}
+VarNode{<org.javaboy.vhr.controller.salary.SobConfigController: org.javaboy.vhr.model.RespBean updateEmployeeSalaryById(java.lang.Integer,java.lang.Integer)>/sid}
+VarNode{<org.javaboy.vhr.controller.system.basic.PositionController: org.javaboy.vhr.model.RespBean deletePositionById(java.lang.Integer)>/id}
+VarNode{<org.javaboy.vhr.controller.system.HrController: org.javaboy.vhr.model.RespBean updateHrRole(java.lang.Integer,java.lang.Integer[])>/rids}
+VarNode{<org.javaboy.vhr.controller.system.basic.JobLevelController: org.javaboy.vhr.model.RespBean addJobLevel(org.javaboy.vhr.model.JobLevel)>/jobLevel}
+VarNode{<org.javaboy.vhr.controller.system.basic.JobLevelController: org.javaboy.vhr.model.RespBean deleteJobLevelsByIds(java.lang.Integer[])>/ids}
+VarNode{<org.javaboy.vhr.controller.system.HrController: org.javaboy.vhr.model.RespBean deleteHrById(java.lang.Integer)>/id}
+VarNode{<org.javaboy.vhr.controller.salary.SalaryController: org.javaboy.vhr.model.RespBean updateSalaryById(org.javaboy.vhr.model.Salary)>/salary}
+VarNode{<org.javaboy.vhr.controller.system.basic.JobLevelController: org.javaboy.vhr.model.RespBean updateJobLevelById(org.javaboy.vhr.model.JobLevel)>/jobLevel}
+VarNode{<org.javaboy.vhr.controller.system.basic.PermissController: org.javaboy.vhr.model.RespBean deleteRoleById(java.lang.Integer)>/rid}
+VarNode{<org.javaboy.vhr.controller.system.HrController: org.javaboy.vhr.model.RespBean updateHrRole(java.lang.Integer,java.lang.Integer[])>/hrid}
+VarNode{<org.javaboy.vhr.controller.salary.SobConfigController: org.javaboy.vhr.model.RespPageBean getEmployeeByPageWithSalary(java.lang.Integer,java.lang.Integer)>/page}
+VarNode{<org.javaboy.vhr.controller.system.basic.PermissController: org.javaboy.vhr.model.RespBean updateMenuRole(java.lang.Integer,java.lang.Integer[])>/rid}
+VarNode{<org.javaboy.vhr.controller.salary.SobConfigController: org.javaboy.vhr.model.RespBean updateEmployeeSalaryById(java.lang.Integer,java.lang.Integer)>/eid}
+VarNode{<org.javaboy.vhr.controller.system.HrController: org.javaboy.vhr.model.RespBean updateHr(org.javaboy.vhr.model.Hr)>/hr}
+VarNode{<org.javaboy.vhr.controller.salary.SalaryController: org.javaboy.vhr.model.RespBean deleteSalaryById(java.lang.Integer)>/id}
+VarNode{<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespBean addEmp(org.javaboy.vhr.model.Employee)>/employee}
+VarNode{<org.javaboy.vhr.controller.system.basic.PositionController: org.javaboy.vhr.model.RespBean updatePositions(org.javaboy.vhr.model.Position)>/position}
+VarNode{<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespBean deleteEmpByEid(java.lang.Integer)>/id}
+VarNode{<org.javaboy.vhr.controller.system.HrController: java.util.List getAllHrs(java.lang.String)>/keywords}
+VarNode{<org.javaboy.vhr.controller.system.basic.PermissController: org.javaboy.vhr.model.RespBean addRole(org.javaboy.vhr.model.Role)>/role}
+VarNode{<org.javaboy.vhr.controller.salary.SobConfigController: org.javaboy.vhr.model.RespPageBean getEmployeeByPageWithSalary(java.lang.Integer,java.lang.Integer)>/size}
+VarNode{<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.Hr getCurrentHr(org.springframework.security.core.Authentication)>/authentication}
+VarNode{<org.javaboy.vhr.controller.system.basic.DepartmentController: org.javaboy.vhr.model.RespBean addDep(org.javaboy.vhr.model.Department)>/dep}
+VarNode{<org.javaboy.vhr.controller.salary.SalaryController: org.javaboy.vhr.model.RespBean addSalary(org.javaboy.vhr.model.Salary)>/salary}
+VarNode{<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespPageBean getEmployeeByPage(java.lang.Integer,java.lang.Integer,org.javaboy.vhr.model.Employee,java.util.Date[])>/employee}
+VarNode{<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespPageBean getEmployeeByPage(java.lang.Integer,java.lang.Integer,org.javaboy.vhr.model.Employee,java.util.Date[])>/beginDateScope}
+VarNode{<org.javaboy.vhr.controller.system.basic.JobLevelController: org.javaboy.vhr.model.RespBean deleteJobLevelById(java.lang.Integer)>/id}
+VarNode{<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespPageBean getEmployeeByPage(java.lang.Integer,java.lang.Integer,org.javaboy.vhr.model.Employee,java.util.Date[])>/page}
+VarNode{<org.javaboy.vhr.controller.system.basic.DepartmentController: org.javaboy.vhr.model.RespBean deleteDepById(java.lang.Integer)>/id}
+VarNode{<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHrUserface(org.springframework.web.multipart.MultipartFile,java.lang.Integer,org.springframework.security.core.Authentication)>/file}
+VarNode{<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHrPasswd(java.util.Map)>/info}
+VarNode{<org.javaboy.vhr.controller.system.basic.PositionController: org.javaboy.vhr.model.RespBean addPosition(org.javaboy.vhr.model.Position)>/position}
+VarNode{<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHr(org.javaboy.vhr.model.Hr,org.springframework.security.core.Authentication)>/hr}
+VarNode{<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespPageBean getEmployeeByPage(java.lang.Integer,java.lang.Integer,org.javaboy.vhr.model.Employee,java.util.Date[])>/size}
+VarNode{<org.javaboy.vhr.controller.system.basic.PermissController: java.util.List getMidsByRid(java.lang.Integer)>/rid}
+VarNode{<org.javaboy.vhr.controller.HrInfoController: org.javaboy.vhr.model.RespBean updateHrUserface(org.springframework.web.multipart.MultipartFile,java.lang.Integer,org.springframework.security.core.Authentication)>/id}
+VarNode{<org.javaboy.vhr.controller.emp.EmpBasicController: org.javaboy.vhr.model.RespBean updateEmp(org.javaboy.vhr.model.Employee)>/employee}
+Sink nodes:
+VarNode{<org.javaboy.vhr.service.EmployeeService: java.lang.Integer addEmp(org.javaboy.vhr.model.Employee)>/employee}
+VarNode{<org.javaboy.vhr.service.HrService: boolean updateHrRole(java.lang.Integer,java.lang.Integer[])>/hrid}
+VarNode{<org.javaboy.vhr.service.JobLevelService: java.lang.Integer deleteJobLevelsByIds(java.lang.Integer[])>/ids}
+VarNode{<org.javaboy.vhr.service.RoleService: java.lang.Integer deleteRoleById(java.lang.Integer)>/rid}
+VarNode{<org.javaboy.vhr.service.PositionService: java.lang.Integer updatePositions(org.javaboy.vhr.model.Position)>/position}
+VarNode{<org.javaboy.vhr.service.HrService: java.lang.Integer updateHr(org.javaboy.vhr.model.Hr)>/hr}
+VarNode{<org.javaboy.vhr.service.DepartmentService: void addDep(org.javaboy.vhr.model.Department)>/dep}
+VarNode{<org.javaboy.vhr.service.MenuService: java.util.List getMidsByRid(java.lang.Integer)>/rid}
+VarNode{<org.javaboy.vhr.service.HrService: java.lang.Integer deleteHrById(java.lang.Integer)>/id}
+VarNode{<org.javaboy.vhr.service.RoleService: java.lang.Integer addRole(org.javaboy.vhr.model.Role)>/role}
+VarNode{<org.javaboy.vhr.service.PositionService: java.lang.Integer deletePositionsByIds(java.lang.Integer[])>/ids}
+VarNode{<org.javaboy.vhr.service.JobLevelService: java.lang.Integer updateJobLevelById(org.javaboy.vhr.model.JobLevel)>/jobLevel}
+VarNode{<org.javaboy.vhr.service.EmployeeService: java.lang.Integer updateEmp(org.javaboy.vhr.model.Employee)>/employee}
+VarNode{<org.javaboy.vhr.service.MenuService: boolean updateMenuRole(java.lang.Integer,java.lang.Integer[])>/rid}
+VarNode{<org.javaboy.vhr.service.PositionService: java.lang.Integer deletePositionById(java.lang.Integer)>/id}
+VarNode{<org.javaboy.vhr.service.SalaryService: java.lang.Integer addSalary(org.javaboy.vhr.model.Salary)>/salary}
+VarNode{<org.javaboy.vhr.service.JobLevelService: java.lang.Integer deleteJobLevelById(java.lang.Integer)>/id}
+VarNode{<org.javaboy.vhr.service.JobLevelService: java.lang.Integer addJobLevel(org.javaboy.vhr.model.JobLevel)>/jobLevel}
+VarNode{<org.javaboy.vhr.service.PositionService: java.lang.Integer addPosition(org.javaboy.vhr.model.Position)>/position}
+VarNode{<org.javaboy.vhr.service.EmployeeService: java.lang.Integer deleteEmpByEid(java.lang.Integer)>/id}
+VarNode{<org.javaboy.vhr.service.SalaryService: java.lang.Integer updateSalaryById(org.javaboy.vhr.model.Salary)>/salary}
+VarNode{<org.javaboy.vhr.service.SalaryService: java.lang.Integer deleteSalaryById(java.lang.Integer)>/id}
+Dumping /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-flow-graph.dot
+TFGDumper finishes, elapsed time: 0.02s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                1714 (insens) / 1714 (sens)
+#objects:                     729 (insens) / 729 (sens)
+#var points-to:               1907 (insens) / 1907 (sens)
+#static field points-to:      221 (sens)
+#instance field points-to:    928 (sens)
+#array points-to:             79 (sens)
+#reachable methods:           323 (insens) / 323 (sens)
+#call graph edges:            600 (insens) / 600 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.21s
+cg starts ...
+Call graph has 323 reachable methods and 600 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.03s
+Tai-e finishes, elapsed time: 35.40s

@@ -1,0 +1,873 @@
+# Auto-generated taint analysis configuration by SRFA
+# Chapter 4: Fine-grained Taint Source and Sink Detection
+
+sources:
+  - { kind: param, method: "<org.owasp.webgoat.webwolf.jwt.JWTController: org.owasp.webgoat.webwolf.jwt.JWTToken decode(org.springframework.util.MultiValueMap)>", index: 0, type: "org.springframework.util.MultiValueMap" }
+  - { kind: param, method: "<org.owasp.webgoat.webwolf.jwt.JWTController: org.owasp.webgoat.webwolf.jwt.JWTToken encode(org.springframework.util.MultiValueMap)>", index: 0, type: "org.springframework.util.MultiValueMap" }
+  - { kind: param, method: "<org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile,org.springframework.security.core.Authentication)>", index: 0, type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: param, method: "<org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView importFile(org.springframework.web.multipart.MultipartFile,org.springframework.security.core.Authentication)>", index: 1, type: "org.springframework.security.core.Authentication" }
+  - { kind: param, method: "<org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView getFiles(jakarta.servlet.http.HttpServletRequest,org.springframework.security.core.Authentication,java.util.TimeZone)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView getFiles(jakarta.servlet.http.HttpServletRequest,org.springframework.security.core.Authentication,java.util.TimeZone)>", index: 1, type: "org.springframework.security.core.Authentication" }
+  - { kind: param, method: "<org.owasp.webgoat.webwolf.FileServer: org.springframework.web.servlet.ModelAndView getFiles(jakarta.servlet.http.HttpServletRequest,org.springframework.security.core.Authentication,java.util.TimeZone)>", index: 2, type: "java.util.TimeZone" }
+  - { kind: param, method: "<org.owasp.webgoat.webwolf.mailbox.MailboxController: org.springframework.web.servlet.ModelAndView mail(org.springframework.security.core.Authentication,org.springframework.ui.Model)>", index: 0, type: "org.springframework.security.core.Authentication" }
+  - { kind: param, method: "<org.owasp.webgoat.webwolf.mailbox.MailboxController: void sendEmail(org.owasp.webgoat.webwolf.mailbox.Email)>", index: 0, type: "org.owasp.webgoat.webwolf.mailbox.Email" }
+  - { kind: param, method: "<org.owasp.webgoat.webwolf.requests.Requests: org.springframework.web.servlet.ModelAndView get(org.springframework.security.core.Authentication)>", index: 0, type: "org.springframework.security.core.Authentication" }
+  - { kind: param, method: "<org.owasp.webgoat.webwolf.requests.LandingPage: java.util.concurrent.Callable ok(jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.container.controller.Welcome: org.springframework.web.servlet.ModelAndView welcome(jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.container.controller.StartLesson: org.springframework.web.servlet.ModelAndView lessonPage(jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.container.users.RegistrationController: java.lang.String showForm(org.owasp.webgoat.container.users.UserForm)>", index: 0, type: "org.owasp.webgoat.container.users.UserForm" }
+  - { kind: param, method: "<org.owasp.webgoat.container.users.RegistrationController: java.lang.String registration(org.owasp.webgoat.container.users.UserForm,org.springframework.validation.BindingResult,jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "org.owasp.webgoat.container.users.UserForm" }
+  - { kind: param, method: "<org.owasp.webgoat.container.users.RegistrationController: java.lang.String registration(org.owasp.webgoat.container.users.UserForm,org.springframework.validation.BindingResult,jakarta.servlet.http.HttpServletRequest)>", index: 2, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.container.users.RegistrationController: java.lang.String registrationOAUTH(org.springframework.security.core.Authentication,jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "org.springframework.security.core.Authentication" }
+  - { kind: param, method: "<org.owasp.webgoat.container.users.RegistrationController: java.lang.String registrationOAUTH(org.springframework.security.core.Authentication,jakarta.servlet.http.HttpServletRequest)>", index: 1, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.container.service.LabelDebugService: org.springframework.http.ResponseEntity setDebuggingStatus(java.lang.Boolean)>", index: 0, type: "java.lang.Boolean" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTDecodeEndpoint: org.owasp.webgoat.container.assignments.AttackResult decode(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTSecretKeyEndpoint: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint: void login(java.lang.String,jakarta.servlet.http.HttpServletResponse)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint: void login(java.lang.String,jakarta.servlet.http.HttpServletResponse)>", index: 1, type: "jakarta.servlet.http.HttpServletResponse" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint: org.springframework.http.converter.json.MappingJacksonValue getVotes(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint: org.springframework.http.ResponseEntity vote(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint: org.springframework.http.ResponseEntity vote(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTVotesEndpoint: org.owasp.webgoat.container.assignments.AttackResult resetVotes(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTRefreshEndpoint: org.springframework.http.ResponseEntity follow(java.util.Map)>", index: 0, type: "java.util.Map" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTRefreshEndpoint: org.springframework.http.ResponseEntity checkout(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTRefreshEndpoint: org.springframework.http.ResponseEntity newToken(java.lang.String,java.util.Map)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTRefreshEndpoint: org.springframework.http.ResponseEntity newToken(java.lang.String,java.util.Map)>", index: 1, type: "java.util.Map" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderKIDEndpoint: java.lang.String follow(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderKIDEndpoint: org.owasp.webgoat.container.assignments.AttackResult resetVotes(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderJKUEndpoint: java.lang.String follow(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.claimmisuse.JWTHeaderJKUEndpoint: org.owasp.webgoat.container.assignments.AttackResult resetVotes(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[])>", index: 0, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.jwt.JWTQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[])>", index: 1, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFieldRestrictions: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFieldRestrictions: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFieldRestrictions: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 2, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFieldRestrictions: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 3, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFieldRestrictions: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 4, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFrontendValidation: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFrontendValidation: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFrontendValidation: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>", index: 2, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFrontendValidation: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>", index: 3, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFrontendValidation: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>", index: 4, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFrontendValidation: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>", index: 5, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFrontendValidation: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>", index: 6, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.bypassrestrictions.BypassRestrictionsFrontendValidation: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)>", index: 7, type: "java.lang.Integer" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.ssrf.SSRFTask2: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.ssrf.SSRFTask1: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xxe.BlindSendFileAssignment: org.owasp.webgoat.container.assignments.AttackResult addComment(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xxe.SimpleXXE: org.owasp.webgoat.container.assignments.AttackResult createNewComment(jakarta.servlet.http.HttpServletRequest,java.lang.String)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xxe.SimpleXXE: org.owasp.webgoat.container.assignments.AttackResult createNewComment(jakarta.servlet.http.HttpServletRequest,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xxe.ContentTypeAssignment: org.owasp.webgoat.container.assignments.AttackResult createNewUser(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xxe.ContentTypeAssignment: org.owasp.webgoat.container.assignments.AttackResult createNewUser(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xxe.ContentTypeAssignment: org.owasp.webgoat.container.assignments.AttackResult createNewUser(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: 2, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.securepasswords.SecurePasswordsAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.EncodingAssignment: java.lang.String getBasicAuth(jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.EncodingAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.EncodingAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.EncodingAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: 2, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.HashingAssignment: java.lang.String getMd5(jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.HashingAssignment: java.lang.String getSha256(jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.HashingAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.HashingAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.HashingAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: 2, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.SecureDefaultsAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.SecureDefaultsAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.SigningAssignment: java.lang.String getPrivateKey(jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.SigningAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.SigningAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.SigningAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)>", index: 2, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cryptography.XOREncodingAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.lessontemplate.SampleAttack: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.lessontemplate.SampleAttack: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.lessontemplate.SampleAttack: java.util.List getItemsInBasket(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.clientsidefiltering.ShopEndpoint: org.owasp.webgoat.lessons.clientsidefiltering.ShopEndpoint$CheckoutCode getDiscountCode(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.clientsidefiltering.ClientSideFilteringAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.clientsidefiltering.ClientSideFilteringFreeAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.chromedevtools.NetworkDummy: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.chromedevtools.NetworkLesson: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.chromedevtools.NetworkLesson: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.chromedevtools.NetworkLesson: org.springframework.http.ResponseEntity ok(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.challenges.challenge7.Assignment7: org.springframework.http.ResponseEntity resetPassword(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.challenges.challenge7.Assignment7: org.owasp.webgoat.container.assignments.AttackResult sendPasswordResetLink(java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.challenges.challenge7.Assignment7: org.owasp.webgoat.container.assignments.AttackResult sendPasswordResetLink(java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 1, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.challenges.FlagController: org.owasp.webgoat.container.assignments.AttackResult postFlag(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8: org.springframework.http.ResponseEntity vote(int,jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "int" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.challenges.challenge8.Assignment8: org.springframework.http.ResponseEntity vote(int,jakarta.servlet.http.HttpServletRequest)>", index: 1, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.challenges.challenge1.Assignment1: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.challenges.challenge1.Assignment1: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.challenges.challenge5.Assignment5: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.challenges.challenge5.Assignment5: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson6a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.DOMCrossSiteScripting: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "java.lang.Integer" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.DOMCrossSiteScripting: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,jakarta.servlet.http.HttpServletRequest)>", index: 1, type: "java.lang.Integer" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.DOMCrossSiteScripting: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,jakarta.servlet.http.HttpServletRequest)>", index: 2, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson4: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.DOMCrossSiteScriptingVerifier: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson5a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>", index: 0, type: "java.lang.Integer" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson5a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>", index: 1, type: "java.lang.Integer" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson5a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>", index: 2, type: "java.lang.Integer" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson5a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>", index: 3, type: "java.lang.Integer" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson5a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>", index: 4, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson5a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)>", index: 5, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson1: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingLesson3: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 0, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 1, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 2, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 3, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.CrossSiteScriptingQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 4, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.stored.StoredCrossSiteScriptingVerifier: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.xss.stored.StoredXssComments: org.owasp.webgoat.container.assignments.AttackResult createNewComment(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.authbypass.VerifyAccount: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.authbypass.VerifyAccount: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.authbypass.VerifyAccount: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 2, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.spoofcookie.SpoofCookieAssignment: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletResponse)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.spoofcookie.SpoofCookieAssignment: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletResponse)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.spoofcookie.SpoofCookieAssignment: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletResponse)>", index: 2, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.spoofcookie.SpoofCookieAssignment: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletResponse)>", index: 3, type: "jakarta.servlet.http.HttpServletResponse" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.spoofcookie.SpoofCookieAssignment: void cleanup(jakarta.servlet.http.HttpServletResponse)>", index: 0, type: "jakarta.servlet.http.HttpServletResponse" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.webwolfintroduction.LandingAssignment: org.owasp.webgoat.container.assignments.AttackResult click(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.webwolfintroduction.LandingAssignment: org.springframework.web.servlet.ModelAndView openPasswordReset(jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.webwolfintroduction.MailAssignment: org.owasp.webgoat.container.assignments.AttackResult sendEmail(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.webwolfintroduction.MailAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.idor.IDORViewOwnProfileAltUrl: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.idor.IDORLogin: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.idor.IDORLogin: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.idor.IDORDiffAttributes: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.idor.IDOREditOtherProfile: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,org.owasp.webgoat.lessons.idor.UserProfile)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.idor.IDOREditOtherProfile: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,org.owasp.webgoat.lessons.idor.UserProfile)>", index: 1, type: "org.owasp.webgoat.lessons.idor.UserProfile" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.idor.IDORViewOtherProfile: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,jakarta.servlet.http.HttpServletResponse)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.idor.IDORViewOtherProfile: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,jakarta.servlet.http.HttpServletResponse)>", index: 1, type: "jakarta.servlet.http.HttpServletResponse" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.missingac.MissingFunctionACUsers: org.owasp.webgoat.lessons.missingac.User addUser(org.owasp.webgoat.lessons.missingac.User)>", index: 0, type: "org.owasp.webgoat.lessons.missingac.User" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.missingac.MissingFunctionACYourHashAdmin: org.owasp.webgoat.container.assignments.AttackResult admin(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.missingac.MissingFunctionACYourHash: org.owasp.webgoat.container.assignments.AttackResult simple(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.missingac.MissingFunctionACHiddenMenus: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.missingac.MissingFunctionACHiddenMenus: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.csrf.CSRFFeedback: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.csrf.CSRFFeedback: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.csrf.CSRFFeedback: org.owasp.webgoat.container.assignments.AttackResult flag(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.csrf.ForgedReviews: org.owasp.webgoat.container.assignments.AttackResult createNewReview(java.lang.String,java.lang.Integer,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.csrf.ForgedReviews: org.owasp.webgoat.container.assignments.AttackResult createNewReview(java.lang.String,java.lang.Integer,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 1, type: "java.lang.Integer" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.csrf.ForgedReviews: org.owasp.webgoat.container.assignments.AttackResult createNewReview(java.lang.String,java.lang.Integer,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 2, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.csrf.ForgedReviews: org.owasp.webgoat.container.assignments.AttackResult createNewReview(java.lang.String,java.lang.Integer,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 3, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.csrf.CSRFLogin: org.owasp.webgoat.container.assignments.AttackResult completed(jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.csrf.CSRFConfirmFlag1: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.csrf.CSRFGetFlag: java.util.Map invoke(jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionChallenge: org.owasp.webgoat.container.assignments.AttackResult registerNewUser(java.lang.String,java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionChallenge: org.owasp.webgoat.container.assignments.AttackResult registerNewUser(java.lang.String,java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionChallenge: org.owasp.webgoat.container.assignments.AttackResult registerNewUser(java.lang.String,java.lang.String,java.lang.String)>", index: 2, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 0, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 1, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 2, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 3, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 4, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionChallengeLogin: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionChallengeLogin: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionLesson6b: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.advanced.SqlInjectionLesson6a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson5a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson5a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson5a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String)>", index: 2, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson8: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson8: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson5b: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson5b: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson5b: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 2, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson9: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson9: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson3: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson5: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson10: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson2: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.introduction.SqlInjectionLesson4: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson10b: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson10a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson10a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson10a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 2, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson10a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 3, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson10a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 4, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson10a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 5, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson10a: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)>", index: 6, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlInjectionLesson13: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.mitigation.Servers: java.util.List sort(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlOnlyInputValidation: org.owasp.webgoat.container.assignments.AttackResult attack(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.sqlinjection.mitigation.SqlOnlyInputValidationOnKeywords: org.owasp.webgoat.container.assignments.AttackResult attack(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignmentForgotPassword: org.owasp.webgoat.container.assignments.AttackResult sendPasswordResetLink(java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignmentForgotPassword: org.owasp.webgoat.container.assignments.AttackResult sendPasswordResetLink(java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 1, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignment: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignment: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignment: org.springframework.web.servlet.ModelAndView resetPassword(java.lang.String,org.springframework.ui.Model)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.passwordreset.ResetLinkAssignment: org.springframework.web.servlet.ModelAndView changePassword(org.owasp.webgoat.lessons.passwordreset.resetlink.PasswordChangeForm,org.springframework.validation.BindingResult)>", index: 0, type: "org.owasp.webgoat.lessons.passwordreset.resetlink.PasswordChangeForm" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.passwordreset.SecurityQuestionAssignment: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.passwordreset.SimpleMailAssignment: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.passwordreset.SimpleMailAssignment: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.passwordreset.SimpleMailAssignment: org.owasp.webgoat.container.assignments.AttackResult resetPassword(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.passwordreset.QuestionsAssignment: org.owasp.webgoat.container.assignments.AttackResult passwordReset(java.util.Map)>", index: 0, type: "java.util.Map" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.insecurelogin.InsecureLoginTask: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.insecurelogin.InsecureLoginTask: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.pathtraversal.ProfileUpload: org.owasp.webgoat.container.assignments.AttackResult uploadFileHandler(org.springframework.web.multipart.MultipartFile,java.lang.String)>", index: 0, type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.pathtraversal.ProfileUpload: org.owasp.webgoat.container.assignments.AttackResult uploadFileHandler(org.springframework.web.multipart.MultipartFile,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.pathtraversal.ProfileZipSlip: org.owasp.webgoat.container.assignments.AttackResult uploadFileHandler(org.springframework.web.multipart.MultipartFile)>", index: 0, type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.pathtraversal.ProfileZipSlip: org.springframework.http.ResponseEntity getProfilePicture(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.pathtraversal.ProfileUploadFix: org.owasp.webgoat.container.assignments.AttackResult uploadFileHandler(org.springframework.web.multipart.MultipartFile,java.lang.String)>", index: 0, type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.pathtraversal.ProfileUploadFix: org.owasp.webgoat.container.assignments.AttackResult uploadFileHandler(org.springframework.web.multipart.MultipartFile,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.pathtraversal.ProfileUploadRemoveUserInput: org.owasp.webgoat.container.assignments.AttackResult uploadFileHandler(org.springframework.web.multipart.MultipartFile)>", index: 0, type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.pathtraversal.ProfileUploadRetrieval: org.owasp.webgoat.container.assignments.AttackResult execute(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.pathtraversal.ProfileUploadRetrieval: org.springframework.http.ResponseEntity getProfilePicture(jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.hijacksession.HijackSessionAssignment: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletResponse)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.hijacksession.HijackSessionAssignment: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletResponse)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.hijacksession.HijackSessionAssignment: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletResponse)>", index: 2, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.hijacksession.HijackSessionAssignment: org.owasp.webgoat.container.assignments.AttackResult login(java.lang.String,java.lang.String,java.lang.String,jakarta.servlet.http.HttpServletResponse)>", index: 3, type: "jakarta.servlet.http.HttpServletResponse" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.htmltampering.HtmlTamperingTask: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.htmltampering.HtmlTamperingTask: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cia.CIAQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 0, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cia.CIAQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 1, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cia.CIAQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 2, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.cia.CIAQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String[],java.lang.String[],java.lang.String[],java.lang.String[])>", index: 3, type: "java.lang.String[]" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.logging.LogBleedingTask: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.logging.LogBleedingTask: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.logging.LogSpoofingTask: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.logging.LogSpoofingTask: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.vulnerablecomponents.VulnerableComponentsLesson: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.httpproxies.HttpBasicsInterceptRequest: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Boolean,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 0, type: "java.lang.Boolean" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.httpproxies.HttpBasicsInterceptRequest: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Boolean,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.httpproxies.HttpBasicsInterceptRequest: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.Boolean,java.lang.String,jakarta.servlet.http.HttpServletRequest)>", index: 2, type: "jakarta.servlet.http.HttpServletRequest" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.deserialization.InsecureDeserializationTask: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.httpbasics.HttpBasicsLesson: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.httpbasics.HttpBasicsQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String)>", index: 0, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.httpbasics.HttpBasicsQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String)>", index: 1, type: "java.lang.String" }
+  - { kind: param, method: "<org.owasp.webgoat.lessons.httpbasics.HttpBasicsQuiz: org.owasp.webgoat.container.assignments.AttackResult completed(java.lang.String,java.lang.String,java.lang.String)>", index: 2, type: "java.lang.String" }
+  # ── Framework-injected taint sources (universal, Tai-e call source format) ─
+
+  # --- Apache Shiro ---
+  - { kind: call, method: "<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>", index: result, type: "org.apache.shiro.subject.Subject" }
+  - { kind: call, method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", index: result, type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { kind: call, method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", index: result, type: "java.lang.Object" }
+
+  # --- Spring Security ---
+  - { kind: call, method: "<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>", index: result, type: "org.springframework.security.core.context.SecurityContext" }
+  - { kind: call, method: "<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>", index: result, type: "org.springframework.security.core.Authentication" }
+  - { kind: call, method: "<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<org.springframework.security.core.Authentication: java.lang.Object getDetails()>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<org.springframework.security.core.Authentication: java.lang.String getName()>", index: result, type: "java.lang.String" }
+  - { kind: call, method: "<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>", index: result, type: "java.util.Collection" }
+  - { kind: call, method: "<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>", index: result, type: "java.lang.String" }
+
+  # --- Servlet HttpSession (framework-agnostic) ---
+  - { kind: call, method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>", index: result, type: "javax.servlet.http.HttpSession" }
+  - { kind: call, method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>", index: result, type: "javax.servlet.http.HttpSession" }
+  - { kind: call, method: "<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>", index: result, type: "java.security.Principal" }
+  - { kind: call, method: "<java.security.Principal: java.lang.String getName()>", index: result, type: "java.lang.String" }
+  - { kind: call, method: "<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>", index: result, type: "java.lang.String" }
+
+  # --- Request Attribute (JWT / custom filter pattern) ---
+  - { kind: call, method: "<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>", index: result, type: "java.lang.Object" }
+
+  # --- ThreadLocal user context (common custom pattern) ---
+  - { kind: call, method: "<java.lang.ThreadLocal: java.lang.Object get()>", index: result, type: "java.lang.Object" }
+  - { kind: call, method: "<java.lang.InheritableThreadLocal: java.lang.Object get()>", index: result, type: "java.lang.Object" }
+
+sinks:
+  # ── SQL Injection ─────────────────────────────────────────────────────────
+  # --- JDBC ---
+  - { method: "<java.sql.Statement: java.sql.ResultSet executeQuery(java.lang.String)>", index: 0 }
+  - { method: "<java.sql.Statement: int executeUpdate(java.lang.String)>", index: 0 }
+  - { method: "<java.sql.Statement: boolean execute(java.lang.String)>", index: 0 }
+  # executeBatch() has no parameters, taint enters via prior addBatch(String) calls
+  # - { method: "<java.sql.Statement: int[] executeBatch()>", index: 0 }
+  - { method: "<java.sql.Statement: void addBatch(java.lang.String)>", index: 0 }
+  - { method: "<java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>", index: 0 }
+  - { method: "<java.sql.Connection: java.sql.CallableStatement prepareCall(java.lang.String)>", index: 0 }
+  # --- Spring JdbcTemplate ---
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List query(java.lang.String,org.springframework.jdbc.core.RowMapper)>", index: 0 }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.lang.Object queryForObject(java.lang.String,java.lang.Class)>", index: 0 }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String,java.lang.Class)>", index: 0 }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int update(java.lang.String)>", index: 0 }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int[] batchUpdate(java.lang.String[])>", index: 0 }
+  # --- JPA / Hibernate / EntityManager ---
+  - { method: "<javax.persistence.EntityManager: javax.persistence.Query createQuery(java.lang.String)>", index: 0 }
+  - { method: "<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String)>", index: 0 }
+  - { method: "<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String,java.lang.Class)>", index: 0 }
+  - { method: "<org.hibernate.Session: org.hibernate.Query createQuery(java.lang.String)>", index: 0 }
+  - { method: "<org.hibernate.Session: org.hibernate.SQLQuery createSQLQuery(java.lang.String)>", index: 0 }
+
+  # ── Command Injection (OS Command) ────────────────────────────────────────
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>", index: 0 }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>", index: 0 }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[])>", index: 0 }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[],java.io.File)>", index: 0 }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>", index: 0 }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.util.List)>", index: 0 }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", index: 0 }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.util.List)>", index: 0 }
+
+  # ── Path Traversal / File Access ──────────────────────────────────────────
+  - { method: "<java.io.File: void <init>(java.lang.String)>", index: 0 }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: 0 }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: 1 }
+  - { method: "<java.io.FileInputStream: void <init>(java.lang.String)>", index: 0 }
+  - { method: "<java.io.FileOutputStream: void <init>(java.lang.String)>", index: 0 }
+  - { method: "<java.io.FileReader: void <init>(java.lang.String)>", index: 0 }
+  - { method: "<java.io.FileWriter: void <init>(java.lang.String)>", index: 0 }
+  - { method: "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>", index: 0 }
+  - { method: "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>", index: 0 }
+  - { method: "<java.nio.file.Files: java.util.List readAllLines(java.nio.file.Path)>", index: 0 }
+  - { method: "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>", index: 0 }
+  - { method: "<java.nio.file.Files: java.nio.file.Path write(java.nio.file.Path,byte[],java.nio.file.OpenOption[])>", index: 0 }
+
+  # ── XSS (Cross-Site Scripting) ────────────────────────────────────────────
+  # --- Servlet Response ---
+  # Note: getWriter() itself is not a sink; the actual sinks are print/println/write on the returned PrintWriter
+  - { method: "<java.io.PrintWriter: void print(java.lang.String)>", index: 0 }
+  - { method: "<java.io.PrintWriter: void println(java.lang.String)>", index: 0 }
+  - { method: "<java.io.PrintWriter: void write(java.lang.String)>", index: 0 }
+  - { method: "<javax.servlet.ServletOutputStream: void print(java.lang.String)>", index: 0 }
+  - { method: "<javax.servlet.ServletOutputStream: void write(byte[])>", index: 0 }
+  - { method: "<org.owasp.webgoat.container.assignments.AttackResultBuilder: org.owasp.webgoat.container.assignments.AttackResultBuilder output(java.lang.String)>", index: 0 }
+  - { method: "<org.owasp.webgoat.container.assignments.AttackResultBuilder: org.owasp.webgoat.container.assignments.AttackResultBuilder feedback(java.lang.String)>", index: 0 }
+  # --- JSP ---
+  - { method: "<javax.servlet.jsp.JspWriter: void print(java.lang.String)>", index: 0 }
+  - { method: "<javax.servlet.jsp.JspWriter: void println(java.lang.String)>", index: 0 }
+  - { method: "<javax.servlet.jsp.JspWriter: void write(java.lang.String)>", index: 0 }
+
+  # ── SSRF (Server-Side Request Forgery) ────────────────────────────────────
+  - { method: "<java.net.URL: void <init>(java.lang.String)>", index: 0 }
+  - { method: "<java.net.URI: void <init>(java.lang.String)>", index: 0 }
+  - { method: "<java.net.URI: java.net.URI create(java.lang.String)>", index: 0 }
+  # Note: connect() has no parameters; SSRF taint enters via URL/URI construction (listed above)
+  - { method: "<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>", index: 0 }
+  - { method: "<org.springframework.web.client.RestTemplate: java.lang.Object getForObject(java.lang.String,java.lang.Class)>", index: 0 }
+  - { method: "<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity getForEntity(java.lang.String,java.lang.Class)>", index: 0 }
+  - { method: "<org.springframework.web.client.RestTemplate: java.lang.Object postForObject(java.lang.String,java.lang.Object,java.lang.Class)>", index: 0 }
+  - { method: "<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class)>", index: 0 }
+
+  # ── URL Redirect / Open Redirect ──────────────────────────────────────────
+  - { method: "<javax.servlet.http.HttpServletResponse: void sendRedirect(java.lang.String)>", index: 0 }
+  - { method: "<javax.servlet.RequestDispatcher: void forward(javax.servlet.ServletRequest,javax.servlet.ServletResponse)>", index: 0 }
+
+  # ── LDAP Injection ────────────────────────────────────────────────────────
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: 0 }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: 1 }
+  - { method: "<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: 0 }
+  - { method: "<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: 1 }
+  - { method: "<org.springframework.ldap.core.LdapTemplate: java.util.List search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls,org.springframework.ldap.core.AttributesMapper)>", index: 1 }
+  - { method: "<jakarta.servlet.http.HttpServletResponse: void sendRedirect(java.lang.String)>", index: 0 }
+  - { method: "<jakarta.servlet.http.Cookie: void <init>(java.lang.String,java.lang.String)>", index: 1 }
+  - { method: "<jakarta.servlet.http.Cookie: void setValue(java.lang.String)>", index: 0 }
+  - { method: "<jakarta.servlet.http.HttpServletResponse: void addHeader(java.lang.String,java.lang.String)>", index: 1 }
+  - { method: "<jakarta.servlet.http.HttpServletResponse: void setHeader(java.lang.String,java.lang.String)>", index: 1 }
+  # ── XPath Injection ───────────────────────────────────────────────────────
+  - { method: "<javax.xml.xpath.XPath: java.lang.String evaluate(java.lang.String,java.lang.Object)>", index: 0 }
+  - { method: "<javax.xml.xpath.XPath: javax.xml.xpath.XPathExpression compile(java.lang.String)>", index: 0 }
+
+  # ── XML External Entity (XXE) ─────────────────────────────────────────────
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.io.InputStream)>", index: 0 }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.lang.String)>", index: 0 }
+  - { method: "<javax.xml.parsers.SAXParser: void parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler)>", index: 0 }
+  - { method: "<org.xml.sax.XMLReader: void parse(org.xml.sax.InputSource)>", index: 0 }
+
+  # ── Expression Language / Template Injection ──────────────────────────────
+  # --- Spring SpEL ---
+  - { method: "<org.springframework.expression.ExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>", index: 0 }
+  - { method: "<org.springframework.expression.spel.standard.SpelExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>", index: 0 }
+  # --- OGNL ---
+  - { method: "<ognl.Ognl: java.lang.Object parseExpression(java.lang.String)>", index: 0 }
+  - { method: "<ognl.Ognl: java.lang.Object getValue(java.lang.String,java.lang.Object)>", index: 0 }
+  # --- MVEL ---
+  - { method: "<org.mvel2.MVEL: java.lang.Object eval(java.lang.String)>", index: 0 }
+  - { method: "<org.mvel2.MVEL: java.lang.Object eval(java.lang.String,java.lang.Object)>", index: 0 }
+  # --- JEXL ---
+  - { method: "<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlExpression createExpression(java.lang.String)>", index: 0 }
+  - { method: "<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlScript createScript(java.lang.String)>", index: 0 }
+  # --- Freemarker ---
+  - { method: "<freemarker.template.Template: void <init>(java.lang.String,java.io.Reader)>", index: 0 }
+  # --- Velocity ---
+  - { method: "<org.apache.velocity.app.VelocityEngine: boolean evaluate(org.apache.velocity.context.Context,java.io.Writer,java.lang.String,java.lang.String)>", index: 3 }
+
+  # ── Deserialization ───────────────────────────────────────────────────────
+  # Note: readObject() has no parameters; deserialization taint enters via ObjectInputStream(InputStream) constructor (listed below)
+  - { method: "<java.io.ObjectInputStream: void <init>(java.io.InputStream)>", index: 0 }
+  - { method: "<com.alibaba.fastjson.JSON: java.lang.Object parse(java.lang.String)>", index: 0 }
+  - { method: "<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String)>", index: 0 }
+  - { method: "<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String,java.lang.Class)>", index: 0 }
+  - { method: "<com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.lang.String,java.lang.Class)>", index: 0 }
+  - { method: "<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.lang.String)>", index: 0 }
+  - { method: "<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.io.InputStream)>", index: 0 }
+
+  # ── Logging Injection ─────────────────────────────────────────────────────
+  # Note: These are lower severity but can enable log forging / log4shell
+  - { method: "<org.apache.logging.log4j.Logger: void info(java.lang.String)>", index: 0 }
+  - { method: "<org.apache.logging.log4j.Logger: void warn(java.lang.String)>", index: 0 }
+  - { method: "<org.apache.logging.log4j.Logger: void error(java.lang.String)>", index: 0 }
+  - { method: "<org.apache.logging.log4j.Logger: void debug(java.lang.String)>", index: 0 }
+  - { method: "<org.apache.logging.log4j.Logger: void fatal(java.lang.String)>", index: 0 }
+  - { method: "<org.slf4j.Logger: void info(java.lang.String)>", index: 0 }
+  - { method: "<org.slf4j.Logger: void warn(java.lang.String)>", index: 0 }
+  - { method: "<org.slf4j.Logger: void error(java.lang.String)>", index: 0 }
+  - { method: "<org.slf4j.Logger: void debug(java.lang.String)>", index: 0 }
+
+  # ── Reflection (Code Injection) ───────────────────────────────────────────
+  - { method: "<java.lang.Class: java.lang.Class forName(java.lang.String)>", index: 0 }
+  - { method: "<java.lang.ClassLoader: java.lang.Class loadClass(java.lang.String)>", index: 0 }
+  - { method: "<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>", index: 1 }
+
+  # ── Server-Side Include / RequestDispatcher ───────────────────────────────
+  - { method: "<javax.servlet.ServletContext: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>", index: 0 }
+  - { method: "<javax.servlet.http.HttpServletRequest: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>", index: 0 }
+
+  # ── Cookie Manipulation ───────────────────────────────────────────────────
+  - { method: "<javax.servlet.http.Cookie: void <init>(java.lang.String,java.lang.String)>", index: 1 }
+  - { method: "<javax.servlet.http.Cookie: void setValue(java.lang.String)>", index: 0 }
+  - { method: "<javax.servlet.http.HttpServletResponse: void addHeader(java.lang.String,java.lang.String)>", index: 1 }
+  - { method: "<javax.servlet.http.HttpServletResponse: void setHeader(java.lang.String,java.lang.String)>", index: 1 }
+
+
+  - { method: "<javax.naming.InitialContext: java.lang.Object lookup(java.lang.String)>", index: 0 }
+  - { method: "<javax.naming.Context: java.lang.Object lookup(java.lang.String)>", index: 0 }
+  - { method: "<java.util.regex.Pattern: java.util.regex.Pattern compile(java.lang.String)>", index: 0 }
+  - { method: "<java.lang.String: boolean matches(java.lang.String)>", index: 0 }
+  - { method: "<jakarta.servlet.http.HttpServletResponse: void addCookie(jakarta.servlet.http.Cookie)>", index: 0 }
+  - { method: "<jakarta.servlet.http.HttpServletResponse: void setContentType(java.lang.String)>", index: 0 }
+transfers:
+  # ── java.lang.String ─────────────────────────────────────────────────────
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int,int)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(char,char)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String trim()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String strip()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripLeading()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripTrailing()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String intern()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(java.lang.Object)>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(char[])>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.util.Locale,java.lang.String,java.lang.Object[])>", from: 1, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.CharSequence[])>", from: 1, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.Iterable)>", from: 1, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.String: char[] toCharArray()>", from: base, to: result, type: "char[]" }
+
+  # ── java.lang.StringBuilder ───────────────────────────────────────────────
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char[])>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(long)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: base, to: result }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.String)>", from: 1, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.Object)>", from: 1, to: base }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence)>", from: 1, to: base }
+
+  # ── java.lang.StringBuffer ────────────────────────────────────────────────
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: base, to: result }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: base, to: result, type: "java.lang.String" }
+
+  # ── java.util.Map ─────────────────────────────────────────────────────────
+  - { method: "<java.util.Map: java.lang.Object get(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.HashMap: java.lang.Object get(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.LinkedHashMap: java.lang.Object get(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.TreeMap: java.lang.Object get(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.concurrent.ConcurrentHashMap: java.lang.Object get(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: 1, to: base }
+  - { method: "<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: 1, to: base }
+  - { method: "<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: 1, to: base }
+  - { method: "<java.util.Map: void putAll(java.util.Map)>", from: 0, to: base }
+  - { method: "<java.util.Map: java.util.Collection values()>", from: base, to: result, type: "java.util.Collection" }
+  - { method: "<java.util.Map: java.util.Set entrySet()>", from: base, to: result, type: "java.util.Set" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getValue()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getKey()>", from: base, to: result, type: "java.lang.Object" }
+
+  # ── java.util.List / Collection ───────────────────────────────────────────
+  - { method: "<java.util.List: java.lang.Object get(int)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.ArrayList: java.lang.Object get(int)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.LinkedList: java.lang.Object get(int)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.List: boolean add(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.util.ArrayList: boolean add(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.util.LinkedList: boolean add(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.util.Collection: boolean add(java.lang.Object)>", from: 0, to: base }
+  - { method: "<java.util.Iterator: java.lang.Object next()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.ListIterator: java.lang.Object next()>", from: base, to: result, type: "java.lang.Object" }
+
+  # ── java.util.Optional ────────────────────────────────────────────────────
+  - { method: "<java.util.Optional: java.lang.Object get()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElse(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElseGet(java.util.function.Supplier)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.util.Optional of(java.lang.Object)>", from: 0, to: result, type: "java.util.Optional" }
+  - { method: "<java.util.Optional: java.util.Optional ofNullable(java.lang.Object)>", from: 0, to: result, type: "java.util.Optional" }
+
+  # ── java.lang.Object ──────────────────────────────────────────────────────
+  - { method: "<java.lang.Object: java.lang.String toString()>", from: base, to: result, type: "java.lang.String" }
+
+  # ── Servlet request parameter / header / URI ──────────────────────────────
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>", from: base, to: result, type: "java.lang.String[]" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>", from: base, to: result, type: "java.lang.StringBuffer" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>", from: base, to: result, type: "java.lang.Object" }
+
+  # ── Shiro propagation chain ───────────────────────────────────────────────
+  - { method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", from: base, to: result, type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.util.Collection fromRealm(java.lang.String)>", from: base, to: result, type: "java.util.Collection" }
+
+  # ── Spring Security propagation chain ─────────────────────────────────────
+  - { method: "<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>", from: base, to: result, type: "org.springframework.security.core.Authentication" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.Object getDetails()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<org.springframework.security.core.Authentication: java.lang.String getName()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>", from: base, to: result, type: "java.util.Collection" }
+  - { method: "<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>", from: base, to: result, type: "java.lang.String" }
+
+  # ── HttpSession / ThreadLocal propagation ─────────────────────────────────
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>", from: 1, to: base }
+  - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.lang.InheritableThreadLocal: java.lang.Object get()>", from: base, to: result, type: "java.lang.Object" }
+
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # 1. Jakarta Servlet Namespace（最高优先级）
+  # ══════════════════════════════════════════════════════════════════════════
+
+  # --- Jakarta HttpServletRequest 参数/头/URI ---
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>", from: base, to: result, type: "java.lang.String[]" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.util.Map getParameterMap()>", from: base, to: result, type: "java.util.Map" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.util.Enumeration getHeaders(java.lang.String)>", from: base, to: result, type: "java.util.Enumeration" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.String getQueryString()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>", from: base, to: result, type: "java.lang.StringBuffer" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.String getPathInfo()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.String getServletPath()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.String getRemoteHost()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.String getContentType()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.String getMethod()>", from: base, to: result, type: "java.lang.String" }
+
+  # --- Jakarta Request/Response Body Stream ---
+  - { method: "<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.ServletInputStream getInputStream()>", from: base, to: result, type: "jakarta.servlet.ServletInputStream" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.io.BufferedReader getReader()>", from: base, to: result, type: "java.io.BufferedReader" }
+  - { method: "<jakarta.servlet.ServletRequest: jakarta.servlet.ServletInputStream getInputStream()>", from: base, to: result, type: "jakarta.servlet.ServletInputStream" }
+  - { method: "<jakarta.servlet.ServletRequest: java.io.BufferedReader getReader()>", from: base, to: result, type: "java.io.BufferedReader" }
+
+  # --- Jakarta Request Attribute ---
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<jakarta.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>", from: base, to: result, type: "java.lang.Object" }
+
+  # --- Jakarta Cookie ---
+  - { method: "<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.Cookie[] getCookies()>", from: base, to: result, type: "jakarta.servlet.http.Cookie[]" }
+  - { method: "<jakarta.servlet.http.Cookie: java.lang.String getValue()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.Cookie: java.lang.String getName()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.Cookie: java.lang.String getPath()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.Cookie: java.lang.String getDomain()>", from: base, to: result, type: "java.lang.String" }
+
+  # --- Jakarta HttpSession ---
+  - { method: "<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession()>", from: base, to: result, type: "jakarta.servlet.http.HttpSession" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.HttpSession getSession(boolean)>", from: base, to: result, type: "jakarta.servlet.http.HttpSession" }
+  - { method: "<jakarta.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<jakarta.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>", from: 1, to: base }
+
+  # --- Jakarta UserPrincipal ---
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>", from: base, to: result, type: "java.security.Principal" }
+
+  # --- Jakarta RequestDispatcher ---
+  - { method: "<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>", from: 0, to: result }
+  - { method: "<jakarta.servlet.ServletContext: jakarta.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>", from: 0, to: result }
+
+  # --- Jakarta Part (Multipart) ---
+  - { method: "<jakarta.servlet.http.HttpServletRequest: jakarta.servlet.http.Part getPart(java.lang.String)>", from: base, to: result, type: "jakarta.servlet.http.Part" }
+  - { method: "<jakarta.servlet.http.HttpServletRequest: java.util.Collection getParts()>", from: base, to: result, type: "java.util.Collection" }
+  - { method: "<jakarta.servlet.http.Part: java.lang.String getSubmittedFileName()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<jakarta.servlet.http.Part: java.io.InputStream getInputStream()>", from: base, to: result, type: "java.io.InputStream" }
+  - { method: "<jakarta.servlet.http.Part: java.lang.String getHeader(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # 2. Spring Framework 传播链
+  # ══════════════════════════════════════════════════════════════════════════
+
+  # --- Spring MultiValueMap ---
+  - { method: "<org.springframework.util.MultiValueMap: java.lang.Object getFirst(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<org.springframework.util.MultiValueMap: java.util.List get(java.lang.Object)>", from: base, to: result, type: "java.util.List" }
+  - { method: "<org.springframework.util.MultiValueMap: void add(java.lang.Object,java.lang.Object)>", from: 1, to: base }
+  - { method: "<org.springframework.util.MultiValueMap: void set(java.lang.Object,java.lang.Object)>", from: 1, to: base }
+  - { method: "<org.springframework.util.LinkedMultiValueMap: java.lang.Object getFirst(java.lang.Object)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<org.springframework.util.LinkedMultiValueMap: java.util.List get(java.lang.Object)>", from: base, to: result, type: "java.util.List" }
+
+  # --- Spring HttpHeaders ---
+  - { method: "<org.springframework.http.HttpHeaders: java.lang.String getFirst(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<org.springframework.http.HttpHeaders: java.util.List get(java.lang.Object)>", from: base, to: result, type: "java.util.List" }
+  - { method: "<org.springframework.http.HttpHeaders: java.lang.String getContentType()>", from: base, to: result, type: "java.lang.String" }
+
+  # --- Spring Model / ModelAndView ---
+  - { method: "<org.springframework.ui.Model: org.springframework.ui.Model addAttribute(java.lang.String,java.lang.Object)>", from: 1, to: base }
+  - { method: "<org.springframework.ui.Model: org.springframework.ui.Model addAttribute(java.lang.Object)>", from: 0, to: base }
+  - { method: "<org.springframework.ui.ModelMap: org.springframework.ui.ModelMap addAttribute(java.lang.String,java.lang.Object)>", from: 1, to: base }
+  - { method: "<org.springframework.web.servlet.ModelAndView: org.springframework.web.servlet.ModelAndView addObject(java.lang.String,java.lang.Object)>", from: 1, to: base }
+  - { method: "<org.springframework.web.servlet.ModelAndView: org.springframework.ui.ModelMap getModel()>", from: base, to: result, type: "org.springframework.ui.ModelMap" }
+
+  # --- Spring ResponseEntity 构建（static 方法，用 from: 0 正确） ---
+  - { method: "<org.springframework.http.ResponseEntity: org.springframework.http.ResponseEntity ok(java.lang.Object)>", from: 0, to: result }
+  - { method: "<org.springframework.http.ResponseEntity$BodyBuilder: org.springframework.http.ResponseEntity body(java.lang.Object)>", from: 0, to: result }
+
+  # --- Spring WebUtils（static 方法，用 from: 0 正确） ---
+  - { method: "<org.springframework.web.util.WebUtils: java.lang.String findParameterValue(jakarta.servlet.http.HttpServletRequest,java.lang.String)>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<org.springframework.web.util.WebUtils: jakarta.servlet.http.Cookie getCookie(jakarta.servlet.http.HttpServletRequest,java.lang.String)>", from: 0, to: result, type: "jakarta.servlet.http.Cookie" }
+
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # 3. IO 流传播链（XXE / 反序列化的关键桥接）
+  # ══════════════════════════════════════════════════════════════════════════
+
+  # --- InputStream 包装 ---
+  - { method: "<java.io.ByteArrayInputStream: void <init>(byte[])>", from: 0, to: base }
+  - { method: "<java.io.BufferedInputStream: void <init>(java.io.InputStream)>", from: 0, to: base }
+  - { method: "<java.io.DataInputStream: void <init>(java.io.InputStream)>", from: 0, to: base }
+  - { method: "<java.util.zip.GZIPInputStream: void <init>(java.io.InputStream)>", from: 0, to: base }
+  - { method: "<java.util.zip.ZipInputStream: void <init>(java.io.InputStream)>", from: 0, to: base }
+
+  # --- Reader 桥接 ---
+  - { method: "<java.io.InputStreamReader: void <init>(java.io.InputStream)>", from: 0, to: base }
+  - { method: "<java.io.InputStreamReader: void <init>(java.io.InputStream,java.lang.String)>", from: 0, to: base }
+  - { method: "<java.io.InputStreamReader: void <init>(java.io.InputStream,java.nio.charset.Charset)>", from: 0, to: base }
+  - { method: "<java.io.BufferedReader: void <init>(java.io.Reader)>", from: 0, to: base }
+  - { method: "<java.io.StringReader: void <init>(java.lang.String)>", from: 0, to: base }
+
+  # --- Reader / InputStream 读取 ---
+  - { method: "<java.io.BufferedReader: java.lang.String readLine()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.io.Reader: int read(char[])>", from: base, to: 0 }
+  - { method: "<java.io.InputStream: int read(byte[])>", from: base, to: 0 }
+  - { method: "<java.io.InputStream: byte[] readAllBytes()>", from: base, to: result, type: "byte[]" }
+  - { method: "<java.io.InputStream: byte[] readNBytes(int)>", from: base, to: result, type: "byte[]" }
+
+  # --- OutputStream 包装 ---
+  - { method: "<java.io.OutputStreamWriter: void <init>(java.io.OutputStream)>", from: 0, to: base }
+  - { method: "<java.io.BufferedWriter: void <init>(java.io.Writer)>", from: 0, to: base }
+  - { method: "<java.io.PrintWriter: void <init>(java.io.Writer)>", from: 0, to: base }
+  - { method: "<java.io.PrintWriter: void <init>(java.io.OutputStream)>", from: 0, to: base }
+
+  # --- XML InputSource 构造（XXE 传播桥梁） ---
+  - { method: "<org.xml.sax.InputSource: void <init>(java.io.InputStream)>", from: 0, to: base }
+  - { method: "<org.xml.sax.InputSource: void <init>(java.io.Reader)>", from: 0, to: base }
+  - { method: "<org.xml.sax.InputSource: void <init>(java.lang.String)>", from: 0, to: base }
+
+  # --- StreamSource ---
+  - { method: "<javax.xml.transform.stream.StreamSource: void <init>(java.io.InputStream)>", from: 0, to: base }
+  - { method: "<javax.xml.transform.stream.StreamSource: void <init>(java.io.Reader)>", from: 0, to: base }
+
+  # --- ZipEntry（ZipSlip 路径遍历） ---
+  - { method: "<java.util.zip.ZipEntry: java.lang.String getName()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.util.zip.ZipInputStream: java.util.zip.ZipEntry getNextEntry()>", from: base, to: result, type: "java.util.zip.ZipEntry" }
+
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # 4. 编码/解码传播（反序列化课程关键路径）
+  # ══════════════════════════════════════════════════════════════════════════
+
+  # --- Base64 ---
+  - { method: "<java.util.Base64$Decoder: byte[] decode(java.lang.String)>", from: 0, to: result, type: "byte[]" }
+  - { method: "<java.util.Base64$Decoder: byte[] decode(byte[])>", from: 0, to: result, type: "byte[]" }
+  - { method: "<java.util.Base64$Encoder: byte[] encode(byte[])>", from: 0, to: result, type: "byte[]" }
+  - { method: "<java.util.Base64$Encoder: java.lang.String encodeToString(byte[])>", from: 0, to: result, type: "java.lang.String" }
+  # [FIX] 已删除 Base64.getDecoder() 和 Base64.getEncoder() 的 transfer 规则
+  # 这两个是 static 方法，不能使用 from: base，且它们本身不传播污点数据
+
+  # --- URL Encoding ---
+  - { method: "<java.net.URLDecoder: java.lang.String decode(java.lang.String,java.lang.String)>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<java.net.URLDecoder: java.lang.String decode(java.lang.String,java.nio.charset.Charset)>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<java.net.URLEncoder: java.lang.String encode(java.lang.String,java.lang.String)>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<java.net.URLEncoder: java.lang.String encode(java.lang.String,java.nio.charset.Charset)>", from: 0, to: result, type: "java.lang.String" }
+
+  # --- Charset 编解码 ---
+  - { method: "<java.lang.String: byte[] getBytes()>", from: base, to: result, type: "byte[]" }
+  - { method: "<java.lang.String: byte[] getBytes(java.lang.String)>", from: base, to: result, type: "byte[]" }
+  - { method: "<java.lang.String: byte[] getBytes(java.nio.charset.Charset)>", from: base, to: result, type: "byte[]" }
+  - { method: "<java.lang.String: void <init>(byte[])>", from: 0, to: base }
+  - { method: "<java.lang.String: void <init>(byte[],java.lang.String)>", from: 0, to: base }
+  - { method: "<java.lang.String: void <init>(byte[],java.nio.charset.Charset)>", from: 0, to: base }
+  - { method: "<java.lang.String: void <init>(byte[],int,int)>", from: 0, to: base }
+  - { method: "<java.lang.String: void <init>(char[])>", from: 0, to: base }
+
+  # --- Hex 编解码（Apache Commons） ---
+  - { method: "<org.apache.commons.codec.binary.Hex: byte[] decodeHex(java.lang.String)>", from: 0, to: result, type: "byte[]" }
+  - { method: "<org.apache.commons.codec.binary.Hex: java.lang.String encodeHexString(byte[])>", from: 0, to: result, type: "java.lang.String" }
+  - { method: "<org.apache.commons.codec.binary.Base64: byte[] decode(byte[])>", from: 0, to: result, type: "byte[]" }
+  - { method: "<org.apache.commons.codec.binary.Base64: byte[] encode(byte[])>", from: 0, to: result, type: "byte[]" }
+
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # 5. Spring MultipartFile 传播（路径遍历课程关键路径）
+  # ══════════════════════════════════════════════════════════════════════════
+
+  - { method: "<org.springframework.web.multipart.MultipartFile: java.lang.String getOriginalFilename()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<org.springframework.web.multipart.MultipartFile: java.lang.String getName()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<org.springframework.web.multipart.MultipartFile: java.lang.String getContentType()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<org.springframework.web.multipart.MultipartFile: byte[] getBytes()>", from: base, to: result, type: "byte[]" }
+  - { method: "<org.springframework.web.multipart.MultipartFile: java.io.InputStream getInputStream()>", from: base, to: result, type: "java.io.InputStream" }
+  - { method: "<org.springframework.web.multipart.MultipartFile: void transferTo(java.io.File)>", from: base, to: 0 }
+
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # 6. 数组 / 集合工具类传播
+  # ══════════════════════════════════════════════════════════════════════════
+
+  - { method: "<java.util.Arrays: java.util.List asList(java.lang.Object[])>", from: 0, to: result, type: "java.util.List" }
+  - { method: "<java.util.Collections: java.util.List singletonList(java.lang.Object)>", from: 0, to: result, type: "java.util.List" }
+  - { method: "<java.util.Collections: java.util.List unmodifiableList(java.util.List)>", from: 0, to: result, type: "java.util.List" }
+  - { method: "<java.util.Collections: java.util.Map unmodifiableMap(java.util.Map)>", from: 0, to: result, type: "java.util.Map" }
+  - { method: "<java.util.Collections: java.util.Set singleton(java.lang.Object)>", from: 0, to: result, type: "java.util.Set" }
+  - { method: "<java.util.List: java.util.List subList(int,int)>", from: base, to: result, type: "java.util.List" }
+  - { method: "<java.util.List: java.lang.Object[] toArray()>", from: base, to: result, type: "java.lang.Object[]" }
+  - { method: "<java.util.List: java.lang.Object[] toArray(java.lang.Object[])>", from: base, to: result, type: "java.lang.Object[]" }
+  - { method: "<java.util.Collection: java.util.Iterator iterator()>", from: base, to: result, type: "java.util.Iterator" }
+  - { method: "<java.util.List: java.util.Iterator iterator()>", from: base, to: result, type: "java.util.Iterator" }
+  - { method: "<java.util.List: java.util.ListIterator listIterator()>", from: base, to: result, type: "java.util.ListIterator" }
+  - { method: "<java.util.Set: java.util.Iterator iterator()>", from: base, to: result, type: "java.util.Iterator" }
+  - { method: "<java.util.Enumeration: java.lang.Object nextElement()>", from: base, to: result, type: "java.lang.Object" }
+
+  # --- List.of / Map.of (Java 9+, static 方法，用 from: 0/1 正确) ---
+  - { method: "<java.util.List: java.util.List of(java.lang.Object[])>", from: 0, to: result, type: "java.util.List" }
+  - { method: "<java.util.Map: java.util.Map of(java.lang.Object,java.lang.Object)>", from: 1, to: result, type: "java.util.Map" }
+  - { method: "<java.util.Set: java.util.Set of(java.lang.Object[])>", from: 0, to: result, type: "java.util.Set" }
+
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # 7. Stream API 传播（Java 8+）
+  # ══════════════════════════════════════════════════════════════════════════
+
+  - { method: "<java.util.Collection: java.util.stream.Stream stream()>", from: base, to: result, type: "java.util.stream.Stream" }
+  - { method: "<java.util.stream.Stream: java.util.stream.Stream map(java.util.function.Function)>", from: base, to: result, type: "java.util.stream.Stream" }
+  - { method: "<java.util.stream.Stream: java.util.stream.Stream filter(java.util.function.Predicate)>", from: base, to: result, type: "java.util.stream.Stream" }
+  - { method: "<java.util.stream.Stream: java.util.stream.Stream flatMap(java.util.function.Function)>", from: base, to: result, type: "java.util.stream.Stream" }
+  - { method: "<java.util.stream.Stream: java.lang.Object reduce(java.lang.Object,java.util.function.BinaryOperator)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.stream.Stream: java.lang.Object collect(java.util.stream.Collector)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<java.util.stream.Stream: java.util.Optional findFirst()>", from: base, to: result, type: "java.util.Optional" }
+  - { method: "<java.util.stream.Stream: java.util.Optional findAny()>", from: base, to: result, type: "java.util.Optional" }
+  # [FIX] 已删除 Collectors.toList() 和 Collectors.joining() 的 transfer 规则
+  # 这两个是 static 工厂方法，不传播污点数据，污点通过 Stream.collect() 传播
+
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # 8. Path / File 传播链（路径遍历传播桥梁）
+  # ══════════════════════════════════════════════════════════════════════════
+
+  - { method: "<java.nio.file.Path: java.nio.file.Path resolve(java.nio.file.Path)>", from: 0, to: result, type: "java.nio.file.Path" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>", from: 0, to: result, type: "java.nio.file.Path" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>", from: base, to: result, type: "java.nio.file.Path" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path resolveSibling(java.lang.String)>", from: 0, to: result, type: "java.nio.file.Path" }
+  - { method: "<java.nio.file.Path: java.lang.String toString()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path getFileName()>", from: base, to: result, type: "java.nio.file.Path" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path normalize()>", from: base, to: result, type: "java.nio.file.Path" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path toAbsolutePath()>", from: base, to: result, type: "java.nio.file.Path" }
+  - { method: "<java.nio.file.Path: java.io.File toFile()>", from: base, to: result, type: "java.io.File" }
+  - { method: "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>", from: 0, to: result, type: "java.nio.file.Path" }
+  - { method: "<java.io.File: java.lang.String getAbsolutePath()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.io.File: java.lang.String getPath()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.io.File: java.lang.String getName()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.io.File: java.lang.String getCanonicalPath()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<java.io.File: java.nio.file.Path toPath()>", from: base, to: result, type: "java.nio.file.Path" }
+
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # 9. JWT 库传播（JWT 课程核心路径）
+  # ══════════════════════════════════════════════════════════════════════════
+
+  # --- JJWT (io.jsonwebtoken) ---
+  # [FIX] 已删除 Jwts.parser() 的 transfer 规则
+  # Jwts.parser() 是 static 方法，不能使用 from: base，且它本身不传播污点数据
+  - { method: "<io.jsonwebtoken.JwtParser: io.jsonwebtoken.Jws parseClaimsJws(java.lang.String)>", from: 0, to: result }
+  - { method: "<io.jsonwebtoken.JwtParser: io.jsonwebtoken.JwtParserBuilder setSigningKey(java.lang.String)>", from: base, to: result }
+  - { method: "<io.jsonwebtoken.Jws: java.lang.Object getBody()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<io.jsonwebtoken.Jws: java.lang.Object getHeader()>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<io.jsonwebtoken.Claims: java.lang.Object get(java.lang.String)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<io.jsonwebtoken.Claims: java.lang.String getSubject()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<io.jsonwebtoken.Claims: java.lang.String getIssuer()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<io.jsonwebtoken.Header: java.lang.Object get(java.lang.String)>", from: base, to: result, type: "java.lang.Object" }
+
+  # --- Auth0 java-jwt (static 方法 JWT.decode 用 from: 0 正确) ---
+  - { method: "<com.auth0.jwt.JWT: com.auth0.jwt.interfaces.DecodedJWT decode(java.lang.String)>", from: 0, to: result }
+  - { method: "<com.auth0.jwt.interfaces.DecodedJWT: com.auth0.jwt.interfaces.Claim getClaim(java.lang.String)>", from: base, to: result }
+  - { method: "<com.auth0.jwt.interfaces.DecodedJWT: java.lang.String getSubject()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<com.auth0.jwt.interfaces.DecodedJWT: java.lang.String getHeader()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<com.auth0.jwt.interfaces.DecodedJWT: java.lang.String getPayload()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<com.auth0.jwt.interfaces.DecodedJWT: java.lang.String getKeyId()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<com.auth0.jwt.interfaces.Claim: java.lang.String asString()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<com.auth0.jwt.interfaces.Claim: java.lang.Integer asInt()>", from: base, to: result, type: "java.lang.Integer" }
+
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # 10. JSON 解析传播（请求体数据提取）
+  # ══════════════════════════════════════════════════════════════════════════
+
+  # --- Jackson ---
+  - { method: "<com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.lang.String,java.lang.Class)>", from: 0, to: result }
+  - { method: "<com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.io.InputStream,java.lang.Class)>", from: 0, to: result }
+  - { method: "<com.fasterxml.jackson.databind.ObjectMapper: com.fasterxml.jackson.databind.JsonNode readTree(java.lang.String)>", from: 0, to: result }
+  - { method: "<com.fasterxml.jackson.databind.JsonNode: java.lang.String asText()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<com.fasterxml.jackson.databind.JsonNode: com.fasterxml.jackson.databind.JsonNode get(java.lang.String)>", from: base, to: result }
+  - { method: "<com.fasterxml.jackson.databind.JsonNode: com.fasterxml.jackson.databind.JsonNode get(int)>", from: base, to: result }
+  - { method: "<com.fasterxml.jackson.databind.JsonNode: java.lang.String toString()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<com.fasterxml.jackson.databind.ObjectMapper: java.lang.String writeValueAsString(java.lang.Object)>", from: 0, to: result, type: "java.lang.String" }
+
+  # --- Gson ---
+  - { method: "<com.google.gson.Gson: java.lang.Object fromJson(java.lang.String,java.lang.Class)>", from: 0, to: result }
+  - { method: "<com.google.gson.Gson: java.lang.Object fromJson(java.io.Reader,java.lang.Class)>", from: 0, to: result }
+  - { method: "<com.google.gson.JsonParser: com.google.gson.JsonElement parseString(java.lang.String)>", from: 0, to: result }
+  - { method: "<com.google.gson.JsonObject: com.google.gson.JsonElement get(java.lang.String)>", from: base, to: result }
+  - { method: "<com.google.gson.JsonElement: java.lang.String getAsString()>", from: base, to: result, type: "java.lang.String" }
+
+  # --- org.json ---
+  - { method: "<org.json.JSONObject: void <init>(java.lang.String)>", from: 0, to: base }
+  - { method: "<org.json.JSONObject: java.lang.Object get(java.lang.String)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<org.json.JSONObject: java.lang.String getString(java.lang.String)>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<org.json.JSONObject: int getInt(java.lang.String)>", from: base, to: result, type: "int" }
+  - { method: "<org.json.JSONObject: org.json.JSONObject getJSONObject(java.lang.String)>", from: base, to: result }
+  - { method: "<org.json.JSONObject: org.json.JSONArray getJSONArray(java.lang.String)>", from: base, to: result }
+  - { method: "<org.json.JSONArray: java.lang.Object get(int)>", from: base, to: result, type: "java.lang.Object" }
+  - { method: "<org.json.JSONObject: java.lang.String toString()>", from: base, to: result, type: "java.lang.String" }
+
+
+  # ══════════════════════════════════════════════════════════════════════════
+  # 11. javax.servlet 原有规则中遗漏的补充
+  # ══════════════════════════════════════════════════════════════════════════
+
+  - { method: "<javax.servlet.http.HttpServletRequest: java.util.Map getParameterMap()>", from: base, to: result, type: "java.util.Map" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.util.Enumeration getHeaders(java.lang.String)>", from: base, to: result, type: "java.util.Enumeration" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getPathInfo()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getServletPath()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getContentType()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getMethod()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: javax.servlet.ServletInputStream getInputStream()>", from: base, to: result, type: "javax.servlet.ServletInputStream" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.io.BufferedReader getReader()>", from: base, to: result, type: "java.io.BufferedReader" }
+  - { method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.Cookie[] getCookies()>", from: base, to: result, type: "javax.servlet.http.Cookie[]" }
+  - { method: "<javax.servlet.http.Cookie: java.lang.String getValue()>", from: base, to: result, type: "java.lang.String" }
+  - { method: "<javax.servlet.http.Cookie: java.lang.String getName()>", from: base, to: result, type: "java.lang.String" }

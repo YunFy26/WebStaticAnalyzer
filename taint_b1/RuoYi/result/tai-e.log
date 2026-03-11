@@ -1,0 +1,1073 @@
+Writing log to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e.log
+java.version: 17.0.11
+java.version.date: 2024-04-16
+java.runtime.version: 17.0.11+7-LTS-207
+java.vendor: Oracle Corporation
+java.vendor.version: null
+os.name: Mac OS X
+os.version: 26.3
+os.arch: aarch64
+Tai-e Version: 0.5.1
+Manifest does not contain Tai-e commit information
+Tai-e Commit: Unknown
+Writing analysis plan to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tai-e-plan.yml
+WorldBuilder starts ...
+Warning: main class was not given!
+28053 classes with 242746 methods in the world
+WorldBuilder finishes, elapsed time: 21.01s
+ir-dumper starts ...
+Dumping IR in /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/tir
+13708 classes in scope (APP) of class analyses
+ir-dumper finishes, elapsed time: 11.95s
+routerAnalysis starts ...
+Router analysis started at: 2026-02-28 21:30:40
+Router analysis completed at: 2026-02-28 21:30:40 (Duration: 7ms)
+routerAnalysis finishes, elapsed time: 0.01s
+beanAnalysis starts ...
+beanAnalysis finishes, elapsed time: 0.01s
+injectPointsAnalysis starts ...
+injectPointsAnalysis finishes, elapsed time: 0.00s
+aspectAnalysis starts ...
+Starting AOP aspect analysis...
+aspectAnalysis finishes, elapsed time: 0.00s
+resultAnalysis starts ...
+============================================================
+                 Spring Analysis Result Summary             
+============================================================
+Router Methods (Endpoints)     : 298
+Spring Beans                   : 169
+Aspect Methods (Advice)        : 6
+============================================================
+resultAnalysis finishes, elapsed time: 0.00s
+srfaAnalysis starts ...
+SRFA Analysis started at: 2026-02-28 21:30:40
+Loaded 34 controller classes from RouterAnalysis
+Discovering mapper paths from 21 appClassPath entries
+Auto-discovered 38 mapper path(s)
+  - /Users/yuntsy/My/Graduate/Data/final/RuoYi/ruoyi-admin/src/main/resources
+  - /Users/yuntsy/My/Graduate/Data/final/RuoYi/ruoyi-admin/src/main/resources/mybatis
+  - /Users/yuntsy/My/Graduate/Data/final/RuoYi/ruoyi-admin/src/main/resources/ehcache
+  - /Users/yuntsy/My/Graduate/Data/final/RuoYi/ruoyi-generator/src/main/resources/mapper/generator
+  - /Users/yuntsy/My/Graduate/Data/final/RuoYi/ruoyi-quartz/src/main/resources/mapper/quartz
+  - /Users/yuntsy/My/Graduate/Data/final/RuoYi/ruoyi-system/src/main/resources/mapper/system
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-4_0_4_1592488715000/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/javax_servlet-api-4_0_1_1532351392000/META-INF/maven/javax.servlet/javax.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-web-6_2_1_1733996318000/META-INF
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-jdbc-6_2_0_1731602316000/org/springframework/jdbc/support
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-6_0_0_1720887509497/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-context-6_2_0_1731602337000/org/springframework/remoting/rmi
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves/rewrite
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mbeans
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/deploy
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/webresources
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/loader
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/users
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/connector
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/authenticator
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/startup
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/realm
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/session
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-web-1_13_0_1699061658000/META-INF/maven/org.apache.shiro/shiro-web
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-core-1_13_0_1699061656000/META-INF/maven/org.apache.shiro/shiro-core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/org/quartz/impl/jdbcjobstore
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/META-INF/maven/org.quartz-scheduler/quartz
+Using 38 mapper search path(s):
+  - /Users/yuntsy/My/Graduate/Data/final/RuoYi/ruoyi-admin/src/main/resources
+  - /Users/yuntsy/My/Graduate/Data/final/RuoYi/ruoyi-admin/src/main/resources/mybatis
+  - /Users/yuntsy/My/Graduate/Data/final/RuoYi/ruoyi-admin/src/main/resources/ehcache
+  - /Users/yuntsy/My/Graduate/Data/final/RuoYi/ruoyi-generator/src/main/resources/mapper/generator
+  - /Users/yuntsy/My/Graduate/Data/final/RuoYi/ruoyi-quartz/src/main/resources/mapper/quartz
+  - /Users/yuntsy/My/Graduate/Data/final/RuoYi/ruoyi-system/src/main/resources/mapper/system
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-4_0_4_1592488715000/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/javax_servlet-api-4_0_1_1532351392000/META-INF/maven/javax.servlet/javax.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-web-6_2_1_1733996318000/META-INF
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-jdbc-6_2_0_1731602316000/org/springframework/jdbc/support
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/jakarta_servlet-api-6_0_0_1720887509497/META-INF/maven/jakarta.servlet/jakarta.servlet-api
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/spring-context-6_2_0_1731602337000/org/springframework/remoting/rmi
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_4_6_1520782006000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/valves/rewrite
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mbeans
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/deploy
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/mapper
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/webresources
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/loader
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/users
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/connector
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/authenticator
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/startup
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/realm
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/tomcat-catalina-10_1_18_1704467231000/org/apache/catalina/session
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/ognl/ognl
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.javassist/javassist
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/mybatis-3_5_15_1702536962000/META-INF/maven/org.mybatis/mybatis
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-web-1_13_0_1699061658000/META-INF/maven/org.apache.shiro/shiro-web
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/shiro-core-1_13_0_1699061656000/META-INF/maven/org.apache.shiro/shiro-core
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/org/quartz/impl/jdbcjobstore
+  - /var/folders/n9/gm62bg6x77xgx7pk8ttb_v640000gn/T/srfa-mapper-cache/quartz-2_3_2_1571857751000/META-INF/maven/org.quartz-scheduler/quartz
+Parsed 20 MyBatis mapper files
+Parsed 20 MyBatis mapper files
+  Mapper namespace: com.ruoyi.generator.mapper.GenTableMapper
+    Operation: id=selectGenTableList, type=select, hasDollar=false
+    Operation: id=selectDbTableList, type=select, hasDollar=false
+    Operation: id=selectDbTableListByNames, type=select, hasDollar=false
+    Operation: id=selectTableByName, type=select, hasDollar=false
+    Operation: id=selectGenTableById, type=select, hasDollar=false
+    Operation: id=selectGenTableByName, type=select, hasDollar=false
+    Operation: id=deleteGenTableByIds, type=delete, hasDollar=false
+    Operation: id=createTable, type=update, hasDollar=true
+      Risky var: ${{sql}}
+    Operation: id=updateGenTable, type=update, hasDollar=false
+    Operation: id=insertGenTable, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.generator.mapper.GenTableColumnMapper
+    Operation: id=selectGenTableColumnListByTableId, type=select, hasDollar=false
+    Operation: id=selectDbTableColumnsByName, type=select, hasDollar=false
+    Operation: id=deleteGenTableColumnByIds, type=delete, hasDollar=false
+    Operation: id=deleteGenTableColumns, type=delete, hasDollar=false
+    Operation: id=updateGenTableColumn, type=update, hasDollar=false
+    Operation: id=insertGenTableColumn, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.quartz.mapper.SysJobLogMapper
+    Operation: id=selectJobLogList, type=select, hasDollar=false
+    Operation: id=selectJobLogById, type=select, hasDollar=false
+    Operation: id=deleteJobLogById, type=delete, hasDollar=false
+    Operation: id=deleteJobLogByIds, type=delete, hasDollar=false
+    Operation: id=insertJobLog, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.quartz.mapper.SysJobMapper
+    Operation: id=selectJobList, type=select, hasDollar=false
+    Operation: id=selectJobById, type=select, hasDollar=false
+    Operation: id=deleteJobById, type=delete, hasDollar=false
+    Operation: id=deleteJobByIds, type=delete, hasDollar=false
+    Operation: id=updateJob, type=update, hasDollar=false
+    Operation: id=insertJob, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysDictDataMapper
+    Operation: id=selectDictDataList, type=select, hasDollar=false
+    Operation: id=selectDictDataByType, type=select, hasDollar=false
+    Operation: id=selectDictLabel, type=select, hasDollar=false
+    Operation: id=selectDictDataById, type=select, hasDollar=false
+    Operation: id=countDictDataByType, type=select, hasDollar=false
+    Operation: id=deleteDictDataById, type=delete, hasDollar=false
+    Operation: id=deleteDictDataByIds, type=delete, hasDollar=false
+    Operation: id=updateDictData, type=update, hasDollar=false
+    Operation: id=updateDictDataType, type=update, hasDollar=false
+    Operation: id=insertDictData, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysRoleMenuMapper
+    Operation: id=selectCountRoleMenuByMenuId, type=select, hasDollar=false
+    Operation: id=deleteRoleMenuByRoleId, type=delete, hasDollar=false
+    Operation: id=deleteRoleMenu, type=delete, hasDollar=false
+    Operation: id=batchRoleMenu, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysUserMapper
+    Operation: id=selectUserList, type=select, hasDollar=true
+      Risky var: ${{params.dataScope}}
+    Operation: id=selectAllocatedList, type=select, hasDollar=true
+      Risky var: ${{params.dataScope}}
+    Operation: id=selectUnallocatedList, type=select, hasDollar=true
+      Risky var: ${{params.dataScope}}
+    Operation: id=selectUserByLoginName, type=select, hasDollar=false
+    Operation: id=selectUserByPhoneNumber, type=select, hasDollar=false
+    Operation: id=selectUserByEmail, type=select, hasDollar=false
+    Operation: id=checkLoginNameUnique, type=select, hasDollar=false
+    Operation: id=checkPhoneUnique, type=select, hasDollar=false
+    Operation: id=checkEmailUnique, type=select, hasDollar=false
+    Operation: id=selectUserById, type=select, hasDollar=false
+    Operation: id=deleteUserById, type=delete, hasDollar=false
+    Operation: id=deleteUserByIds, type=delete, hasDollar=false
+    Operation: id=updateUserAvatar, type=update, hasDollar=false
+    Operation: id=resetUserPwd, type=update, hasDollar=false
+    Operation: id=updateUserStatus, type=update, hasDollar=false
+    Operation: id=updateLoginInfo, type=update, hasDollar=false
+    Operation: id=updateUser, type=update, hasDollar=false
+    Operation: id=insertUser, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysUserPostMapper
+    Operation: id=countUserPostById, type=select, hasDollar=false
+    Operation: id=deleteUserPostByUserId, type=delete, hasDollar=false
+    Operation: id=deleteUserPost, type=delete, hasDollar=false
+    Operation: id=batchUserPost, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysDictTypeMapper
+    Operation: id=selectDictTypeList, type=select, hasDollar=false
+    Operation: id=selectDictTypeById, type=select, hasDollar=false
+    Operation: id=selectDictTypeByType, type=select, hasDollar=false
+    Operation: id=checkDictTypeUnique, type=select, hasDollar=false
+    Operation: id=deleteDictTypeById, type=delete, hasDollar=false
+    Operation: id=deleteDictTypeByIds, type=delete, hasDollar=false
+    Operation: id=updateDictType, type=update, hasDollar=false
+    Operation: id=insertDictType, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysRoleMapper
+    Operation: id=selectRoleList, type=select, hasDollar=true
+      Risky var: ${{params.dataScope}}
+    Operation: id=selectRolesByUserId, type=select, hasDollar=false
+    Operation: id=selectRoleById, type=select, hasDollar=false
+    Operation: id=checkRoleNameUnique, type=select, hasDollar=false
+    Operation: id=checkRoleKeyUnique, type=select, hasDollar=false
+    Operation: id=deleteRoleById, type=delete, hasDollar=false
+    Operation: id=deleteRoleByIds, type=delete, hasDollar=false
+    Operation: id=updateRole, type=update, hasDollar=false
+    Operation: id=insertRole, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysDeptMapper
+    Operation: id=selectRoleDeptTree, type=select, hasDollar=false
+    Operation: id=selectDeptList, type=select, hasDollar=true
+      Risky var: ${{params.dataScope}}
+    Operation: id=checkDeptExistUser, type=select, hasDollar=false
+    Operation: id=selectDeptCount, type=select, hasDollar=false
+    Operation: id=checkDeptNameUnique, type=select, hasDollar=false
+    Operation: id=selectDeptById, type=select, hasDollar=false
+    Operation: id=selectChildrenDeptById, type=select, hasDollar=false
+    Operation: id=selectNormalChildrenDeptById, type=select, hasDollar=false
+    Operation: id=deleteDeptById, type=delete, hasDollar=false
+    Operation: id=updateDept, type=update, hasDollar=false
+    Operation: id=updateDeptChildren, type=update, hasDollar=false
+    Operation: id=updateDeptStatusNormal, type=update, hasDollar=false
+    Operation: id=insertDept, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysLogininforMapper
+    Operation: id=selectLogininforList, type=select, hasDollar=false
+    Operation: id=deleteLogininforByIds, type=delete, hasDollar=false
+    Operation: id=insertLogininfor, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysUserOnlineMapper
+    Operation: id=selectOnlineById, type=select, hasDollar=false
+    Operation: id=selectUserOnlineList, type=select, hasDollar=false
+    Operation: id=selectOnlineByExpired, type=select, hasDollar=false
+    Operation: id=deleteOnlineById, type=delete, hasDollar=false
+    Operation: id=saveOnline, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysMenuMapper
+    Operation: id=selectMenusByUserId, type=select, hasDollar=false
+    Operation: id=selectMenuAllByUserId, type=select, hasDollar=false
+    Operation: id=selectPermsByUserId, type=select, hasDollar=false
+    Operation: id=selectPermsByRoleId, type=select, hasDollar=false
+    Operation: id=selectMenuTree, type=select, hasDollar=false
+    Operation: id=selectMenuList, type=select, hasDollar=false
+    Operation: id=selectMenuListByUserId, type=select, hasDollar=false
+    Operation: id=selectMenuById, type=select, hasDollar=false
+    Operation: id=selectCountMenuByParentId, type=select, hasDollar=false
+    Operation: id=checkMenuNameUnique, type=select, hasDollar=false
+    Operation: id=deleteMenuById, type=delete, hasDollar=false
+    Operation: id=updateMenu, type=update, hasDollar=false
+    Operation: id=updateMenuSort, type=update, hasDollar=false
+    Operation: id=insertMenu, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysUserRoleMapper
+    Operation: id=selectUserRoleByUserId, type=select, hasDollar=false
+    Operation: id=countUserRoleByRoleId, type=select, hasDollar=false
+    Operation: id=deleteUserRoleByUserId, type=delete, hasDollar=false
+    Operation: id=deleteUserRole, type=delete, hasDollar=false
+    Operation: id=deleteUserRoleInfo, type=delete, hasDollar=false
+    Operation: id=deleteUserRoleInfos, type=delete, hasDollar=false
+    Operation: id=batchUserRole, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysPostMapper
+    Operation: id=selectPostList, type=select, hasDollar=false
+    Operation: id=selectPostsByUserId, type=select, hasDollar=false
+    Operation: id=selectPostById, type=select, hasDollar=false
+    Operation: id=checkPostNameUnique, type=select, hasDollar=false
+    Operation: id=checkPostCodeUnique, type=select, hasDollar=false
+    Operation: id=deletePostByIds, type=delete, hasDollar=false
+    Operation: id=updatePost, type=update, hasDollar=false
+    Operation: id=insertPost, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysOperLogMapper
+    Operation: id=selectOperLogList, type=select, hasDollar=false
+    Operation: id=selectOperLogById, type=select, hasDollar=false
+    Operation: id=deleteOperLogByIds, type=delete, hasDollar=false
+    Operation: id=insertOperlog, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysNoticeMapper
+    Operation: id=selectNoticeById, type=select, hasDollar=false
+    Operation: id=selectNoticeList, type=select, hasDollar=false
+    Operation: id=deleteNoticeByIds, type=delete, hasDollar=false
+    Operation: id=updateNotice, type=update, hasDollar=false
+    Operation: id=insertNotice, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysRoleDeptMapper
+    Operation: id=selectCountRoleDeptByDeptId, type=select, hasDollar=false
+    Operation: id=deleteRoleDeptByRoleId, type=delete, hasDollar=false
+    Operation: id=deleteRoleDept, type=delete, hasDollar=false
+    Operation: id=batchRoleDept, type=insert, hasDollar=false
+  Mapper namespace: com.ruoyi.system.mapper.SysConfigMapper
+    Operation: id=selectConfigList, type=select, hasDollar=false
+    Operation: id=selectConfigById, type=select, hasDollar=false
+    Operation: id=checkConfigKeyUnique, type=select, hasDollar=false
+    Operation: id=deleteConfigById, type=delete, hasDollar=false
+    Operation: id=deleteConfigByIds, type=delete, hasDollar=false
+    Operation: id=updateConfig, type=update, hasDollar=false
+    Operation: id=insertConfig, type=insert, hasDollar=false
+Collected 129 write field names from INSERT/UPDATE operations
+Extracted 182 source metadata entries (before filtering)
+Resolving 20 mapper namespaces...
+  Namespace resolve: com.ruoyi.generator.mapper.GenTableMapper -> com.ruoyi.generator.mapper.GenTableMapper
+  Namespace resolve: com.ruoyi.generator.mapper.GenTableColumnMapper -> com.ruoyi.generator.mapper.GenTableColumnMapper
+  Namespace resolve: com.ruoyi.quartz.mapper.SysJobLogMapper -> com.ruoyi.quartz.mapper.SysJobLogMapper
+  Namespace resolve: com.ruoyi.quartz.mapper.SysJobMapper -> com.ruoyi.quartz.mapper.SysJobMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysDictDataMapper -> com.ruoyi.system.mapper.SysDictDataMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysRoleMenuMapper -> com.ruoyi.system.mapper.SysRoleMenuMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysUserMapper -> com.ruoyi.system.mapper.SysUserMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysUserPostMapper -> com.ruoyi.system.mapper.SysUserPostMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysDictTypeMapper -> com.ruoyi.system.mapper.SysDictTypeMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysRoleMapper -> com.ruoyi.system.mapper.SysRoleMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysDeptMapper -> com.ruoyi.system.mapper.SysDeptMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysLogininforMapper -> com.ruoyi.system.mapper.SysLogininforMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysUserOnlineMapper -> com.ruoyi.system.mapper.SysUserOnlineMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysMenuMapper -> com.ruoyi.system.mapper.SysMenuMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysUserRoleMapper -> com.ruoyi.system.mapper.SysUserRoleMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysPostMapper -> com.ruoyi.system.mapper.SysPostMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysOperLogMapper -> com.ruoyi.system.mapper.SysOperLogMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysNoticeMapper -> com.ruoyi.system.mapper.SysNoticeMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysRoleDeptMapper -> com.ruoyi.system.mapper.SysRoleDeptMapper
+  Namespace resolve: com.ruoyi.system.mapper.SysConfigMapper -> com.ruoyi.system.mapper.SysConfigMapper
+Extracted 0 sink metadata entries (deduplicated, before risk filtering)
+Sources: 182 generated, 0 filtered, 0 deduplicated
+Sinks: 0 generated (risky), 0 filtered (safe), 0 deduplicated
+  Note: 'risky' means uses string concatenation ($), 'safe' means uses prepared statement (#)
+Written taint config to: output/taint-config-generated.yml
+  Sources: 182 (SRFA param) + framework call sources
+  Sinks: 0 (SRFA) + common predefined sinks
+  Transfers: standard set included
+SRFA Analysis completed at: 2026-02-28 21:30:40 (Duration: 129ms)
+srfaAnalysis finishes, elapsed time: 0.13s
+pta starts ...
+Loading taint config from /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-config-generated.yml
+Cannot find source method '<org.springframework.security.core.context.SecurityContextHolder: org.springframework.security.core.context.SecurityContext getContext()>'
+Cannot find source method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find source method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
+Cannot find source method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find source method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find source method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String)>'
+Cannot find sink method '<javax.persistence.EntityManager: javax.persistence.Query createNativeQuery(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.Query createQuery(java.lang.String)>'
+Cannot find sink method '<org.hibernate.Session: org.hibernate.SQLQuery createSQLQuery(java.lang.String)>'
+Cannot find sink method '<javax.servlet.ServletOutputStream: void write(byte[])>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void print(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void println(java.lang.String)>'
+Cannot find sink method '<javax.servlet.jsp.JspWriter: void write(java.lang.String)>'
+Cannot find sink method '<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object getForObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity getForEntity(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: java.lang.Object postForObject(java.lang.String,java.lang.Object,java.lang.Class)>'
+Cannot find sink method '<org.springframework.web.client.RestTemplate: org.springframework.http.ResponseEntity exchange(java.lang.String,org.springframework.http.HttpMethod,org.springframework.http.HttpEntity,java.lang.Class)>'
+Cannot find sink method '<org.springframework.ldap.core.LdapTemplate: java.util.List search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls,org.springframework.ldap.core.AttributesMapper)>'
+Cannot find sink method '<org.springframework.expression.ExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>'
+Cannot find sink method '<org.springframework.expression.spel.standard.SpelExpressionParser: org.springframework.expression.Expression parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object parseExpression(java.lang.String)>'
+Cannot find sink method '<ognl.Ognl: java.lang.Object getValue(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String)>'
+Cannot find sink method '<org.mvel2.MVEL: java.lang.Object eval(java.lang.String,java.lang.Object)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlExpression createExpression(java.lang.String)>'
+Cannot find sink method '<org.apache.commons.jexl3.JexlEngine: org.apache.commons.jexl3.JexlScript createScript(java.lang.String)>'
+Cannot find sink method '<freemarker.template.Template: void <init>(java.lang.String,java.io.Reader)>'
+Cannot find sink method '<org.apache.velocity.app.VelocityEngine: boolean evaluate(org.apache.velocity.context.Context,java.io.Writer,java.lang.String,java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parse(java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String)>'
+Cannot find sink method '<com.alibaba.fastjson.JSON: java.lang.Object parseObject(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<com.fasterxml.jackson.databind.ObjectMapper: java.lang.Object readValue(java.lang.String,java.lang.Class)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.lang.String)>'
+Cannot find sink method '<org.yaml.snakeyaml.Yaml: java.lang.Object load(java.io.InputStream)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void info(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void warn(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void error(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void debug(java.lang.String)>'
+Cannot find sink method '<org.apache.logging.log4j.Logger: void fatal(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void info(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void warn(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void error(java.lang.String)>'
+Cannot find sink method '<org.slf4j.Logger: void debug(java.lang.String)>'
+Cannot find sink method '<javax.servlet.http.HttpServletRequest: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>'
+Cannot find taint-transfer method '<java.util.LinkedHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getParameter(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String[] getParameterValues(java.lang.String)>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.String getRemoteAddr()>'
+Cannot find taint-transfer method '<javax.servlet.http.HttpServletRequest: java.lang.Object getAttribute(java.lang.String)>'
+Cannot find taint-transfer method '<org.springframework.security.core.context.SecurityContext: org.springframework.security.core.Authentication getAuthentication()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getPrincipal()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.Object getDetails()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.lang.String getName()>'
+Cannot find taint-transfer method '<org.springframework.security.core.Authentication: java.util.Collection getAuthorities()>'
+Cannot find taint-transfer method '<org.springframework.security.core.userdetails.UserDetails: java.lang.String getUsername()>'
+Cannot find taint-transfer method '<org.springframework.security.core.GrantedAuthority: java.lang.String getAuthority()>'
+Cannot find taint-transfer method '<java.lang.InheritableThreadLocal: java.lang.Object get()>'
+TaintConfig:
+sources:
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: com.ruoyi.common.core.domain.AjaxResult exportSelected(com.ruoyi.web.controller.demo.controller.UserTableModel,java.lang.String)>", index: "0", type: "com.ruoyi.web.controller.demo.controller.UserTableModel" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: com.ruoyi.common.core.domain.AjaxResult exportSelected(com.ruoyi.web.controller.demo.controller.UserTableModel,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: com.ruoyi.common.core.domain.AjaxResult ajaxColumns(com.ruoyi.web.controller.demo.controller.UserTableColumn)>", index: "0", type: "com.ruoyi.web.controller.demo.controller.UserTableColumn" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.web.controller.demo.controller.UserTableModel)>", index: "0", type: "com.ruoyi.web.controller.demo.controller.UserTableModel" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: com.ruoyi.common.core.page.TableDataInfo textList(com.ruoyi.common.core.domain.BaseEntity)>", index: "0", type: "com.ruoyi.common.core.domain.BaseEntity" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: com.ruoyi.common.core.page.TableDataInfo treeList(com.ruoyi.web.controller.demo.controller.AreaModel)>", index: "0", type: "com.ruoyi.web.controller.demo.controller.AreaModel" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.util.List listChild(com.ruoyi.web.controller.demo.controller.AreaModel)>", index: "0", type: "com.ruoyi.web.controller.demo.controller.AreaModel" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.web.controller.demo.domain.UserOperateModel)>", index: "0", type: "com.ruoyi.web.controller.demo.domain.UserOperateModel" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.web.controller.demo.domain.UserOperateModel)>", index: "0", type: "com.ruoyi.web.controller.demo.domain.UserOperateModel" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.web.controller.demo.domain.CustomerModel)>", index: "0", type: "com.ruoyi.web.controller.demo.domain.CustomerModel" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: java.lang.String edit(java.lang.Integer,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.web.controller.demo.domain.UserOperateModel)>", index: "0", type: "com.ruoyi.web.controller.demo.domain.UserOperateModel" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.web.controller.demo.domain.UserOperateModel)>", index: "0", type: "com.ruoyi.web.controller.demo.domain.UserOperateModel" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult importData(org.springframework.web.multipart.MultipartFile,boolean)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult importData(org.springframework.web.multipart.MultipartFile,boolean)>", index: "1", type: "boolean" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: java.lang.String detail(java.lang.Integer,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String localRefreshTask(java.lang.String,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.SysLogininforController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.system.domain.SysLogininfor)>", index: "0", type: "com.ruoyi.system.domain.SysLogininfor" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.SysLogininforController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.system.domain.SysLogininfor)>", index: "0", type: "com.ruoyi.system.domain.SysLogininfor" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.SysLogininforController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.SysLogininforController: com.ruoyi.common.core.domain.AjaxResult unlock(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.SysUserOnlineController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.system.domain.SysUserOnline)>", index: "0", type: "com.ruoyi.system.domain.SysUserOnline" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.SysUserOnlineController: com.ruoyi.common.core.domain.AjaxResult batchForceLogout(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.SysOperlogController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.system.domain.SysOperLog)>", index: "0", type: "com.ruoyi.system.domain.SysOperLog" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.SysOperlogController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.system.domain.SysOperLog)>", index: "0", type: "com.ruoyi.system.domain.SysOperLog" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.SysOperlogController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.SysOperlogController: java.lang.String detail(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.CacheController: java.lang.String getCacheKeys(java.lang.String,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.CacheController: java.lang.String getCacheValue(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.CacheController: java.lang.String getCacheValue(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.CacheController: com.ruoyi.common.core.domain.AjaxResult clearCacheName(java.lang.String,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.CacheController: com.ruoyi.common.core.domain.AjaxResult clearCacheKey(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.monitor.CacheController: com.ruoyi.common.core.domain.AjaxResult clearCacheKey(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysConfigController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.system.domain.SysConfig)>", index: "0", type: "com.ruoyi.system.domain.SysConfig" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysConfigController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.system.domain.SysConfig)>", index: "0", type: "com.ruoyi.system.domain.SysConfig" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysConfigController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.system.domain.SysConfig)>", index: "0", type: "com.ruoyi.system.domain.SysConfig" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysConfigController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysConfigController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.system.domain.SysConfig)>", index: "0", type: "com.ruoyi.system.domain.SysConfig" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysConfigController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysConfigController: boolean checkConfigKeyUnique(com.ruoyi.system.domain.SysConfig)>", index: "0", type: "com.ruoyi.system.domain.SysConfig" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictDataController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.common.core.domain.entity.SysDictData)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDictData" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictDataController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.common.core.domain.entity.SysDictData)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDictData" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictDataController: java.lang.String add(java.lang.String,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictDataController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.common.core.domain.entity.SysDictData)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDictData" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictDataController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictDataController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.common.core.domain.entity.SysDictData)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDictData" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictDataController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRegisterController: com.ruoyi.common.core.domain.AjaxResult ajaxRegister(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.common.core.domain.entity.SysRole)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysRole" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.common.core.domain.entity.SysRole)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysRole" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.common.core.domain.entity.SysRole)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysRole" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.common.core.domain.entity.SysRole)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysRole" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: java.lang.String authDataScope(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult authDataScopeSave(com.ruoyi.common.core.domain.entity.SysRole)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysRole" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: boolean checkRoleNameUnique(com.ruoyi.common.core.domain.entity.SysRole)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysRole" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: boolean checkRoleKeyUnique(com.ruoyi.common.core.domain.entity.SysRole)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysRole" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult changeStatus(com.ruoyi.common.core.domain.entity.SysRole)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysRole" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: java.lang.String authUser(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.page.TableDataInfo allocatedList(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult cancelAuthUser(com.ruoyi.system.domain.SysUserRole)>", index: "0", type: "com.ruoyi.system.domain.SysUserRole" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult cancelAuthUserAll(java.lang.Long,java.lang.String)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult cancelAuthUserAll(java.lang.Long,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: java.lang.String selectUser(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.page.TableDataInfo unallocatedList(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult selectAuthUserAll(java.lang.Long,java.lang.String)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult selectAuthUserAll(java.lang.Long,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysRoleController: java.util.List deptTreeData(com.ruoyi.common.core.domain.entity.SysRole)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysRole" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysProfileController: boolean checkPassword(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysProfileController: com.ruoyi.common.core.domain.AjaxResult resetPwd(java.lang.String,java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysProfileController: com.ruoyi.common.core.domain.AjaxResult resetPwd(java.lang.String,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysProfileController: com.ruoyi.common.core.domain.AjaxResult update(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysProfileController: com.ruoyi.common.core.domain.AjaxResult updateAvatar(org.springframework.web.multipart.MultipartFile)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysIndexController: com.ruoyi.common.core.domain.AjaxResult unlockscreen(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysIndexController: void menuStyle(java.lang.String,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDeptController: java.util.List list(com.ruoyi.common.core.domain.entity.SysDept)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDept" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDeptController: java.lang.String add(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDeptController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.common.core.domain.entity.SysDept)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDept" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDeptController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDeptController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.common.core.domain.entity.SysDept)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDept" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDeptController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDeptController: boolean checkDeptNameUnique(com.ruoyi.common.core.domain.entity.SysDept)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDept" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDeptController: java.lang.String selectDeptTree(java.lang.Long,java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDeptController: java.lang.String selectDeptTree(java.lang.Long,java.lang.Long,org.springframework.ui.ModelMap)>", index: "1", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDeptController: java.util.List treeDataExcludeChild(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictTypeController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.common.core.domain.entity.SysDictType)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDictType" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictTypeController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.common.core.domain.entity.SysDictType)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDictType" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictTypeController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.common.core.domain.entity.SysDictType)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDictType" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictTypeController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.common.core.domain.entity.SysDictType)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDictType" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictTypeController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String detail(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictTypeController: boolean checkDictTypeUnique(com.ruoyi.common.core.domain.entity.SysDictType)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysDictType" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String selectDictTree(java.lang.Long,java.lang.String,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String selectDictTree(java.lang.Long,java.lang.String,org.springframework.ui.ModelMap)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysPostController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.system.domain.SysPost)>", index: "0", type: "com.ruoyi.system.domain.SysPost" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysPostController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.system.domain.SysPost)>", index: "0", type: "com.ruoyi.system.domain.SysPost" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysPostController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysPostController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.system.domain.SysPost)>", index: "0", type: "com.ruoyi.system.domain.SysPost" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysPostController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysPostController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.system.domain.SysPost)>", index: "0", type: "com.ruoyi.system.domain.SysPost" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysPostController: boolean checkPostNameUnique(com.ruoyi.system.domain.SysPost)>", index: "0", type: "com.ruoyi.system.domain.SysPost" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysPostController: boolean checkPostCodeUnique(com.ruoyi.system.domain.SysPost)>", index: "0", type: "com.ruoyi.system.domain.SysPost" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult importData(org.springframework.web.multipart.MultipartFile,boolean)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult importData(org.springframework.web.multipart.MultipartFile,boolean)>", index: "1", type: "boolean" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: java.lang.String view(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: java.lang.String resetPwd(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult resetPwdSave(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: java.lang.String authRole(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult insertAuthRole(java.lang.Long,java.lang.Long[])>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult insertAuthRole(java.lang.Long,java.lang.Long[])>", index: "1", type: "java.lang.Long[]" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: boolean checkLoginNameUnique(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: boolean checkPhoneUnique(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: boolean checkEmailUnique(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult changeStatus(com.ruoyi.common.core.domain.entity.SysUser)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysUser" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysUserController: java.lang.String selectDeptTree(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysNoticeController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.system.domain.SysNotice)>", index: "0", type: "com.ruoyi.system.domain.SysNotice" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysNoticeController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.system.domain.SysNotice)>", index: "0", type: "com.ruoyi.system.domain.SysNotice" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysNoticeController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysNoticeController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.system.domain.SysNotice)>", index: "0", type: "com.ruoyi.system.domain.SysNotice" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysNoticeController: java.lang.String view(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysNoticeController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysMenuController: java.util.List list(com.ruoyi.common.core.domain.entity.SysMenu)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysMenu" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysMenuController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysMenuController: java.lang.String add(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysMenuController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.common.core.domain.entity.SysMenu)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysMenu" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysMenuController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysMenuController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.common.core.domain.entity.SysMenu)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysMenu" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysMenuController: com.ruoyi.common.core.domain.AjaxResult updateSort(java.lang.String[],java.lang.String[])>", index: "0", type: "java.lang.String[]" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysMenuController: com.ruoyi.common.core.domain.AjaxResult updateSort(java.lang.String[],java.lang.String[])>", index: "1", type: "java.lang.String[]" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysMenuController: boolean checkMenuNameUnique(com.ruoyi.common.core.domain.entity.SysMenu)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysMenu" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysMenuController: java.util.List roleMenuTreeData(com.ruoyi.common.core.domain.entity.SysRole)>", index: "0", type: "com.ruoyi.common.core.domain.entity.SysRole" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysMenuController: java.lang.String selectMenuTree(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysLoginController: com.ruoyi.common.core.domain.AjaxResult ajaxLogin(java.lang.String,java.lang.String,java.lang.Boolean)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysLoginController: com.ruoyi.common.core.domain.AjaxResult ajaxLogin(java.lang.String,java.lang.String,java.lang.Boolean)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.system.SysLoginController: com.ruoyi.common.core.domain.AjaxResult ajaxLogin(java.lang.String,java.lang.String,java.lang.Boolean)>", index: "2", type: "java.lang.Boolean" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.common.CommonController: void fileDownload(java.lang.String,java.lang.Boolean,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.common.CommonController: void fileDownload(java.lang.String,java.lang.Boolean,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest)>", index: "1", type: "java.lang.Boolean" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.common.CommonController: com.ruoyi.common.core.domain.AjaxResult uploadFile(org.springframework.web.multipart.MultipartFile)>", index: "0", type: "org.springframework.web.multipart.MultipartFile" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.common.CommonController: com.ruoyi.common.core.domain.AjaxResult uploadFiles(java.util.List)>", index: "0", type: "java.util.List" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.common.CommonController: void resourceDownload(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.tool.TestController: com.ruoyi.common.core.domain.R getUser(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.tool.TestController: com.ruoyi.common.core.domain.R save(com.ruoyi.web.controller.tool.UserEntity)>", index: "0", type: "com.ruoyi.web.controller.tool.UserEntity" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.tool.TestController: com.ruoyi.common.core.domain.R update(com.ruoyi.web.controller.tool.UserEntity)>", index: "0", type: "com.ruoyi.web.controller.tool.UserEntity" }
+  - { kind: "param", method: "<classes.com.ruoyi.web.controller.tool.TestController: com.ruoyi.common.core.domain.R delete(java.lang.Integer)>", index: "0", type: "java.lang.Integer" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.page.TableDataInfo genList(com.ruoyi.generator.domain.GenTable)>", index: "0", type: "com.ruoyi.generator.domain.GenTable" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.page.TableDataInfo dataList(com.ruoyi.generator.domain.GenTable)>", index: "0", type: "com.ruoyi.generator.domain.GenTable" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.page.TableDataInfo columnList(com.ruoyi.generator.domain.GenTableColumn)>", index: "0", type: "com.ruoyi.generator.domain.GenTableColumn" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult importTableSave(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.generator.domain.GenTable)>", index: "0", type: "com.ruoyi.generator.domain.GenTable" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult create(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult preview(java.lang.Long)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: void download(javax.servlet.http.HttpServletResponse,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult genCode(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult synchDb(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.generator.controller.GenController: void batchGenCode(javax.servlet.http.HttpServletResponse,java.lang.String)>", index: "1", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.quartz.domain.SysJob)>", index: "0", type: "com.ruoyi.quartz.domain.SysJob" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.quartz.domain.SysJob)>", index: "0", type: "com.ruoyi.quartz.domain.SysJob" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobController: java.lang.String detail(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult changeStatus(com.ruoyi.quartz.domain.SysJob)>", index: "0", type: "com.ruoyi.quartz.domain.SysJob" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult run(com.ruoyi.quartz.domain.SysJob)>", index: "0", type: "com.ruoyi.quartz.domain.SysJob" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.quartz.domain.SysJob)>", index: "0", type: "com.ruoyi.quartz.domain.SysJob" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.quartz.domain.SysJob)>", index: "0", type: "com.ruoyi.quartz.domain.SysJob" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobController: boolean checkCronExpressionIsValid(com.ruoyi.quartz.domain.SysJob)>", index: "0", type: "com.ruoyi.quartz.domain.SysJob" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult queryCronExpression(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobLogController: java.lang.String jobLog(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobLogController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.quartz.domain.SysJobLog)>", index: "0", type: "com.ruoyi.quartz.domain.SysJobLog" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobLogController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.quartz.domain.SysJobLog)>", index: "0", type: "com.ruoyi.quartz.domain.SysJobLog" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobLogController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>", index: "0", type: "java.lang.String" }
+  - { kind: "param", method: "<classes.com.ruoyi.quartz.controller.SysJobLogController: java.lang.String detail(java.lang.Long,org.springframework.ui.ModelMap)>", index: "0", type: "java.lang.Long" }
+  - { kind: "call", method: "<org.apache.shiro.SecurityUtils: org.apache.shiro.subject.Subject getSubject()>", index: "result", type: "org.apache.shiro.subject.Subject" }
+  - { kind: "call", method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", index: "result", type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { kind: "call", method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession()>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: javax.servlet.http.HttpSession getSession(boolean)>", index: "result", type: "javax.servlet.http.HttpSession" }
+  - { kind: "call", method: "<javax.servlet.http.HttpServletRequest: java.security.Principal getUserPrincipal()>", index: "result", type: "java.security.Principal" }
+  - { kind: "call", method: "<java.security.Principal: java.lang.String getName()>", index: "result", type: "java.lang.String" }
+  - { kind: "call", method: "<javax.servlet.ServletRequest: java.lang.Object getAttribute(java.lang.String)>", index: "result", type: "java.lang.Object" }
+  - { kind: "call", method: "<java.lang.ThreadLocal: java.lang.Object get()>", index: "result", type: "java.lang.Object" }
+
+sinks:
+  - { method: "<java.sql.Statement: java.sql.ResultSet executeQuery(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: int executeUpdate(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: boolean execute(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Statement: void addBatch(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.PreparedStatement prepareStatement(java.lang.String)>", index: "0" }
+  - { method: "<java.sql.Connection: java.sql.CallableStatement prepareCall(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List query(java.lang.String,org.springframework.jdbc.core.RowMapper)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.lang.Object queryForObject(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: java.util.List queryForList(java.lang.String,java.lang.Class)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int update(java.lang.String)>", index: "0" }
+  - { method: "<org.springframework.jdbc.core.JdbcTemplate: int[] batchUpdate(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.Runtime: java.lang.Process exec(java.lang.String,java.lang.String[],java.io.File)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: void <init>(java.util.List)>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.lang.String[])>", index: "0" }
+  - { method: "<java.lang.ProcessBuilder: java.lang.ProcessBuilder command(java.util.List)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "0" }
+  - { method: "<java.io.File: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<java.io.FileInputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileOutputStream: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileReader: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.io.FileWriter: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Paths: java.nio.file.Path get(java.lang.String,java.lang.String[])>", index: "0" }
+  - { method: "<java.nio.file.Path: java.nio.file.Path resolve(java.lang.String)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.util.List readAllLines(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: byte[] readAllBytes(java.nio.file.Path)>", index: "0" }
+  - { method: "<java.nio.file.Files: java.nio.file.Path write(java.nio.file.Path,byte[],java.nio.file.OpenOption[])>", index: "0" }
+  - { method: "<java.io.PrintWriter: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void println(java.lang.String)>", index: "0" }
+  - { method: "<java.io.PrintWriter: void write(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.ServletOutputStream: void print(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URL: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: void <init>(java.lang.String)>", index: "0" }
+  - { method: "<java.net.URI: java.net.URI create(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void sendRedirect(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.RequestDispatcher: void forward(javax.servlet.ServletRequest,javax.servlet.ServletResponse)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "0" }
+  - { method: "<javax.naming.directory.DirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "1" }
+  - { method: "<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "0" }
+  - { method: "<javax.naming.directory.InitialDirContext: javax.naming.NamingEnumeration search(java.lang.String,java.lang.String,javax.naming.directory.SearchControls)>", index: "1" }
+  - { method: "<javax.xml.xpath.XPath: java.lang.String evaluate(java.lang.String,java.lang.Object)>", index: "0" }
+  - { method: "<javax.xml.xpath.XPath: javax.xml.xpath.XPathExpression compile(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.io.InputStream)>", index: "0" }
+  - { method: "<javax.xml.parsers.DocumentBuilder: org.w3c.dom.Document parse(java.lang.String)>", index: "0" }
+  - { method: "<javax.xml.parsers.SAXParser: void parse(java.io.InputStream,org.xml.sax.helpers.DefaultHandler)>", index: "0" }
+  - { method: "<org.xml.sax.XMLReader: void parse(org.xml.sax.InputSource)>", index: "0" }
+  - { method: "<java.io.ObjectInputStream: void <init>(java.io.InputStream)>", index: "0" }
+  - { method: "<java.lang.Class: java.lang.Class forName(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.ClassLoader: java.lang.Class loadClass(java.lang.String)>", index: "0" }
+  - { method: "<java.lang.reflect.Method: java.lang.Object invoke(java.lang.Object,java.lang.Object[])>", index: "1" }
+  - { method: "<javax.servlet.ServletContext: javax.servlet.RequestDispatcher getRequestDispatcher(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.Cookie: void <init>(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.Cookie: void setValue(java.lang.String)>", index: "0" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void addHeader(java.lang.String,java.lang.String)>", index: "1" }
+  - { method: "<javax.servlet.http.HttpServletResponse: void setHeader(java.lang.String,java.lang.String)>", index: "1" }
+
+transfers:
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String concat(java.lang.String)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String substring(int,int)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(char,char)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String trim()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String strip()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripLeading()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String stripTrailing()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String toUpperCase(java.util.Locale)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String intern()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(java.lang.Object)>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String valueOf(char[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.lang.String,java.lang.Object[])>", from: "0", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String format(java.util.Locale,java.lang.String,java.lang.Object[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.CharSequence[])>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: java.lang.String join(java.lang.CharSequence,java.lang.Iterable)>", from: "1", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.String: char[] toCharArray()>", from: "base", to: "result", type: "char[]" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(char[])>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(boolean)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(int)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(long)>", from: "0", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.CharSequence)>", from: "base", to: "result", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.String)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.Object)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuilder: java.lang.StringBuilder insert(int,java.lang.CharSequence)>", from: "1", to: "base", type: "java.lang.StringBuilder" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "0", to: "base", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.String)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<java.lang.StringBuffer: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<java.util.Map: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.HashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.TreeMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.concurrent.ConcurrentHashMap: java.lang.Object get(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>", from: "1", to: "base", type: "java.util.HashMap" }
+  - { method: "<java.util.Map: void putAll(java.util.Map)>", from: "0", to: "base", type: "java.util.Map" }
+  - { method: "<java.util.Map: java.util.Collection values()>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<java.util.Map: java.util.Set entrySet()>", from: "base", to: "result", type: "java.util.Set" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getValue()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Map$Entry: java.lang.Object getKey()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ArrayList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.LinkedList: java.lang.Object get(int)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.List: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.List" }
+  - { method: "<java.util.ArrayList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.ArrayList" }
+  - { method: "<java.util.LinkedList: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.LinkedList" }
+  - { method: "<java.util.Collection: boolean add(java.lang.Object)>", from: "0", to: "base", type: "java.util.Collection" }
+  - { method: "<java.util.Iterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.ListIterator: java.lang.Object next()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElse(java.lang.Object)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.lang.Object orElseGet(java.util.function.Supplier)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<java.util.Optional: java.util.Optional of(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.util.Optional: java.util.Optional ofNullable(java.lang.Object)>", from: "0", to: "result", type: "java.util.Optional" }
+  - { method: "<java.lang.Object: java.lang.String toString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getHeader(java.lang.String)>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getQueryString()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.String getRequestURI()>", from: "base", to: "result", type: "java.lang.String" }
+  - { method: "<javax.servlet.http.HttpServletRequest: java.lang.StringBuffer getRequestURL()>", from: "base", to: "result", type: "java.lang.StringBuffer" }
+  - { method: "<org.apache.shiro.subject.Subject: java.lang.Object getPrincipal()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.Subject: org.apache.shiro.subject.PrincipalCollection getPrincipals()>", from: "base", to: "result", type: "org.apache.shiro.subject.PrincipalCollection" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.lang.Object getPrimaryPrincipal()>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<org.apache.shiro.subject.PrincipalCollection: java.util.Collection fromRealm(java.lang.String)>", from: "base", to: "result", type: "java.util.Collection" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getAttribute(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: java.lang.Object getValue(java.lang.String)>", from: "base", to: "result", type: "java.lang.Object" }
+  - { method: "<javax.servlet.http.HttpSession: void setAttribute(java.lang.String,java.lang.Object)>", from: "1", to: "base", type: "javax.servlet.http.HttpSession" }
+  - { method: "<java.lang.ThreadLocal: java.lang.Object get()>", from: "base", to: "result", type: "java.lang.Object" }
+
+Initializing global bean mock objects for beans...
+Initialized 124 global bean objects.
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String search()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String footer()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String groupHeader()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String export()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String exportSelected()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String remember()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String cookie()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String pageGo()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String params()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String multi()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String button()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String fixedColumns()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String event()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String detail()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String child()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String image()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String curd()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String reorderRows()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String reorderColumns()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String resizable()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String editable()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String subdata()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String refresh()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String print()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String headerStyle()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String dynamicColumns()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String virtualScroll()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String customView()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String textSearch()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String asynTree()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.lang.String other()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoIconController: java.lang.String fontAwesome()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoIconController: java.lang.String glyphicons()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: java.lang.String table()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: java.lang.String other()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult importTemplate()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult clean()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String button()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String select()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String timeline()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String progress_bars()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String validate()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String jasny()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String sortable()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String invoice()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String labels_tips()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String tabs_panels()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String grid()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String wizard()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String upload()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String datetime()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String duallistbox()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String basic()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String cards()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String summernote()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String autocomplete()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String cityData()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: com.ruoyi.common.core.domain.AjaxResult userModel()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoFormController: com.ruoyi.common.core.domain.AjaxResult collection()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoReportController: java.lang.String echarts()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoReportController: java.lang.String peity()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoReportController: java.lang.String sparkline()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoReportController: java.lang.String metrics()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoDialogController: java.lang.String dialog()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoDialogController: java.lang.String layer()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoDialogController: java.lang.String form()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoDialogController: java.lang.String table()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoDialogController: java.lang.String check()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoDialogController: java.lang.String radio()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoDialogController: java.lang.String parent()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoDialogController: java.lang.String frame1()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.demo.controller.DemoDialogController: java.lang.String frame2()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.monitor.SysLogininforController: java.lang.String logininfor()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.monitor.SysLogininforController: com.ruoyi.common.core.domain.AjaxResult clean()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.monitor.SysUserOnlineController: java.lang.String online()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.monitor.DruidController: java.lang.String index()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.monitor.SysOperlogController: java.lang.String operlog()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.monitor.SysOperlogController: com.ruoyi.common.core.domain.AjaxResult clean()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysConfigController: java.lang.String config()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysConfigController: java.lang.String add()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysConfigController: com.ruoyi.common.core.domain.AjaxResult refreshCache()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysDictDataController: java.lang.String dictData()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysRegisterController: java.lang.String register()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysRoleController: java.lang.String role()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysRoleController: java.lang.String add()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysRoleController: java.lang.String selectMenuTree()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysIndexController: java.lang.String switchSkin()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysDeptController: java.lang.String dept()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String dictType()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String add()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysDictTypeController: com.ruoyi.common.core.domain.AjaxResult refreshCache()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysDictTypeController: java.util.List treeData()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysPostController: java.lang.String operlog()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysPostController: java.lang.String add()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysUserController: java.lang.String user()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult importTemplate()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysUserController: java.util.List deptTreeData()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysNoticeController: java.lang.String notice()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysNoticeController: java.lang.String add()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysMenuController: java.lang.String menu()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysMenuController: java.lang.String icon()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysMenuController: java.util.List menuTreeData()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.system.SysLoginController: java.lang.String unauth()>
+Concrete class not found for type: org.springframework.web.multipart.support.StandardMultipartFile
+Added entry point (Empty): <classes.com.ruoyi.web.controller.tool.SwaggerController: java.lang.String index()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.tool.BuildController: java.lang.String build()>
+Added entry point (Empty): <classes.com.ruoyi.web.controller.tool.TestController: com.ruoyi.common.core.domain.R userList()>
+Added entry point (Empty): <classes.com.ruoyi.generator.controller.GenController: java.lang.String gen()>
+Added entry point (Empty): <classes.com.ruoyi.generator.controller.GenController: java.lang.String importTable()>
+Added entry point (Empty): <classes.com.ruoyi.generator.controller.GenController: java.lang.String createTable()>
+Added entry point (Empty): <classes.com.ruoyi.quartz.controller.SysJobController: java.lang.String job()>
+Added entry point (Empty): <classes.com.ruoyi.quartz.controller.SysJobController: java.lang.String add()>
+Added entry point (Empty): <classes.com.ruoyi.quartz.controller.SysJobController: java.lang.String cron()>
+Added entry point (Empty): <classes.com.ruoyi.quartz.controller.SysJobLogController: com.ruoyi.common.core.domain.AjaxResult clean()>
+Initializing global aspect mock objects...
+[Pointer analysis] elapsed time: 0.06s
+Detected 0 taint flow(s):
+TFGDumper starts ...
+Source nodes:
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.quartz.domain.SysJob)>/job}
+VarNode{<classes.com.ruoyi.web.controller.system.SysPostController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.system.domain.SysPost)>/post}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictDataController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.common.core.domain.entity.SysDictData)>/dict}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictDataController: java.lang.String add(java.lang.String,org.springframework.ui.ModelMap)>/dictType}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>/tableId}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult create(java.lang.String)>/sql}
+VarNode{<classes.com.ruoyi.web.controller.system.SysConfigController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.system.domain.SysConfig)>/config}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictDataController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDeptController: java.lang.String selectDeptTree(java.lang.Long,java.lang.Long,org.springframework.ui.ModelMap)>/excludeId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult selectAuthUserAll(java.lang.Long,java.lang.String)>/userIds}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.web.controller.demo.domain.UserOperateModel)>/userModel}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictDataController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.common.core.domain.entity.SysDictData)>/dict}
+VarNode{<classes.com.ruoyi.web.controller.system.SysNoticeController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.system.domain.SysNotice)>/notice}
+VarNode{<classes.com.ruoyi.web.controller.common.CommonController: com.ruoyi.common.core.domain.AjaxResult uploadFiles(java.util.List)>/files}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.page.TableDataInfo dataList(com.ruoyi.generator.domain.GenTable)>/genTable}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDeptController: java.lang.String add(java.lang.Long,org.springframework.ui.ModelMap)>/parentId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysNoticeController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String selectDictTree(java.lang.Long,java.lang.String,org.springframework.ui.ModelMap)>/dictType}
+VarNode{<classes.com.ruoyi.web.controller.monitor.SysLogininforController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.system.domain.SysLogininfor)>/logininfor}
+VarNode{<org.apache.shiro.util.ThreadContext: void ensureResourcesInitialized()>/$r1}
+VarNode{<classes.com.ruoyi.web.controller.monitor.SysOperlogController: java.lang.String detail(java.lang.Long,org.springframework.ui.ModelMap)>/operId}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.quartz.domain.SysJob)>/job}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: java.lang.String selectUser(java.lang.Long,org.springframework.ui.ModelMap)>/roleId}
+VarNode{<classes.com.ruoyi.web.controller.monitor.CacheController: java.lang.String getCacheValue(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)>/cacheKey}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: com.ruoyi.common.core.domain.AjaxResult exportSelected(com.ruoyi.web.controller.demo.controller.UserTableModel,java.lang.String)>/userModel}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult synchDb(java.lang.String)>/tableName}
+VarNode{<classes.com.ruoyi.web.controller.tool.TestController: com.ruoyi.common.core.domain.R delete(java.lang.Integer)>/userId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: java.lang.String authDataScope(java.lang.Long,org.springframework.ui.ModelMap)>/roleId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysProfileController: com.ruoyi.common.core.domain.AjaxResult update(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: boolean checkRoleKeyUnique(com.ruoyi.common.core.domain.entity.SysRole)>/role}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictDataController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.common.core.domain.entity.SysDictData)>/dictData}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRegisterController: com.ruoyi.common.core.domain.AjaxResult ajaxRegister(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysProfileController: com.ruoyi.common.core.domain.AjaxResult resetPwd(java.lang.String,java.lang.String)>/oldPassword}
+VarNode{<classes.com.ruoyi.web.controller.system.SysLoginController: com.ruoyi.common.core.domain.AjaxResult ajaxLogin(java.lang.String,java.lang.String,java.lang.Boolean)>/$r4}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDeptController: java.util.List treeDataExcludeChild(java.lang.Long)>/excludeId}
+VarNode{<classes.com.ruoyi.web.controller.common.CommonController: void resourceDownload(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)>/resource}
+VarNode{<classes.com.ruoyi.web.controller.monitor.SysOperlogController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.system.domain.SysOperLog)>/operLog}
+VarNode{<classes.com.ruoyi.web.controller.system.SysIndexController: com.ruoyi.common.core.domain.AjaxResult unlockscreen(java.lang.String)>/password}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: java.lang.String selectDeptTree(java.lang.Long,org.springframework.ui.ModelMap)>/deptId}
+VarNode{<classes.com.ruoyi.web.controller.monitor.SysLogininforController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.system.domain.SysLogininfor)>/logininfor}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.web.controller.system.SysMenuController: com.ruoyi.common.core.domain.AjaxResult updateSort(java.lang.String[],java.lang.String[])>/menuIds}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: boolean checkEmailUnique(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.monitor.SysUserOnlineController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.system.domain.SysUserOnline)>/userOnline}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobLogController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<org.apache.shiro.util.ThreadContext: java.lang.Object remove(java.lang.Object)>/$r1}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: boolean checkRoleNameUnique(com.ruoyi.common.core.domain.entity.SysRole)>/role}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult run(com.ruoyi.quartz.domain.SysJob)>/job}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: java.util.List deptTreeData(com.ruoyi.common.core.domain.entity.SysRole)>/role}
+VarNode{<classes.com.ruoyi.web.controller.system.SysMenuController: com.ruoyi.common.core.domain.AjaxResult updateSort(java.lang.String[],java.lang.String[])>/orderNums}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDeptController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.common.core.domain.entity.SysDept)>/dept}
+VarNode{<classes.com.ruoyi.web.controller.system.SysConfigController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.web.controller.system.SysPostController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.system.domain.SysPost)>/post}
+VarNode{<classes.com.ruoyi.web.controller.system.SysNoticeController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.system.domain.SysNotice)>/notice}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult genCode(java.lang.String)>/tableName}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult importData(org.springframework.web.multipart.MultipartFile,boolean)>/file}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>/jobId}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.page.TableDataInfo genList(com.ruoyi.generator.domain.GenTable)>/genTable}
+VarNode{<classes.com.ruoyi.web.controller.system.SysNoticeController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>/noticeId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult insertAuthRole(java.lang.Long,java.lang.Long[])>/roleIds}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictDataController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>/dictCode}
+VarNode{<classes.com.ruoyi.web.controller.system.SysLoginController: com.ruoyi.common.core.domain.AjaxResult ajaxLogin(java.lang.String,java.lang.String,java.lang.Boolean)>/password}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>/roleId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.page.TableDataInfo unallocatedList(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysPostController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>/postId}
+VarNode{<classes.com.ruoyi.web.controller.tool.TestController: com.ruoyi.common.core.domain.R getUser(java.lang.Integer)>/userId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult changeStatus(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysMenuController: java.util.List roleMenuTreeData(com.ruoyi.common.core.domain.entity.SysRole)>/role}
+VarNode{<classes.com.ruoyi.web.controller.system.SysLoginController: com.ruoyi.common.core.domain.AjaxResult ajaxLogin(java.lang.String,java.lang.String,java.lang.Boolean)>/username}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult importData(org.springframework.web.multipart.MultipartFile,boolean)>/updateSupport}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: java.lang.String resetPwd(java.lang.Long,org.springframework.ui.ModelMap)>/userId}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult queryCronExpression(java.lang.String)>/cronExpression}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.quartz.domain.SysJob)>/job}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult preview(java.lang.Long)>/tableId}
+VarNode{<classes.com.ruoyi.web.controller.tool.TestController: com.ruoyi.common.core.domain.R update(com.ruoyi.web.controller.tool.UserEntity)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictTypeController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.common.core.domain.entity.SysDictType)>/dictType}
+VarNode{<classes.com.ruoyi.web.controller.monitor.CacheController: java.lang.String getCacheValue(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)>/cacheName}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult authDataScopeSave(com.ruoyi.common.core.domain.entity.SysRole)>/role}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult selectAuthUserAll(java.lang.Long,java.lang.String)>/roleId}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: com.ruoyi.common.core.page.TableDataInfo treeList(com.ruoyi.web.controller.demo.controller.AreaModel)>/areaModel}
+VarNode{<classes.com.ruoyi.web.controller.system.SysNoticeController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.system.domain.SysNotice)>/notice}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.web.controller.demo.domain.UserOperateModel)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult changeStatus(com.ruoyi.common.core.domain.entity.SysRole)>/role}
+VarNode{<classes.com.ruoyi.web.controller.system.SysProfileController: boolean checkPassword(java.lang.String)>/password}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: boolean checkLoginNameUnique(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: com.ruoyi.common.core.page.TableDataInfo textList(com.ruoyi.common.core.domain.BaseEntity)>/baseEntity}
+VarNode{<classes.com.ruoyi.web.controller.monitor.CacheController: com.ruoyi.common.core.domain.AjaxResult clearCacheName(java.lang.String,org.springframework.ui.ModelMap)>/cacheName}
+VarNode{<classes.com.ruoyi.web.controller.monitor.CacheController: com.ruoyi.common.core.domain.AjaxResult clearCacheKey(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)>/cacheName}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobController: java.lang.String detail(java.lang.Long,org.springframework.ui.ModelMap)>/jobId}
+VarNode{<classes.com.ruoyi.web.controller.monitor.SysOperlogController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.web.controller.system.SysMenuController: java.lang.String add(java.lang.Long,org.springframework.ui.ModelMap)>/parentId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult resetPwdSave(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.web.controller.demo.controller.UserTableModel)>/userModel}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictDataController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.common.core.domain.entity.SysDictData)>/dictData}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.web.controller.demo.domain.UserOperateModel)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: boolean checkPhoneUnique(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult cancelAuthUserAll(java.lang.Long,java.lang.String)>/userIds}
+VarNode{<classes.com.ruoyi.web.controller.system.SysMenuController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.common.core.domain.entity.SysMenu)>/menu}
+VarNode{<org.apache.shiro.util.ThreadContext: void put(java.lang.Object,java.lang.Object)>/$r3}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: java.lang.String authUser(java.lang.Long,org.springframework.ui.ModelMap)>/roleId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysProfileController: com.ruoyi.common.core.domain.AjaxResult resetPwd(java.lang.String,java.lang.String)>/newPassword}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: java.lang.String detail(java.lang.Integer,org.springframework.ui.ModelMap)>/userId}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.generator.domain.GenTable)>/genTable}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDeptController: boolean checkDeptNameUnique(com.ruoyi.common.core.domain.entity.SysDept)>/dept}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.page.TableDataInfo columnList(com.ruoyi.generator.domain.GenTableColumn)>/genTableColumn}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String selectDictTree(java.lang.Long,java.lang.String,org.springframework.ui.ModelMap)>/columnId}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobLogController: java.lang.String detail(java.lang.Long,org.springframework.ui.ModelMap)>/jobLogId}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: com.ruoyi.common.core.domain.AjaxResult importTableSave(java.lang.String)>/tables}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDeptController: java.lang.String selectDeptTree(java.lang.Long,java.lang.Long,org.springframework.ui.ModelMap)>/deptId}
+VarNode{<classes.com.ruoyi.web.controller.monitor.SysOperlogController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.system.domain.SysOperLog)>/operLog}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: java.lang.String edit(java.lang.Integer,org.springframework.ui.ModelMap)>/userId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictTypeController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.web.controller.system.SysConfigController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.system.domain.SysConfig)>/config}
+VarNode{<classes.com.ruoyi.web.controller.system.SysConfigController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>/configId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.common.core.domain.entity.SysRole)>/role}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.page.TableDataInfo allocatedList(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult insertAuthRole(java.lang.Long,java.lang.Long[])>/userId}
+VarNode{<classes.com.ruoyi.web.controller.monitor.CacheController: java.lang.String getCacheKeys(java.lang.String,org.springframework.ui.ModelMap)>/cacheName}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.web.controller.system.SysLoginController: com.ruoyi.common.core.domain.AjaxResult ajaxLogin(java.lang.String,java.lang.String,java.lang.Boolean)>/rememberMe}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobLogController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.quartz.domain.SysJobLog)>/jobLog}
+VarNode{<classes.com.ruoyi.web.controller.system.SysMenuController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.common.core.domain.entity.SysMenu)>/menu}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult importData(org.springframework.web.multipart.MultipartFile,boolean)>/updateSupport}
+VarNode{<classes.com.ruoyi.web.controller.system.SysIndexController: void menuStyle(java.lang.String,javax.servlet.http.HttpServletResponse)>/style}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.common.core.domain.entity.SysUser)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysNoticeController: java.lang.String view(java.lang.Long,org.springframework.ui.ModelMap)>/noticeId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictTypeController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.common.core.domain.entity.SysDictType)>/dict}
+VarNode{<classes.com.ruoyi.web.controller.system.SysConfigController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.system.domain.SysConfig)>/config}
+VarNode{<classes.com.ruoyi.web.controller.system.SysPostController: boolean checkPostCodeUnique(com.ruoyi.system.domain.SysPost)>/post}
+VarNode{<classes.com.ruoyi.web.controller.system.SysMenuController: java.util.List list(com.ruoyi.common.core.domain.entity.SysMenu)>/menu}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>/userId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysMenuController: boolean checkMenuNameUnique(com.ruoyi.common.core.domain.entity.SysMenu)>/menu}
+VarNode{<classes.com.ruoyi.web.controller.common.CommonController: void fileDownload(java.lang.String,java.lang.Boolean,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest)>/fileName}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult cancelAuthUser(com.ruoyi.system.domain.SysUserRole)>/userRole}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDeptController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.Long)>/deptId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictTypeController: boolean checkDictTypeUnique(com.ruoyi.common.core.domain.entity.SysDictType)>/dictType}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDeptController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.common.core.domain.entity.SysDept)>/dept}
+VarNode{<classes.com.ruoyi.web.controller.common.CommonController: void fileDownload(java.lang.String,java.lang.Boolean,javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest)>/delete}
+VarNode{<classes.com.ruoyi.web.controller.monitor.SysLogininforController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.web.controller.system.SysMenuController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.Long)>/menuId}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobLogController: java.lang.String jobLog(java.lang.Long,org.springframework.ui.ModelMap)>/jobId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: com.ruoyi.common.core.domain.AjaxResult importData(org.springframework.web.multipart.MultipartFile,boolean)>/file}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: void batchGenCode(javax.servlet.http.HttpServletResponse,java.lang.String)>/tables}
+VarNode{<classes.com.ruoyi.web.controller.system.SysMenuController: java.lang.String selectMenuTree(java.lang.Long,org.springframework.ui.ModelMap)>/menuId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.common.core.domain.entity.SysRole)>/role}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: java.util.List listChild(com.ruoyi.web.controller.demo.controller.AreaModel)>/areaModel}
+VarNode{<classes.com.ruoyi.web.controller.system.SysPostController: com.ruoyi.common.core.domain.AjaxResult remove(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictTypeController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.common.core.domain.entity.SysDictType)>/dictType}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: com.ruoyi.common.core.domain.AjaxResult exportSelected(com.ruoyi.web.controller.demo.controller.UserTableModel,java.lang.String)>/userIds}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: java.lang.String authRole(java.lang.Long,org.springframework.ui.ModelMap)>/userId}
+VarNode{<classes.com.ruoyi.web.controller.monitor.SysLogininforController: com.ruoyi.common.core.domain.AjaxResult unlock(java.lang.String)>/loginName}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.web.controller.demo.domain.CustomerModel)>/customerModel}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.quartz.domain.SysJob)>/job}
+VarNode{<classes.com.ruoyi.web.controller.system.SysConfigController: boolean checkConfigKeyUnique(com.ruoyi.system.domain.SysConfig)>/config}
+VarNode{<classes.com.ruoyi.web.controller.system.SysUserController: java.lang.String view(java.lang.Long,org.springframework.ui.ModelMap)>/userId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysConfigController: com.ruoyi.common.core.domain.AjaxResult addSave(com.ruoyi.system.domain.SysConfig)>/config}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String detail(java.lang.Long,org.springframework.ui.ModelMap)>/dictId}
+VarNode{<classes.com.ruoyi.web.controller.monitor.SysUserOnlineController: com.ruoyi.common.core.domain.AjaxResult batchForceLogout(java.lang.String)>/ids}
+VarNode{<classes.com.ruoyi.web.controller.system.SysPostController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.system.domain.SysPost)>/post}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobLogController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.quartz.domain.SysJobLog)>/jobLog}
+VarNode{<classes.com.ruoyi.web.controller.monitor.CacheController: com.ruoyi.common.core.domain.AjaxResult clearCacheKey(java.lang.String,java.lang.String,org.springframework.ui.ModelMap)>/cacheKey}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictTypeController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.common.core.domain.entity.SysDictType)>/dict}
+VarNode{<classes.com.ruoyi.web.controller.system.SysPostController: boolean checkPostNameUnique(com.ruoyi.system.domain.SysPost)>/post}
+VarNode{<classes.com.ruoyi.web.controller.tool.TestController: com.ruoyi.common.core.domain.R save(com.ruoyi.web.controller.tool.UserEntity)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysMenuController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>/menuId}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoTableController: com.ruoyi.common.core.domain.AjaxResult ajaxColumns(com.ruoyi.web.controller.demo.controller.UserTableColumn)>/userColumn}
+VarNode{<org.apache.shiro.util.ThreadContext: java.lang.Object getValue(java.lang.Object)>/$r1}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.page.TableDataInfo list(com.ruoyi.common.core.domain.entity.SysRole)>/role}
+VarNode{<classes.com.ruoyi.web.controller.system.SysPostController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.system.domain.SysPost)>/post}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoOperateController: com.ruoyi.common.core.domain.AjaxResult export(com.ruoyi.web.controller.demo.domain.UserOperateModel)>/user}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult cancelAuthUserAll(java.lang.Long,java.lang.String)>/roleId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDeptController: java.util.List list(com.ruoyi.common.core.domain.entity.SysDept)>/dept}
+VarNode{<classes.com.ruoyi.web.controller.demo.controller.DemoFormController: java.lang.String localRefreshTask(java.lang.String,org.springframework.ui.ModelMap)>/taskName}
+VarNode{<classes.com.ruoyi.generator.controller.GenController: void download(javax.servlet.http.HttpServletResponse,java.lang.String)>/tableName}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDictTypeController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>/dictId}
+VarNode{<classes.com.ruoyi.web.controller.system.SysRoleController: com.ruoyi.common.core.domain.AjaxResult editSave(com.ruoyi.common.core.domain.entity.SysRole)>/role}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobController: boolean checkCronExpressionIsValid(com.ruoyi.quartz.domain.SysJob)>/job}
+VarNode{<classes.com.ruoyi.web.controller.system.SysDeptController: java.lang.String edit(java.lang.Long,org.springframework.ui.ModelMap)>/deptId}
+VarNode{<classes.com.ruoyi.quartz.controller.SysJobController: com.ruoyi.common.core.domain.AjaxResult changeStatus(com.ruoyi.quartz.domain.SysJob)>/job}
+Sink nodes:
+Dumping /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/taint-flow-graph.dot
+TFGDumper finishes, elapsed time: 0.02s
+-------------- Pointer analysis statistics: --------------
+#var pointers:                3409 (insens) / 3409 (sens)
+#objects:                     1405 (insens) / 1405 (sens)
+#var points-to:               1423 (insens) / 1425 (sens)
+#static field points-to:      1 (sens)
+#instance field points-to:    643 (sens)
+#array points-to:             20 (sens)
+#reachable methods:           378 (insens) / 378 (sens)
+#call graph edges:            705 (insens) / 705 (sens)
+----------------------------------------
+pta finishes, elapsed time: 0.22s
+cg starts ...
+Call graph has 378 reachable methods and 705 edges
+Dumping call graph to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-graph.dot
+Dumping reachable methods to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/reachable-methods.txt
+Dumping call edges to /Users/yuntsy/My/Projects/Java/WebAnalyzer/output/call-edges.txt
+cg finishes, elapsed time: 0.03s
+Tai-e finishes, elapsed time: 33.45s
